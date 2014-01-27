@@ -383,16 +383,13 @@
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_1_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_1_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_1_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -415,16 +412,13 @@
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_2_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_2_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_2_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -447,16 +441,13 @@
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_3_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_3_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_3_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -479,16 +470,13 @@
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_4_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_4_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],hotcue_4_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 
@@ -886,16 +874,13 @@
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_1_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_1_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_1_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -918,16 +903,13 @@
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_2_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_2_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_2_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -948,20 +930,15 @@
 								</State>
 								<Pos>132,71</Pos>
 								<Connection>
-									<ConfigKey>[Sampler2],hotcue_3_activate</ConfigKey>
-									
+									<ConfigKey>[Sampler2],hotcue_3_activate</ConfigKey>									
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
-									<ConfigKey>[Sampler2],hotcue_3_clear</ConfigKey>
-									
+									<ConfigKey>[Sampler2],hotcue_3_clear</ConfigKey>			
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_3_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -983,19 +960,14 @@
 								<Pos>158,71</Pos>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_4_activate</ConfigKey>
-									
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
-									<ConfigKey>[Sampler2],hotcue_4_clear</ConfigKey>
-									
+									<ConfigKey>[Sampler2],hotcue_4_clear</ConfigKey>		
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler2],hotcue_4_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 
@@ -1394,16 +1366,13 @@
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_1_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_1_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_1_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -1426,16 +1395,13 @@
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_2_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_2_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_2_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -1458,16 +1424,13 @@
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_3_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_3_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_3_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -1490,16 +1453,13 @@
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_4_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
+									</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_4_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler3],hotcue_4_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 
@@ -1898,16 +1858,13 @@
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_1_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_1_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_1_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -1930,17 +1887,14 @@
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_2_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_2_clear</ConfigKey>
 									
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_2_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -1963,16 +1917,13 @@
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_3_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_3_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_3_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 							<PushButton>
@@ -1995,16 +1946,13 @@
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_4_activate</ConfigKey>
 									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
+									</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_4_clear</ConfigKey>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler4],hotcue_4_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
 								</Connection>
 							</PushButton>
 
@@ -3193,16 +3141,13 @@
 						<Connection>
 							<ConfigKey>[Channel1],play</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_set</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],play_indicator</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -3224,16 +3169,13 @@
 						<Connection>
 							<ConfigKey>[Channel2],play</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],cue_set</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],play_indicator</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -3261,17 +3203,14 @@
 						<Connection>
 							<ConfigKey>[Channel1],cue_default</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_gotoandstop</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_indicator</ConfigKey>
 							<ButtonState>Indicator</ButtonState>
-                            <ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -3293,17 +3232,14 @@
 						<Connection>
 							<ConfigKey>[Channel2],cue_default</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],cue_gotoandstop</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],cue_indicator</ConfigKey>
 							<ButtonState>Indicator</ButtonState>
-                            <ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -4410,7 +4346,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_0.125_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4440,7 +4375,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_0.25_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4470,7 +4404,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_0.5_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4500,7 +4433,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_1_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4530,7 +4462,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_2_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4560,7 +4491,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_4_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4590,7 +4520,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_8_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4620,7 +4549,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],beatloop_16_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -4714,11 +4642,9 @@
 						<Connection>
 							<ConfigKey>[Channel1],reloop_exit</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],loop_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -4752,11 +4678,9 @@
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_1_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_1_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4779,16 +4703,13 @@
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_2_activate</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_2_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_2_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4811,16 +4732,13 @@
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_3_activate</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_3_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_3_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -4848,11 +4766,9 @@
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_4_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],hotcue_4_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -5478,7 +5394,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_0.125_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5508,7 +5423,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_0.25_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5538,7 +5452,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_0.5_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5568,7 +5481,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_1_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5598,7 +5510,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_2_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5628,7 +5539,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_4_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5658,7 +5568,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_8_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5688,7 +5597,6 @@
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],beatloop_16_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -5782,11 +5690,9 @@
 						<Connection>
 							<ConfigKey>[Channel2],reloop_exit</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],loop_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
@@ -5815,16 +5721,13 @@
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_1_activate</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_1_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_1_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5847,16 +5750,13 @@
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_2_activate</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_2_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>[Channel2],hotcue_2_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
+							<ConfigKey>[Channel2],hotcue_2_enabled</ConfigKey>>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5879,16 +5779,13 @@
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_3_activate</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_3_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_3_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -5911,16 +5808,13 @@
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_4_activate</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_4_clear</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],hotcue_4_enabled</ConfigKey>
-							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
