@@ -308,7 +308,6 @@
 								<TooltipId>play_start</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_play_sampler_down.png</Pressed>
@@ -322,14 +321,11 @@
 								<Pos>10,31</Pos>
 								<Connection>
 									<ConfigKey>[Sampler1],play</ConfigKey>
-									<EmitOnDownPress>true</EmitOnDownPress>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 								<Connection>
 									<ConfigKey>[Sampler1],start</ConfigKey>
-									<EmitOnDownPress>true</EmitOnDownPress>
 									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
 								</Connection>
 							</PushButton>
 
@@ -367,8 +363,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_1_down.png</Pressed>
@@ -396,8 +390,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_2_down.png</Pressed>
@@ -425,8 +417,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_3_down.png</Pressed>
@@ -454,8 +444,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_4_down.png</Pressed>
@@ -799,7 +787,6 @@
 								<TooltipId>play_start</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_play_sampler_down.png</Pressed>
@@ -858,8 +845,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_1_down.png</Pressed>
@@ -887,8 +872,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_2_down.png</Pressed>
@@ -916,8 +899,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_3_down.png</Pressed>
@@ -945,8 +926,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_4_down.png</Pressed>
@@ -1291,7 +1270,6 @@
 								<TooltipId>play_start</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_play_sampler_down.png</Pressed>
@@ -1350,8 +1328,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_1_down.png</Pressed>
@@ -1379,8 +1355,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_2_down.png</Pressed>
@@ -1408,8 +1382,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_3_down.png</Pressed>
@@ -1437,8 +1409,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_4_down.png</Pressed>
@@ -1783,7 +1753,6 @@
 								<TooltipId>play_start</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_play_sampler_down.png</Pressed>
@@ -1842,8 +1811,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_1_down.png</Pressed>
@@ -1871,8 +1838,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_2_down.png</Pressed>
@@ -1901,8 +1866,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_3_down.png</Pressed>
@@ -1930,8 +1893,6 @@
 								<TooltipId>hotcue</TooltipId>
 								<Style></Style>
 								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
 								<State>
 									<Number>0</Number>
 									<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_4_down.png</Pressed>
@@ -2256,7 +2217,6 @@
 														<TooltipId>play_start</TooltipId>
 														<Style></Style>
 														<NumberStates>2</NumberStates>
-														<RightClickIsPushButton>true</RightClickIsPushButton>
 														<State>
 															<Number>0</Number>
 															<Pressed>../../skins/Deere1366x768-WXGA/btn_play_sampler_down.png</Pressed>
@@ -3126,7 +3086,6 @@
 						<TooltipId>play_cue_set</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_play1_down.png</Pressed>
@@ -3154,7 +3113,6 @@
 						<TooltipId>play_cue_set</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_play2_down.png</Pressed>
@@ -3188,7 +3146,6 @@
 						<TooltipId>cue_default_cue_gotoandstop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_cue1_down.png</Pressed>
@@ -3217,7 +3174,6 @@
 						<TooltipId>cue_default_cue_gotoandstop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_cue2_down.png</Pressed>
@@ -3393,7 +3349,6 @@
 							<ConfigKey>[Channel1],filterLowKill</ConfigKey>
 						</Connection>
 					</PushButton>
-
 					<PushButton>
 						<TooltipId>filterHighKill</TooltipId>
 						<Style></Style>
@@ -4291,8 +4246,6 @@
 						<TooltipId>reverse</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_reverse1_overdown.png</Pressed>
@@ -4323,8 +4276,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_0125_down.png</Pressed>
@@ -4352,8 +4303,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_0250_down.png</Pressed>
@@ -4381,8 +4330,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_0500_down.png</Pressed>
@@ -4410,8 +4357,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_1_down.png</Pressed>
@@ -4439,8 +4384,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_2_down.png</Pressed>
@@ -4468,8 +4411,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_4_down.png</Pressed>
@@ -4497,9 +4438,7 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
-						<State>
+							<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_8_down.png</Pressed>
 							<Unpressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_8.png</Unpressed>
@@ -4526,8 +4465,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop1_16_down.png</Pressed>
@@ -4627,7 +4564,6 @@
 						<TooltipId>reloop_exit</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_reloop1_down.png</Pressed>
@@ -4657,8 +4593,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_1_down.png</Pressed>
@@ -4687,8 +4621,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_2_down.png</Pressed>
@@ -4716,8 +4648,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_3_down.png</Pressed>
@@ -4745,8 +4675,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue1_4_down.png</Pressed>
@@ -5339,8 +5267,6 @@
 						<TooltipId>reverse</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_reverse2_overdown.png</Pressed>
@@ -5371,8 +5297,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_0125_down.png</Pressed>
@@ -5400,8 +5324,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_0250_down.png</Pressed>
@@ -5429,8 +5351,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_0500_down.png</Pressed>
@@ -5458,8 +5378,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_1_down.png</Pressed>
@@ -5487,8 +5405,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_2_down.png</Pressed>
@@ -5516,8 +5432,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_4_down.png</Pressed>
@@ -5545,8 +5459,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_8_down.png</Pressed>
@@ -5574,8 +5486,6 @@
 						<TooltipId>beatloop</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_beatloop2_16_down.png</Pressed>
@@ -5675,7 +5585,6 @@
 						<TooltipId>reloop_exit</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_reloop2_down.png</Pressed>
@@ -5705,8 +5614,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue2_1_down.png</Pressed>
@@ -5734,8 +5641,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue2_2_down.png</Pressed>
@@ -5763,8 +5668,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue2_3_down.png</Pressed>
@@ -5792,8 +5695,6 @@
 						<TooltipId>hotcue</TooltipId>
 						<Style></Style>
 						<NumberStates>2</NumberStates>
-						<LeftClickIsPushButton>true</LeftClickIsPushButton>
-						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
 							<Pressed>../../skins/Deere1366x768-WXGA/btn_hotcue2_4_down.png</Pressed>
