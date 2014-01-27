@@ -3193,6 +3193,7 @@
 						<Connection>
 							<ConfigKey>[Channel1],play</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
+                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_set</ConfigKey>
@@ -3223,6 +3224,7 @@
 						<Connection>
 							<ConfigKey>[Channel2],play</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
+                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],cue_set</ConfigKey>
@@ -3259,14 +3261,17 @@
 						<Connection>
 							<ConfigKey>[Channel1],cue_default</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
+                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_gotoandstop</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
+                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_indicator</ConfigKey>
 							<ButtonState>Indicator</ButtonState>
+                            <ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -3288,14 +3293,17 @@
 						<Connection>
 							<ConfigKey>[Channel2],cue_default</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
+                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],cue_gotoandstop</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
+                            <ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel2],cue_indicator</ConfigKey>
 							<ButtonState>Indicator</ButtonState>
+                            <ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
 
