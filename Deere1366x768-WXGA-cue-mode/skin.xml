@@ -124,7 +124,7 @@
 					<WidgetGroup>
 						<Pos>0,0</Pos>
 						<Size>312,110</Size>
-						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px; background: url(skin:/style/style_bg_sampler.png); } </Style>
+						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px; background: url(skin:/../../skins/Deere1366x768-WXGA/style/style_bg_sampler.png); } </Style>
 						<Children>
 							<!--
 							**********************************************
@@ -639,7 +639,7 @@
 					<WidgetGroup>
 						<Pos>0,0</Pos>
 						<Size>312,110</Size>
-						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px; background: url(skin:../../skins/Deere1366x768-WXGA/style/style_bg_sampler.png); } </Style>
+						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px; background: url(skin:/../../skins/Deere1366x768-WXGA/style/style_bg_sampler.png); } </Style>
 						<Children>
 							<!--
 							**********************************************
@@ -1154,7 +1154,7 @@
 					<WidgetGroup>
 						<Pos>0,0</Pos>
 						<Size>312,110</Size>
-						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px; background: url(skin:/style/style_bg_sampler.png); } </Style>
+						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px; background: url(skin:/../../skins/Deere1366x768-WXGA/style/style_bg_sampler.png); } </Style>
 						<Children>
 							<!--
 							**********************************************
@@ -2206,7 +2206,7 @@
 				<!--checkbox in library "Played" column -->
 				QTableView::indicator { width: 12px; height: 12px;}
 				QTableView::indicator:checked { background: url(skin:/../../skins/Deere1366x768-WXGA/style/style_checkbox_checked.png);}
-				QTableView::indicator:unchecked { background: url(skin:/style/style_checkbox_unchecked.png);}
+				QTableView::indicator:unchecked { background: url(skin:/../../skins/Deere1366x768-WXGA/style/style_checkbox_unchecked.png);}
 				<!--Button in library "Preview" column -->
 				QPushButton#LibraryPreviewButton { width: 23px; height: 12px; background: transparent; border: 0; }
 				QPushButton#LibraryPreviewButton:!checked{ image: url(skin:/../../skins/Deere1366x768-WXGA/style/style_library_preview_play.png); }
@@ -2691,7 +2691,7 @@
 	<WidgetGroup>
 		<Pos>97,296</Pos>
 		<Size>280,58</Size>
-		<Style>QGroupBox { border: 0px solid yellow; background: url(skin:/style/style_bg_microphone.png) no-repeat;} QWidget { margin: 0; padding: 0; }</Style>
+		<Style>QGroupBox { border: 0px solid yellow; background: url(skin:/../../skins/Deere1366x768-WXGA/style/style_bg_microphone.png) no-repeat;} QWidget { margin: 0; padding: 0; }</Style>
 		<!--<Layout>horizontal</Layout>-->
 		<Children>
 			<!--
@@ -2880,6 +2880,7 @@
 						<Pos>189,104</Pos>
 						<Connection>
 							<ConfigKey>[Samplers],show_samplers</ConfigKey>
+                            <ButtonState>LeftButton</ButtonState>
 						</Connection>
 					</PushButton>
 
