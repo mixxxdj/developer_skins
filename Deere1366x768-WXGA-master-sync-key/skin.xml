@@ -2908,7 +2908,7 @@
 						</State>
 						<Pos>7,24</Pos>
 						<Connection>
-							<ConfigKey>[Channel1],sync_enable</ConfigKey>
+							<ConfigKey>[Channel1],sync_enabled</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
