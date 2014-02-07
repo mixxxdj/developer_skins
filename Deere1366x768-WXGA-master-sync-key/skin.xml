@@ -4191,7 +4191,7 @@
 			**********************************************
 			-->
 			<PushButton>
-				<TooltipId>repeat</TooltipId>
+				<TooltipId>passthrough</TooltipId>
 				<Style></Style>
 				<NumberStates>2</NumberStates>
 				<State>
@@ -4206,7 +4206,7 @@
 				</State>
 				<Pos>407,171</Pos>
 				<Connection>
-					<ConfigKey>[Channel1],repeat</ConfigKey>
+					<ConfigKey>[Channel1],passthrough</ConfigKey>
 				</Connection>
 			</PushButton>
 
@@ -5226,7 +5226,7 @@
 			**********************************************
 			-->
 			<PushButton>
-				<TooltipId>repeat</TooltipId>
+				<TooltipId>passthrough</TooltipId>
 				<Style></Style>
 				<NumberStates>2</NumberStates>
 				<State>
@@ -5241,7 +5241,7 @@
 				</State>
 				<Pos>407,171</Pos>
 				<Connection>
-					<ConfigKey>[Channel2],repeat</ConfigKey>
+					<ConfigKey>[Channel2],passthrough</ConfigKey>
 				</Connection>
 			</PushButton>
 
