@@ -120,6 +120,148 @@
 				<Layout>horizontal</Layout>
 				<Style>QGroupBox { border: 0px solid yellow; margin: 0px 0px 4px 0px;} </Style>
 				<Children>
+					<!-- all sub-widgets for the sampler aux decks -->
+					<WidgetGroup>
+						<Pos>0,0</Pos>
+						<Size>80,110</Size>
+						<Style>QGroupBox { border: 0px solid green;  margin: -0px 0px 0px 0px;} </Style>
+						<Children>
+							<!--
+							**********************************************
+							RotaryFader- Gain
+							**********************************************
+							-->
+							<Knob>
+								<TooltipId>pregain</TooltipId>
+								<Style></Style>
+								<NumberStates>64</NumberStates>
+								<Path>../../skins/Deere1366x768-WXGA/knobs/knob_rotary_s%1.png</Path>
+								<Pos>22,64</Pos>
+								<Connection>
+									<ConfigKey>[Aux1],pregain</ConfigKey>
+								</Connection>
+							</Knob>
+
+							<!--
+							**********************************************
+							Visual- Volume peak indicator
+							**********************************************
+							-->
+							<StatusLight>
+								<TooltipId>PeakIndicator</TooltipId>
+								<Style></Style>
+								<PathStatusLight>../../skins/Deere1366x768-WXGA/btn_clipping_sampler_over.png</PathStatusLight>
+								<PathBack>../../skins/Deere1366x768-WXGA/btn_clipping_sampler.png</PathBack>
+								<Pos>67,3</Pos>
+								<Connection>
+									<ConfigKey>[Aux1],PeakIndicator</ConfigKey>
+								</Connection>
+							</StatusLight>
+
+							<!--
+							**********************************************
+							Visual - Volume level display
+							**********************************************
+							-->
+							<VuMeter>
+								<TooltipId>channel_VuMeter</TooltipId>
+								<Style></Style>
+								<PathVu>../../skins/Deere1366x768-WXGA/btn_volume_display_sampler_over.png</PathVu>
+								<PathBack>../../skins/Deere1366x768-WXGA/btn_volume_display_sampler.png</PathBack>
+								<Pos>67,24</Pos>
+								<Horizontal>false</Horizontal>
+								<PeakHoldSize>5</PeakHoldSize>
+								<PeakHoldTime>500</PeakHoldTime>
+								<PeakFallTime>50</PeakFallTime>
+								<PeakFallStep>2</PeakFallStep>
+								<Connection>
+									<ConfigKey>[Aux1],VuMeter</ConfigKey>
+								</Connection>
+							</VuMeter>
+							
+							<!--
+							**********************************************
+							Button- Prelisten / Monitoring
+							**********************************************
+							-->
+							<PushButton>
+								<TooltipId>pfl</TooltipId>
+								<Style></Style>
+								<NumberStates>2</NumberStates>
+								<State>
+									<Number>0</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_pfl_sampler_down.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_pfl_sampler.png</Unpressed>
+								</State>
+								<State>
+									<Number>1</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_pfl_sampler_overdown.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_pfl_sampler_over.png</Unpressed>
+								</State>
+								<Pos>0,71</Pos>
+								<Connection>
+									<ConfigKey>[Aux1],pfl</ConfigKey>
+								</Connection>
+							</PushButton>
+
+							<!--
+							**********************************************
+							Button- Repeat (End of track mode)
+							**********************************************
+							-->
+							<PushButton>
+								<TooltipId>repeat</TooltipId>
+								<Style></Style>
+								<NumberStates>2</NumberStates>
+								<State>
+									<Number>0</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_repeat_sampler.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_repeat_sampler.png</Unpressed>
+								</State>
+								<State>
+									<Number>1</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_repeat_sampler_over.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_repeat_sampler_over.png</Unpressed>
+								</State>
+								<Pos>16,24</Pos>
+								<Connection>
+									<ConfigKey>[Aux1],passthrough</ConfigKey>
+								</Connection>
+							</PushButton>
+
+							<!--
+							**********************************************
+							Button- Mix Orientation (Routing)
+							**********************************************
+							-->
+							<PushButton>
+								<TooltipId>orientation</TooltipId>
+								<Style></Style>
+								<NumberStates>3</NumberStates>
+								<State>
+									<Number>0</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_orientation_sampler_left_over.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_orientation_sampler_left_over.png</Unpressed>
+								</State>
+								<State>
+									<Number>1</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_orientation_sampler_master.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_orientation_sampler_master.png</Unpressed>
+								</State>
+								<State>
+									<Number>2</Number>
+									<Pressed>../../skins/Deere1366x768-WXGA/btn_orientation_sampler_right_over.png</Pressed>
+									<Unpressed>../../skins/Deere1366x768-WXGA/btn_orientation_sampler_right_over.png</Unpressed>
+								</State>
+								<Pos>17,42</Pos>
+								<Connection>
+									<ConfigKey>[Aux1],orientation</ConfigKey>
+									<EmitOnDownPress>true</EmitOnDownPress>
+									<ButtonState>LeftButton</ButtonState>
+								</Connection>
+							</PushButton>
+						</Children>
+					</WidgetGroup>
 					<!-- all sub-widgets for the sampler decks -->
 					<WidgetGroup>
 						<Pos>0,0</Pos>
