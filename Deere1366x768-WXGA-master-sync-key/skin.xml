@@ -4744,7 +4744,6 @@
 							<ConfigKey>[Channel1],hotcue_4_enabled</ConfigKey>
 						</Connection>
 					</PushButton>
-
 				</Children>
 			</WidgetGroup>
 
@@ -5778,6 +5777,22 @@
 							<ConfigKey>[Channel2],hotcue_4_enabled</ConfigKey>
 						</Connection>
 					</PushButton>
+					
+					<!--
+					**********************************************
+					Text- Clock display
+					**********************************************
+					-->
+					<Time>
+						<TooltipId>time</TooltipId>
+						<Style>QLabel { font: bold 15px/17px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+						background-color: transparent; color: #ACACAC; text-align: center; }
+						</Style>
+						<Pos>400,14</Pos>
+						<Size>80,20</Size>
+						<ShowSeconds>false</ShowSeconds>
+						<ClockFormat>24</ClockFormat>
+					</Time>
 
 				</Children>
 			</WidgetGroup>
