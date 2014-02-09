@@ -479,7 +479,7 @@
 					</Spinny>
 				</Children>
 				<Connection>
-					<ConfigKey>[Spinny1],show_spinny</ConfigKey>
+					<ConfigKey persist="true">[Spinny1],show_spinny</ConfigKey>
 					<BindProperty>visible</BindProperty>
 				</Connection>
 			</WidgetGroup>
@@ -506,7 +506,7 @@
 					</Spinny>
 				</Children>
 				<Connection>
-					<ConfigKey>[Spinny2],show_spinny</ConfigKey>
+					<ConfigKey persist="true">[Spinny2],show_spinny</ConfigKey>
 					<BindProperty>visible</BindProperty>
 				</Connection>
 			</WidgetGroup>
@@ -780,7 +780,7 @@
 					</Spinny>
 				</Children>
 				<Connection>
-					<ConfigKey>[Spinny3],show_spinny</ConfigKey>
+					<ConfigKey persist="true">[Spinny3],show_spinny</ConfigKey>
 					<BindProperty>visible</BindProperty>
 				</Connection>
 			</WidgetGroup>
@@ -806,7 +806,7 @@
 					</Spinny>
 				</Children>
 				<Connection>
-					<ConfigKey>[Spinny4],show_spinny</ConfigKey>
+					<ConfigKey persist="true">[Spinny4],show_spinny</ConfigKey>
 					<BindProperty>visible</BindProperty>
 				</Connection>
 			</WidgetGroup>
@@ -2172,7 +2172,7 @@
 				        </State>
 				        <Pos>0,0</Pos>
 				        <Connection>
-					        <ConfigKey>[Spinny1],show_spinny</ConfigKey>
+					        <ConfigKey persist="true">[Spinny1],show_spinny</ConfigKey>
 					        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					        <ButtonState>LeftButton</ButtonState>
 				        </Connection>
@@ -3385,7 +3385,7 @@
 				        </State>
 				        <Pos>0,0</Pos>
 				        <Connection>
-					        <ConfigKey>[Spinny2],show_spinny</ConfigKey>
+					        <ConfigKey persist="true">[Spinny2],show_spinny</ConfigKey>
 					        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					        <ButtonState>LeftButton</ButtonState>
 				        </Connection>
@@ -4599,7 +4599,7 @@
 				        </State>
 				        <Pos>0,0</Pos>
 				        <Connection>
-					        <ConfigKey>[Spinny3],show_spinny</ConfigKey>
+					        <ConfigKey persist="true">[Spinny3],show_spinny</ConfigKey>
 					        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					        <ButtonState>LeftButton</ButtonState>
 				        </Connection>
@@ -5812,7 +5812,7 @@
 				        </State>
 				        <Pos>0,0</Pos>
 				        <Connection>
-					        <ConfigKey>[Spinny4],show_spinny</ConfigKey>
+					        <ConfigKey persist="true">[Spinny4],show_spinny</ConfigKey>
 					        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					        <ButtonState>LeftButton</ButtonState>
 				        </Connection>
