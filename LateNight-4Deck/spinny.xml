@@ -6,7 +6,7 @@
     <SizePolicy>f,f</SizePolicy>
     <Children>
       <Spinny>
-        <Group><Variable name="group"/></Group>
+        <Group>[Channel<Variable name="channum"/>]</Group>
         <PathBackground>vinyl_spinny2_background.png</PathBackground>
         <PathForeground>vinyl_spinny2_foreground.png</PathForeground>
         <PathGhost>vinyl_spinny2_foreground_ghost.png</PathGhost>

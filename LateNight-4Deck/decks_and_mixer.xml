@@ -8,7 +8,7 @@
     <ObjectName>MainDeckContainer</ObjectName>
     <Layout>horizontal</Layout>
     <SizePolicy>me, f</SizePolicy>
-    <MinimumSize>1024, -1</MinimumSize>
+    <MinimumSize>1910, -1</MinimumSize>
     <Children>
         <Template src="skin:deck.xml">
             <SetVariable name="channum">3</SetVariable>

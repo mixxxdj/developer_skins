@@ -8,6 +8,7 @@
     <ObjectName>MainDeckContainer</ObjectName>
     <Layout>horizontal</Layout>
     <SizePolicy>me,max</SizePolicy>
+    <MaximumSize>-1, 213</MaximumSize>
     <Children>
       <Template src="skin:spinny.xml">
           <SetVariable name="channum">3</SetVariable>
