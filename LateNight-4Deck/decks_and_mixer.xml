@@ -1,0 +1,28 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Decks and mixer, like it says.
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>MainDeckContainer</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me, f</SizePolicy>
+    <MinimumSize>1024, -1</MinimumSize>
+    <Children>
+        <Template src="skin:deck.xml">
+            <SetVariable name="channum">3</SetVariable>
+        </Template>
+        <Template src="skin:deck.xml">
+            <SetVariable name="channum">1</SetVariable>
+        </Template>
+        <Template src="skin:mixer.xml"/>
+        <Template src="skin:deck.xml">
+            <SetVariable name="channum">2</SetVariable>
+        </Template>
+        <Template src="skin:deck.xml">
+            <SetVariable name="channum">4</SetVariable>
+        </Template>
+    </Children>
+  </WidgetGroup>
+</Template>

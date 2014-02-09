@@ -1,0 +1,20 @@
+<Template>
+  <WidgetGroup>
+    <ObjectName>SpinnyHolder</ObjectName>
+    <Layout>horizontal</Layout>
+    <Size>213,215</Size>
+    <SizePolicy>f,f</SizePolicy>
+    <Children>
+      <Spinny>
+        <Group><Variable name="group"/></Group>
+        <PathBackground>vinyl_spinny2_background.png</PathBackground>
+        <PathForeground>vinyl_spinny2_foreground.png</PathForeground>
+        <PathGhost>vinyl_spinny2_foreground_ghost.png</PathGhost>
+      </Spinny>
+    </Children>
+    <Connection>
+			<ConfigKey persist="true">[Spinny<Variable name="channum"/>],show_spinny</ConfigKey>
+			<BindProperty>visible</BindProperty>
+    </Connection>
+  </WidgetGroup>
+</Template>

@@ -1,0 +1,44 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Spinnys and Waveforms
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>MainDeckContainer</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me,max</SizePolicy>
+    <Children>
+      <Template src="skin:spinny.xml">
+          <SetVariable name="channum">3</SetVariable>
+      </Template>
+      <Template src="skin:spinny.xml">
+          <SetVariable name="channum">1</SetVariable>
+      </Template>
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+        <SizePolicy>me,me</SizePolicy>
+        <Children>
+            <Template src="skin:waveform.xml">
+                <SetVariable name="channum">3</SetVariable>
+            </Template>
+            <Template src="skin:waveform.xml">
+                <SetVariable name="channum">1</SetVariable>
+            </Template>
+            <Template src="skin:waveform.xml">
+                <SetVariable name="channum">2</SetVariable>
+            </Template>
+            <Template src="skin:waveform.xml">
+                <SetVariable name="channum">4</SetVariable>
+            </Template>
+        </Children>
+      </WidgetGroup>
+      <Template src="skin:spinny.xml">
+          <SetVariable name="channum">2</SetVariable>
+      </Template>
+      <Template src="skin:spinny.xml">
+          <SetVariable name="channum">4</SetVariable>
+      </Template>
+    </Children>
+  </WidgetGroup>
+</Template>
