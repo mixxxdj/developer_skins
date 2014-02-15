@@ -1,0 +1,91 @@
+<Template>
+	<WidgetGroup>
+	    <ObjectName>DeckRowTwoThreeFour</ObjectName>
+		<Layout>vertical</Layout>
+		<Children>
+			<TrackProperty>
+				<TooltipId>track_title</TooltipId>
+				<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+					Unicode, Arial, Verdana, sans-serif;
+					background-color: transparent; color: #EECE33; text-align: left; padding-left: 1px;
+					}
+				</Style>
+				<Property>title</Property>
+				<Channel>
+					<Variable name="channum" />
+				</Channel>
+			</TrackProperty>
+			<WidgetGroup>
+			    <ObjectName>ArtistRow</ObjectName>
+				<Layout>horizontal</Layout>
+				<Children>
+					<TrackProperty>
+						<TooltipId>track_artist</TooltipId>
+						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+							Unicode, Arial, Verdana, sans-serif;
+							background-color: transparent; color: #EECE33; text-align: left; padding-left:
+							1px; }
+						</Style>
+						<Property>artist</Property>
+						<Channel>
+							<Variable name="channum" />
+						</Channel>
+					</TrackProperty>
+					<NumberPos>
+						<TooltipId>track_time</TooltipId>
+						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+							Unicode, Arial, Verdana, sans-serif;
+							background-color: transparent; color: #EECE33; text-align: right;padding-left:
+							1px; }
+						</Style>
+						<Channel>
+							<Variable name="channum" />
+						</Channel>
+						<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment> -->
+						<Alignment>right</Alignment>
+						<Connection>
+							<ConfigKey>
+								[Channel
+								<Variable name="channum" />
+								],playposition
+							</ConfigKey>
+						</Connection>
+					</NumberPos>
+				</Children>
+			</WidgetGroup>
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Children>
+					<TrackProperty>
+						<TooltipId>track_album</TooltipId>
+						<Style>QLabel { font: 13px/15px Lucida Grande, Lucida Sans
+							Unicode,
+							Arial, Verdana, sans-serif;
+							background-color: transparent; color: #EECE33; text-align: left; padding-left:
+							1px; }
+						</Style>
+						<Property>album</Property>
+						<Channel>
+							<Variable name="channum" />
+						</Channel>
+					</TrackProperty>
+					<TrackProperty>
+						<TooltipId>track_duration</TooltipId>
+						<Style>QLabel { font: 13px/15px Lucida Grande, Lucida Sans
+							Unicode,
+							Arial, Verdana, sans-serif;
+							background-color: transparent; color: #EECE33; text-align: left; padding-left:
+							1px; }
+						</Style>
+						<Property>durationFormatted</Property>
+						<Channel>
+							<Variable name="channum" />
+						</Channel>
+						<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment> -->
+						<Alignment>right</Alignment>
+					</TrackProperty>
+				</Children>
+			</WidgetGroup>
+		</Children>
+	</WidgetGroup>
+</Template>

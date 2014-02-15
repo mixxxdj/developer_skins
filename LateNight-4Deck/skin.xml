@@ -25,8 +25,6 @@
 	-->
 
 <!DOCTYPE skin>
-
-<!DOCTYPE skin>
 <skin>
   <manifest>
     <title>LateNight-4Deck</title>
@@ -56,9 +54,9 @@
   <Style src="skin:style.qss"/>
 
   <Background>
-		<Path>background1920x1080.png</Path>
-		<BgColor>#000000</BgColor>
-	</Background>
+    <Path>background1920x1080.png</Path>
+    <BgColor>#000000</BgColor>
+  </Background>
 
   <MinimumSize>1024,-1</MinimumSize>
   <SizePolicy>me,me</SizePolicy>

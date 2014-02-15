@@ -1,0 +1,41 @@
+/*******************************************************************************
+ ** BORDER *********************************************************************
+ *******************************************************************************/
+/* These definitions put a faint grey border around all the widgets. We have to
+   be tricky with top/bottom-ness to get things right. */
+
+#DeckRowOne {
+  border: 2px solid #F00;
+  background-color: #1e1e1e;
+}
+
+#DeckRowTwoThreeFour {
+  border: 2px solid #F00;
+  background-color: #1e1e1e;
+    qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#DeckRowFive {
+  border: 2px solid #F00;
+  background-color: #1e1e1e;
+}
+
+#ArtistRow {
+qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#DecksAndMixer {
+  border: 2px solid #585858;
+  background-color: transparent;
+}
+
+
+#PrimaryMixer {
+    border: 10px solid 10px;
+    margin:10px;
+}
+
+#MixerChannel {
+    border: 10px solid 10px;
+    margin:10px;    
+}

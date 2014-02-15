@@ -5,7 +5,8 @@
 -->
 <Template>
   <WidgetGroup>
-    <ObjectName>MainDeckContainer</ObjectName>
+    <ObjectName>DecksAndMixer</ObjectName>
+    <BackPath>background_tile.png</BackPath>
     <Layout>horizontal</Layout>
     <SizePolicy>me, f</SizePolicy>
     <MinimumSize>1910, -1</MinimumSize>
