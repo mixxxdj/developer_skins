@@ -120,7 +120,7 @@
 				<Layout>horizontal</Layout>
 				<Style>QGroupBox { border: 0px solid yellow; margin: 0px 0px 4px 0px;} </Style>
 				<Children>
-					<!-- all sub-widgets for the sampler aux decks -->
+					<!-- all sub-widgets for the sampler Auxilliary decks -->
 					<WidgetGroup>
 						<Pos>0,0</Pos>
 						<Size>80,110</Size>
@@ -138,7 +138,7 @@
 								<Path>../../skins/Deere1366x768-WXGA/knobs/knob_rotary_s%1.png</Path>
 								<Pos>22,64</Pos>
 								<Connection>
-									<ConfigKey>[Aux1],pregain</ConfigKey>
+									<ConfigKey>[Auxilliary1],pregain</ConfigKey>
 								</Connection>
 							</Knob>
 
@@ -154,7 +154,7 @@
 								<PathBack>../../skins/Deere1366x768-WXGA/btn_clipping_sampler.png</PathBack>
 								<Pos>67,3</Pos>
 								<Connection>
-									<ConfigKey>[Aux1],PeakIndicator</ConfigKey>
+									<ConfigKey>[Auxilliary1],PeakIndicator</ConfigKey>
 								</Connection>
 							</StatusLight>
 
@@ -175,7 +175,7 @@
 								<PeakFallTime>50</PeakFallTime>
 								<PeakFallStep>2</PeakFallStep>
 								<Connection>
-									<ConfigKey>[Aux1],VuMeter</ConfigKey>
+									<ConfigKey>[Auxilliary1],VuMeter</ConfigKey>
 								</Connection>
 							</VuMeter>
 							
@@ -200,7 +200,7 @@
 								</State>
 								<Pos>0,71</Pos>
 								<Connection>
-									<ConfigKey>[Aux1],pfl</ConfigKey>
+									<ConfigKey>[Auxilliary1],pfl</ConfigKey>
 								</Connection>
 							</PushButton>
 
@@ -225,7 +225,7 @@
 								</State>
 								<Pos>16,24</Pos>
 								<Connection>
-									<ConfigKey>[Aux1],passthrough</ConfigKey>
+									<ConfigKey>[Auxilliary1],passthrough</ConfigKey>
 								</Connection>
 							</PushButton>
 
@@ -255,7 +255,7 @@
 								</State>
 								<Pos>17,42</Pos>
 								<Connection>
-									<ConfigKey>[Aux1],orientation</ConfigKey>
+									<ConfigKey>[Auxilliary1],orientation</ConfigKey>
 									<EmitOnDownPress>true</EmitOnDownPress>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
