@@ -233,3 +233,33 @@
 #PreviewPlayOverview {
   padding: 3px;
 }
+
+#PreviewDeckExpanded {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#PreviewDeckToggle {
+  font: 14px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  padding:0px;
+  margin:0px;
+  text-align:left;
+}
+
+#CollapseButton {
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
+  padding-top: 0px;
+  padding-bottom:3px;
+  text-align:left;
+}
+
+#AlignLeftTop {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#AlignRightTop {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
+
+#AlignLeftBottom {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}

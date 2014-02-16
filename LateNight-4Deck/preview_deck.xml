@@ -17,33 +17,47 @@
 						<Layout>horizontal</Layout>
 						<SizePolicy>me,min</SizePolicy>
 						<Children>
-							<Text>
-								<TooltipId>text</TooltipId>
-								<Style>QLabel {
-									font: 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana,
-									sans-serif;
-									background-color: transparent;
-									color: #cfb32c;
-									text-align: left;
-									}
-								</Style>
-								<Group>[PreviewDeck1]</Group>
-							</Text>
-							<PushButton>
-								<TooltipId>eject</TooltipId>
-								<NumberStates>1</NumberStates>
-								<State>
-									<Number>0</Number>
-									<Pressed>btn_eject1_over.png</Pressed>
-									<Unpressed>btn_eject1.png</Unpressed>
-								</State>
-								<Connection>
-									<ConfigKey>[PreviewDeck1],eject</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-							</PushButton>
+						    <WidgetGroup>
+						        <ObjectName>AlignLeftTop</ObjectName>
+						        <Layout>horizontal</Layout>
+						        <SizePolicy>me,min</SizePolicy>
+						        <Children>
+									<Text>
+										<TooltipId>text</TooltipId>
+										<Style>QLabel {
+											font: 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana,
+											sans-serif;
+											background-color: transparent;
+											color: #cfb32c;
+											text-align: left;
+											}
+										</Style>
+										<Group>[PreviewDeck1]</Group>
+									</Text>
+								</Children>
+							</WidgetGroup>
+							<WidgetGroup>
+                                <ObjectName>AlignRightTop</ObjectName>
+                                <Layout>horizontal</Layout>
+                                <SizePolicy>me,min</SizePolicy>
+                                <Children>
+									<PushButton>
+										<TooltipId>eject</TooltipId>
+										<NumberStates>1</NumberStates>
+										<State>
+											<Number>0</Number>
+											<Pressed>btn_eject1_over.png</Pressed>
+											<Unpressed>btn_eject1.png</Unpressed>
+										</State>
+										<Connection>
+											<ConfigKey>[PreviewDeck1],eject</ConfigKey>
+											<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+											<ButtonState>LeftButton</ButtonState>
+											<ConnectValueToWidget>false</ConnectValueToWidget>
+										</Connection>
+									</PushButton>
+								</Children>
+							</WidgetGroup>
 						</Children>
 					</WidgetGroup>
 					<WidgetGroup>
@@ -118,7 +132,7 @@
 		        <Children>
 					<WidgetGroup>
 					    <Layout>vertical</Layout>
-					    <SizePolicy>me,min</SizePolicy>
+					    <SizePolicy>min,min</SizePolicy>
 						<Children>
 							<StatusLight>
 								<TooltipId>PeakIndicator</TooltipId>
@@ -158,9 +172,5 @@
 				</Children>
 			</WidgetGroup>
 		</Children>
-		<Connection>
-			<ConfigKey>[PreviewDeck],show_previewdeck</ConfigKey>
-			<BindProperty>visible</BindProperty>
-		</Connection>
 	</WidgetGroup>
 </Template>

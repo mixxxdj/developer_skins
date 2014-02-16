@@ -6,22 +6,32 @@
     group: The group for the controls.
 -->
 <Template>
-  <PushButton>
-    <ObjectName><Variable name="object_name"/></ObjectName>
-    <Size>20f,20f</Size>
-    <NumberStates>2</NumberStates>
-    <State>
-      <Number>0</Number>
-      <Text>▶</Text>
-    </State>
-    <State>
-      <Number>1</Number>
-      <Text>▼</Text>
-    </State>
-    <Connection>
-      <ConfigKey><Variable name="control"/></ConfigKey>
-      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-      <ButtonState>LeftButton</ButtonState>
-    </Connection>
-  </PushButton>
+  <WidgetGroup>
+    <ObjectName>CollapseButton</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>min,min</SizePolicy>
+    <MinimumSize>20,20</MinimumSize>
+    <Children>
+	  <PushButton>
+	    <ObjectName><Variable name="object_name"/></ObjectName>
+	    <Size>110f,20f</Size>
+	    <NumberStates>2</NumberStates>
+	    <State>
+	      <Number>0</Number>
+	      <Text>▶ <Variable name="button_text"/></Text>
+	      <Align>Left</Align>
+	    </State>
+	    <State>
+	      <Number>1</Number>
+	      <Text>▼ <Variable name="button_text"/></Text>
+	      <Align>Left</Align>
+	    </State>
+	    <Connection>
+	      <ConfigKey><Variable name="control"/></ConfigKey>
+	      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+	      <ButtonState>LeftButton</ButtonState>
+	    </Connection>
+	  </PushButton>
+    </Children>
+  </WidgetGroup>
 </Template>
