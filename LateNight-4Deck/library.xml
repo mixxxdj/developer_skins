@@ -75,7 +75,6 @@
 				<Children>
 					<Splitter>
 						<Size>me,me</Size>
-						<Style></Style>
 						<SplitSizes>1,12</SplitSizes>
 						<Children>
 							<WidgetGroup>
