@@ -48,7 +48,7 @@
 			</Overview>
 
       <WidgetGroup>
-        <ObjectName>ToggleButtons</ObjectName>
+        <ObjectName>ToolbarButtons</ObjectName>
         <Layout>vertical</Layout>
         <Children>
           <WidgetGroup>

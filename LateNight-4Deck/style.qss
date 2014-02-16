@@ -46,7 +46,6 @@
   border: 1px solid #585858; 
   border-right: 0px;
   border-bottom: 0px;
-  padding: 6px;  
   background-color: #1e1e1e;
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
 }
@@ -108,29 +107,60 @@
   padding-top: 0px;
 }
 
-#ColumnThree, #LoopSizeButtons {
+#ColumnThree {
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
-  padding-left: 10px;
+  padding: 3px;
+  padding-left:10px;
+}
+
+#LoopSizeButtons {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+}
+
+#Hotcues {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+}
+
+#FFRew {
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+}
+
+#ColumnFour {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+  padding: 3px;
+}
+
+#LoopInOut {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
+
+#PlayCue {
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
 }
 
 #RateButtons, #RatePermButtons, #RateTempButtons {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
 }
 
+#ColumnOne {
+  qproperty-layoutAlignment: 'AlignLeft';
+}
+
 #ColumnTwo {
+  padding: 3px;
   padding-left: 10px;
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
 }
 
 #DeckButtons {
   padding: 3px;
-  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
 #ColumnTwo {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
-#ToggleButtons {
+#ToolbarButtons {
   border: 1px solid #585858;
   border-top: 0px;
   border-right: 0px;
@@ -156,4 +186,21 @@
   qproperty-layoutAlignment: 'AlignRight | AlignBottom';
   padding-right: 0px;
   border-bottom: 1px solid #585858;
+}
+
+#ToggleButton {
+  border: 1px solid #eece33;
+  font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+}
+
+#CrossFadeContainer {
+}
+
+#FourDeckButton {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  padding-left: 5px;
+}
+
+#Crossfader {
+  padding-right: 60px;
 }

@@ -1,7 +1,8 @@
 <Template>
 	<WidgetGroup>
 	    <ObjectName>Mixer</ObjectName>
-		<SizePolicy>min,min</SizePolicy>
+		<SizePolicy>me,min</SizePolicy>
+		<MinimumSize>360,-1</MinimumSize>
 		<Layout>horizontal</Layout>
 		<Children>
 			<WidgetGroup>
@@ -75,19 +76,50 @@
 								</Children>
 							</WidgetGroup>
 							<WidgetGroup>
+							    <ObjectName>CrossFadeContainer</ObjectName>
 								<Layout>horizontal</Layout>
-								<SizePolicy>min,min</SizePolicy>
+								<SizePolicy>me,min</SizePolicy>
 								<Children>
-									<SliderComposed>
-										<TooltipId>crossfader</TooltipId>
-										<Handle>knob_crossfader.png</Handle>
-										<Slider>slider_crossfader.png</Slider>
-										<Horizontal>true</Horizontal>
-										<Connection>
-											<ConfigKey>[Master],crossfader</ConfigKey>
-											<EmitOnDownPress>false</EmitOnDownPress>
-										</Connection>
-									</SliderComposed>
+								    <WidgetGroup>
+								        <ObjectName>FourDeckButton</ObjectName>
+				                        <Layout>horizontal</Layout>
+				                        <Children>
+				                            <PushButton>
+				                                <Size>40f,20f</Size>
+				                                <ObjectName>ToggleButton</ObjectName>
+				                                <NumberStates>2</NumberStates>
+				                                <State>
+				                                  <Number>0</Number>
+				                                  <Text>2DECK</Text>
+				                                </State>
+				                                <State>
+				                                  <Number>1</Number>
+				                                  <Text>4DECK</Text>
+				                                </State>
+				                                <Connection>
+				                                  <ConfigKey>[Master],show_4decks</ConfigKey>
+				                                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+				                                </Connection>
+				                            </PushButton>
+				                        </Children>
+				                    </WidgetGroup>
+								    <WidgetGroup>
+								        <ObjectName>Crossfader</ObjectName>
+								        <Layout>horizontal</Layout>
+								        <SizePolicy>me,min</SizePolicy>
+								        <Children>
+											<SliderComposed>
+												<TooltipId>crossfader</TooltipId>
+												<Handle>knob_crossfader.png</Handle>
+												<Slider>slider_crossfader.png</Slider>
+												<Horizontal>true</Horizontal>
+												<Connection>
+													<ConfigKey>[Master],crossfader</ConfigKey>
+													<EmitOnDownPress>false</EmitOnDownPress>
+												</Connection>
+											</SliderComposed>
+										</Children>
+									</WidgetGroup>
 								</Children>
 							</WidgetGroup>
 						</Children>
@@ -100,13 +132,11 @@
 				<Layout>vertical</Layout>
 				<Children>
 		            <WidgetGroup>
-		                <Size>48f,48f</Size>
 		                <ObjectName>KnobCentered</ObjectName>
 		                <SizePolicy>min,min</SizePolicy>
 		                <Layout>vertical</Layout>
 		                <Children>
 							<Knob>
-							    <Size>48f,48f</Size>
 								<TooltipId>master_volume</TooltipId>
 								<NumberStates>64</NumberStates>
 								<Path>knobs/knob_rotary_s%1.png</Path>
@@ -115,20 +145,17 @@
 								</Connection>
 							</Knob>
 		                    <Label>
-		                        <Size>48f,12f</Size>
 		                        <ObjectName>KnobLabel</ObjectName>
 		                        <Text>Master</Text>
 		                    </Label>
 						</Children>
 					</WidgetGroup>
                     <WidgetGroup>
-                        <Size>48f,60f</Size>
                         <ObjectName>KnobCentered</ObjectName>
                         <SizePolicy>min,min</SizePolicy>
                         <Layout>vertical</Layout>
                         <Children>
 							 <Knob>
-							    <Size>48f,48f</Size>
 								<TooltipId>balance</TooltipId>
 								<NumberStates>63</NumberStates>
 								<Path>knobs/knob_rotary_s%1.png</Path>
@@ -137,7 +164,6 @@
 								</Connection>
 							</Knob>
 		                    <Label>
-		                        <Size>48f,12f</Size>
 		                        <ObjectName>KnobLabel</ObjectName>
 		                        <Text>Balance</Text>
 		                    </Label>
@@ -206,13 +232,11 @@
 						</Children>
 					</WidgetGroup>
                     <WidgetGroup>
-                        <Size>48f,60f</Size>
                         <ObjectName>KnobCentered</ObjectName>
                         <SizePolicy>min,min</SizePolicy>
                         <Layout>vertical</Layout>
                         <Children>
 							<Knob>
-							    <Size>48f,48f</Size>
 		                        <TooltipId>headphone_volume</TooltipId>
 		                        <NumberStates>64</NumberStates>
 		                        <Path>knobs/knob_rotary_s%1.png</Path>
@@ -221,20 +245,17 @@
 		                        </Connection>
 		                    </Knob>
 		                    <Label>
-		                        <Size>48f,12f</Size>
 		                        <ObjectName>KnobLabel</ObjectName>
 		                        <Text>Head Vol</Text>
 		                    </Label>
                         </Children>
                     </WidgetGroup>
                     <WidgetGroup>
-                        <Size>48f,60f</Size>
                         <ObjectName>KnobCentered</ObjectName>
                         <SizePolicy>min,min</SizePolicy>
                         <Layout>vertical</Layout>
                         <Children>
 		                    <Knob>
-		                        <Size>48f,48f</Size>
 		                        <TooltipId>headMix</TooltipId>
 		                        <NumberStates>64</NumberStates>
 		                        <Path>knobs/knob_rotary_s%1.png</Path>
@@ -243,7 +264,6 @@
 		                        </Connection>
 		                    </Knob>
 		                    <Label>
-		                        <Size>48f,12f</Size>
 		                        <ObjectName>KnobLabel</ObjectName>
 		                        <Text>Pre/Main</Text>
 		                    </Label>

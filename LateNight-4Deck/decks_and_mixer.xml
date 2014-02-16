@@ -8,11 +8,20 @@
     <ObjectName>DecksAndMixer</ObjectName>
     <Layout>horizontal</Layout>
     <SizePolicy>me, min</SizePolicy>
-    <MinimumSize>1280, -1</MinimumSize>
+    <MinimumSize>1024, -1</MinimumSize>
     <Children>
-        <Template src="skin:deck.xml">
-            <SetVariable name="channum">3</SetVariable>
-        </Template>
+        <WidgetGroup>
+            <Layout>horizontal</Layout>
+            <Children>
+		        <Template src="skin:deck.xml">
+		            <SetVariable name="channum">3</SetVariable>
+		        </Template>
+	        </Children>
+	        <Connection>
+	            <ConfigKey>[Master],show_4decks</ConfigKey>
+	            <BindProperty>visible</BindProperty>
+	        </Connection>
+        </WidgetGroup>
         <Template src="skin:deck.xml">
             <SetVariable name="channum">1</SetVariable>
         </Template>
@@ -20,9 +29,18 @@
         <Template src="skin:deck.xml">
             <SetVariable name="channum">2</SetVariable>
         </Template>
-        <Template src="skin:deck.xml">
-            <SetVariable name="channum">4</SetVariable>
-        </Template>
+        <WidgetGroup>
+            <Layout>horizontal</Layout>
+            <Children>
+		        <Template src="skin:deck.xml">
+		            <SetVariable name="channum">4</SetVariable>
+		        </Template>
+	        </Children>
+	        <Connection>
+                <ConfigKey>[Master],show_4decks</ConfigKey>
+                <BindProperty>visible</BindProperty>
+            </Connection>
+        </WidgetGroup>
     </Children>
   </WidgetGroup>
 </Template>

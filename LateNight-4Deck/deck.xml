@@ -1,8 +1,8 @@
 <Template>
 	<WidgetGroup>  <!-- Deck Channel1 -->
 		<ObjectName>Deck</ObjectName>
-		<SizePolicy>me,min</SizePolicy>
-		<MinimumSize>-1,-1</MinimumSize>
+		<SizePolicy>me,max</SizePolicy>
+		<MinimumSize>340,-1</MinimumSize>
 		<Layout>vertical</Layout>
 		<!--<BackPath>deck_bg.png</BackPath> -->
 		<Children>
