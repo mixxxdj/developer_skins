@@ -5,7 +5,7 @@
    be tricky with top/bottom-ness to get things right. */
 
 #Library {
-  border-left: 1px solid #585858;
+  border-left: 0px solid #585858;
   background-color: #1e1e1e;
   padding-top: 10px;
   border-top: 1px solid #585858;
@@ -182,7 +182,6 @@
   padding-top: -2px;
 }
 
-
 #SyncControls {
   qproperty-layoutAlignment: 'AlignRight | AlignBottom';
   padding-right: 0px;
@@ -204,4 +203,33 @@
 
 #Crossfader {
   padding-right: 60px;
+}
+
+#PreviewDeck {
+  border: 1px solid #585858;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+#PreviewPlayOverview {
+  padding: 3px;
+}
+
+#PreviewColumnOne {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+#PreviewTitleEject {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 3px;
+}
+
+#PreviewPlayOverview {
+  padding: 3px;
 }
