@@ -1,91 +1,106 @@
 <Template>
-  <WidgetGroup>
-    <ObjectName>DeckRowOne</ObjectName>
-    <Layout>horizontal</Layout>
-    <SizePolicy>min,min</SizePolicy>
-    <Children>
-    <!-- Vinylcontrol 1 sub-widget -->
-      <PushButton>
-        <TooltipId>vinylcontrol_mode</TooltipId>
-        <Style></Style>
-        <NumberStates>3</NumberStates>
-        <State>
-          <Number>0</Number>
-          <Pressed>btn_vinylcontrol_mode_abs2.png</Pressed>
-          <Unpressed>btn_vinylcontrol_mode_abs2.png</Unpressed>
-        </State>
-        <State>
-          <Number>1</Number>
-          <Pressed>btn_vinylcontrol_mode_rel2.png</Pressed>
-          <Unpressed>btn_vinylcontrol_mode_rel2.png</Unpressed>
-        </State>
-        <State>
-          <Number>2</Number>
-          <Pressed>btn_vinylcontrol_mode_const2.png</Pressed>
-          <Unpressed>btn_vinylcontrol_mode_const2.png</Unpressed>
-        </State>
-        <Pos>1,2</Pos>
-        <Connection>
-          <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_mode</ConfigKey>
-        </Connection>
-      </PushButton>
-      <PushButton>
-        <TooltipId>vinylcontrol_cueing</TooltipId>
-        <Style></Style>
-        <NumberStates>3</NumberStates>
-        <State>
-          <Number>0</Number>
-          <Pressed>btn_vinylcontrol_cueing_off2.png</Pressed>
-          <Unpressed>btn_vinylcontrol_cueing_off2.png</Unpressed>
-        </State>
-        <State>
-          <Number>1</Number>
-          <Pressed>btn_vinylcontrol_cueing_one2.png</Pressed>
-          <Unpressed>btn_vinylcontrol_cueing_one2.png</Unpressed>
-        </State>
-        <State>
-          <Number>2</Number>
-          <Pressed>btn_vinylcontrol_cueing_hot2.png</Pressed>
-          <Unpressed>btn_vinylcontrol_cueing_hot2.png</Unpressed>
-        </State>
-        <Connection>
-          <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_cueing</ConfigKey>
-        </Connection>
-      </PushButton>
-      <!-- Master -->
-      <PushButton>
-        <TooltipId>sync_master</TooltipId>
-        <Style></Style>
-        <NumberStates>2</NumberStates>
-        <State>
-          <Number>0</Number>
-          <Pressed>btn_mastersync_master_on.png</Pressed>
-          <Unpressed>btn_mastersync_master_off.png</Unpressed>
-        </State>
-        <State>
-          <Number>1</Number>
-          <Pressed>btn_mastersync_master_on.png</Pressed>
-          <Unpressed>btn_mastersync_master_on.png</Unpressed>
-        </State>
-        <Connection>
-          <ConfigKey>[Channel<Variable name="channum"/>],sync_master</ConfigKey>
-          <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-          <ButtonState>LeftButton</ButtonState>
-        </Connection>
-      </PushButton>
- 			<NumberBpm>
-				<TooltipId>visual_bpm</TooltipId>
-				<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-				background-color: transparent; color: #EECE33; text-align: left;padding-left: 1px; }
-				</Style>
-				<Channel><Variable name="channum"/></Channel>
-				<NumberOfDigits>1</NumberOfDigits>
-				<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
-				<Alignment>right</Alignment>
-				<Connection>
-					<ConfigKey>[Channel<Variable name="channum"/>],visual_bpm</ConfigKey>
-				</Connection>
-			</NumberBpm>
-    </Children>
-  </WidgetGroup>
+	<WidgetGroup>
+		<ObjectName>DeckRowOne</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,min</SizePolicy>
+		<Children>
+		    <WidgetGroup>
+		        <ObjectName>VinylControls</ObjectName>
+                <Layout>Horizontal</Layout>
+                <SizePolicy>me,min</SizePolicy>
+                <MinimumSize>-1,48</MinimumSize>
+                <Children>		         
+					<PushButton>
+						<TooltipId>vinylcontrol_mode</TooltipId>
+						<Style></Style>
+						<NumberStates>3</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_vinylcontrol_mode_abs2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_mode_abs2.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_vinylcontrol_mode_rel2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_mode_rel2.png</Unpressed>
+						</State>
+						<State>
+							<Number>2</Number>
+							<Pressed>btn_vinylcontrol_mode_const2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_mode_const2.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],vinylcontrol_mode</ConfigKey>
+						</Connection>
+					</PushButton>
+					<PushButton>
+					    <Pos>60,0</Pos>
+						<TooltipId>vinylcontrol_cueing</TooltipId>
+						<Style></Style>
+						<NumberStates>3</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_vinylcontrol_cueing_off2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_cueing_off2.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_vinylcontrol_cueing_one2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_cueing_one2.png</Unpressed>
+						</State>
+						<State>
+							<Number>2</Number>
+							<Pressed>btn_vinylcontrol_cueing_hot2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_cueing_hot2.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],vinylcontrol_cueing</ConfigKey>
+						</Connection>
+					</PushButton>
+				</Children>
+			</WidgetGroup>
+
+            <WidgetGroup>
+                <ObjectName>SyncControls</ObjectName>
+                <Layout>horizontal</Layout>
+                <SizePolicy>me,min</SizePolicy>
+                <Children>
+					<PushButton>
+						<TooltipId>sync_master</TooltipId>
+						<Style></Style>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_mastersync_master_on.png</Pressed>
+							<Unpressed>btn_mastersync_master_off.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_mastersync_master_on.png</Pressed>
+							<Unpressed>btn_mastersync_master_on.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],sync_master</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					<!-- <NumberBpm>
+						<TooltipId>visual_bpm</TooltipId>
+						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+							Unicode, Arial, Verdana, sans-serif;
+							background-color: transparent; color: #EECE33; padding-left: 2px; }
+						</Style>
+						<Channel>
+							<Variable name="channum" />
+						</Channel>
+						<NumberOfDigits>1</NumberOfDigits>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],visual_bpm</ConfigKey>
+						</Connection>
+					</NumberBpm>-->
+				</Children>
+			</WidgetGroup>
+		</Children>
+	</WidgetGroup>
 </Template>

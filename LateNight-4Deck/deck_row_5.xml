@@ -2,6 +2,7 @@
   <WidgetGroup>
     <ObjectName>DeckRowFive</ObjectName>
     <Layout>horizontal</Layout>
+    <SizePolicy>me,min</SizePolicy>
     <Children>
 			<Overview>
 				<TooltipId>waveform_overview</TooltipId>
@@ -12,6 +13,8 @@
 				<BgColor>#1C1C1C</BgColor>
 				<BgPixmap></BgPixmap>
 				-->
+				<SizePolicy>me,min</SizePolicy>
+				<MinimumSize>-1,-1</MinimumSize>
 				<SignalColor>#EECE33</SignalColor>
 				<SignalHighColor>#F0EBD1</SignalHighColor>
 				<SignalMidColor>#EECE33</SignalMidColor>
@@ -44,10 +47,12 @@
 				</Connection>
 			</Overview>
 
-      <WidgetGroup> <!-- Channel1 Toggle Buttons -->
+      <WidgetGroup>
+        <ObjectName>ToggleButtons</ObjectName>
         <Layout>vertical</Layout>
         <Children>
           <WidgetGroup>
+            <ObjectName>ToggleRowOne</ObjectName>
             <Layout>horizontal</Layout>
             <Children>
               <PushButton>

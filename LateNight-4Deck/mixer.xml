@@ -1,14 +1,18 @@
 <Template>
 	<WidgetGroup>
-		<SizePolicy>me,me</SizePolicy>
-		<Size>486,306</Size>
+	    <ObjectName>Mixer</ObjectName>
+		<SizePolicy>min,min</SizePolicy>
+		<!-- <Size>486,306</Size>-->
 		<Layout>horizontal</Layout>
 		<Children>
 			<WidgetGroup>
 			    <ObjectName>PrimaryMixer</ObjectName> 
 				<Layout>vertical</Layout>
+				<SizePolicy>min,min</SizePolicy>
 				<Children>
-					<WidgetGroup>
+					  <WidgetGroup>
+					    <ObjectName>MasterSync</ObjectName>
+					    <SizePolicy>min,min</SizePolicy>
 						<Layout>horizontal</Layout>
 						<Children>
 							<PushButton>
@@ -32,8 +36,6 @@
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 							</PushButton>
-							<!-- ********************************************** Text- BPM number 
-								display ********************************************** -->
 							<NumberBpm>
 								<TooltipId>visual_bpm</TooltipId>
 								<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
@@ -44,8 +46,6 @@
 									}
 								</Style>
 								<Channel>1</Channel>
-								<Pos>4,25</Pos>
-								<Size>30,33</Size>
 								<NumberOfDigits>1</NumberOfDigits>
 								<Connection>
 									<ConfigKey>[InternalClock],bpm</ConfigKey>
@@ -53,10 +53,10 @@
 							</NumberBpm>
 						</Children>
 					</WidgetGroup>
-					<!-- ********************************************** Mixer Controls ********************************************** -->
 					<WidgetGroup>
 						<ObjectName>MixerContainer</ObjectName>
 						<Layout>vertical</Layout>
+						<SizePolicy>min,min</SizePolicy>
 						<Children>
 							<WidgetGroup>
 								<Layout>horizontal</Layout>
@@ -75,16 +75,14 @@
 									</Template>
 								</Children>
 							</WidgetGroup>
-
 							<WidgetGroup>
 								<Layout>horizontal</Layout>
+								<SizePolicy>min,min</SizePolicy>
 								<Children>
 									<SliderComposed>
 										<TooltipId>crossfader</TooltipId>
-										<Style></Style>
 										<Handle>knob_crossfader.png</Handle>
 										<Slider>slider_crossfader.png</Slider>
-										<Pos>e,e</Pos>
 										<Horizontal>true</Horizontal>
 										<Connection>
 											<ConfigKey>[Master],crossfader</ConfigKey>
@@ -97,108 +95,163 @@
 					</WidgetGroup>
 				</Children>
 			</WidgetGroup>
-
 			<WidgetGroup>
-			     <ObjectName>MasterFaders</ObjectName>
-				<MinimumSize>68,306</MinimumSize>
+			    <ObjectName>MasterFaders</ObjectName>
+				<SizePolicy>min,min</SizePolicy>
+				<Layout>vertical</Layout>
 				<Children>
-					<Knob>
-						<TooltipId>master_volume</TooltipId>
-						<Style></Style>
-						<NumberStates>64</NumberStates>
-						<Path>knobs/knob_rotary_s%1.png</Path>
-						<Pos>0,10</Pos>
-						<Connection>
-							<ConfigKey>[Master],volume</ConfigKey>
-						</Connection>
-					</Knob>
-					<Knob>
-						<TooltipId>balance</TooltipId>
-						<Style></Style>
-						<NumberStates>63</NumberStates>
-						<Path>knobs/knob_rotary_s%1.png</Path>
-						<Pos>0,55</Pos>
-						<Connection>
-							<ConfigKey>[Master],balance</ConfigKey>
-						</Connection>
-					</Knob>
-					<Knob>
-						<TooltipId>headphone_volume</TooltipId>
-						<Style></Style>
-						<NumberStates>64</NumberStates>
-						<Path>knobs/knob_rotary_s%1.png</Path>
-						<Pos>0,210</Pos>
-						<Connection>
-							<ConfigKey>[Master],headVolume</ConfigKey>
-						</Connection>
-					</Knob>
-					<Knob>
-						<TooltipId>headMix</TooltipId>
-						<Style></Style>
-						<NumberStates>64</NumberStates>
-						<Path>knobs/knob_rotary_s%1.png</Path>
-						<Pos>0,250</Pos>
-						<Connection>
-							<ConfigKey>[Master],headMix</ConfigKey>
-						</Connection>
-					</Knob>
-					<WidgetGroup>   <!-- Master VU Meter -->
-						<Pos>10,104</Pos>
-						<Children>
-							<StatusLight>
-								<TooltipId>PeakIndicator</TooltipId>
-								<Style></Style>
-								<PathStatusLight>btn_clipping1_over.png</PathStatusLight>
-								<PathBack>btn_clipping1.png</PathBack>
-								<Pos>0,0</Pos>
+		            <WidgetGroup>
+		                <Size>48f,48f</Size>
+		                <ObjectName>KnobCentered</ObjectName>
+		                <SizePolicy>min,min</SizePolicy>
+		                <Layout>vertical</Layout>
+		                <Children>
+							<Knob>
+							    <Size>48f,48f</Size>
+								<TooltipId>master_volume</TooltipId>
+								<NumberStates>64</NumberStates>
+								<Path>knobs/knob_rotary_s%1.png</Path>
 								<Connection>
-									<ConfigKey>[Master],PeakIndicator</ConfigKey>
+									<ConfigKey>[Master],volume</ConfigKey>
 								</Connection>
-							</StatusLight>
-							<StatusLight>
-								<TooltipId>PeakIndicator</TooltipId>
-								<Style></Style>
-								<PathStatusLight>btn_clipping1_over.png</PathStatusLight>
-								<PathBack>btn_clipping1.png</PathBack>
-								<Pos>11,0</Pos>
-								<Connection>
-									<ConfigKey>[Master],PeakIndicator</ConfigKey>
-								</Connection>
-							</StatusLight>
-							<VuMeter>
-								<TooltipId>channel_VuMeter</TooltipId>
-								<Style></Style>
-								<PathVu>btn_volume_display1_over.png</PathVu>
-								<PathBack>btn_volume_display1.png</PathBack>
-								<Pos>0,15</Pos>
-								<Horizontal>false</Horizontal>
-								<PeakHoldSize>5</PeakHoldSize>
-								<PeakHoldTime>500</PeakHoldTime>
-								<PeakFallTime>50</PeakFallTime>
-								<PeakFallStep>2</PeakFallStep>
-								<Connection>
-									<ConfigKey>[Master],VuMeterL</ConfigKey>
-								</Connection>
-							</VuMeter>
-							<VuMeter>
-								<TooltipId>channel_VuMeter</TooltipId>
-								<Style></Style>
-								<PathVu>btn_volume_display1_over.png</PathVu>
-								<PathBack>btn_volume_display1.png</PathBack>
-								<Pos>11,15</Pos>
-								<Horizontal>false</Horizontal>
-								<PeakHoldSize>5</PeakHoldSize>
-								<PeakHoldTime>500</PeakHoldTime>
-								<PeakFallTime>50</PeakFallTime>
-								<PeakFallStep>2</PeakFallStep>
-								<Connection>
-									<ConfigKey>[Master],VuMeterR</ConfigKey>
-								</Connection>
-							</VuMeter>
+							</Knob>
+		                    <Label>
+		                        <Size>48f,12f</Size>
+		                        <ObjectName>KnobLabel</ObjectName>
+		                        <Text>Master</Text>
+		                    </Label>
 						</Children>
 					</WidgetGroup>
+                    <WidgetGroup>
+                        <Size>48f,60f</Size>
+                        <ObjectName>KnobCentered</ObjectName>
+                        <SizePolicy>min,min</SizePolicy>
+                        <Layout>vertical</Layout>
+                        <Children>
+							 <Knob>
+							    <Size>48f,48f</Size>
+								<TooltipId>balance</TooltipId>
+								<NumberStates>63</NumberStates>
+								<Path>knobs/knob_rotary_s%1.png</Path>
+								<Connection>
+									<ConfigKey>[Master],balance</ConfigKey>
+								</Connection>
+							</Knob>
+		                    <Label>
+		                        <Size>48f,12f</Size>
+		                        <ObjectName>KnobLabel</ObjectName>
+		                        <Text>Balance</Text>
+		                    </Label>
+                        </Children>
+                    </WidgetGroup>
+					<WidgetGroup> 
+					    <ObjectName>MasterLevels</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>min,min</SizePolicy>
+						<Children>
+						    <WidgetGroup>
+						        <SizePolicy>min,min</SizePolicy>
+						        <Layout>vertical</Layout>
+						        <Children>
+									<StatusLight>
+										<TooltipId>PeakIndicator</TooltipId>
+										<PathStatusLight>btn_clipping1_over.png</PathStatusLight>
+										<PathBack>btn_clipping1.png</PathBack>
+										<Connection>
+											<ConfigKey>[Master],PeakIndicator</ConfigKey>
+										</Connection>
+									</StatusLight>
+									
+									<VuMeter>
+										<TooltipId>channel_VuMeter</TooltipId>
+										<PathVu>btn_volume_display1_over.png</PathVu>
+										<PathBack>btn_volume_display1.png</PathBack>
+										<Horizontal>false</Horizontal>
+										<PeakHoldSize>5</PeakHoldSize>
+										<PeakHoldTime>500</PeakHoldTime>
+										<PeakFallTime>50</PeakFallTime>
+										<PeakFallStep>2</PeakFallStep>
+										<Connection>
+											<ConfigKey>[Master],VuMeterL</ConfigKey>
+										</Connection>
+									</VuMeter>
+							     </Children>
+							</WidgetGroup>
+                            <WidgetGroup>
+                                <SizePolicy>min,min</SizePolicy>
+                                <Layout>vertical</Layout>
+                                <Children>
+									<StatusLight>
+		                                <TooltipId>PeakIndicator</TooltipId>
+		                                <PathStatusLight>btn_clipping1_over.png</PathStatusLight>
+		                                <PathBack>btn_clipping1.png</PathBack>
+		                                <Connection>
+		                                    <ConfigKey>[Master],PeakIndicator</ConfigKey>
+		                                </Connection>
+		                            </StatusLight>
+									<VuMeter>
+										<TooltipId>channel_VuMeter</TooltipId>
+										<PathVu>btn_volume_display1_over.png</PathVu>
+										<PathBack>btn_volume_display1.png</PathBack>
+										<Horizontal>false</Horizontal>
+										<PeakHoldSize>5</PeakHoldSize>
+										<PeakHoldTime>500</PeakHoldTime>
+										<PeakFallTime>50</PeakFallTime>
+										<PeakFallStep>2</PeakFallStep>
+										<Connection>
+											<ConfigKey>[Master],VuMeterR</ConfigKey>
+										</Connection>
+									</VuMeter>
+								</Children>
+							</WidgetGroup>
+						</Children>
+					</WidgetGroup>
+                    <WidgetGroup>
+                        <Size>48f,60f</Size>
+                        <ObjectName>KnobCentered</ObjectName>
+                        <SizePolicy>min,min</SizePolicy>
+                        <Layout>vertical</Layout>
+                        <Children>
+							<Knob>
+							    <Size>48f,48f</Size>
+		                        <TooltipId>headphone_volume</TooltipId>
+		                        <NumberStates>64</NumberStates>
+		                        <Path>knobs/knob_rotary_s%1.png</Path>
+		                        <Connection>
+		                            <ConfigKey>[Master],headVolume</ConfigKey>
+		                        </Connection>
+		                    </Knob>
+		                    <Label>
+		                        <Size>48f,12f</Size>
+		                        <ObjectName>KnobLabel</ObjectName>
+		                        <Text>Head Vol</Text>
+		                    </Label>
+                        </Children>
+                    </WidgetGroup>
+                    <WidgetGroup>
+                        <Size>48f,60f</Size>
+                        <ObjectName>KnobCentered</ObjectName>
+                        <SizePolicy>min,min</SizePolicy>
+                        <Layout>vertical</Layout>
+                        <Children>
+		                    <Knob>
+		                        <Size>48f,48f</Size>
+		                        <TooltipId>headMix</TooltipId>
+		                        <NumberStates>64</NumberStates>
+		                        <Path>knobs/knob_rotary_s%1.png</Path>
+		                        <Connection>
+		                            <ConfigKey>[Master],headMix</ConfigKey>
+		                        </Connection>
+		                    </Knob>
+		                    <Label>
+		                        <Size>48f,12f</Size>
+		                        <ObjectName>KnobLabel</ObjectName>
+		                        <Text>Pre/Main</Text>
+		                    </Label>
+                        </Children>
+                    </WidgetGroup>
 				</Children>
 			</WidgetGroup>
 		</Children>
-	</WidgetGroup> <!-- /Mixer -->
+	</WidgetGroup> 
 </Template>

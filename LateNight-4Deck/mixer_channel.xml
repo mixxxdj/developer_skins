@@ -1,14 +1,13 @@
 <Template>
   <WidgetGroup>  <!-- Channel1 controls -->
+    <ObjectName>MixerChannel</ObjectName>
   <!--<Pos>99,0</Pos>-->-->
     <SizePolicy>min,min</SizePolicy>
-    <MinimumSize>64,250</MinimumSize>
-	  <Style>QGroupBox { border: 0px solid yellow; } QWidget { margin: 0; padding: 0; } </Style>
+    <MinimumSize>80,260</MinimumSize>
     <!-- Channel1 controls -->
     <Children>
       <SliderComposed>
         <TooltipId>channel_volume</TooltipId>
-        <Style></Style>
         <Handle>knob_volume1.png</Handle>
         <Slider>slider_volume1.png</Slider>
         <Pos>26,153</Pos>-->
@@ -20,7 +19,6 @@
       </SliderComposed>
       <PushButton>
 	      <TooltipId>pfl</TooltipId>
-	      <Style></Style>
 	      <NumberStates>2</NumberStates>
 	      <State>
 		      <Number>0</Number>
@@ -39,7 +37,6 @@
       </PushButton>
       <PushButton>
 	      <TooltipId>filterHighKill</TooltipId>
-	      <Style></Style>
 	      <NumberStates>2</NumberStates>
 	      <State>
 		      <Number>0</Number>
@@ -60,7 +57,6 @@
       </PushButton>
       <PushButton>
 	      <TooltipId>filterMidKill</TooltipId>
-	      <Style></Style>
 	      <NumberStates>2</NumberStates>
 	      <State>
 		      <Number>0</Number>
@@ -81,7 +77,6 @@
       </PushButton>
       <PushButton>
 	      <TooltipId>filterLowKill</TooltipId>
-	      <Style></Style>
 	      <NumberStates>2</NumberStates>
 	      <State>
 		      <Number>0</Number>
@@ -102,7 +97,6 @@
       </PushButton>
       <Knob>
 	      <TooltipId>pregain</TooltipId>
-	      <Style></Style>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
 	      <Pos>29,1</Pos>-->
@@ -112,7 +106,6 @@
       </Knob>
       <Knob>
 	      <TooltipId>filterHigh</TooltipId>
-	      <Style></Style>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
 	      <Pos>29,39</Pos>-->
@@ -122,7 +115,6 @@
       </Knob>
       <Knob>
 	      <TooltipId>filterMid</TooltipId>
-	      <Style></Style>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
 	      <Pos>29,78</Pos>-->
@@ -132,7 +124,6 @@
       </Knob>
       <Knob>
 	      <TooltipId>filterLow</TooltipId>
-	      <Style></Style>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
 	      <Pos>29,115</Pos>-->
@@ -142,7 +133,6 @@
       </Knob>
       <StatusLight>
 	      <TooltipId>PeakIndicator</TooltipId>
-	      <Style></Style>
 	      <PathStatusLight>btn_clipping1_over.png</PathStatusLight>
 	      <PathBack>btn_clipping1.png</PathBack>
 	      <Pos>8,154</Pos>-->
@@ -152,7 +142,6 @@
       </StatusLight>
       <VuMeter>
 	      <TooltipId>channel_VuMeter</TooltipId>
-	      <Style></Style>
 	      <PathVu>btn_volume_display1_over.png</PathVu>
 	      <PathBack>btn_volume_display1.png</PathBack>
 	      <Pos>8,169</Pos>-->

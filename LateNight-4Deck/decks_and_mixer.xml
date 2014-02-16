@@ -6,10 +6,9 @@
 <Template>
   <WidgetGroup>
     <ObjectName>DecksAndMixer</ObjectName>
-    <BackPath>background_tile.png</BackPath>
     <Layout>horizontal</Layout>
-    <SizePolicy>me, f</SizePolicy>
-    <MinimumSize>1910, -1</MinimumSize>
+    <SizePolicy>me, min</SizePolicy>
+    <MinimumSize>1750, -1</MinimumSize>
     <Children>
         <Template src="skin:deck.xml">
             <SetVariable name="channum">3</SetVariable>

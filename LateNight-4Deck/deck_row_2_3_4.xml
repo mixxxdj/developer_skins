@@ -1,89 +1,114 @@
 <Template>
 	<WidgetGroup>
-	    <ObjectName>DeckRowTwoThreeFour</ObjectName>
+		<ObjectName>DeckRowTwoThreeFour</ObjectName>
 		<Layout>vertical</Layout>
+		<SizePolicy>me,min</SizePolicy>
+		<MinimumSize>-1,-1</MinimumSize>
 		<Children>
-			<TrackProperty>
-				<TooltipId>track_title</TooltipId>
-				<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
-					Unicode, Arial, Verdana, sans-serif;
-					background-color: transparent; color: #EECE33; text-align: left; padding-left: 1px;
-					}
-				</Style>
-				<Property>title</Property>
-				<Channel>
-					<Variable name="channum" />
-				</Channel>
-			</TrackProperty>
-			<WidgetGroup>
-			    <ObjectName>ArtistRow</ObjectName>
-				<Layout>horizontal</Layout>
-				<Children>
+		    <WidgetGroup>
+		        <ObjectName>TitleGutter</ObjectName>
+		        <Layout>horizontal</Layout>
+		        <SizePolicy>me,min</SizePolicy>
+		        <Children>
 					<TrackProperty>
-						<TooltipId>track_artist</TooltipId>
+						<TooltipId>track_title</TooltipId>
 						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
 							Unicode, Arial, Verdana, sans-serif;
-							background-color: transparent; color: #EECE33; text-align: left; padding-left:
-							1px; }
+							color: #EECE33;}
 						</Style>
-						<Property>artist</Property>
+						<Property>title</Property>
 						<Channel>
 							<Variable name="channum" />
 						</Channel>
 					</TrackProperty>
-					<NumberPos>
-						<TooltipId>track_time</TooltipId>
-						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
-							Unicode, Arial, Verdana, sans-serif;
-							background-color: transparent; color: #EECE33; text-align: right;padding-left:
-							1px; }
-						</Style>
-						<Channel>
-							<Variable name="channum" />
-						</Channel>
-						<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment> -->
-						<Alignment>right</Alignment>
-						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],playposition
-							</ConfigKey>
-						</Connection>
-					</NumberPos>
 				</Children>
 			</WidgetGroup>
 			<WidgetGroup>
+				<ObjectName>ArtistRow</ObjectName>
 				<Layout>horizontal</Layout>
+				<SizePolicy>me, min</SizePolicy>
 				<Children>
-					<TrackProperty>
-						<TooltipId>track_album</TooltipId>
-						<Style>QLabel { font: 13px/15px Lucida Grande, Lucida Sans
-							Unicode,
-							Arial, Verdana, sans-serif;
-							background-color: transparent; color: #EECE33; text-align: left; padding-left:
-							1px; }
-						</Style>
-						<Property>album</Property>
-						<Channel>
-							<Variable name="channum" />
-						</Channel>
-					</TrackProperty>
-					<TrackProperty>
-						<TooltipId>track_duration</TooltipId>
-						<Style>QLabel { font: 13px/15px Lucida Grande, Lucida Sans
-							Unicode,
-							Arial, Verdana, sans-serif;
-							background-color: transparent; color: #EECE33; text-align: left; padding-left:
-							1px; }
-						</Style>
-						<Property>durationFormatted</Property>
-						<Channel>
-							<Variable name="channum" />
-						</Channel>
-						<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment> -->
-						<Alignment>right</Alignment>
-					</TrackProperty>
+					<WidgetGroup>
+						<ObjectName>ArtistGutter</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>me,min</SizePolicy>
+						<Children>
+							<TrackProperty>
+								<TooltipId>track_artist</TooltipId>
+								<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+									Unicode, Arial, Verdana, sans-serif;
+									color: #EECE33;}
+								</Style>
+								<Property>artist</Property>
+								<Channel>
+									<Variable name="channum" />
+								</Channel>
+							</TrackProperty>
+						</Children>
+					</WidgetGroup>
+					<WidgetGroup>
+						<ObjectName>TimeGutter</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>me,min</SizePolicy>
+						<Children>
+							<NumberPos>
+								<TooltipId>track_time</TooltipId>
+								<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+									Unicode, Arial, Verdana, sans-serif;  color: #EECE33;}
+								</Style>
+								<Channel>
+									<Variable name="channum" />
+								</Channel>
+								<Connection>
+									<ConfigKey>[Channel<Variable name="channum" />],playposition</ConfigKey>
+								</Connection>
+							</NumberPos>
+						</Children>
+					</WidgetGroup>
+				</Children>
+			</WidgetGroup>
+			<WidgetGroup>
+				<ObjectName>AlbumRow</ObjectName>
+				<Layout>horizontal</Layout>
+				<SizePolicy>me,min</SizePolicy>
+				<Children>
+				    <WidgetGroup>
+				        <ObjectName>AlbumGutter</ObjectName>
+				        <Layout>horizontal</Layout>
+				        <SizePolicy>me,min</SizePolicy>
+				        <Children>
+							<TrackProperty>
+								<TooltipId>track_album</TooltipId>
+								<Style>QLabel
+									{ font: 13px/15px Lucida Grande, Lucida Sans Unicode, Arial,
+									Verdana, sans-serif; color: #EECE33}
+								</Style>
+								<Property>album</Property>
+								<Channel>
+									<Variable name="channum" />
+								</Channel>
+								<Alignment>right</Alignment>
+							</TrackProperty>
+						</Children>
+					</WidgetGroup>
+					<WidgetGroup>
+					    <ObjectName>DurationGutter</ObjectName>
+                        <Layout>horizontal</Layout>
+                        <SizePolicy>me,min</SizePolicy>
+                        <Children>
+							<TrackProperty>
+								<TooltipId>track_duration</TooltipId>
+								<Style>QLabel { font: 13px/15px Lucida Grande, Lucida Sans
+									Unicode,
+									Arial, Verdana, sans-serif; color: #EECE33;}
+								</Style>
+								<Property>durationFormatted</Property>
+								<Channel>
+									<Variable name="channum" />
+								</Channel>
+							</TrackProperty>
+						</Children>
+					</WidgetGroup>
 				</Children>
 			</WidgetGroup>
 		</Children>

@@ -4,38 +4,133 @@
 /* These definitions put a faint grey border around all the widgets. We have to
    be tricky with top/bottom-ness to get things right. */
 
-#DeckRowOne {
-  border: 2px solid #F00;
+#Library {
+  border-left: 1px solid #585858;
   background-color: #1e1e1e;
+  padding-top: 10px;
+  border-top: 1px solid #585858;
+}
+
+#DeckRowOne {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  border-bottom: 1px solid #585858;
+  background-color: #1e1e1e;
+  padding: 5px;
 }
 
 #DeckRowTwoThreeFour {
-  border: 2px solid #F00;
+  border-bottom: 1px solid #585858;
   background-color: #1e1e1e;
-    qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  /*padding: 3px;*/
 }
 
 #DeckRowFive {
-  border: 2px solid #F00;
+  border-bottom: 1px solid #585858;
   background-color: #1e1e1e;
-}
-
-#ArtistRow {
-qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  padding: 0px;
+  padding-left: 2px;
 }
 
 #DecksAndMixer {
-  border: 2px solid #585858;
-  background-color: transparent;
+  /*border: 1px solid #585858;*/
+  background-color: #1e1e1e;
 }
 
+#Deck {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858; 
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+#Mixer {
+  border: 1px solid #585858; 
+  border-right: 0px;
+  border-bottom: 0px;
+  padding: 6px;  
+  background-color: #1e1e1e;
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+}
 
 #PrimaryMixer {
-    border: 10px solid 10px;
-    margin:10px;
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+  padding: 0px;
+  margin: 0px;
+}
+
+#MixerContainer {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
 }
 
 #MixerChannel {
-    border: 10px solid 10px;
-    margin:10px;    
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+}
+
+#MasterSync {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+  padding: 1px;
+}
+
+#MasterFaders, #MasterLevels {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+  background-color: #1e1e1e;
+}
+
+#KnobCentered {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+}
+
+#TitleGutter, #ArtistGutter, #AlbumGutter { 
+  qproperty-layoutAlignment: 'AlignLeft | AlignCenter';
+  padding: 5px;
+  padding-bottom: 6px;
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#TimeGutter, #DurationGutter {
+  qproperty-layoutAlignment: 'AlignRight | AlignCenter';
+  padding: 5px;
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#DeckButtons {
+  padding: 5px;
+}
+
+#ToggleButtons {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding: 2px;
+}
+
+#VinylControls {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  padding: 10px;
+}
+
+#KnobLabel {
+  font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #585858;
+  text-align:center;
+  padding-bottom: 2px;
+  padding-top: -2px;
+}
+
+
+#SyncControls {
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+  padding-right: 0px;
+  border-bottom: 1px solid #585858;
 }

@@ -1,20 +1,15 @@
 <Template>
 	<WidgetGroup>  <!-- Deck Channel1 -->
 		<ObjectName>Deck</ObjectName>
-		<Pos>0,217</Pos>
-		<SizePolicy>min,min</SizePolicy>
-		<!--<Size>356,312</Size> -->
+		<SizePolicy>me,min</SizePolicy>
+		<!-- <Size>356,312</Size>-->
 		<Layout>vertical</Layout>
-		<Style>QGroupBox { border: 0px solid red; } QWidget { margin: 0;
-			padding: 0; }</Style>
 		<!--<BackPath>deck_bg.png</BackPath> -->
 		<Children>
-
+  
 			<Template src="skin:deck_row_1.xml" />
-
 			<Template src="skin:deck_row_2_3_4.xml" />
-
-			<Template src="skin:deck_row_5.xml" />
+            <Template src="skin:deck_row_5.xml" />
 
 			<!-- ********************************************** Visual- Vinyl control 
 				status indicator // we need 4 of them for top-bottom-left-right ********************************************** -->
@@ -42,16 +37,14 @@
 			<!-- Playback control sub-widget -->
 			<WidgetGroup>
 				<ObjectName>DeckButtons</ObjectName>
-				<Size>356,138</Size>
-				<Style>QGroupBox { border: 0px solid yellow; } QWidget { margin: 0;
-					padding: 0; }</Style>
+				<SizePolicy>me,min</SizePolicy>
+				<BackPath>background_tile.png</BackPath>
+				<Size>358,144</Size>
 				<Children>
 					<!-- Pitch 1 control sub-widget -->
 					<WidgetGroup>
 						<!--<Pos>0,0</Pos> -->
-						<Size>110,148</Size>
-						<Style>QGroupBox { border: 0px solid yellow; } QWidget { margin:
-							0; padding: 0; } </Style>
+						<Size>110,141</Size>
 						<Children>
 							<!-- ********************************************** Text- Pitch rate 
 								display ********************************************** -->
@@ -79,14 +72,10 @@
 								<Style></Style>
 								<Handle>knob_pitch1.png</Handle>
 								<Slider>slider_pitch1.png</Slider>
-								<Pos>3,0</Pos>
+								<Pos>3,3</Pos>
 								<Horizontal>false</Horizontal>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate</ConfigKey>
 									<EmitOnDownPress>false</EmitOnDownPress>
 								</Connection>
 							</SliderComposed>
@@ -109,20 +98,12 @@
 								</State>
 								<Pos>54,5</Pos>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],sync_enabled
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],sync_enabled</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],beatsync_tempo
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],beatsync_tempo</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>RightButton</ButtonState>
 								</Connection>
@@ -141,20 +122,12 @@
 								</State>
 								<Pos>80,86</Pos>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_perm_up
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_perm_up</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_perm_up_small
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_perm_up_small</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>RightButton</ButtonState>
 								</Connection>
@@ -170,20 +143,12 @@
 								</State>
 								<Pos>54,86</Pos>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_perm_down
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_perm_down</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_perm_down_small
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_perm_down_small</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>RightButton</ButtonState>
 								</Connection>
@@ -202,20 +167,12 @@
 								</State>
 								<Pos>80,112</Pos>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_temp_up
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_temp_up</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_temp_up_small
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_temp_up_small</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>RightButton</ButtonState>
 								</Connection>
@@ -231,20 +188,12 @@
 								</State>
 								<Pos>54,112</Pos>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_temp_down
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_temp_down</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
 								<Connection>
-									<ConfigKey>
-										[Channel
-										<Variable name="channum" />
-										],rate_temp_down_small
-									</ConfigKey>
+									<ConfigKey>[Channel<Variable name="channum" />],rate_temp_down_small</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>RightButton</ButtonState>
 								</Connection>
@@ -264,20 +213,12 @@
 						</State>
 						<Pos>232,82</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],back
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],back</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],start
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],start</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
@@ -293,20 +234,12 @@
 						</State>
 						<Pos>258,82</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],fwd
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],fwd</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],end
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],end</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
@@ -324,20 +257,12 @@
 						</State>
 						<Pos>232,108</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],reverse
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],reverse</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],reverseroll
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],reverseroll</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
@@ -363,29 +288,17 @@
 						</State>
 						<Pos>165,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_0.125_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_0.125_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_0.125_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_0.125_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_0.125_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_0.125_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -407,29 +320,17 @@
 						</State>
 						<Pos>191,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_0.25_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_0.25_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_0.25_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_0.25_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_0.25_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_0.25_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -451,29 +352,17 @@
 						</State>
 						<Pos>217,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_0.5_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_0.5_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_0.5_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_0.5_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_0.5_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_0.5_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -495,29 +384,17 @@
 						</State>
 						<Pos>243,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_1_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_1_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_1_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_1_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_1_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_1_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -539,29 +416,17 @@
 						</State>
 						<Pos>165,31</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_2_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_2_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_2_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_2_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_2_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_2_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -583,29 +448,17 @@
 						</State>
 						<Pos>191,31</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_4_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_4_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_4_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_4_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_4_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_4_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -627,29 +480,17 @@
 						</State>
 						<Pos>217,31</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_8_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_8_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_8_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_8_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_8_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_8_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -671,29 +512,17 @@
 						</State>
 						<Pos>243,31</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_16_toggle
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_16_toggle</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatlooproll_16_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatlooproll_16_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],beatloop_16_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],beatloop_16_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -711,11 +540,7 @@
 						</State>
 						<Pos>142,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],loop_halve
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_halve</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
@@ -731,11 +556,7 @@
 						</State>
 						<Pos>270,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],loop_double
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_double</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
@@ -754,11 +575,7 @@
 						</State>
 						<Pos>301,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],loop_in
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_in</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
@@ -774,11 +591,7 @@
 						</State>
 						<Pos>327,5</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],loop_out
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_out</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
@@ -800,21 +613,13 @@
 						</State>
 						<Pos>301,31</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],reloop_exit
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],reloop_exit</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],loop_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -838,31 +643,19 @@
 						</State>
 						<Pos>142,82</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_1_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_1_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_1_clear
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_1_clear</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_1_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_1_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -884,31 +677,19 @@
 						</State>
 						<Pos>168,82</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_2_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_2_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_2_clear
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_2_clear</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_2_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_2_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -930,31 +711,19 @@
 						</State>
 						<Pos>142,108</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_3_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_3_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_3_clear
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_3_clear</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_3_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_3_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -976,31 +745,19 @@
 						</State>
 						<Pos>168,108</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_4_activate
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_4_activate</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_4_clear
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_4_clear</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],hotcue_4_enabled
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],hotcue_4_enabled</ConfigKey>
 							<ConnectValueFromWidget>false</ConnectValueFromWidget>
 						</Connection>
 					</PushButton>
@@ -1015,20 +772,12 @@
 						</State>
 						<Pos>301,82</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],cue_default
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],cue_default</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],cue_gotoandstop
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],cue_gotoandstop</ConfigKey>
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>RightButton</ButtonState>
 						</Connection>
@@ -1050,20 +799,12 @@
 						</State>
 						<Pos>301,108</Pos>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],play
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],play</ConfigKey>
 							<EmitOnDownPress>true</EmitOnDownPress>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 						<Connection>
-							<ConfigKey>
-								[Channel
-								<Variable name="channum" />
-								],play_sync
-							</ConfigKey>
+							<ConfigKey>[Channel<Variable name="channum" />],play_sync</ConfigKey>
 							<EmitOnDownPress>true</EmitOnDownPress>
 							<ButtonState>RightButton</ButtonState>
 							<ConnectValueToWidget>false</ConnectValueToWidget>
