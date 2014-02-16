@@ -71,6 +71,7 @@
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   background-color: #1e1e1e;
   padding: 1px;
+  padding-left: 2px;
 }
 
 #MasterFaders, #MasterLevels {
