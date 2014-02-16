@@ -3,6 +3,7 @@
 		<ObjectName>DeckRowOne</ObjectName>
 		<Layout>horizontal</Layout>
 		<SizePolicy>me,min</SizePolicy>
+		<MinimumSize>180,-1</MinimumSize>
 		<Children>
 		    <WidgetGroup>
 		        <ObjectName>VinylControls</ObjectName>
@@ -63,7 +64,8 @@
             <WidgetGroup>
                 <ObjectName>SyncControls</ObjectName>
                 <Layout>horizontal</Layout>
-                <SizePolicy>me,min</SizePolicy>
+                <SizePolicy>min,min</SizePolicy>
+                <MinimumSize>48,48</MinimumSize>
                 <Children>
 					<PushButton>
 						<TooltipId>sync_master</TooltipId>

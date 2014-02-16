@@ -31,7 +31,7 @@
 					<WidgetGroup>
 						<ObjectName>ArtistGutter</ObjectName>
 						<Layout>horizontal</Layout>
-						<SizePolicy>me,min</SizePolicy>
+						<SizePolicy>me, min</SizePolicy>
 						<Children>
 							<TrackProperty>
 								<TooltipId>track_artist</TooltipId>

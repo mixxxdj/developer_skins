@@ -58,7 +58,7 @@
     <BgColor>#000000</BgColor>
   </Background>
 
-  <MinimumSize>1024,-1</MinimumSize>
+  <MinimumSize>1280,-1</MinimumSize>
   <SizePolicy>me,me</SizePolicy>
   <Layout>vertical</Layout>
 

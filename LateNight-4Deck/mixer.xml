@@ -2,7 +2,6 @@
 	<WidgetGroup>
 	    <ObjectName>Mixer</ObjectName>
 		<SizePolicy>min,min</SizePolicy>
-		<!-- <Size>486,306</Size>-->
 		<Layout>horizontal</Layout>
 		<Children>
 			<WidgetGroup>

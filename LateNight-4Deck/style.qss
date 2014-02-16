@@ -15,7 +15,7 @@
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
   border-bottom: 1px solid #585858;
   background-color: #1e1e1e;
-  padding: 5px;
+  padding: 4px;
 }
 
 #DeckRowTwoThreeFour {
@@ -32,7 +32,6 @@
 }
 
 #DecksAndMixer {
-  /*border: 1px solid #585858;*/
   background-color: #1e1e1e;
 }
 
@@ -86,7 +85,7 @@
 
 #TitleGutter, #ArtistGutter, #AlbumGutter { 
   qproperty-layoutAlignment: 'AlignLeft | AlignCenter';
-  padding: 5px;
+  padding: 3px;
   padding-bottom: 6px;
   border: 1px solid #585858;
   border-top: 0px;
@@ -96,15 +95,39 @@
 
 #TimeGutter, #DurationGutter {
   qproperty-layoutAlignment: 'AlignRight | AlignCenter';
-  padding: 5px;
+  padding: 3px;
   border: 1px solid #585858;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
 }
 
+#RateGutter {
+  qproperty-layoutAlignment: 'AlignCenter | AlignBottom';
+  text-align: center;
+  padding-top: 0px;
+}
+
+#ColumnThree, #LoopSizeButtons {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+  padding-left: 10px;
+}
+
+#RateButtons, #RatePermButtons, #RateTempButtons {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+}
+
+#ColumnTwo {
+  padding-left: 10px;
+}
+
 #DeckButtons {
-  padding: 5px;
+  padding: 3px;
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#ColumnTwo {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
 #ToggleButtons {
