@@ -1,5 +1,6 @@
 #DecksLeftContainer, #DecksRightContainer, #SkinContainer {
   background-color: #0f0f0f;
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
 }
 
 #RightSpinny {
@@ -376,4 +377,3 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
   padding: 6px;
 }
-
