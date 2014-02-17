@@ -11,9 +11,41 @@
     <MinimumSize>1024, -1</MinimumSize>
     <Children>
         <WidgetGroup>
+            <ObjectName>DeckLeftMargin</ObjectName>
+            <Layout>horizontal</Layout>
+            <SizePolicy>me,min</SizePolicy>
+            <MinimumSize>50,-1</MinimumSize>
+            <Children>
+                <WidgetGroup>
+			        <ObjectName>FourDeckButton</ObjectName>
+			        <Layout>vertical</Layout>
+			        <SizePolicy>me,min</SizePolicy>
+			        <Children>
+			            <PushButton>
+			                <Size>40f,20f</Size>
+			                <ObjectName>ToggleButton</ObjectName>
+			                <NumberStates>2</NumberStates>
+			                <State>
+			                  <Number>0</Number>
+			                  <Text>2DECK</Text>
+			                </State>
+			                <State>
+			                  <Number>1</Number>
+			                  <Text>4DECK</Text>
+			                </State>
+			                <Connection>
+			                  <ConfigKey persist="true">[Master],show_4decks</ConfigKey>
+			                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			                </Connection>
+			            </PushButton>
+			        </Children>
+			    </WidgetGroup>
+            </Children>
+        </WidgetGroup>
+        <WidgetGroup>
             <Layout>horizontal</Layout>
             <Children>
-		        <Template src="skin:deck.xml">
+		        <Template src="skin:deck_container.xml">
 		            <SetVariable name="channum">3</SetVariable>
 		        </Template>
 	        </Children>
@@ -22,17 +54,17 @@
 	            <BindProperty>visible</BindProperty>
 	        </Connection>
         </WidgetGroup>
-        <Template src="skin:deck.xml">
+        <Template src="skin:deck_container.xml">
             <SetVariable name="channum">1</SetVariable>
         </Template>
         <Template src="skin:mixer.xml"/>
-        <Template src="skin:deck.xml">
+        <Template src="skin:deck_container.xml">
             <SetVariable name="channum">2</SetVariable>
         </Template>
         <WidgetGroup>
             <Layout>horizontal</Layout>
             <Children>
-		        <Template src="skin:deck.xml">
+		        <Template src="skin:deck_container.xml">
 		            <SetVariable name="channum">4</SetVariable>
 		        </Template>
 	        </Children>
@@ -40,6 +72,13 @@
                 <ConfigKey persist="true">[Master],show_4decks</ConfigKey>
                 <BindProperty>visible</BindProperty>
             </Connection>
+        </WidgetGroup>
+        <WidgetGroup>
+            <ObjectName>DeckRightMargin</ObjectName>
+            <Layout>horizontal</Layout>
+            <SizePolicy>me,min</SizePolicy>
+            <MinimumSize>1,-1</MinimumSize>
+            <Children></Children>
         </WidgetGroup>
     </Children>
   </WidgetGroup>

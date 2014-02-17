@@ -1,7 +1,7 @@
 <Template>
 	<WidgetGroup>
-		<Style>QGroupBox { border: 0px solid yellow; } QWidget { margin: 0; padding: 0; }</Style>
 		<Layout>vertical</Layout>
+		<SizePolicy>me,min</SizePolicy>
 		<MinimumSize>800, 50</MinimumSize>
 		<Children>
 			<!--If you want the waveforms center to adjust when resizing in a collapsing widget

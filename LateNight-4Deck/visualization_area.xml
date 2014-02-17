@@ -5,13 +5,14 @@
 -->
 <Template>
   <WidgetGroup>
-    <ObjectName>MainDeckContainer</ObjectName>
+    <ObjectName>VisualizationContainer</ObjectName>
     <Layout>horizontal</Layout>
     <SizePolicy>me,max</SizePolicy>
-    <MaximumSize>-1, 213</MaximumSize>
+    <MaximumSize>-1,216</MaximumSize>
     <Children>
       <WidgetGroup>
           <Layout>horizontal</Layout>
+          <SizePolicy>min,min</SizePolicy>
           <Children>
 	      <Template src="skin:spinny.xml">
 	          <SetVariable name="channum">3</SetVariable>
@@ -22,15 +23,22 @@
               <BindProperty>visible</BindProperty>
           </Connection>
       </WidgetGroup>
-      <Template src="skin:spinny.xml">
-          <SetVariable name="channum">1</SetVariable>
-      </Template>
+      <WidgetGroup>
+          <Layout>horizontal</Layout>
+          <SizePolicy>min,min</SizePolicy>
+          <Children>
+		      <Template src="skin:spinny.xml">
+		          <SetVariable name="channum">1</SetVariable>
+		      </Template>
+	      </Children>
+      </WidgetGroup>
       <WidgetGroup>
         <Layout>vertical</Layout>
-        <SizePolicy>me,me</SizePolicy>
+        <SizePolicy>me,min</SizePolicy>
         <Children>
             <WidgetGroup>
             <Layout>horizontal</Layout>
+            <SizePolicy>me,min</SizePolicy>
             <Children>
 	            <Template src="skin:waveform.xml">
 	                <SetVariable name="channum">3</SetVariable>
@@ -41,13 +49,14 @@
                 <BindProperty>visible</BindProperty>
             </Connection>
         </WidgetGroup>
-            <Template src="skin:waveform.xml">
-                <SetVariable name="channum">1</SetVariable>
-            </Template>
-            <Template src="skin:waveform.xml">
-                <SetVariable name="channum">2</SetVariable>
-            </Template>
+        <Template src="skin:waveform.xml">
+            <SetVariable name="channum">1</SetVariable>
+        </Template>
+        <Template src="skin:waveform.xml">
+            <SetVariable name="channum">2</SetVariable>
+        </Template>
         <WidgetGroup>
+            <SizePolicy>me,min</SizePolicy>
             <Layout>horizontal</Layout>
             <Children>
 	            <Template src="skin:waveform.xml">
@@ -61,10 +70,19 @@
         </WidgetGroup>
         </Children>
       </WidgetGroup>
-      <Template src="skin:spinny.xml">
-          <SetVariable name="channum">2</SetVariable>
-      </Template>
       <WidgetGroup>
+            <ObjectName>RightSpinny</ObjectName>
+            <Layout>horizontal</Layout>
+            <SizePolicy>min,min</SizePolicy>
+            <Children>
+		      <Template src="skin:spinny.xml">
+		          <SetVariable name="channum">2</SetVariable>
+		      </Template>
+	        </Children>
+      </WidgetGroup>
+      <WidgetGroup>
+            <ObjectName>RightSpinny</ObjectName>
+            <SizePolicy>min,min</SizePolicy>
             <Layout>horizontal</Layout>
             <Children>
 		      <Template src="skin:spinny.xml">

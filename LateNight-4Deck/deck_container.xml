@@ -1,0 +1,35 @@
+<Template>
+    <WidgetGroup>
+        <ObjectName>DeckContainer</ObjectName>
+        <Layout>vertical</Layout>
+        <SizePolicy>min,min</SizePolicy>
+        <Children>
+            <WidgetGroup>
+                <ObjectName>VinylStatusTop<Variable name="channum" /></ObjectName>
+                <SizePolicy>me,min</SizePolicy>
+                <MinimumSize>2,10</MinimumSize>
+                <Layout>horizontal</Layout>
+                <Children>
+                    <StatusLight> 
+                        <Size>2me,10f</Size>
+	                    <TooltipId>vinylcontrol_status</TooltipId> 
+	                    <NumberPos>3</NumberPos> 
+	                    <PathStatusLight sizemode="RESIZE">btn_vinylcontrol_indicator_horizontal1.png</PathStatusLight> 
+		                <PathStatusLight2 sizemode="RESIZE">btn_vinylcontrol_indicator_horizontal2.png</PathStatusLight2> 
+		                <PathStatusLight3 sizemode="RESIZE">btn_vinylcontrol_indicator_horizontal3.png</PathStatusLight3> 
+	                    <Connection>
+	                        <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_status</ConfigKey> 
+	                    </Connection> 
+                    </StatusLight>
+                </Children>
+            </WidgetGroup>
+            <WidgetGroup>
+                <SizePolicy>min,min</SizePolicy>
+                <Layout>horizontal</Layout>
+                <Children>
+                    <Template src="skin:deck.xml"/>
+                </Children>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+</Template>

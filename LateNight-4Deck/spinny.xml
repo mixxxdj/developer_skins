@@ -1,9 +1,9 @@
 <Template>
   <WidgetGroup>
-    <ObjectName>SpinnyHolder</ObjectName>
+    <ObjectName>SpinnyContainer</ObjectName>
     <Layout>horizontal</Layout>
-    <Size>213,215</Size>
-    <SizePolicy>f,f</SizePolicy>
+    <MinimumSize>213,215</MinimumSize>
+    <SizePolicy>min,min</SizePolicy>
     <Children>
       <Spinny>
         <Group>[Channel<Variable name="channum"/>]</Group>

@@ -1,40 +1,14 @@
 <Template>
 	<WidgetGroup>  <!-- Deck Channel1 -->
-		<ObjectName>Deck</ObjectName>
+		<ObjectName>Deck<Variable name="channum" /></ObjectName>
 		<SizePolicy>me,max</SizePolicy>
 		<MinimumSize>340,-1</MinimumSize>
+		<MaximumSize>500,-1</MaximumSize>
 		<Layout>vertical</Layout>
-		<!--<BackPath>deck_bg.png</BackPath> -->
 		<Children>
-  
 			<Template src="skin:deck_row_1.xml" />
 			<Template src="skin:deck_row_2_3_4.xml" />
             <Template src="skin:deck_row_5.xml" />
-
-			<!-- ********************************************** Visual- Vinyl control 
-				status indicator // we need 4 of them for top-bottom-left-right ********************************************** -->
-			<!--<StatusLight> <TooltipId>vinylcontrol_status</TooltipId> <Style></Style> 
-				<NumberPos>3</NumberPos> <PathStatusLight>btn_vinylcontrol_indicator_horizontal1.png</PathStatusLight> 
-				<PathStatusLight2>btn_vinylcontrol_indicator_horizontal2.png</PathStatusLight2> 
-				<PathStatusLight3>btn_vinylcontrol_indicator_horizontal3.png</PathStatusLight3> 
-				<Pos>0,0</Pos> <Connection> <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_status</ConfigKey> 
-				</Connection> </StatusLight> <StatusLight> <TooltipId>vinylcontrol_status</TooltipId> 
-				<Style></Style> <NumberPos>3</NumberPos> <PathStatusLight>btn_vinylcontrol_indicator_horizontal1.png</PathStatusLight> 
-				<PathStatusLight2>btn_vinylcontrol_indicator_horizontal2.png</PathStatusLight2> 
-				<PathStatusLight3>btn_vinylcontrol_indicator_horizontal3.png</PathStatusLight3> 
-				<Pos>0,311</Pos> <Connection> <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_status</ConfigKey> 
-				</Connection> </StatusLight> <StatusLight> <TooltipId>vinylcontrol_status</TooltipId> 
-				<Style></Style> <NumberPos>3</NumberPos> <PathStatusLight>btn_vinylcontrol_indicator_vertical1.png</PathStatusLight> 
-				<PathStatusLight2>btn_vinylcontrol_indicator_vertical2.png</PathStatusLight2> 
-				<PathStatusLight3>btn_vinylcontrol_indicator_vertical3.png</PathStatusLight3> 
-				<Pos>0,0</Pos> <Connection> <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_status</ConfigKey> 
-				</Connection> </StatusLight> <StatusLight> <TooltipId>vinylcontrol_status</TooltipId> 
-				<Style></Style> <NumberPos>3</NumberPos> <PathStatusLight>btn_vinylcontrol_indicator_vertical1.png</PathStatusLight> 
-				<PathStatusLight2>btn_vinylcontrol_indicator_vertical2.png</PathStatusLight2> 
-				<PathStatusLight3>btn_vinylcontrol_indicator_vertical3.png</PathStatusLight3> 
-				<Pos>356,0</Pos> <Connection> <ConfigKey>[Channel<Variable name="channum"/>],vinylcontrol_status</ConfigKey> 
-				</Connection> </StatusLight> -->
-			<!-- Playback control sub-widget -->
 			<Template src="skin:deck_buttons.xml" />
 		</Children>
 	</WidgetGroup> <!-- /Deck Channel1 -->

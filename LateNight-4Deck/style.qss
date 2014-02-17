@@ -1,8 +1,6 @@
-/*******************************************************************************
- ** BORDER *********************************************************************
- *******************************************************************************/
-/* These definitions put a faint grey border around all the widgets. We have to
-   be tricky with top/bottom-ness to get things right. */
+#RightSpinny {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
 
 #Library {
   border-left: 0px solid #585858;
@@ -35,17 +33,57 @@
   background-color: #1e1e1e;
 }
 
-#Deck {
+#VisualizationContainer {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+#Deck2, #Deck4 {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   border: 1px solid #585858; 
+  border-bottom:0px;
+  border-right:0px;
+}
+
+#Deck1, #Deck3 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858; 
+  border-bottom:0px;
+  border-right:0px;
+}
+
+#DeckContainer {
+  border: 0px solid #585858; 
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+  background-color: #0f0f0f;
+}
+
+#DeckLeftMargin {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 0px solid #585858;
+  border-left: 0px;
   border-right: 0px;
   border-bottom: 0px;
+  background-color: #0f0f0f;
+}
+
+#DeckRightMargin {
+  border: 1px solid #585858;
+  border-top:0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  background-color: #0f0f0f;
 }
 
 #Mixer {
   border: 1px solid #585858; 
   border-right: 0px;
   border-bottom: 0px;
+  border-top: 0px;
   background-color: #1e1e1e;
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
 }
@@ -194,15 +232,19 @@
 }
 
 #CrossFadeContainer {
+qproperty-layoutAlignment: 'AlignCenter';
+ background-color: #1e1e1e;
 }
 
 #FourDeckButton {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   padding-left: 5px;
+  padding-right: 5px;
 }
 
 #Crossfader {
-  padding-right: 60px;
+  qproperty-layoutAlignment: 'AlignCenter';
+  background-color:#1e1e1e;
 }
 
 #PreviewDeck {
@@ -262,4 +304,20 @@
 
 #AlignLeftBottom {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#VinylStatusTop1, #VinylStatusTop3 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+#VinylStatusTop2, #VinylStatusTop4 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-right: 0px;
 }

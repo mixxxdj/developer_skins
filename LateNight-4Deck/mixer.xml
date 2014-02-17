@@ -1,8 +1,8 @@
 <Template>
 	<WidgetGroup>
 	    <ObjectName>Mixer</ObjectName>
-		<SizePolicy>me,min</SizePolicy>
-		<MinimumSize>360,-1</MinimumSize>
+		<SizePolicy>min,min</SizePolicy>
+		<MinimumSize>340,-1</MinimumSize>
 		<Layout>horizontal</Layout>
 		<Children>
 			<WidgetGroup>
@@ -61,52 +61,49 @@
 							<WidgetGroup>
 								<Layout>horizontal</Layout>
 								<Children>
-									<Template src="skin:mixer_channel.xml">
-										<SetVariable name="channum">3</SetVariable>
-									</Template>
+								    <WidgetGroup>
+							            <Layout>horizontal</Layout>
+							            <Children>
+											<Template src="skin:mixer_channel.xml">
+												<SetVariable name="channum">3</SetVariable>
+        									</Template>
+							            </Children>
+							            <Connection>
+							                <ConfigKey persist="true">[Master],show_4decks</ConfigKey>
+							                <BindProperty>visible</BindProperty>
+							            </Connection>
+							        </WidgetGroup>
+								
 									<Template src="skin:mixer_channel.xml">
 										<SetVariable name="channum">1</SetVariable>
 									</Template>
 									<Template src="skin:mixer_channel.xml">
 										<SetVariable name="channum">2</SetVariable>
 									</Template>
-									<Template src="skin:mixer_channel.xml">
-										<SetVariable name="channum">4</SetVariable>
-									</Template>
+		                           <WidgetGroup>
+                                        <Layout>horizontal</Layout>
+                                        <Children>
+                                            <Template src="skin:mixer_channel.xml">
+                                                <SetVariable name="channum">4</SetVariable>
+                                            </Template>
+                                        </Children>
+                                        <Connection>
+                                            <ConfigKey persist="true">[Master],show_4decks</ConfigKey>
+                                            <BindProperty>visible</BindProperty>
+                                        </Connection>
+                                    </WidgetGroup>
 								</Children>
 							</WidgetGroup>
 							<WidgetGroup>
 							    <ObjectName>CrossFadeContainer</ObjectName>
 								<Layout>horizontal</Layout>
-								<SizePolicy>me,min</SizePolicy>
+								<SizePolicy>min,min</SizePolicy>
+								<MinimumSize>240,-1</MinimumSize>
 								<Children>
-								    <WidgetGroup>
-								        <ObjectName>FourDeckButton</ObjectName>
-				                        <Layout>horizontal</Layout>
-				                        <Children>
-				                            <PushButton>
-				                                <Size>40f,20f</Size>
-				                                <ObjectName>ToggleButton</ObjectName>
-				                                <NumberStates>2</NumberStates>
-				                                <State>
-				                                  <Number>0</Number>
-				                                  <Text>2DECK</Text>
-				                                </State>
-				                                <State>
-				                                  <Number>1</Number>
-				                                  <Text>4DECK</Text>
-				                                </State>
-				                                <Connection>
-				                                  <ConfigKey persist="true">[Master],show_4decks</ConfigKey>
-				                                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-				                                </Connection>
-				                            </PushButton>
-				                        </Children>
-				                    </WidgetGroup>
 								    <WidgetGroup>
 								        <ObjectName>Crossfader</ObjectName>
 								        <Layout>horizontal</Layout>
-								        <SizePolicy>me,min</SizePolicy>
+								        <SizePolicy>min,min</SizePolicy>
 								        <Children>
 											<SliderComposed>
 												<TooltipId>crossfader</TooltipId>
