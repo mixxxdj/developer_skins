@@ -1,0 +1,39 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Decks and mixer, like it says.
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>DecksAndMixer</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me, min</SizePolicy>
+    <MinimumSize>1024, -1</MinimumSize>
+    <Children>
+        <WidgetGroup>
+            <ObjectName>DeckLeftMargin</ObjectName>
+            <Layout>horizontal</Layout>
+            <SizePolicy>me,min</SizePolicy>
+            <MinimumSize>50,-1</MinimumSize>
+            <Children>
+            </Children>
+        </WidgetGroup>
+        
+        <Template src="skin:deck_container.xml">
+            <SetVariable name="channum">1</SetVariable>
+        </Template>
+        <Template src="skin:mixer.xml"/>
+        <Template src="skin:deck_container.xml">
+            <SetVariable name="channum">2</SetVariable>
+        </Template>
+        
+        <WidgetGroup>
+            <ObjectName>DeckRightMargin</ObjectName>
+            <Layout>horizontal</Layout>
+            <SizePolicy>me,min</SizePolicy>
+            <MinimumSize>1,-1</MinimumSize>
+            <Children></Children>
+        </WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

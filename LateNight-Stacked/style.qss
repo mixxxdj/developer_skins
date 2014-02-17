@@ -1,0 +1,379 @@
+#DecksLeftContainer, #DecksRightContainer, #SkinContainer {
+  background-color: #0f0f0f;
+}
+
+#RightSpinny {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
+
+#Library {
+  border-left: 0px solid #585858;
+  background-color: #1e1e1e;
+  padding-top: 10px;
+  border-top: 1px solid #585858;
+}
+
+#DeckRowOne {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  border-bottom: 1px solid #585858;
+  background-color: #1e1e1e;
+  padding: 4px;
+}
+
+#DeckRowTwoThreeFour {
+  border-bottom: 1px solid #585858;
+  background-color: #1e1e1e;
+  /*padding: 3px;*/
+}
+
+#DeckRowFive {
+  border-bottom: 1px solid #585858;
+  background-color: #1e1e1e;
+  padding: 0px;
+  padding-left: 2px;
+}
+
+#DecksAndMixer {
+  background-color: #1e1e1e;
+}
+
+#VisualizationContainer {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+#Deck4 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858; 
+}
+
+#Deck2 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858; 
+  border-bottom: 0px;
+}
+
+#Deck3 { 
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858;
+  border-right: 0px;
+}
+
+#Deck1 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+#DeckContainer {
+  background-color: #0f0f0f;
+}
+
+#DeckLeftMargin {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  border: 1px solid #585858;
+  border-left: 0px;
+  border-bottom: 0px;
+  border-top: 0px;
+  background-color: #0f0f0f;
+}
+
+#DeckRightMargin {
+  border: 0px solid #585858;
+  border-top:0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  background-color: #0f0f0f;
+}
+
+#Mixer {
+  background-color: #1e1e1e;
+  qproperty-layoutAlignment: 'AlignCenter';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#PrimaryMixer {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+  padding: 0px;
+  margin: 0px;
+}
+
+#MasterControls {
+}
+
+#MixerContainer {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+}
+
+#MixerChannel {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+}
+
+#MasterSync {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  background-color: #1e1e1e;
+  padding: 1px;
+  padding-left: 2px;
+}
+
+#MasterFaders, #MasterLevels {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+  background-color: #1e1e1e;
+}
+
+#KnobCentered {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+}
+
+#TitleGutter, #ArtistGutter, #AlbumGutter { 
+  qproperty-layoutAlignment: 'AlignLeft | AlignCenter';
+  padding: 3px;
+  padding-bottom: 6px;
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#TimeGutter, #DurationGutter {
+  qproperty-layoutAlignment: 'AlignRight | AlignCenter';
+  padding: 3px;
+}
+
+#RateGutter {
+  qproperty-layoutAlignment: 'AlignCenter | AlignBottom';
+  text-align: center;
+  padding-top: 0px;
+}
+
+#ColumnThree {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+  padding: 3px;
+  padding-left:10px;
+}
+
+#LoopSizeButtons {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#Hotcues {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#FFRew {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
+
+#ColumnFour {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+  padding: 3px;
+}
+
+#LoopInOut {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#PlayCue {
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+}
+
+#RateButtons, #RatePermButtons, #RateTempButtons {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#ColumnOne {
+  qproperty-layoutAlignment: 'AlignLeft';
+}
+
+#ColumnTwo {
+  padding: 3px;
+  padding-left: 10px;
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
+}
+
+#DeckButtons {
+  padding: 3px;
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#ColumnTwo {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#ToolbarButtons {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding: 2px;
+}
+
+#VinylControls {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  padding: 10px;
+}
+
+#KnobLabel {
+  font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #585858;
+  text-align:center;
+  padding-bottom: 2px;
+  padding-top: -2px;
+}
+
+#SyncControls {
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+  padding-right: 0px;
+  border-bottom: 1px solid #585858;
+}
+
+#ToggleButton {
+  border: 1px solid #eece33;
+  font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+}
+
+#CrossFadeContainer {
+qproperty-layoutAlignment: 'AlignCenter';
+ background-color: #1e1e1e;
+}
+
+#FourDeckButton {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  padding: 5px;
+  border: 0px solid #585858;
+  border-left:0px;
+  border-right:0px;
+  border-bottom:0px;
+  background-color: #0f0f0f;
+}
+
+#Crossfader {
+  qproperty-layoutAlignment: 'AlignCenter';
+  background-color:#1e1e1e;
+}
+
+#PreviewDeck {
+  border: 1px solid #585858;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+#PreviewPlayOverview {
+  padding: 3px;
+}
+
+#PreviewColumnOne {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+#PreviewTitleEject {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 3px;
+}
+
+#PreviewPlayOverview {
+  padding: 3px;
+}
+
+#PreviewDeckExpanded {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#PreviewDeckToggle {
+  font: 14px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  padding:0px;
+  margin:0px;
+  text-align:left;
+}
+
+#CollapseButton {
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
+  padding-top: 0px;
+  padding-bottom:3px;
+  text-align:left;
+}
+
+#AlignLeftTop {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#AlignRightTop {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
+
+#AlignLeftBottom {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#VinylStatusTop1, #VinylStatusTop3 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#VinylStatusTop2, #VinylStatusTop4 {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#WaveformMixerContainer {
+  border: 1px solid #585858;
+  border-bottom: 0px;
+}
+
+#RateContainer3 {
+  border: 1px solid #585858;
+  border-right: 0px;
+  padding: 3px;
+}
+
+#RateContainer4 {
+  border: 1px solid #585858;
+  border-right: 0px;
+  border-left: 0px;
+  padding: 3px;
+}
+
+#RateContainer1 {
+  border: 1px solid #585858;
+  border-bottom: 1px;
+  border-right: 0px;
+  padding: 3px;
+}
+
+#RateContainer2 {
+  border: 1px solid #585858;
+  border-bottom: 1px;
+  border-right: 0px;
+  border-left: 0px;
+  padding: 3px;
+}
+
+#RateAdjust {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+  padding: 6px;
+}
+
