@@ -27,7 +27,7 @@
 	      <Align>Left</Align>
 	    </State>
 	    <Connection>
-	      <ConfigKey><Variable name="control"/></ConfigKey>
+	      <ConfigKey persist="true"><Variable name="control"/></ConfigKey>
 	      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 	      <ButtonState>LeftButton</ButtonState>
 	    </Connection>

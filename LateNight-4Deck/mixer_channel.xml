@@ -1,7 +1,6 @@
 <Template>
   <WidgetGroup>  <!-- Channel1 controls -->
     <ObjectName>MixerChannel</ObjectName>
-  <!--<Pos>99,0</Pos>-->-->
     <SizePolicy>min,min</SizePolicy>
     <MinimumSize>80,260</MinimumSize>
     <!-- Channel1 controls -->
@@ -10,7 +9,7 @@
         <TooltipId>channel_volume</TooltipId>
         <Handle>knob_volume1.png</Handle>
         <Slider>slider_volume1.png</Slider>
-        <Pos>26,153</Pos>-->
+        <Pos>26,153</Pos>
         <Horizontal>false</Horizontal>
         <Connection>
           <ConfigKey>[Channel<Variable name="channum"/>],volume</ConfigKey>
@@ -30,7 +29,7 @@
 		      <Pressed>btn_pfl1_overdown.png</Pressed>
 		      <Unpressed>btn_pfl1_over.png</Unpressed>
 	      </State>
-	      <Pos>1,8</Pos>-->
+	      <Pos>1,8</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],pfl</ConfigKey>
 	      </Connection>
@@ -48,7 +47,7 @@
 		      <Pressed>btn_kill_overdown.png</Pressed>
 		      <Unpressed>btn_kill_over.png</Unpressed>
 	      </State>
-	      <Pos>4,54</Pos>-->
+	      <Pos>4,54</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],filterHighKill</ConfigKey>
 		      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
@@ -68,7 +67,7 @@
 		      <Pressed>btn_kill_overdown.png</Pressed>
 		      <Unpressed>btn_kill_over.png</Unpressed>
 	      </State>
-	      <Pos>4,93</Pos>-->
+	      <Pos>4,93</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],filterMidKill</ConfigKey>
 		      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
@@ -88,7 +87,7 @@
 		      <Pressed>btn_kill_overdown.png</Pressed>
 		      <Unpressed>btn_kill_over.png</Unpressed>
 	      </State>
-	      <Pos>4,130</Pos>-->
+	      <Pos>4,130</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],filterLowKill</ConfigKey>
 		      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
@@ -99,7 +98,7 @@
 	      <TooltipId>pregain</TooltipId>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
-	      <Pos>29,1</Pos>-->
+	      <Pos>29,1</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],pregain</ConfigKey>
 	      </Connection>
@@ -108,7 +107,7 @@
 	      <TooltipId>filterHigh</TooltipId>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
-	      <Pos>29,39</Pos>-->
+	      <Pos>29,39</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],filterHigh</ConfigKey>
 	      </Connection>
@@ -117,7 +116,7 @@
 	      <TooltipId>filterMid</TooltipId>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
-	      <Pos>29,78</Pos>-->
+	      <Pos>29,78</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],filterMid</ConfigKey>
 	      </Connection>
@@ -126,7 +125,7 @@
 	      <TooltipId>filterLow</TooltipId>
 	      <NumberStates>64</NumberStates>
 	      <Path>knobs/knob_rotary_s%1.png</Path>
-	      <Pos>29,115</Pos>-->
+	      <Pos>29,115</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],filterLow</ConfigKey>
 	      </Connection>
@@ -135,7 +134,7 @@
 	      <TooltipId>PeakIndicator</TooltipId>
 	      <PathStatusLight>btn_clipping1_over.png</PathStatusLight>
 	      <PathBack>btn_clipping1.png</PathBack>
-	      <Pos>8,154</Pos>-->
+	      <Pos>8,154</Pos>
 	      <Connection>
 		      <ConfigKey>[Channel<Variable name="channum"/>],PeakIndicator</ConfigKey>
 	      </Connection>
@@ -144,7 +143,7 @@
 	      <TooltipId>channel_VuMeter</TooltipId>
 	      <PathVu>btn_volume_display1_over.png</PathVu>
 	      <PathBack>btn_volume_display1.png</PathBack>
-	      <Pos>8,169</Pos>-->
+	      <Pos>8,169</Pos>
 	      <Horizontal>false</Horizontal>
 	      <PeakHoldSize>5</PeakHoldSize>
 	      <PeakHoldTime>500</PeakHoldTime>
