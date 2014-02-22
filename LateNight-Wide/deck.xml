@@ -1,7 +1,7 @@
 <Template>
 	<WidgetGroup>  <!-- Deck Channel1 -->
 		<ObjectName>Deck<Variable name="channum" /></ObjectName>
-		<SizePolicy>me,max</SizePolicy>
+		<SizePolicy>me,min</SizePolicy>
 		<MinimumSize>340,-1</MinimumSize>
 		<MaximumSize>500,-1</MaximumSize>
 		<Layout>vertical</Layout>

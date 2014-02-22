@@ -4,9 +4,9 @@
 
 #Library {
   border-left: 0px solid #585858;
-  background-color: #1e1e1e;
-  padding-top: 10px;
-  border-top: 1px solid #585858;
+  background-color: #0e0e0e;
+  padding-top: 5px;
+  /*border-top: 1px solid #585858;*/
 }
 
 #DeckRowOne {
@@ -78,6 +78,7 @@
   border-right: 0px;
   border-bottom: 0px;
   background-color: #0f0f0f;
+  padding: 10px;
 }
 
 #Mixer {
@@ -324,10 +325,6 @@ qproperty-layoutAlignment: 'AlignCenter';
   border-right: 0px;
 }
 
-#FourDeckButton {
-  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
-}
-
 #MicContainer {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
@@ -342,6 +339,9 @@ qproperty-layoutAlignment: 'AlignCenter';
 #SamplerDecksContainer {
   background-color: #0e0e0e;
   border-top: 1px solid #585858;
+  /*border-bottom: 1px solid #585858;*/
+  padding: 2px;
+  padding-left: 0px;
 }
 
 #SamplerDeck {
@@ -429,4 +429,82 @@ qproperty-layoutAlignment: 'AlignCenter';
   border-bottom: 0px;
   border-right: 0px;
   padding: 2px;
+}
+
+
+
+
+#TitleGutter WLabel, #EffectChainNameContainer WLabel {
+  font: bold 16px/19px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #eece33;
+  text-transform: none;
+  text-align: left;
+}
+
+#EffectChainNameRow {
+  border-bottom: 1px solid #585858;
+  background-color: transparent;
+  margin: 0px;
+}
+
+#EffectChain1, #EffectChain2, #EffectChain3, #EffectChain4 {
+  qproperty-layoutAlignment: 'AlignTop';
+  border: 1px solid #585858;
+  border-left:none;
+}
+
+#EffectChain1 {
+  border-left: 1px solid #585858;
+}
+
+#EffectChainNameContainer {
+  padding: 2px;
+}
+
+#EffectChainNextPrevContainer {
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+}
+
+#EffectChainNextPrevContainer WPushButton {
+  font-size: 16px;
+}
+
+
+#EffectRackContainer {
+  background-color: #0e0e0e;
+  padding-top: 2px;
+  padding-bottom:5px;
+  /*border-bottom: 10px solid #585858;*/
+}
+
+#EffectRackExpanded, #EffectRackCollapsed {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#EffectChainParameters {
+  padding: 2px;
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  qproperty-layoutSpacing: 2;
+}
+
+#EffectChainControls {
+  padding: 2px;
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+  qproperty-layoutSpacing: 2;
+}
+
+#EffectChainGroupControls {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+}
+
+#EffectChain {
+  font-size: 16px;
+}
+
+#EffectKnob {
+  qproperty-layoutAlignment: 'AlignCenter';
+}
+
+WLabel {
+  qproperty-alignment: 'AlignCenter';
 }

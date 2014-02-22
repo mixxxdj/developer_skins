@@ -9,22 +9,22 @@
   <WidgetGroup>
     <ObjectName>CollapseButton</ObjectName>
     <Layout>horizontal</Layout>
-    <SizePolicy>min,min</SizePolicy>
+    <SizePolicy>me,min</SizePolicy>
     <MinimumSize>20,20</MinimumSize>
     <Children>
 	  <PushButton>
-	    <ObjectName><Variable name="object_name"/></ObjectName>
-	    <Size>110f,20f</Size>
+        <ObjectName><Variable name="object_name"/></ObjectName>
+        <Size>80me,19f</Size>
 	    <NumberStates>2</NumberStates>
 	    <State>
 	      <Number>0</Number>
 	      <Text>▶ <Variable name="button_text"/></Text>
-	      <Align>Left</Align>
+	      <Alignment>Left</Alignment>
 	    </State>
 	    <State>
 	      <Number>1</Number>
 	      <Text>▼ <Variable name="button_text"/></Text>
-	      <Align>Left</Align>
+	      <Alignment>Left</Alignment>
 	    </State>
 	    <Connection>
 	      <ConfigKey persist="true"><Variable name="control"/></ConfigKey>

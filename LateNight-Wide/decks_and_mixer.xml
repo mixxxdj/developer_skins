@@ -10,7 +10,7 @@
     <SizePolicy>me, min</SizePolicy>
     <!-- It would be nice if we could be totally dynamic, but having a set
     height for this row really helps. -->
-    <MinimumSize>1024, 325</MinimumSize>
+    <MinimumSize>1024, 350</MinimumSize>
     <Children>
         <WidgetGroup>
             <ObjectName>DeckLeftMargin</ObjectName>
