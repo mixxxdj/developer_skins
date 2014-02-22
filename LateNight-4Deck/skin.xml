@@ -70,7 +70,7 @@
 
     <Template src="skin:visualization_area.xml"/>
     <Template src="skin:decks_and_mixer.xml"/>
-    <!--<Template src="skin:sample_decks.xml"/>-->
+    <Template src="skin:sample_decks_container.xml"/>
     <!--<Template src="skin:effect_rack.xml"/>-->
     <Template src="skin:library.xml"/>
   </Children>

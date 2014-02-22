@@ -282,7 +282,7 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
-#PreviewDeckToggle {
+#HideShowButton {
   font: 14px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   padding:0px;
   margin:0px;
@@ -328,9 +328,105 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
 }
 
+#MicContainer {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
 #MicBorder {
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
   border: 1px solid #585858;
   padding: 5px;
   margin: 5px;
+}
+
+#SamplerDecksContainer {
+  background-color: #0e0e0e;
+  border-top: 1px solid #585858;
+}
+
+#SamplerDeck {
+  padding: 0px;
+  margin: 10px;
+  margin-top: 0px;
+  border: 1px solid #585858;
+  background-color: #1e1e1e;
+}
+
+#SamplerVU {
+  padding: 5px;
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+
+#SamplerPitch {
+  padding: 5px;
+  qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+}
+
+#SamplerSyncButton {
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
+}
+
+#SamplerMainControls {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+#SamplerButtons {
+  padding: 5px;
+  qproperty-layoutAlignment: 'AlignCenter';
+}
+
+#SamplerRowTwo {
+  border: 1px solid #585858;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#SamplerText {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  padding: 3px;
+}
+
+#SamplerHotcues {
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+}
+
+#SamplerPfl {
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+  padding:5px;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-right:0px;
+}
+
+#SamplerButtonGrid {
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+#SamplerPlay {
+  padding: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+#SamplerVol {
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+  border: 1px solid #585858;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-right: 0px;
+  padding: 2px;
 }

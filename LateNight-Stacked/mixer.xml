@@ -5,6 +5,14 @@
 		<MinimumSize>340,-1</MinimumSize>
 		<Layout>horizontal</Layout>
 		<Children>
+		    <WidgetGroup>
+                <ObjectName>MicContainer</ObjectName>
+                <Layout>vertical</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                    <Template src="skin:microphone.xml"/>
+                </Children>
+            </WidgetGroup>
 			<WidgetGroup>
 			    <ObjectName>PrimaryMixer</ObjectName> 
 				<Layout>vertical</Layout>
