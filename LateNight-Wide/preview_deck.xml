@@ -2,25 +2,25 @@
 	<WidgetGroup>
 	    <ObjectName>PreviewDeck</ObjectName>
 		<Layout>horizontal</Layout>
-		<SizePolicy>me, min</SizePolicy>
-		<MinimumSize>-1,40</MinimumSize>
+		<SizePolicy>min, min</SizePolicy>
+		<MinimumSize>100,40</MinimumSize>
 		<Children>
 			<!-- Preview Deck Column 1 Row 1 -->
 			<WidgetGroup>
 			    <ObjectName>PreviewColumnOne</ObjectName>
 				<Layout>vertical</Layout>
-				<SizePolicy>me,min</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<MinimumSize>-1,40</MinimumSize>
 				<Children>
 					<WidgetGroup>
 					    <ObjectName>PreviewTitleEject</ObjectName>
 						<Layout>horizontal</Layout>
-						<SizePolicy>me,min</SizePolicy>
+						<SizePolicy>min,min</SizePolicy>
 						<Children>
 						    <WidgetGroup>
 						        <ObjectName>AlignLeftTop</ObjectName>
 						        <Layout>horizontal</Layout>
-						        <SizePolicy>me,min</SizePolicy>
+						        <SizePolicy>min,min</SizePolicy>
 						        <Children>
 									<Text>
 										<TooltipId>text</TooltipId>
@@ -64,7 +64,7 @@
 					    <ObjectName>PreviewPlayOverview</ObjectName>
 						<Layout>horizontal</Layout>
 						<SizePolicy>me,min</SizePolicy>
-						<MinimumSize>-1,40</MinimumSize>
+						<MinimumSize>100,40</MinimumSize>
 						<Children>
 							<PushButton>
 								<TooltipId>play_start</TooltipId>

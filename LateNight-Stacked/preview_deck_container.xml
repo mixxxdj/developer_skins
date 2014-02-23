@@ -3,19 +3,20 @@
 <Template>
     <WidgetGroup>
         <Layout>vertical</Layout>
-        <SizePolicy>me,f</SizePolicy>
+        <SizePolicy>min,f</SizePolicy>
+        <MinimumSize>100,-1</MinimumSize>
         <Children>
 			<WidgetStack>
 				<ObjectName>PreviewDeckContainer</ObjectName>
-				<SizePolicy>me,min</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<Children>
 					<WidgetGroup trigger="[PreviewDeck],show_previewdeck">
 						<ObjectName>PreviewDeckExpanded</ObjectName>
 						<Layout>vertical</Layout>
-						<SizePolicy>me,min</SizePolicy>
+						<SizePolicy>min,min</SizePolicy>
 						<Children>
 							<WidgetGroup>
-							    <SizePolicy>me,min</SizePolicy>
+							    <SizePolicy>min,min</SizePolicy>
 								<Layout>vertical</Layout>
 								<Children>
 									 <Template src="skin:hide_show_button.xml">
@@ -33,7 +34,7 @@
 					<WidgetGroup trigger="[PreviewDeck],hide_previewdeck">
 						<ObjectName>AlignLeftBottom</ObjectName>
 						<Layout>horizontal</Layout>
-						<SizePolicy>me,min</SizePolicy>
+						<SizePolicy>min,min</SizePolicy>
 						<Children>
 							<Template src="skin:hide_show_button.xml">
 								<SetVariable name="object_name">HideShowButton</SetVariable>
