@@ -28,9 +28,9 @@
                             </WidgetGroup>
                         </Children>
                     </WidgetGroup>
-        
+
                     <!-- Collapsed Library  -->
-                    <WidgetGroup>
+                    <WidgetGroup trigger="[Samplers],hide_samplers">
                         <ObjectName>AlignLeftBottom</ObjectName>
                         <Layout>horizontal</Layout>
                         <SizePolicy>me,min</SizePolicy>

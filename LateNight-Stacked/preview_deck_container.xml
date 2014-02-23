@@ -30,7 +30,7 @@
 					</WidgetGroup>
 		
 					<!-- Collapsed Library  -->
-					<WidgetGroup>
+					<WidgetGroup trigger="[PreviewDeck],hide_previewdeck">
 						<ObjectName>AlignLeftBottom</ObjectName>
 						<Layout>horizontal</Layout>
 						<SizePolicy>me,min</SizePolicy>

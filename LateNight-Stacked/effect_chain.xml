@@ -11,12 +11,13 @@
     <ObjectName>EffectChain<Variable name="EffectChain"/></ObjectName>
     <Layout>vertical</Layout>
     <SizePolicy>me,f</SizePolicy>
-    <MinimumSize>200,100</MinimumSize>
+    <MinimumSize>300,60</MinimumSize>
+    <MaximumSize>350,-1</MaximumSize>
     <Children>
       <WidgetGroup>
         <ObjectName>EffectChainNameRow</ObjectName>
         <Layout>horizontal</Layout>
-        <SizePolicy>min,min</SizePolicy>
+        <SizePolicy>me,min</SizePolicy>
         <Children>
           <WidgetGroup>
             <ObjectName>EffectChainNameContainer</ObjectName>
@@ -80,84 +81,114 @@
         </Children>
       </WidgetGroup>
 
+
       <WidgetGroup>
         <ObjectName>EffectChainControlRow</ObjectName>
         <Layout>horizontal</Layout>
-        <SizePolicy>min,min</SizePolicy>
+        <SizePolicy>me,min</SizePolicy>
+        <BackPath>background_tile.png</BackPath>
         <Children>
           <WidgetGroup>
             <ObjectName>EffectChainParameters</ObjectName>
             <SizePolicy>me,max</SizePolicy>
             <Layout>horizontal</Layout>
             <Children>
-              <Template src="skin:effect_parameter_knob.xml">
-                <SetVariable name="Effect">1</SetVariable>
-                <SetVariable name="EffectParameter">1</SetVariable>
-              </Template>
-              <Template src="skin:effect_parameter_knob.xml">
-                <SetVariable name="Effect">1</SetVariable>
-                <SetVariable name="EffectParameter">2</SetVariable>
-              </Template>
-              <Template src="skin:effect_parameter_knob.xml">
-                <SetVariable name="Effect">1</SetVariable>
-                <SetVariable name="EffectParameter">3</SetVariable>
-              </Template>
+              <WidgetGroup>
+                <SizePolicy>max,min</SizePolicy>
+                <Layout>horizontal</Layout>
+                <ObjectName>EffectKnobContainer</ObjectName>
+                <Children>
+                  <Template src="skin:effect_parameter_knob.xml">
+                    <SetVariable name="Effect">1</SetVariable>
+                    <SetVariable name="EffectParameter">1</SetVariable>
+                  </Template>
+                  <Template src="skin:effect_parameter_knob.xml">
+                    <SetVariable name="Effect">1</SetVariable>
+                    <SetVariable name="EffectParameter">2</SetVariable>
+                  </Template>
+                  <Template src="skin:effect_parameter_knob.xml">
+                    <SetVariable name="Effect">1</SetVariable>
+                    <SetVariable name="EffectParameter">3</SetVariable>
+                  </Template>
+                </Children>
+              </WidgetGroup>
             </Children>
           </WidgetGroup>
 
           <WidgetGroup>
-            <ObjectName>EffectChainControls</ObjectName>
             <Layout>horizontal</Layout>
-            <SizePolicy>me,max</SizePolicy>
+            <SizePolicy>min,min</SizePolicy>
+            <ObjectName>EffectControlsRight</ObjectName>
             <Children>
-              <Template src="skin:knob.xml">
-                <SetVariable name="control">parameter</SetVariable>
-                <SetVariable name="label">Parameter</SetVariable>
-              </Template>
+              <WidgetGroup>
+                <ObjectName>EffectChainControls</ObjectName>
+                <Layout>horizontal</Layout>
+                <SizePolicy>max,min</SizePolicy>
+                <Children>
+                  <!-- <Template src="skin:knob.xml">
+                    <SetVariable name="control">parameter</SetVariable>
+                    <SetVariable name="label">Parameter</SetVariable>
+                  </Template>-->
+                  <Template src="skin:knob.xml">
+                    <SetVariable name="control">mix</SetVariable>
+                    <SetVariable name="label">Mix</SetVariable>
+                  </Template>
+                </Children>
+              </WidgetGroup>
 
-              <Template src="skin:knob.xml">
-                <SetVariable name="control">mix</SetVariable>
-                <SetVariable name="label">Mix</SetVariable>
-              </Template>
+              <WidgetGroup>
+                <ObjectName>EffectChainGroupControls</ObjectName>
+                <SizePolicy>min,min</SizePolicy>
+                <Layout>vertical</Layout>
+                <Children>
+                  <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <SizePolicy>min,min</SizePolicy>
+                    <Children>
+                      <Template src="skin:effect_chain_group_control_button.xml">
+                        <SetVariable name="group_name">Master</SetVariable>
+                        <SetVariable name="group_group">[Master]</SetVariable>
+                      </Template>
+                      <Template src="skin:effect_chain_group_control_button.xml">
+                        <SetVariable name="group_name">Head</SetVariable>
+                        <SetVariable name="group_group">[Headphone]</SetVariable>
+                      </Template>
+                    </Children>
+                  </WidgetGroup>
+                  <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <SizePolicy>min,min</SizePolicy>
+                    <Children>
+                      <Template src="skin:effect_chain_group_control_button.xml">
+                        <SetVariable name="group_name">CH1</SetVariable>
+                        <SetVariable name="group_group">[Channel1]</SetVariable>
+                      </Template>
+
+                      <Template src="skin:effect_chain_group_control_button.xml">
+                        <SetVariable name="group_name">CH2</SetVariable>
+                        <SetVariable name="group_group">[Channel2]</SetVariable>
+                      </Template>
+                    </Children>
+                  </WidgetGroup>
+                  <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <SizePolicy>min,min</SizePolicy>
+                    <Children>
+                      <Template src="skin:effect_chain_group_control_button.xml">
+                        <SetVariable name="group_name">CH3</SetVariable>
+                        <SetVariable name="group_group">[Channel3]</SetVariable>
+                      </Template>
+
+                      <Template src="skin:effect_chain_group_control_button.xml">
+                        <SetVariable name="group_name">CH4</SetVariable>
+                        <SetVariable name="group_group">[Channel4]</SetVariable>
+                      </Template>
+                    </Children>
+                  </WidgetGroup>
+                </Children>
+              </WidgetGroup>
             </Children>
           </WidgetGroup>
-        </Children>
-      </WidgetGroup>
-
-      <WidgetGroup>
-        <ObjectName>EffectChainGroupControls</ObjectName>
-        <SizePolicy>me,min</SizePolicy>
-        <Layout>horizontal</Layout>
-        <Children>
-          <Template src="skin:effect_chain_group_control_button.xml">
-            <SetVariable name="group_name">Head</SetVariable>
-            <SetVariable name="group_group">[Headphone]</SetVariable>
-          </Template>
-
-          <Template src="skin:effect_chain_group_control_button.xml">
-            <SetVariable name="group_name">Master</SetVariable>
-            <SetVariable name="group_group">[Master]</SetVariable>
-          </Template>
-
-          <Template src="skin:effect_chain_group_control_button.xml">
-            <SetVariable name="group_name">CH1</SetVariable>
-            <SetVariable name="group_group">[Channel1]</SetVariable>
-          </Template>
-
-          <Template src="skin:effect_chain_group_control_button.xml">
-            <SetVariable name="group_name">CH2</SetVariable>
-            <SetVariable name="group_group">[Channel2]</SetVariable>
-          </Template>
-
-          <Template src="skin:effect_chain_group_control_button.xml">
-            <SetVariable name="group_name">CH3</SetVariable>
-            <SetVariable name="group_group">[Channel3]</SetVariable>
-          </Template>
-
-          <Template src="skin:effect_chain_group_control_button.xml">
-            <SetVariable name="group_name">CH4</SetVariable>
-            <SetVariable name="group_group">[Channel4]</SetVariable>
-          </Template>
         </Children>
       </WidgetGroup>
     </Children>

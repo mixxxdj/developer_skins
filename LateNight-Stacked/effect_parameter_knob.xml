@@ -27,7 +27,7 @@
 	     </Children>
       </WidgetGroup>
       <EffectParameterName>
-        <Size>80f,15f</Size>
+        <Size>1me,12f</Size>
         <ObjectName>KnobLabel</ObjectName>
         <EffectRack><Variable name="EffectRack"/></EffectRack>
         <EffectChain><Variable name="EffectChain"/></EffectChain>

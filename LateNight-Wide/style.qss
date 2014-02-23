@@ -229,9 +229,10 @@
   border-bottom: 1px solid #585858;
 }
 
-#ToggleButton {
-  border: 1px solid #eece33;
+#FourDeckToggleButton {
+  border: 1px solid #e17800;
   font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #e17800;
 }
 
 #CrossFadeContainer {
@@ -458,6 +459,7 @@ qproperty-layoutAlignment: 'AlignCenter';
 }
 
 #EffectChainNameContainer {
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
   padding: 2px;
 }
 
@@ -468,7 +470,6 @@ qproperty-layoutAlignment: 'AlignCenter';
 #EffectChainNextPrevContainer WPushButton {
   font-size: 16px;
 }
-
 
 #EffectRackContainer {
   background-color: #0e0e0e;
@@ -487,22 +488,48 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutSpacing: 2;
 }
 
-#EffectChainControls {
-  padding: 2px;
+#EffectChainControlRow {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#EffectControlsRight {
   qproperty-layoutAlignment: 'AlignRight | AlignTop';
-  qproperty-layoutSpacing: 2;
+}
+
+#EffectChainControls {
+  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+  padding: 2px;
 }
 
 #EffectChainGroupControls {
-  qproperty-layoutAlignment: 'AlignRight | AlignTop';
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
 
 #EffectChain {
   font-size: 16px;
 }
 
+#EffectKnobContainer {
+}
+
 #EffectKnob {
   qproperty-layoutAlignment: 'AlignCenter';
+  padding-left: 5px;
+  padding-right: 5px; 
+}
+
+#EffectChainKnob {
+  qproperty-layoutAlignment: 'AlignRight';
+  padding:3px;
+}
+
+#EffectChainGroupControlButton {
+  font: bold 11px/13px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #e17800;
+  text-transform: none;
+  text-align: center;
+  border: 1px solid #e17800;
+  margin: 1px;
 }
 
 WLabel {

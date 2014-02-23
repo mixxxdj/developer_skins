@@ -35,7 +35,7 @@
                     <Children>
 			            <PushButton>
 			                <Size>40f,20f</Size>
-			                <ObjectName>ToggleButton</ObjectName>
+			                <ObjectName>FourDeckToggleButton</ObjectName>
 			                <NumberStates>2</NumberStates>
 			                <State>
 			                  <Number>0</Number>

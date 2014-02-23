@@ -57,7 +57,7 @@
           </WidgetGroup>
 
           <!-- Collapsed EffectRack -->
-          <WidgetGroup>
+          <WidgetGroup trigger="[EffectRack1],hide">
             <ObjectName>EffectRackCollapsed</ObjectName>
             <Layout>horizontal</Layout>
             <MinimumSize>-1,20</MinimumSize>
