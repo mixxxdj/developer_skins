@@ -49,12 +49,14 @@
 					<WidgetGroup>
 						<ObjectName>TimeGutter</ObjectName>
 						<Layout>horizontal</Layout>
-						<SizePolicy>me,min</SizePolicy>
+						<SizePolicy>f,min</SizePolicy>
 						<Children>
 							<NumberPos>
+                                <Size>70f,20f</Size>
+                                <Alignment>right</Alignment>
 								<TooltipId>track_time</TooltipId>
 								<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
-									Unicode, Arial, Verdana, sans-serif;  color: #EECE33;}
+									Unicode, Arial, Verdana, sans-serif;  color: #EECE33; text-align:right;}
 								</Style>
 								<Channel>
 									<Variable name="channum" />
