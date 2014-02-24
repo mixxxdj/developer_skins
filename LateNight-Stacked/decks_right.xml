@@ -4,11 +4,14 @@
         <Layout>vertical</Layout>
         <SizePolicy>me,min</SizePolicy>
         <Children>
+            <Template src="skin:deck_container.xml">
+	            <SetVariable name="channum">2</SetVariable>
+	        </Template>
             <WidgetGroup>
                 <Layout>horizontal</Layout>
                 <Children>
                     <Template src="skin:deck_container.xml">
-                        <SetVariable name="channum">2</SetVariable>
+                        <SetVariable name="channum">4</SetVariable>
                     </Template>
                 </Children>
                 <Connection>
@@ -16,9 +19,6 @@
                     <BindProperty>visible</BindProperty>
                 </Connection>
             </WidgetGroup>
-            <Template src="skin:deck_container.xml">
-	            <SetVariable name="channum">4</SetVariable>
-	        </Template>
         </Children>
     </WidgetGroup>
 </Template>

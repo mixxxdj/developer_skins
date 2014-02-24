@@ -47,26 +47,26 @@
 
 #Deck4 {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
-  border: 1px solid #585858; 
+  border: 1px solid #585858;
+  border-top: 0px; 
 }
 
 #Deck2 {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   border: 1px solid #585858; 
-  border-bottom: 0px;
 }
 
 #Deck3 { 
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   border: 1px solid #585858;
   border-right: 0px;
+  border-top: 0px;
 }
 
 #Deck1 {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   border: 1px solid #585858;
   border-right: 0px;
-  border-bottom: 0px;
 }
 
 #DeckContainer {
@@ -148,10 +148,6 @@
 #TimeGutter, #DurationGutter {
   qproperty-layoutAlignment: 'AlignRight | AlignCenter';
   padding: 3px;
-  border: 1px solid #585858;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
 }
 
 #RateGutter {
@@ -353,6 +349,7 @@ qproperty-layoutAlignment: 'AlignCenter';
 #RateContainer3 {
   border: 1px solid #585858;
   border-right: 0px;
+  border-top: 0px;
   padding: 3px;
 }
 
@@ -360,19 +357,18 @@ qproperty-layoutAlignment: 'AlignCenter';
   border: 1px solid #585858;
   border-right: 0px;
   border-left: 0px;
+  border-top: 0px;
   padding: 3px;
 }
 
 #RateContainer1 {
   border: 1px solid #585858;
-  border-bottom: 1px;
   border-right: 0px;
   padding: 3px;
 }
 
 #RateContainer2 {
   border: 1px solid #585858;
-  border-bottom: 1px;
   border-right: 0px;
   border-left: 0px;
   padding: 3px;
