@@ -2,7 +2,7 @@
     <WidgetGroup>
         <ObjectName>DeckContainer</ObjectName>
         <Layout>vertical</Layout>
-        <SizePolicy>min,min</SizePolicy>
+        <SizePolicy>me,min</SizePolicy>
         <Children>
             <WidgetGroup>
                 <ObjectName>VinylStatusTop<Variable name="channum" /></ObjectName>
@@ -24,7 +24,7 @@
                 </Children>
             </WidgetGroup>
             <WidgetGroup>
-                <SizePolicy>min,min</SizePolicy>
+                <SizePolicy>me,min</SizePolicy>
                 <Layout>horizontal</Layout>
                 <Children>
                     <Template src="skin:deck.xml"/>

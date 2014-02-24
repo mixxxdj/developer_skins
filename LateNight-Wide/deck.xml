@@ -1,9 +1,9 @@
 <Template>
 	<WidgetGroup>  <!-- Deck Channel1 -->
 		<ObjectName>Deck<Variable name="channum" /></ObjectName>
-		<SizePolicy>f,min</SizePolicy>
+		<SizePolicy>me,min</SizePolicy>
 		<MinimumSize>340,-1</MinimumSize>
-		<MaximumSize>340,-1</MaximumSize>
+		<MaximumSize>500,-1</MaximumSize>
 		<Layout>vertical</Layout>
 		<Children>
 			<Template src="skin:deck_row_1.xml" />
