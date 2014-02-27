@@ -90,7 +90,7 @@
             <ObjectName>DeckRightMargin</ObjectName>
             <Layout>horizontal</Layout>
             <SizePolicy>me,min</SizePolicy>
-            <MinimumSize>1,325</MinimumSize>
+            <MinimumSize>80,325</MinimumSize>
             <Children>
                 <Time>
                     <Style>QLabel { font: bold 16px/19px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
