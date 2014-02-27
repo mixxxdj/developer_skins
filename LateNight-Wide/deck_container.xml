@@ -3,11 +3,14 @@
         <ObjectName>DeckContainer</ObjectName>
         <Layout>vertical</Layout>
         <SizePolicy>me,min</SizePolicy>
+        <MinimumSize>340,-1</MinimumSize>
+        <MaximumSize>340,-1</MaximumSize>
         <Children>
             <WidgetGroup>
                 <ObjectName>VinylStatusTop<Variable name="channum" /></ObjectName>
-                <SizePolicy>me,min</SizePolicy>
+                <SizePolicy>max,min</SizePolicy>
                 <MinimumSize>2,10</MinimumSize>
+                <MaximumSize>340,10</MaximumSize>
                 <Layout>horizontal</Layout>
                 <Children>
                     <StatusLight> 

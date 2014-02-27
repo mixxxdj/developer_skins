@@ -20,15 +20,37 @@
     <NumberStates>2</NumberStates>
     <State>
       <Number>0</Number>
+      <Style>#EffectChainGroupControlButton {
+                 font: bold 11px/13px Lucida Grande, Lucida Sans Unicode,
+                       Arial, Verdana, sans-serif;
+                 color: #585858;
+                 background-color: #0e0e0e;
+                 text-transform: none;
+                 text-align: center;
+                 border: 1px solid #585858;
+                 margin: 1px;
+             }
+      </Style>
       <Text><Variable name="state_0_text"/></Text>
-      <Pressed><Variable name="state_0_pressed"/></Pressed>
-      <Unpressed><Variable name="state_0_pressed"/></Unpressed>
+      <!-- <Pressed><Variable name="state_0_pressed"/></Pressed>
+      <Unpressed><Variable name="state_0_pressed"/></Unpressed> -->
     </State>
     <State>
       <Number>1</Number>
+      <Style>#EffectChainGroupControlButton {
+                 font: bold 11px/13px Lucida Grande, Lucida Sans Unicode,
+                       Arial, Verdana, sans-serif;
+                 color: #0e0e0e;
+                 background-color: #e17800;
+                 text-transform: none;
+                 text-align: center;
+                 border: 1px solid #585858;
+                 margin: 1px;
+             }
+      </Style>
       <Text><Variable name="state_1_text"/></Text>
-      <Pressed><Variable name="state_1_pressed"/></Pressed>
-      <Unpressed><Variable name="state_1_pressed"/></Unpressed>
+      <!-- <Pressed><Variable name="state_1_pressed"/></Pressed>
+      <Unpressed><Variable name="state_1_pressed"/></Unpressed> -->
     </State>
     <Connection>
       <ConfigKey><Variable name="left_connection_control"/></ConfigKey>

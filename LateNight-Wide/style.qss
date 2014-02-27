@@ -229,11 +229,11 @@
   border-bottom: 1px solid #585858;
 }
 
-#FourDeckToggleButton {
+/*#FourDeckToggleButton {
   border: 1px solid #e17800;
   font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #e17800;
-}
+}*/
 
 #CrossFadeContainer {
 qproperty-layoutAlignment: 'AlignCenter';
@@ -523,14 +523,15 @@ qproperty-layoutAlignment: 'AlignCenter';
   padding:3px;
 }
 
-#EffectChainGroupControlButton {
+/* this is now inline in the pushbutton so we can change styles */
+/*#EffectChainGroupControlButton {
   font: bold 11px/13px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #e17800;
   text-transform: none;
   text-align: center;
   border: 1px solid #e17800;
   margin: 1px;
-}
+}*/
 
 WLabel {
   qproperty-alignment: 'AlignCenter';
