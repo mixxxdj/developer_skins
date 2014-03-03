@@ -1,0 +1,69 @@
+<Template>
+	<WidgetGroup>
+		<ObjectName>DeckRowOne</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,min</SizePolicy>
+		<MinimumSize>100,-1</MinimumSize>
+		<Children>
+		    <!-- <WidgetGroup>
+		        <ObjectName>VinylControls</ObjectName>
+                <Layout>Horizontal</Layout>
+                <SizePolicy>me,min</SizePolicy>
+                <MinimumSize>-1,48</MinimumSize>
+                <Children>		         
+					<PushButton>
+						<TooltipId>vinylcontrol_mode</TooltipId>
+						<Style></Style>
+						<NumberStates>3</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_vinylcontrol_mode_abs2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_mode_abs2.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_vinylcontrol_mode_rel2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_mode_rel2.png</Unpressed>
+						</State>
+						<State>
+							<Number>2</Number>
+							<Pressed>btn_vinylcontrol_mode_const2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_mode_const2.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],vinylcontrol_mode</ConfigKey>
+						</Connection>
+					</PushButton>
+					<PushButton>
+					    <Pos>60,0</Pos>
+						<TooltipId>vinylcontrol_cueing</TooltipId>
+						<Style></Style>
+						<NumberStates>3</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_vinylcontrol_cueing_off2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_cueing_off2.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_vinylcontrol_cueing_one2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_cueing_one2.png</Unpressed>
+						</State>
+						<State>
+							<Number>2</Number>
+							<Pressed>btn_vinylcontrol_cueing_hot2.png</Pressed>
+							<Unpressed>btn_vinylcontrol_cueing_hot2.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],vinylcontrol_cueing</ConfigKey>
+						</Connection>
+					</PushButton>
+				</Children>
+			</WidgetGroup> -->
+			
+			
+
+            
+		</Children>
+	</WidgetGroup>
+</Template>

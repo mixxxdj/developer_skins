@@ -1,0 +1,66 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A button that has a left-click control, a right-click control, and a 2-state
+    display control.
+  Variables:
+    ObjectName: The object name.
+    Size: the button size.
+    state_X_text:
+    state_X_pressed:
+    state_X_unpressed:
+-->
+<Template>
+  <PushButton>
+    <Size>42max,1me</Size>
+    <ObjectName><Variable name="ObjectName"/></ObjectName>
+    <!-- <MinimumSize><Variable name="MinimumSize"/></MinimumSize>
+    <MaximumSize><Variable name="MaximumSize"/></MaximumSize>
+    <SizePolicy><Variable name="SizePolicy"/></SizePolicy> -->
+    <NumberStates>2</NumberStates>
+    <State>
+      <Number>0</Number>
+      <Style>#EffectChainGroupControlButton {
+                 font: bold 11px/13px Lucida Grande, Lucida Sans Unicode,
+                       Arial, Verdana, sans-serif;
+                 color: #585858;
+                 background-color: #0e0e0e;
+                 text-transform: none;
+                 text-align: center;
+                 border: 1px solid #585858;
+                 margin: 1px;
+             }
+      </Style>
+      <Text><Variable name="state_0_text"/></Text>
+      <!-- <Pressed><Variable name="state_0_pressed"/></Pressed>
+      <Unpressed><Variable name="state_0_pressed"/></Unpressed> -->
+    </State>
+    <State>
+      <Number>1</Number>
+      <Style>#EffectChainGroupControlButton {
+                 font: bold 11px/13px Lucida Grande, Lucida Sans Unicode,
+                       Arial, Verdana, sans-serif;
+                 color: #0e0e0e;
+                 background-color: #e17800;
+                 text-transform: none;
+                 text-align: center;
+                 border: 1px solid #585858;
+                 margin: 1px;
+             }
+      </Style>
+      <Text><Variable name="state_1_text"/></Text>
+      <!-- <Pressed><Variable name="state_1_pressed"/></Pressed>
+      <Unpressed><Variable name="state_1_pressed"/></Unpressed> -->
+    </State>
+    <Connection>
+      <ConfigKey><Variable name="left_connection_control"/></ConfigKey>
+      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+      <ButtonState>LeftButton</ButtonState>
+      <ConnectValueToWidget>false</ConnectValueToWidget>
+    </Connection>
+    <Connection>
+      <ConfigKey><Variable name="display_connection_control"/></ConfigKey>
+      <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+  </PushButton>
+</Template>
