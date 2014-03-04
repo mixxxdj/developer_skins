@@ -2,7 +2,9 @@
 	<WidgetGroup>
 	    <ObjectName>WaveformMixerContainer</ObjectName>
 		<Layout>vertical</Layout>
-		<SizePolicy>me,min</SizePolicy>
+		<SizePolicy>max,min</SizePolicy>
+        <MinimumSize>200,-1</MinimumSize>
+        <MaximumSize>200,-1</MaximumSize>
 		<Children>
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
