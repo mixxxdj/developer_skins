@@ -19,12 +19,12 @@
 	    <State>
 	      <Number>0</Number>
 	      <Text>▶ <Variable name="button_text"/></Text>
-	      <Alignment>Left</Alignment>
+	      <Alignment>left</Alignment>
 	    </State>
 	    <State>
 	      <Number>1</Number>
 	      <Text>▼ <Variable name="button_text"/></Text>
-	      <Alignment>Left</Alignment>
+	      <Alignment>left</Alignment>
 	    </State>
 	    <Connection>
 	      <ConfigKey persist="true"><Variable name="control"/></ConfigKey>

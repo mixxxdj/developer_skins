@@ -308,7 +308,7 @@ qproperty-layoutAlignment: 'AlignCenter';
 }
 
 #AlignLeftBottom {
-  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
 }
 
 #VinylStatusTop1, #VinylStatusTop3 {
