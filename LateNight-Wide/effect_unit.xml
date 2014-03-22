@@ -1,38 +1,38 @@
 <!DOCTYPE template>
 <!--
   Description:
-    An effect chain widget.
+    An effect unit widget.
   Variables:
     group: The group for the controls.
 -->
 <Template>
-  <SetVariable name="group">[EffectRack<Variable name="EffectRack"/>_EffectChain<Variable name="EffectChain"/>]</SetVariable>
+  <SetVariable name="group">[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>]</SetVariable>
   <WidgetGroup>
-    <ObjectName>EffectChain<Variable name="EffectChain"/></ObjectName>
+    <ObjectName>EffectUnit<Variable name="EffectUnit"/></ObjectName>
     <Layout>vertical</Layout>
     <SizePolicy>me,f</SizePolicy>
     <MinimumSize>300,60</MinimumSize>
     <MaximumSize>350,-1</MaximumSize>
     <Children>
       <WidgetGroup>
-        <ObjectName>EffectChainNameRow</ObjectName>
+        <ObjectName>EffectUnitNameRow</ObjectName>
         <Layout>horizontal</Layout>
         <SizePolicy>me,min</SizePolicy>
         <Children>
           <WidgetGroup>
-            <ObjectName>EffectChainNameContainer</ObjectName>
+            <ObjectName>EffectUnitNameContainer</ObjectName>
             <Layout>horizontal</Layout>
             <SizePolicy>me,max</SizePolicy>
             <Children>
               <EffectChainName>
                 <EffectRack><Variable name="EffectRack"/></EffectRack>
-                <EffectChain><Variable name="EffectChain"/></EffectChain>
+                <EffectUnit><Variable name="EffectUnit"/></EffectUnit>
               </EffectChainName>
             </Children>
           </WidgetGroup>
 
           <WidgetGroup>
-            <ObjectName>EffectChainNextPrevContainer</ObjectName>
+            <ObjectName>EffectUnitNextPrevContainer</ObjectName>
             <Layout>horizontal</Layout>
             <SizePolicy>me,max</SizePolicy>
             <Children>
@@ -83,13 +83,13 @@
 
 
       <WidgetGroup>
-        <ObjectName>EffectChainControlRow</ObjectName>
+        <ObjectName>EffectUnitControlRow</ObjectName>
         <Layout>horizontal</Layout>
         <SizePolicy>me,min</SizePolicy>
         <BackPath>background_tile.png</BackPath>
         <Children>
           <WidgetGroup>
-            <ObjectName>EffectChainParameters</ObjectName>
+            <ObjectName>EffectUnitParameters</ObjectName>
             <SizePolicy>me,max</SizePolicy>
             <Layout>horizontal</Layout>
             <Children>
@@ -121,7 +121,7 @@
             <ObjectName>EffectControlsRight</ObjectName>
             <Children>
               <WidgetGroup>
-                <ObjectName>EffectChainControls</ObjectName>
+                <ObjectName>EffectUnitControls</ObjectName>
                 <Layout>horizontal</Layout>
                 <SizePolicy>max,min</SizePolicy>
                 <Children>
@@ -137,7 +137,7 @@
               </WidgetGroup>
 
               <WidgetGroup>
-                <ObjectName>EffectChainGroupControls</ObjectName>
+                <ObjectName>EffectUnitGroupControls</ObjectName>
                 <SizePolicy>min,min</SizePolicy>
                 <Layout>vertical</Layout>
                 <Children>
@@ -145,11 +145,11 @@
                     <Layout>horizontal</Layout>
                     <SizePolicy>min,min</SizePolicy>
                     <Children>
-                      <Template src="skin:effect_chain_group_control_button.xml">
+                      <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">Master</SetVariable>
                         <SetVariable name="group_group">[Master]</SetVariable>
                       </Template>
-                      <Template src="skin:effect_chain_group_control_button.xml">
+                      <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">Head</SetVariable>
                         <SetVariable name="group_group">[Headphone]</SetVariable>
                       </Template>
@@ -159,12 +159,12 @@
                     <Layout>horizontal</Layout>
                     <SizePolicy>min,min</SizePolicy>
                     <Children>
-                      <Template src="skin:effect_chain_group_control_button.xml">
+                      <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">CH1</SetVariable>
                         <SetVariable name="group_group">[Channel1]</SetVariable>
                       </Template>
 
-                      <Template src="skin:effect_chain_group_control_button.xml">
+                      <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">CH2</SetVariable>
                         <SetVariable name="group_group">[Channel2]</SetVariable>
                       </Template>
@@ -174,12 +174,12 @@
                     <Layout>horizontal</Layout>
                     <SizePolicy>min,min</SizePolicy>
                     <Children>
-                      <Template src="skin:effect_chain_group_control_button.xml">
+                      <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">CH3</SetVariable>
                         <SetVariable name="group_group">[Channel3]</SetVariable>
                       </Template>
 
-                      <Template src="skin:effect_chain_group_control_button.xml">
+                      <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">CH4</SetVariable>
                         <SetVariable name="group_group">[Channel4]</SetVariable>
                       </Template>
