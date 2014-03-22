@@ -225,6 +225,7 @@
 
 #SyncControls {
   qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+  qproperty-alignment: 'AlignRight | AlignBottom';
   padding-right: 0px;
   border-bottom: 1px solid #585858;
 }
