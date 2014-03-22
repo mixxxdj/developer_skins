@@ -4,7 +4,7 @@
 		<Layout>vertical</Layout>
 		<SizePolicy>min,min</SizePolicy>
 		<Children>
-			<!-- To make each widget centered, we have to put them each in their own 
+			<!-- To make each widget centered, we have to put them each in their own
 				widgetgroup. -->
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
@@ -105,5 +105,9 @@
 				</Children>
 			</WidgetGroup>
 		</Children>
+		<Connection>
+            <ConfigKey persist="true">[Microphone],configured</ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
 	</WidgetGroup>
 </Template>

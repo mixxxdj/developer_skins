@@ -21,6 +21,7 @@
                     <ObjectName>MicContainer</ObjectName>
                     <Layout>vertical</Layout>
                     <SizePolicy>me,min</SizePolicy>
+                    <MinimumSize>0,207</MinimumSize>
                     <Children>
                         <Template src="skin:microphone.xml"/>
                     </Children>
