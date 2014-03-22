@@ -488,39 +488,39 @@ qproperty-layoutAlignment: 'AlignCenter';
 
 
 
-#TitleGutter WLabel, #EffectChainNameContainer WLabel {
+#TitleGutter WLabel, #EffectUnitNameContainer WLabel {
   font: bold 16px/19px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #eece33;
   text-transform: none;
   text-align: left;
 }
 
-#EffectChainNameRow {
+#EffectUnitNameRow {
   border-bottom: 1px solid #585858;
   background-color: transparent;
   margin: 0px;
 }
 
-#EffectChain1, #EffectChain2, #EffectChain3, #EffectChain4 {
+#EffectUnit1, #EffectUnit2, #EffectUnit3, #EffectUnit4 {
   qproperty-layoutAlignment: 'AlignTop';
   border: 1px solid #585858;
   border-left:none;
 }
 
-#EffectChain1 {
+#EffectUnit1 {
   border-left: 1px solid #585858;
 }
 
-#EffectChainNameContainer {
+#EffectUnitNameContainer {
   qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
   padding: 2px;
 }
 
-#EffectChainNextPrevContainer {
+#EffectUnitNextPrevContainer {
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
 
-#EffectChainNextPrevContainer WPushButton {
+#EffectUnitNextPrevContainer WPushButton {
   font-size: 16px;
 }
 
@@ -535,13 +535,13 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
-#EffectChainParameters {
+#EffectUnitParameters {
   padding: 2px;
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
   qproperty-layoutSpacing: 2;
 }
 
-#EffectChainControlRow {
+#EffectUnitControlRow {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
@@ -549,16 +549,16 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignRight | AlignTop';
 }
 
-#EffectChainControls {
+#EffectUnitControls {
   qproperty-layoutAlignment: 'AlignRight | AlignTop';
   padding: 2px;
 }
 
-#EffectChainGroupControls {
+#EffectUnitGroupControls {
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
 
-#EffectChain {
+#EffectUnit {
   font-size: 16px;
 }
 
@@ -571,12 +571,12 @@ qproperty-layoutAlignment: 'AlignCenter';
   padding-right: 5px; 
 }
 
-#EffectChainKnob {
+#EffectUnitKnob {
   qproperty-layoutAlignment: 'AlignRight';
   padding:3px;
 }
 
-#EffectChainGroupControlButton {
+#EffectUnitGroupControlButton {
   font: bold 11px/13px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #e17800;
   text-transform: none;

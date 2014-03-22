@@ -69,6 +69,10 @@
                 <SetVariable name="control">[EffectRack1],show</SetVariable>
                 <SetVariable name="button_text">Effects</SetVariable>
               </Template>
+              <Label>
+                <ObjectName>SectionLabel</ObjectName>
+                <Text>Effects</Text>
+              </Label>
             </Children>
           </WidgetGroup>
         </Children>
