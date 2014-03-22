@@ -200,6 +200,11 @@
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
+								<Connection>
+									<ConfigKey>[Channel<Variable name="channum" />],loop_move_1_backward</ConfigKey>
+									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+									<ButtonState>RightButton</ButtonState>
+								</Connection>
 							</PushButton>
 
 							<WidgetGroup>
@@ -475,6 +480,11 @@
 									<ConfigKey>[Channel<Variable name="channum" />],loop_double</ConfigKey>
 									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 									<ButtonState>LeftButton</ButtonState>
+								</Connection>
+								<Connection>
+									<ConfigKey>[Channel<Variable name="channum" />],loop_move_1_forward</ConfigKey>
+									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+									<ButtonState>RightButton</ButtonState>
 								</Connection>
 							</PushButton>
 						</Children>

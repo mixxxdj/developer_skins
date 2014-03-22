@@ -24,6 +24,11 @@
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_move_1_backward</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>RightButton</ButtonState>
+						</Connection>
 					</PushButton>
 					<WidgetGroup>
 						<Layout>vertical</Layout>
@@ -297,6 +302,11 @@
 							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],loop_move_1_forward</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>RightButton</ButtonState>
+						</Connection>
 					</PushButton>
 				</Children>
 			</WidgetGroup>
@@ -372,7 +382,7 @@
 					</WidgetGroup>
 				</Children>
 			</WidgetGroup>
-			
+
 			<WidgetGroup>
                 <ObjectName>FFRew</ObjectName>
                 <Layout>vertical</Layout>
