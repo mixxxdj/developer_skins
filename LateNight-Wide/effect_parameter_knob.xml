@@ -21,7 +21,7 @@
 		         <NumberStates>64</NumberStates>
 		         <Path>knobs/knob_rotary_s%1.png</Path>
 		         <Connection>
-		             <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>_Parameter<Variable name="EffectParameter"/>],value_normalized</ConfigKey>
+		             <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>],parameter<Variable name="EffectParameter"/></ConfigKey>
 		         </Connection>
 		     </Knob>
 	     </Children>
@@ -37,7 +37,7 @@
       </EffectParameterName>
     </Children>
     <Connection>
-      <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>_Parameter<Variable name="EffectParameter"/>],loaded</ConfigKey>
+      <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>],parameter<Variable name="EffectParameter"/>_loaded</ConfigKey>
       <BindProperty>visible</BindProperty>
     </Connection>
   </WidgetGroup>

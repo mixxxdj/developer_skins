@@ -2851,6 +2851,7 @@
 						<Slider>../../skins/Deere1366x768-WXGA/slider_pitch1.png</Slider>
 						<Pos>7,68</Pos>
 						<Horizontal>false</Horizontal>
+						<EventWhileDrag>no</EventWhileDrag>
 						<Connection>
 							<ConfigKey>[Channel1],rate</ConfigKey>
 						</Connection>
