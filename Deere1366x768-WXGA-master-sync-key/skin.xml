@@ -1,4 +1,4 @@
-	<!--
+<!--
 	Deere , Skin for Mixxx 1.12.x
 	www.mixxx.org
 	Copyright (C) 2010-2014 jus <s.brandt@mixxx.org>
@@ -120,7 +120,7 @@
 				<Layout>horizontal</Layout>
 				<Style>QGroupBox { border: 0px solid yellow; margin: 0px 0px 4px 0px;} </Style>
 				<Children>
-					<!-- all sub-widgets for the sampler Auxilliary decks -->
+					<!-- all sub-widgets for the sampler Auxiliary decks -->
 					<WidgetGroup>
 						<Pos>0,0</Pos>
 						<Size>80,110</Size>
@@ -138,7 +138,7 @@
 								<Path>../../skins/Deere1366x768-WXGA/knobs/knob_rotary_s%1.png</Path>
 								<Pos>22,64</Pos>
 								<Connection>
-									<ConfigKey>[Auxilliary1],pregain</ConfigKey>
+									<ConfigKey>[Auxiliary1],pregain</ConfigKey>
 								</Connection>
 							</Knob>
 
@@ -154,7 +154,7 @@
 								<PathBack>../../skins/Deere1366x768-WXGA/btn_clipping_sampler.png</PathBack>
 								<Pos>67,3</Pos>
 								<Connection>
-									<ConfigKey>[Auxilliary1],PeakIndicator</ConfigKey>
+									<ConfigKey>[Auxiliary1],PeakIndicator</ConfigKey>
 								</Connection>
 							</StatusLight>
 
@@ -175,7 +175,7 @@
 								<PeakFallTime>50</PeakFallTime>
 								<PeakFallStep>2</PeakFallStep>
 								<Connection>
-									<ConfigKey>[Auxilliary1],VuMeter</ConfigKey>
+									<ConfigKey>[Auxiliary1],VuMeter</ConfigKey>
 								</Connection>
 							</VuMeter>
 							
@@ -200,7 +200,7 @@
 								</State>
 								<Pos>0,71</Pos>
 								<Connection>
-									<ConfigKey>[Auxilliary1],pfl</ConfigKey>
+									<ConfigKey>[Auxiliary1],pfl</ConfigKey>
 								</Connection>
 							</PushButton>
 
@@ -225,7 +225,7 @@
 								</State>
 								<Pos>16,24</Pos>
 								<Connection>
-									<ConfigKey>[Auxilliary1],passthrough</ConfigKey>
+									<ConfigKey>[Auxiliary1],passthrough</ConfigKey>
 								</Connection>
 							</PushButton>
 
@@ -255,7 +255,7 @@
 								</State>
 								<Pos>17,42</Pos>
 								<Connection>
-									<ConfigKey>[Auxilliary1],orientation</ConfigKey>
+									<ConfigKey>[Auxiliary1],orientation</ConfigKey>
 									<EmitOnDownPress>true</EmitOnDownPress>
 									<ButtonState>LeftButton</ButtonState>
 								</Connection>
@@ -2970,6 +2970,10 @@
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Channel1],volume</ConfigKey>
+							<Transform>
+								<Invert/>
+								<Add>1</Add>
+							</Transform>
 						</Connection>
 					</SliderComposed>
 					<SliderComposed>
@@ -3007,7 +3011,7 @@
 					**********************************************
 					-->
 					<SliderComposed>
-						<TooltipId>rate</TooltipId>
+						<TooltipId>default</TooltipId>
 						<Style></Style>
 						<Handle>../../skins/Deere1366x768-WXGA/knob_pitch1.png</Handle>
 						<Slider>../../skins/Deere1366x768-WXGA/slider_pitch1.png</Slider>
@@ -3015,6 +3019,7 @@
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Channel1],rate</ConfigKey>
+							<EmitOnDownPress>false</EmitOnDownPress>
 						</Connection>
 					</SliderComposed>
 					<SliderComposed>
@@ -3272,13 +3277,14 @@
 						<Connection>
 							<ConfigKey>[Channel1],play</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
+							<Transform>
+								<Invert/>
+								<Add>1</Add>
+							</Transform>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_set</ConfigKey>
 							<ButtonState>RightButton</ButtonState>
-						</Connection>
-						<Connection>
-							<ConfigKey>[Channel1],play_indicator</ConfigKey>
 						</Connection>
 					</PushButton>
 					<PushButton>
@@ -3592,6 +3598,10 @@
 						<Pos>311,15</Pos>
 						<Connection>
 							<ConfigKey>[Master],volume</ConfigKey>
+							<Transform>
+								<Invert/>
+								<Add>1</Add>
+							</Transform>
 						</Connection>
 					</Knob>
 					<Knob>
