@@ -2,24 +2,26 @@
 	<WidgetGroup>
 	    <ObjectName>WaveformMixerContainer</ObjectName>
 		<Layout>vertical</Layout>
-		<SizePolicy>max,min</SizePolicy>
-        <MinimumSize>200,-1</MinimumSize>
-        <MaximumSize>200,-1</MaximumSize>
+		<SizePolicy>f,min</SizePolicy>
+        <Size>200,-1</Size>
 		<Children>
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
+				<SizePolicy>me,f</SizePolicy>
+				<Size>199, 72</Size>
 				<Children>
 					<Template src="skin:spinny.xml">
 						<SetVariable name="channum">1</SetVariable>
 					</Template>
-					<Template src="skin:waveform.xml">
+				    <Template src="skin:waveform.xml">
 						<SetVariable name="channum">1</SetVariable>
 					</Template>
 				</Children>
 			</WidgetGroup>
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
-				<SizePolicy>me,min</SizePolicy>
+				<SizePolicy>me,f</SizePolicy>
+				<Size>199, 72</Size>
 				<Children>
 					<Template src="skin:spinny.xml">
 						<SetVariable name="channum">2</SetVariable>
@@ -28,13 +30,10 @@
 						<SetVariable name="channum">2</SetVariable>
 					</Template>
 				</Children>
-				<Connection>
-					<ConfigKey persist="true">[Master],show_4decks</ConfigKey>
-					<BindProperty>visible</BindProperty>
-				</Connection>
 			</WidgetGroup>
 			<WidgetGroup>
-				<SizePolicy>me,min</SizePolicy>
+				<SizePolicy>me,f</SizePolicy>
+				<Size>199, 72</Size>
 				<Layout>horizontal</Layout>
 				<Children>
 					<Template src="skin:spinny.xml">
@@ -51,6 +50,8 @@
 			</WidgetGroup>
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
+				<SizePolicy>me,f</SizePolicy>
+				<Size>199, 72</Size>
 				<Children>
 					<Template src="skin:spinny.xml">
 						<SetVariable name="channum">4</SetVariable>
@@ -59,8 +60,11 @@
 						<SetVariable name="channum">4</SetVariable>
 					</Template>
 				</Children>
+				<Connection>
+					<ConfigKey persist="true">[Master],show_4decks</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
 			</WidgetGroup>
-			<Template src="skin:mixer.xml"/>
 		</Children>
 	</WidgetGroup>
 </Template>

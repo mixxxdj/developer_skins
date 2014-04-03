@@ -49,6 +49,7 @@
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   border: 1px solid #585858;
   border-top: 0px; 
+  border-bottom: 0px;
 }
 
 #Deck2 {
@@ -60,6 +61,7 @@
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   border: 1px solid #585858;
   border-right: 0px;
+  border-bottom: 0px;
   border-top: 0px;
 }
 
@@ -236,15 +238,16 @@
 
 #SyncControls {
   qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+  qproperty-alignment: 'AlignRight | AlignBottom';
   padding-right: 0px;
   border-bottom: 1px solid #585858;
 }
 
-#FourDeckToggleButton {
+/*#FourDeckToggleButton {
   border: 1px solid #e17800;
   font: bold 10px/12px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #e17800;
-}
+}*/
 
 #CrossFadeContainer {
 qproperty-layoutAlignment: 'AlignCenter';
@@ -254,7 +257,7 @@ qproperty-layoutAlignment: 'AlignCenter';
 #FourDeckButton {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   padding: 5px;
-  border: 0px solid #585858;
+  border: 1px solid #585858;
   border-left:0px;
   border-right:0px;
   border-bottom:0px;
@@ -304,6 +307,7 @@ qproperty-layoutAlignment: 'AlignCenter';
   padding:0px;
   margin:0px;
   text-align:left;
+  color: #eece33;
 }
 
 #CollapseButton {
@@ -350,14 +354,12 @@ qproperty-layoutAlignment: 'AlignCenter';
   border: 1px solid #585858;
   border-right: 0px;
   border-top: 0px;
+  border-bottom: 0px;
   padding: 3px;
 }
 
 #RateContainer4 {
-  border: 1px solid #585858;
-  border-right: 0px;
-  border-left: 0px;
-  border-top: 0px;
+  border: 0px solid #585858;
   padding: 3px;
 }
 
@@ -488,39 +490,39 @@ qproperty-layoutAlignment: 'AlignCenter';
 
 
 
-#TitleGutter WLabel, #EffectChainNameContainer WLabel {
+#TitleGutter WLabel, #EffectUnitNameContainer WLabel {
   font: bold 16px/19px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #eece33;
   text-transform: none;
   text-align: left;
 }
 
-#EffectChainNameRow {
+#EffectUnitNameRow {
   border-bottom: 1px solid #585858;
   background-color: transparent;
   margin: 0px;
 }
 
-#EffectChain1, #EffectChain2, #EffectChain3, #EffectChain4 {
+#EffectUnit1, #EffectUnit2, #EffectUnit3, #EffectUnit4 {
   qproperty-layoutAlignment: 'AlignTop';
   border: 1px solid #585858;
   border-left:none;
 }
 
-#EffectChain1 {
+#EffectUnit1 {
   border-left: 1px solid #585858;
 }
 
-#EffectChainNameContainer {
+#EffectUnitNameContainer {
   qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
   padding: 2px;
 }
 
-#EffectChainNextPrevContainer {
+#EffectUnitNextPrevContainer {
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
 
-#EffectChainNextPrevContainer WPushButton {
+#EffectUnitNextPrevContainer WPushButton {
   font-size: 16px;
 }
 
@@ -535,13 +537,13 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
-#EffectChainParameters {
+#EffectUnitParameters {
   padding: 2px;
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
   qproperty-layoutSpacing: 2;
 }
 
-#EffectChainControlRow {
+#EffectUnitControlRow {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
@@ -549,16 +551,16 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignRight | AlignTop';
 }
 
-#EffectChainControls {
+#EffectUnitControls {
   qproperty-layoutAlignment: 'AlignRight | AlignTop';
   padding: 2px;
 }
 
-#EffectChainGroupControls {
+#EffectUnitGroupControls {
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
 
-#EffectChain {
+#EffectUnit {
   font-size: 16px;
 }
 
@@ -571,20 +573,162 @@ qproperty-layoutAlignment: 'AlignCenter';
   padding-right: 5px; 
 }
 
-#EffectChainKnob {
+#EffectUnitKnob {
   qproperty-layoutAlignment: 'AlignRight';
   padding:3px;
 }
 
-#EffectChainGroupControlButton {
+/* this is now inline in the pushbutton so we can change styles */
+/*#EffectUnitGroupControlButton {
   font: bold 11px/13px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
   color: #e17800;
   text-transform: none;
   text-align: center;
   border: 1px solid #e17800;
   margin: 1px;
-}
+}*/
 
 WLabel {
   qproperty-alignment: 'AlignCenter';
+}
+
+/* Library styling is hard */
+
+QTableView, QTextBrowser, QTreeView {
+  border: 1px solid #585858;
+  font: 15px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #cfb32c;
+  background-color: #0f0f0f;
+  alternate-background-color: #1a1a1a;
+}
+
+/* checkbox in library "Played" column */
+QTableView::indicator { width: 12px; height: 12px;}
+QTableView::indicator:checked { background: url(skin:/style/style_checkbox_checked.png);}
+QTableView::indicator:unchecked { background: url(skin:/style/style_checkbox_unchecked.png);}
+QTableView::item:selected {
+  color: #cfb32c;
+  background-color: #725309;
+}
+
+/* Button in library "Preview" column */
+QPushButton#LibraryPreviewButton { 
+  width: 23px; 
+  height: 12px; 
+  background: transparent; 
+  border: 0px; 
+}
+/*QPushButton#LibraryPreviewButton:focus { 
+  background-color: #725309;
+}*/
+/*#LibraryBPMWidget, #LibraryBPMButton, #LibraryBPMSpinBox {
+  background-color: #ff0; 
+}*/
+
+QPushButton#LibraryPreviewButton:!checked{ image: url(skin:/style/style_library_preview_play.png); }
+QPushButton#LibraryPreviewButton:checked{ image: url(skin:/style/style_library_preview_pause.png); }
+
+QHeaderView { 
+  font: 13px/15px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; 
+  color: #cfb32c;
+  background-color: #0f0f0f;
+}
+QHeaderView::section {
+  height: 18px;
+  border: 1px solid #585858;
+  border-left: 0px;
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
+}
+
+/* QScrollbar styling is even harder */
+QScrollBar:horizontal {
+  border: 1px solid #585858;
+  min-width: 12px;
+  height: 15px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  padding: 1px;
+}
+QScrollBar:vertical {
+  border: 1px solid #585858;
+  min-height: 12px;
+  width: 15px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  padding: 1px;
+}
+/* "add-page" and "sub-page" are the gutter of the scrollbar */
+QScrollBar::add-page, QScrollBar::sub-page {
+  min-width: 15px;
+  min-height: 15px;
+  border: 2px;
+  background-color: #1a1a1a;
+  border-radius: 3px;
+} 
+QScrollBar::handle:horizontal {
+  min-width: 25px; 
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #725309, stop:1 #412f05);
+  border-radius: 3px;
+  border: 1px solid #725309;
+} 
+QScrollBar::handle:vertical {
+  min-height: 25px; 
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #725309, stop:1 #412f05);
+  border-radius: 3px;
+  border: 1px solid #725309;
+} 
+/* Turn off buttons */
+QScrollBar::add-line:horizontal, QScrollBar::add-line:vertical {
+  width: 0px;
+  height: 0px;
+  border: 0px solid white;
+}
+QScrollBar::sub-line:horizontal, QScrollBar::sub-line:vertical {
+  width: 0px;
+  height: 0px;
+  border: 0px solid white;
+} 
+
+/* transition time in Auto DJ tab */
+QSpinBox:editable { font: 13px/15px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; background: transparent; color: #cfb32c; }
+QSpinBox { min-height: 20px; max-height: 20px;min-width: 40px; max-width: 40px;}
+
+/* library search bar */
+WSearchLineEdit { padding: 2px; border: 1px solid #656565; font: 18px/20px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; background: #181818; color: #cfb32c; }
+WSearchLineEdit:focus { padding: 2px; border: 2px solid #FF6600; font: bold 18px/20px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; background: #0f0f0f; color: #eece33;}
+
+/* splitter between treeview and library */
+QSplitter::handle { image: url(skin:/style/style_handle_unchecked.png); background-color: #1e1e1e; }
+QSplitter::handle:pressed { image: url(skin:/style/style_handle_checked.png); background-color: #1e1e1e; }
+QSplitter::handle:horizontal { width: 10px; background-color: #0e0e0e;}
+QSplitter::handle:vertical { height: 10px; background-color: #0e0e0e;}
+
+/*QPushButton { font: 13px/15px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; }*/
+/* Extra declaration for QRadioButton otherwise it shows up with wrong colors in Linux with Gnome */
+QLabel, QRadioButton { font: 15px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; background: transparent; color: #cfb32c;}
+
+/* Spacing between treeview and searchbar */
+QTreeView { margin: 10px 0px 0px 0px; }
+
+/* triangle for closed/opened branches in treeview */
+QTreeView { show-decoration-selected: 0; background-color: #151515; } /*  Suppresses that selected sidebar items branch indicator shows wrong color when out of focus ; lp:880588 */
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings { border-image: none; image: url(skin:/style/style_branch_closed.png);
+  background-color:#0f0f0f;
+}
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings { border-image: none; image: url(skin:/style/style_branch_open.png);
+  background-color:#0f0f0f;
+}
+QTreeView::branch:has-children:!has-siblings:closed:selected,
+QTreeView::branch:closed:has-children:has-siblings:selected { border-image: none; image: url(skin:/style/style_branch_closed.png);
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
+}
+QTreeView::branch:open:has-children:!has-siblings:selected,
+QTreeView::branch:open:has-children:has-siblings:selected { border-image: none; image: url(skin:/style/style_branch_open.png);
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
+}
+QTreeView::item:selected {
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
+  color: #cfb32c;
 }

@@ -1,17 +1,9 @@
 <Template>
 	<WidgetGroup>
 		<Layout>vertical</Layout>
-		<SizePolicy>me,min</SizePolicy>
-		<MinimumSize>200, 50</MinimumSize>
+		<SizePolicy>me,me</SizePolicy>
+		<MinimumSize>200, 10</MinimumSize>
 		<Children>
-			<!--If you want the waveforms center to adjust when resizing in a collapsing widget
-			(e.g. to display spinning vinyl widget like in this skin) don't put the Waveform in a widget group,
-			and don't specify the Waveform's <Size>. So you would have:
-			Parent WidgetGroup
-				Waveform Widget (no Widgetgroup)
-				Child WidgetGroup for Spinny
-					Spinny Widget
-			-->
 			<!--
 			**********************************************
 			Visual- Waveform
@@ -22,8 +14,6 @@
 				<Style></Style>
 				<Channel><Variable name="channum"/></Channel>
 				<Pos>0,0</Pos>
-				<!--See comment about <Size> above-->
-				<!--<Size>i,110</Size>-->
 				<BgColor>#1C1C1C</BgColor>
 				<BgPixmap>style/style_bg_waveform1.png</BgPixmap>
 				<SignalColor>#EECE33</SignalColor>

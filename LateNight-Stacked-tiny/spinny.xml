@@ -2,7 +2,7 @@
   <WidgetGroup>
     <ObjectName>SpinnyContainer</ObjectName>
     <Layout>horizontal</Layout>
-    <MinimumSize>20,20</MinimumSize>
+    <MinimumSize>50,0</MinimumSize>
     <SizePolicy>min,min</SizePolicy>
     <Children>
       <Spinny>
