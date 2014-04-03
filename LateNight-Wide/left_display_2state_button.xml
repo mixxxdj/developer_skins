@@ -20,7 +20,7 @@
     <NumberStates>2</NumberStates>
     <State>
       <Number>0</Number>
-      <Style>#EffectChainGroupControlButton {
+      <Style>#EffectUnitGroupControlButton {
                  font: bold 11px/13px Lucida Grande, Lucida Sans Unicode,
                        Arial, Verdana, sans-serif;
                  color: #585858;
@@ -37,7 +37,7 @@
     </State>
     <State>
       <Number>1</Number>
-      <Style>#EffectChainGroupControlButton {
+      <Style>#EffectUnitGroupControlButton {
                  font: bold 11px/13px Lucida Grande, Lucida Sans Unicode,
                        Arial, Verdana, sans-serif;
                  color: #0e0e0e;

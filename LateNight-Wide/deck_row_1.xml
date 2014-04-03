@@ -10,7 +10,7 @@
                 <Layout>Horizontal</Layout>
                 <SizePolicy>me,min</SizePolicy>
                 <MinimumSize>-1,48</MinimumSize>
-                <Children>		         
+                <Children>
 					<PushButton>
 						<TooltipId>vinylcontrol_mode</TooltipId>
 						<Style></Style>
@@ -63,10 +63,25 @@
 
             <WidgetGroup>
                 <ObjectName>SyncControls</ObjectName>
-                <Layout>horizontal</Layout>
+                <Layout>vertical</Layout>
                 <SizePolicy>min,min</SizePolicy>
                 <MinimumSize>48,48</MinimumSize>
                 <Children>
+                    <NumberBpm>
+						<TooltipId>visual_bpm</TooltipId>
+						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
+							Unicode, Arial, Verdana, sans-serif;
+							background-color: transparent; color: #EECE33;
+							qproperty-alignment: right;}
+						</Style>
+						<Channel>
+							<Variable name="channum" />
+						</Channel>
+						<NumberOfDigits>1</NumberOfDigits>
+						<Connection>
+							<ConfigKey>[Channel<Variable name="channum" />],visual_bpm</ConfigKey>
+						</Connection>
+					</NumberBpm>
 					<PushButton>
 						<TooltipId>sync_master</TooltipId>
 						<Style></Style>
@@ -87,20 +102,6 @@
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 					</PushButton>
-					<!-- <NumberBpm>
-						<TooltipId>visual_bpm</TooltipId>
-						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
-							Unicode, Arial, Verdana, sans-serif;
-							background-color: transparent; color: #EECE33; padding-left: 2px; }
-						</Style>
-						<Channel>
-							<Variable name="channum" />
-						</Channel>
-						<NumberOfDigits>1</NumberOfDigits>
-						<Connection>
-							<ConfigKey>[Channel<Variable name="channum" />],visual_bpm</ConfigKey>
-						</Connection>
-					</NumberBpm>-->
 				</Children>
 			</WidgetGroup>
 		</Children>

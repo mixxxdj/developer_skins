@@ -10,7 +10,7 @@
                 <Layout>Horizontal</Layout>
                 <SizePolicy>me,min</SizePolicy>
                 <MinimumSize>-1,48</MinimumSize>
-                <Children>		         
+                <Children>
 					<PushButton>
 						<TooltipId>vinylcontrol_mode</TooltipId>
 						<Style></Style>
@@ -60,7 +60,7 @@
 					</PushButton>
 				</Children>
 			</WidgetGroup>
-			
+
 			<WidgetGroup>
                 <ObjectName>Hotcues</ObjectName>
                 <Layout>vertical</Layout>
@@ -261,7 +261,7 @@
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 					</PushButton>
-					<!-- <NumberBpm>
+					<NumberBpm>
 						<TooltipId>visual_bpm</TooltipId>
 						<Style>QLabel { font: bold 18px/21px Lucida Grande, Lucida Sans
 							Unicode, Arial, Verdana, sans-serif;
@@ -274,7 +274,7 @@
 						<Connection>
 							<ConfigKey>[Channel<Variable name="channum" />],visual_bpm</ConfigKey>
 						</Connection>
-					</NumberBpm>-->
+					</NumberBpm>
 				</Children>
 			</WidgetGroup>
 		</Children>

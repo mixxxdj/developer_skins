@@ -8,14 +8,14 @@
 <Template>
   <WidgetGroup>
     <Layout>vertical</Layout>
-    <ObjectName>EffectChainKnob</ObjectName>
+    <ObjectName>EffectUnitKnob</ObjectName>
     <Children>
     <WidgetGroup>
         <Layout>horizontal</Layout>
         <SizePolicy>min,min</SizePolicy>
         <Children>
 	      <Knob>
-	        <NumberStates>64</NumberStates> 
+	        <NumberStates>64</NumberStates>
 	        <Path>knobs/knob_rotary_s%1.png</Path>
 	        <Connection>
 	          <ConfigKey><Variable name="group"/>,<Variable name="control"/></ConfigKey>

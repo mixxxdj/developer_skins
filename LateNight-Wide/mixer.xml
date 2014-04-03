@@ -6,7 +6,7 @@
 		<Layout>horizontal</Layout>
 		<Children>
 			<WidgetGroup>
-			    <ObjectName>PrimaryMixer</ObjectName> 
+			    <ObjectName>PrimaryMixer</ObjectName>
 				<Layout>vertical</Layout>
 				<SizePolicy>min,min</SizePolicy>
 				<Children>
@@ -45,7 +45,6 @@
 									1px;
 									}
 								</Style>
-								<Channel>1</Channel>
 								<NumberOfDigits>1</NumberOfDigits>
 								<Connection>
 									<ConfigKey>[InternalClock],bpm</ConfigKey>
@@ -73,7 +72,7 @@
 							                <BindProperty>visible</BindProperty>
 							            </Connection>
 							        </WidgetGroup>
-								
+
 									<Template src="skin:mixer_channel.xml">
 										<SetVariable name="channum">1</SetVariable>
 									</Template>
@@ -245,5 +244,5 @@
                 </Children>
             </WidgetGroup>  <!-- /Master Controls -->
 		</Children>
-	</WidgetGroup> 
+	</WidgetGroup>
 </Template>

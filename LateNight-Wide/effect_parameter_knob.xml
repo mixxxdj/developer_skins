@@ -4,7 +4,7 @@
     An effect parameter knob.
   Variables:
     EffectRack: the rack
-    EffectChain: the chain
+    EffectUnit: the unit
     Effect: the effect
     EffectParameter: the parameter
 -->
@@ -21,7 +21,7 @@
 		         <NumberStates>64</NumberStates>
 		         <Path>knobs/knob_rotary_s%1.png</Path>
 		         <Connection>
-		             <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectChain<Variable name="EffectChain"/>_Effect<Variable name="Effect"/>_Parameter<Variable name="EffectParameter"/>],value_normalized</ConfigKey>
+		             <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>],parameter<Variable name="EffectParameter"/></ConfigKey>
 		         </Connection>
 		     </Knob>
 	     </Children>
@@ -30,14 +30,14 @@
         <Size>1me,12f</Size>
         <ObjectName>KnobLabel</ObjectName>
         <EffectRack><Variable name="EffectRack"/></EffectRack>
-        <EffectChain><Variable name="EffectChain"/></EffectChain>
+        <EffectUnit><Variable name="EffectUnit"/></EffectUnit>
         <Effect><Variable name="Effect"/></Effect>
         <EffectParameter><Variable name="EffectParameter"/></EffectParameter>
         <Alignment>center</Alignment>
       </EffectParameterName>
     </Children>
     <Connection>
-      <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectChain<Variable name="EffectChain"/>_Effect<Variable name="Effect"/>_Parameter<Variable name="EffectParameter"/>],enabled</ConfigKey>
+      <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>],parameter<Variable name="EffectParameter"/>_loaded</ConfigKey>
       <BindProperty>visible</BindProperty>
     </Connection>
   </WidgetGroup>
