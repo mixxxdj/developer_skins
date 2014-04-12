@@ -3806,6 +3806,7 @@
 						<PathVu>../../skins/Deere1366x768-WXGA/btn_volume_display_master1_over.png</PathVu>
 						<PathBack>../../skins/Deere1366x768-WXGA/btn_volume_display_master1.png</PathBack>
 						<Pos>215,146</Pos>
+						<Horizontal>false</Horizontal>
 						<PeakHoldSize>5</PeakHoldSize>
 						<PeakHoldTime>500</PeakHoldTime>
 						<PeakFallTime>50</PeakFallTime>
@@ -3819,7 +3820,8 @@
 						<Style></Style>
 						<PathVu>../../skins/Deere1366x768-WXGA/btn_volume_display_master2_over.png</PathVu>
 						<PathBack>../../skins/Deere1366x768-WXGA/btn_volume_display_master2.png</PathBack>
-						<Pos>224,146</Pos>
+						<Pos>225,146</Pos>
+						<Horizontal>false</Horizontal>
 						<PeakHoldSize>5</PeakHoldSize>
 						<PeakHoldTime>500</PeakHoldTime>
 						<PeakFallTime>50</PeakFallTime>
@@ -3828,7 +3830,6 @@
 							<ConfigKey>[Master],VuMeterR</ConfigKey>
 						</Connection>
 					</VuMeter>
-
 					<!--
 					**********************************************
 					Visual- Volume peak indicator
@@ -4193,6 +4194,7 @@
 				<Connection>
 					<ConfigKey>[Channel1],visual_key</ConfigKey>
 				</Connection>
+                <DisplayCents>true</DisplayCents>
 			</Key>
 
 			<!--
