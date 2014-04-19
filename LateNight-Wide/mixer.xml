@@ -45,7 +45,7 @@
 									1px;
 									}
 								</Style>
-								<NumberOfDigits>1</NumberOfDigits>
+								<NumberOfDigits>2</NumberOfDigits>
 								<Connection>
 									<ConfigKey>[InternalClock],bpm</ConfigKey>
 								</Connection>

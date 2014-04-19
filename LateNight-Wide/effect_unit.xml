@@ -76,6 +76,50 @@
                   <ButtonState>LeftButton</ButtonState>
                 </Connection>
               </PushButton>
+
+              <PushButton>
+                <Size>40f,20f</Size>
+                <ObjectName>EffectToggleButton</ObjectName>
+                <NumberStates>2</NumberStates>
+                <State>
+                  <Number>0</Number>
+                  <Style>#EffectToggleButton {
+                             border: 1px solid #585858;
+                             font: bold 10px/12px Lucida Grande,
+                                   Lucida Sans Unicode, Arial,
+                                   Verdana, sans-serif;
+                             color: #585858;
+                             background-color: #0e0e0e;
+                             margin-right: 1px;
+                         }
+                  </Style>
+                  <Text>OFF</Text>
+                </State>
+                <State>
+                  <Number>1</Number>
+                  <Style>#EffectToggleButton {
+                             border: 1px solid #585858;
+                             font: bold 10px/12px Lucida Grande,
+                                   Lucida Sans Unicode, Arial,
+                                   Verdana, sans-serif;
+                             color: #0e0e0e;
+                             background-color: #e17800;
+                             margin-right: 1px;
+                         }
+                  </Style>
+                  <Text>ON</Text>
+                </State>
+                <Connection>
+                  <ConfigKey persist="true"><Variable name="group"/>,enabled</ConfigKey>
+                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                  <ButtonState>LeftButton</ButtonState>
+                  <ConnectValueToWidget>false</ConnectValueToWidget>
+                </Connection>
+                <Connection>
+                  <ConfigKey persist="true"><Variable name="group"/>,enabled</ConfigKey>
+                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                </Connection>
+              </PushButton>
             </Children>
           </WidgetGroup>
         </Children>

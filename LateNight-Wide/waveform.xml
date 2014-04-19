@@ -24,8 +24,8 @@
 				<Pos>0,0</Pos>
 				<!--See comment about <Size> above-->
 				<!--<Size>i,110</Size>-->
-				<BgColor>#1C1C1C</BgColor>
-				<BgPixmap>style/style_bg_waveform1.png</BgPixmap>
+				<BgColor>#0e0e0e</BgColor>
+				<!--<BgPixmap>style/style_bg_waveform1.png</BgPixmap>-->
 				<SignalColor>#EECE33</SignalColor>
 				<SignalHighColor>#F0EBD1</SignalHighColor>
 				<SignalMidColor>#EECE33</SignalMidColor>

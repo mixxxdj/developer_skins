@@ -77,7 +77,7 @@
 						<Channel>
 							<Variable name="channum" />
 						</Channel>
-						<NumberOfDigits>1</NumberOfDigits>
+						<NumberOfDigits>2</NumberOfDigits>
 						<Connection>
 							<ConfigKey>[Channel<Variable name="channum" />],visual_bpm</ConfigKey>
 						</Connection>
