@@ -2461,7 +2461,7 @@
 													<PathBack>../../skins/Deere1366x768-WXGA/btn_clipping_previewdeck.png</PathBack>
 													<Pos>0,1</Pos>
 													<Connection>
-														<ConfigKey>[PreviewDeck1],PeakIndicator</ConfigKey>
+														<ConfigKey>[Master],audio_cpu_overload</ConfigKey>
 													</Connection>
 												</StatusLight>
 					
@@ -2482,7 +2482,7 @@
 													<PeakFallTime>50</PeakFallTime>
 													<PeakFallStep>3</PeakFallStep>
 													<Connection>
-														<ConfigKey>[PreviewDeck1],VuMeter</ConfigKey>
+														<ConfigKey>[Master],audio_cpu_usage</ConfigKey>
 													</Connection>
 												</VuMeter>
 
