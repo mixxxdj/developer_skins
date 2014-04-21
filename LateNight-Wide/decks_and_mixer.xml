@@ -40,28 +40,10 @@
 			                <NumberStates>2</NumberStates>
 			                <State>
 			                  <Number>0</Number>
-                              <Style>#FourDeckToggleButton {
-                                         border: 1px solid #585858;
-                                         font: bold 10px/12px Lucida Grande,
-                                               Lucida Sans Unicode, Arial,
-                                               Verdana, sans-serif;
-                                         color: #585858;
-                                         background-color: #0e0e0e;
-                                     }
-                              </Style>
 			                  <Text>2DECK</Text>
 			                </State>
 			                <State>
 			                  <Number>1</Number>
-                              <Style>#FourDeckToggleButton {
-                                         border: 1px solid #585858;
-                                         font: bold 10px/12px Lucida Grande,
-                                               Lucida Sans Unicode, Arial,
-                                               Verdana, sans-serif;
-                                         color: #0e0e0e;
-                                         background-color: #e17800;
-                                     }
-                              </Style>
 			                  <Text>4DECK</Text>
 			                </State>
                             <Connection>
