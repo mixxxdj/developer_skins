@@ -2794,7 +2794,7 @@
 				<Path>../../skins/Deere1366x768-WXGA/knobs/knob_rotary_s%1.png</Path>
 				<Pos>228,14</Pos>
 				<Connection>
-					<ConfigKey>[Microphone],volume</ConfigKey>
+					<ConfigKey>[Microphone],pregain</ConfigKey>
 				</Connection>
 			</Knob>
 
