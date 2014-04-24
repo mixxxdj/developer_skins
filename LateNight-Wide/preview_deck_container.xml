@@ -6,7 +6,7 @@
         <SizePolicy>min,f</SizePolicy>
         <MinimumSize>100,-1</MinimumSize>
         <Children>
-			<WidgetStack>
+			<WidgetStack currentpage="[PreviewDeck],current" persist="true">
 				<ObjectName>PreviewDeckContainer</ObjectName>
 				<SizePolicy>min,min</SizePolicy>
 				<Children>
@@ -29,9 +29,9 @@
 							</WidgetGroup>
 						</Children>
 					</WidgetGroup>
-		
+
 					<!-- Collapsed Library  -->
-					<WidgetGroup trigger="[PreviewDeck],hide_previewdeck">
+					<WidgetGroup>
 						<ObjectName>AlignLeftBottom</ObjectName>
 						<Layout>horizontal</Layout>
 						<SizePolicy>min,min</SizePolicy>
