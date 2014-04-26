@@ -2794,7 +2794,7 @@
 				<Path>../../skins/Deere1366x768-WXGA/knobs/knob_rotary_s%1.png</Path>
 				<Pos>228,14</Pos>
 				<Connection>
-					<ConfigKey>[Microphone],volume</ConfigKey>
+					<ConfigKey>[Microphone],pregain</ConfigKey>
 				</Connection>
 			</Knob>
 
@@ -4166,7 +4166,7 @@
 			Text- BPM number display
 			**********************************************
 			-->
-			<NumberBpm>
+			<NumberDb>
 				<TooltipId>visual_bpm</TooltipId>
 				<Style>QLabel { font: bold 18px/20px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 				background-color: transparent; color: #0099FF; text-align: left;padding-left: 1px; }
@@ -4177,9 +4177,9 @@
 				<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
 				<Alignment>right</Alignment>
 				<Connection>
-					<ConfigKey>[Channel1],visual_bpm</ConfigKey>
+					<ConfigKey>[Channel1],volume</ConfigKey>
 				</Connection>
-			</NumberBpm>
+			</NumberDb>
 
 			<Key>
 			    <TooltipId>visual_key</TooltipId>
