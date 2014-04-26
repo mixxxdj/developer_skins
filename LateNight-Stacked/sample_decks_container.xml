@@ -5,7 +5,7 @@
         <Layout>vertical</Layout>
         <SizePolicy>me,f</SizePolicy>
         <Children>
-            <WidgetStack>
+            <WidgetStack currentpage="[Samplers],current" persist="true">
                 <ObjectName>SamplerDecksContainer</ObjectName>
                 <SizePolicy>me,min</SizePolicy>
                 <Children>
@@ -30,7 +30,7 @@
                     </WidgetGroup>
 
                     <!-- Collapsed Library  -->
-                    <WidgetGroup trigger="[Samplers],hide_samplers">
+                    <WidgetGroup>
                         <ObjectName>AlignLeftBottom</ObjectName>
                         <Layout>horizontal</Layout>
                         <SizePolicy>me,min</SizePolicy>

@@ -19,11 +19,11 @@
             </Children>
         </WidgetGroup>
         
-        <Template src="skin:deck_container.xml">
+        <Template src="skin:deck.xml">
             <SetVariable name="channum">1</SetVariable>
         </Template>
         <Template src="skin:mixer.xml"/>
-        <Template src="skin:deck_container.xml">
+        <Template src="skin:deck.xml">
             <SetVariable name="channum">2</SetVariable>
         </Template>
         

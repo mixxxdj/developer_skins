@@ -9,9 +9,6 @@
                 <ObjectName>SamplerDecksContainer</ObjectName>
                 <SizePolicy>me,min</SizePolicy>
                 <Children>
-                    <!-- TODO(owen): Having two COs, one for show and one for
-                    hide, is a hack to allow the settings to persist.  Eventually
-                    there should be a better solution -->
                     <WidgetGroup trigger="[Samplers],show_samplers">
                         <ObjectName>PreviewDeckExpanded</ObjectName>
                         <Layout>vertical</Layout>

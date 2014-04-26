@@ -8,13 +8,28 @@
                 <ObjectName>RateContainer<Variable name="channum" /></ObjectName>
                 <Layout>vertical</Layout>
                 <SizePolicy>min,min</SizePolicy>
+                <MinimumSize>60,-1</MinimumSize>
                 <Children>
                    <WidgetGroup>
                        <ObjectName>RateAdjust</ObjectName>
-                       <Layout>horizontal</Layout>
-                       <SizePolicy>min,min</SizePolicy>
+                       <Layout>vertical</Layout>
+                       <SizePolicy>min,me</SizePolicy>
 	                   <Children>
-				           <NumberRate>
+                           <NumberBpm>
+                              <TooltipId>visual_bpm</TooltipId>
+                              <Style>QLabel { font: bold 16px/18px Lucida Grande, Lucida Sans
+                                  Unicode, Arial, Verdana, sans-serif;
+                                  background-color: transparent; color: #EECE33; padding: 0px; margin: 0px;}
+                              </Style>
+                              <Channel>
+                                  <Variable name="channum" />
+                              </Channel>
+                              <NumberOfDigits>1</NumberOfDigits>
+                              <Connection>
+                                  <ConfigKey>[Channel<Variable name="channum" />],visual_bpm</ConfigKey>
+                              </Connection>
+                          </NumberBpm>
+				           <!-- <NumberRate>
 				                <TooltipId>rate_display</TooltipId>
 				                <Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans
 				                    Unicode, Arial, Verdana, sans-serif;
@@ -24,23 +39,23 @@
 				                    <Variable name="channum" />
 				                </Channel>
 				                <NumberOfDigits>1</NumberOfDigits>
-				            </NumberRate>
+				            </NumberRate>-->
 			            </Children>
 		            </WidgetGroup>
-		            <SliderComposed>
-		                <TooltipId>rate</TooltipId>
-		                <Handle>knob_pitch1.png</Handle>
-		                <Slider>slider_pitch1.png</Slider>
-		                <Horizontal>false</Horizontal>
-		                <Connection>
-		                    <ConfigKey>[Channel<Variable name="channum" />],rate</ConfigKey>
-		                    <EmitOnDownPress>false</EmitOnDownPress>
-		                </Connection>
-		            </SliderComposed>
+  		            <SliderComposed>
+  		                <TooltipId>rate</TooltipId>
+  		                <Handle>knob_pitch1.png</Handle>
+  		                <Slider>slider_pitch1.png</Slider>
+  		                <Horizontal>false</Horizontal>
+  		                <Connection>
+  		                    <ConfigKey>[Channel<Variable name="channum" />],rate</ConfigKey>
+  		                    <EmitOnDownPress>false</EmitOnDownPress>
+  		                </Connection>
+  		            </SliderComposed>
 		            <WidgetGroup>
 		                <ObjectName>RateButtons</ObjectName>
 		                <Layout>vertical</Layout>
-		                <SizePolicy>min,min</SizePolicy>
+		                <SizePolicy>min,me</SizePolicy>
 		                <Children>
 		                    <WidgetGroup>
 		                        <ObjectName>RatePermButtons</ObjectName>
@@ -136,7 +151,7 @@
             </WidgetGroup>
 			<WidgetGroup>  <!-- Deck Channel1 -->
 				<ObjectName>Deck<Variable name="channum" /></ObjectName>
-				<SizePolicy>me,max</SizePolicy>
+				<SizePolicy>me,min</SizePolicy>
 				<MinimumSize>340,-1</MinimumSize>
 				<Layout>vertical</Layout>
 				<Children>

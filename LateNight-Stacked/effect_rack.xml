@@ -14,7 +14,7 @@
     <SizePolicy>me,f</SizePolicy>
         <ObjectName>EffectRackContainer</ObjectName>
     <Children>
-      <WidgetStack>
+      <WidgetStack currentpage="[EffectRack1],current" persist="true">
         <SizePolicy>me,min</SizePolicy>
         <Children>
           <!-- Expanded EffectRack -->
@@ -57,7 +57,7 @@
           </WidgetGroup>
 
           <!-- Collapsed EffectRack -->
-          <WidgetGroup trigger="[EffectRack1],hide">
+          <WidgetGroup>
             <ObjectName>EffectRackCollapsed</ObjectName>
             <Layout>horizontal</Layout>
             <MinimumSize>-1,20</MinimumSize>
@@ -69,10 +69,6 @@
                 <SetVariable name="control">[EffectRack1],show</SetVariable>
                 <SetVariable name="button_text">Effects</SetVariable>
               </Template>
-              <Label>
-                <ObjectName>SectionLabel</ObjectName>
-                <Text>Effects</Text>
-              </Label>
             </Children>
           </WidgetGroup>
         </Children>
