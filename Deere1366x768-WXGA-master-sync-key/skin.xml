@@ -4164,6 +4164,7 @@
 				<Size>100,23</Size>
 				<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
 				<Alignment>right</Alignment>
+				<Text>x %1 x</Text>
 				<Connection>
 					<ConfigKey>[Channel1],volume</ConfigKey>
 				</Connection>
