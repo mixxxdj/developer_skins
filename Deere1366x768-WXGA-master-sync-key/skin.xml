@@ -2970,10 +2970,6 @@
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Channel1],volume</ConfigKey>
-							<Transform>
-								<Invert/>
-								<Add>1</Add>
-							</Transform>
 						</Connection>
 					</SliderComposed>
 					<SliderComposed>
@@ -3277,10 +3273,6 @@
 						<Connection>
 							<ConfigKey>[Channel1],play</ConfigKey>
 							<ButtonState>LeftButton</ButtonState>
-							<Transform>
-								<Invert/>
-								<Add>1</Add>
-							</Transform>
 						</Connection>
 						<Connection>
 							<ConfigKey>[Channel1],cue_set</ConfigKey>
@@ -3598,10 +3590,6 @@
 						<Pos>311,15</Pos>
 						<Connection>
 							<ConfigKey>[Master],volume</ConfigKey>
-							<Transform>
-								<Invert/>
-								<Add>1</Add>
-							</Transform>
 						</Connection>
 					</Knob>
 					<Knob>
