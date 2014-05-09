@@ -1,0 +1,25 @@
+<!DOCTYPE template>
+<!--
+Description:
+A deck with essential controls.
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>Deck</ObjectName>
+    <Layout>vertical</Layout>
+	<SizePolicy>e,e</SizePolicy>
+	<!--MinimumSize>300,300</MinimumSize-->
+	<MaximumSize>-1,-1</MaximumSize>
+    <Children>
+		
+      <WidgetGroup>
+        <Layout>horizontal</Layout>
+        <Children>
+          <Template src="skin:skin_track_control.xml"/>
+          <Template src="skin:skin_track_info.xml"/>
+        </Children>
+      </WidgetGroup>
+      <!--Template src="skin:spacer.xml"/-->
+    </Children>
+  </WidgetGroup>
+</Template>
