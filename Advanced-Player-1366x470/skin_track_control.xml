@@ -9,9 +9,9 @@ Track control panel.
   <WidgetGroup>
     <ObjectName>Deck</ObjectName>
     <Layout>horizontal</Layout>
-    <SizePolicy>me,me</SizePolicy>
+    <SizePolicy>min,me</SizePolicy>
     <MinimumSize>210,100</MinimumSize>
-    <MaximumSize>250,110</MaximumSize>
+    <MaximumSize>-1,110</MaximumSize>
     <Children>
 
 
@@ -604,13 +604,46 @@ Track control panel.
 			
 			<!--
 			**********************************************
+			Slider- Channel Volume
+			**********************************************
+			-->
+			<SliderComposed>
+				<TooltipId>pregain</TooltipId>
+				<MinimumSize>35,100</MinimumSize>
+				<MaximumSize>40,100</MaximumSize>
+				<Style></Style>
+				<!--Handle>knob_volume1.png</Handle>
+				<Slider>slider_volume1.png</Slider-->
+				<Handle>knob_pitch<Variable name="i"/>.png</Handle>
+				<Slider>slider_pitch<Variable name="i"/>.png</Slider>
+				<Horizontal>false</Horizontal>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
+				</Connection>
+			</SliderComposed>
+			
+      </Children>
+      </WidgetGroup>
+			
+	<!--
+	**********************************************
+	Column 6 : Frequency killers
+	**********************************************
+	-->
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+		<MinimumSize>30,110</MinimumSize>
+		<MaximumSize>40,110</MaximumSize>
+        <Children>
+			
+			<!--
+			**********************************************
 			Button- Frequency Kill
 			**********************************************
 			-->
 			<PushButton>
 				<TooltipId>filterHighKill</TooltipId>
-				<MinimumSize>20,20</MinimumSize>
-				<MaximumSize>20,20</MaximumSize>
+				<Size>20,20</Size>
 				<Style></Style>
 				<NumberStates>2</NumberStates>
 				<State>
@@ -677,8 +710,99 @@ Track control panel.
 			</PushButton>
 			
 			
+			<!--
+			**********************************************
+			Tab- Show/hide Sampler widget group
+			**********************************************
+			-->
+			<PushButton>
+				<TooltipId>show_equalizers</TooltipId>
+				<Style></Style>
+				<NumberStates>2</NumberStates>
+				<State>
+					<Number>0</Number>
+					<Pressed>tab_sampler.png</Pressed>
+					<Unpressed>tab_sampler.png</Unpressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<Pressed>tab_sampler_over.png</Pressed>
+					<Unpressed>tab_sampler_over.png</Unpressed>
+				</State>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
+				</Connection>
+			</PushButton>
+
+			
         </Children>
       </WidgetGroup>
+
+
+	<!--
+	**********************************************
+	Column 7 : EQs
+	**********************************************
+	-->
+
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+		<MinimumSize>70,110</MinimumSize>
+		<MaximumSize>70,110</MaximumSize>
+        <Children>
+			
+			<SliderComposed>
+				<TooltipId>filterHigh</TooltipId>
+				<SizePolicy>f,e</SizePolicy>
+				<Size>60,30</Size>
+				<Style></Style>
+				<Handle>knob_crossfader.png</Handle>
+				<Slider>slider_60.png</Slider>
+				<Horizontal>true</Horizontal>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,filterMid</ConfigKey>
+				</Connection>
+			</SliderComposed>
+			
+			<SliderComposed>
+				<TooltipId>filterMid</TooltipId>
+				<SizePolicy>f,e</SizePolicy>
+				<Size>60,30</Size>
+				<Style></Style>
+				<Handle>knob_crossfader.png</Handle>
+				<Slider>slider_60.png</Slider>
+				<Horizontal>true</Horizontal>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,filterHigh</ConfigKey>
+				</Connection>
+			</SliderComposed>
+			
+			<SliderComposed>
+				<TooltipId>filterLow</TooltipId>
+				<SizePolicy>f,e</SizePolicy>
+				<Size>60,30</Size>
+				<Style></Style>
+				<Handle>knob_crossfader.png</Handle>
+				<Slider>slider_60.png</Slider>
+				<Horizontal>true</Horizontal>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,filterLow</ConfigKey>
+				</Connection>
+			</SliderComposed>
+			
+        </Children>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
+			<BindProperty>visible</BindProperty>
+		</Connection>
+      </WidgetGroup>
+
+
+
+
+
+
+
 
 
 

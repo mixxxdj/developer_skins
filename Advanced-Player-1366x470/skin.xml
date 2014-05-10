@@ -242,15 +242,6 @@
 											<ConfigKey>[Master],volume</ConfigKey>
 										</Connection>
 									</SliderComposed>
-									<!--Knob>
-										<TooltipId>master_volume</TooltipId>
-										<Style></Style>
-										<NumberStates>33</NumberStates>
-										<Path>knobs/knob_rotary3_s%1.png</Path>
-										<Connection>
-											<ConfigKey>[Master],volume</ConfigKey>
-										</Connection>
-									</Knob-->
 									
 									
 								</Children>
@@ -267,6 +258,7 @@
 								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 								background-color: transparent; text-align: right; }
 								</Style>
+								<Alignment>center</Alignment>
 								<Size>60,30</Size>
 								<ShowSeconds>false</ShowSeconds>
 								<ClockFormat>24</ClockFormat>
@@ -279,17 +271,18 @@
 							RotaryFader- Balance
 							**********************************************
 							-->
-							<Knob>
-								<TooltipId>balance</TooltipId>
-								<Style></Style>
+							<SliderComposed>
+								<TooltipId>master_balance</TooltipId>
 								<SizePolicy>f,me</SizePolicy>
 								<Size>60,30</Size>
-								<NumberStates>33</NumberStates>
-								<Path>knobs/knob_rotary3_s%1.png</Path>
+								<Style></Style>
+								<Handle>knob_crossfader.png</Handle>
+								<Slider>slider_60.png</Slider>
+								<Horizontal>true</Horizontal>
 								<Connection>
 									<ConfigKey>[Master],balance</ConfigKey>
 								</Connection>
-							</Knob>
+							</SliderComposed>
 							
 							
 							
@@ -335,7 +328,7 @@
 				cause push buttons in library will show up with wrong margin/padding -->
 				<Style>QGroupBox { border: 0px solid red; }</Style>
 				<Children>
-
+					
 					<!--
 					**********************************************
 					Library / Preview Deck / Search / Tree view
@@ -436,31 +429,6 @@
 		</Children>
 	</WidgetGroup>
 
-
-	<!--
-	**********************************************
-	Tab- Show/hide Sampler widget group
-	**********************************************
-	-->
-	<PushButton>
-		<TooltipId>show_samplers</TooltipId>
-		<Style></Style>
-		<NumberStates>2</NumberStates>
-		<State>
-			<Number>0</Number>
-			<Pressed>tab_sampler.png</Pressed>
-			<Unpressed>tab_sampler.png</Unpressed>
-		</State>
-		<State>
-			<Number>1</Number>
-			<Pressed>tab_sampler_over.png</Pressed>
-			<Unpressed>tab_sampler_over.png</Unpressed>
-		</State>
-		<Pos>780,85</Pos>
-		<Connection>
-			<ConfigKey>[Samplers],show_samplers</ConfigKey>
-		</Connection>
-	</PushButton>
 
 	<!--
 	############################################################################################
