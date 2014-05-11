@@ -631,21 +631,15 @@ Track control panel.
 	Column 6 : Frequency killers
 	**********************************************
 	-->
-      <WidgetGroup>
-        <Layout>vertical</Layout>
-		<MinimumSize>30,110</MinimumSize>
-		<MaximumSize>40,110</MaximumSize>
-        <Children>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+		<SizePolicy>min,me</SizePolicy>
+		<Children>
 			
-			<!--
-			**********************************************
-			Button- Frequency Kill
-			**********************************************
-			-->
 			<PushButton>
 				<TooltipId>filterHighKill</TooltipId>
-				<Size>20,20</Size>
-				<Style></Style>
+				<SizePolicy>f,me</SizePolicy>
+				<Size>8,30</Size>
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
@@ -666,9 +660,8 @@ Track control panel.
 			
 			<PushButton>
 				<TooltipId>filterMidKill</TooltipId>
-				<MinimumSize>20,20</MinimumSize>
-				<MaximumSize>20,20</MaximumSize>
-				<Style></Style>
+				<SizePolicy>f,me</SizePolicy>
+				<!--Size>8,8</Size-->
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
@@ -689,9 +682,8 @@ Track control panel.
 			
 			<PushButton>
 				<TooltipId>filterLowKill</TooltipId>
-				<MinimumSize>20,20</MinimumSize>
-				<MaximumSize>20,20</MaximumSize>
-				<Style></Style>
+				<SizePolicy>f,me</SizePolicy>
+				<!--Size>8,8</Size-->
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
