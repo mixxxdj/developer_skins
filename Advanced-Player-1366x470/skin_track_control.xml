@@ -6,6 +6,7 @@ Track control panel.
 <Template>
 	<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
 	
+	
   <WidgetGroup>
     <ObjectName>Deck</ObjectName>
     <Layout>horizontal</Layout>

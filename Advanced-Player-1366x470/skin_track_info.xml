@@ -8,7 +8,7 @@ Track info panel.
 	<WidgetGroup>
 		<ObjectName>Track Info</ObjectName>
 		<Layout>vertical</Layout>
-		<SizePolicy>e,e</SizePolicy>
+		<SizePolicy><Variable name="space_filler"/>,e</SizePolicy>
 		<MinimumSize>210,100</MinimumSize>
 		<MaximumSize>-1,110</MaximumSize>
 		<Children>
@@ -16,7 +16,7 @@ Track info panel.
 			<WidgetGroup>
 				<ObjectName>Track Text Info</ObjectName>
 				<Layout>horizontal</Layout>
-				<SizePolicy>e,e</SizePolicy>
+				<SizePolicy><Variable name="space_filler"/>,e</SizePolicy>
 				<MinimumSize>300,20</MinimumSize>
 				<MaximumSize>-1,20</MaximumSize>
 				<Children>
@@ -91,7 +91,7 @@ Track info panel.
 			-->
 			<Overview>
 				<TooltipId>waveform_overview</TooltipId>
-				<SizePolicy>e,e</SizePolicy>
+				<SizePolicy><Variable name="space_filler"/>,e</SizePolicy>
 				<MinimumSize>150,50</MinimumSize>
 				<MaximumSize>-1,50</MaximumSize>
 				<Style></Style>

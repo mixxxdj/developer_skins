@@ -1,0 +1,85 @@
+<!DOCTYPE template>
+<!--
+Description:
+Master controls : volume, balance, pregain + time.
+-->
+<Template>
+	<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			
+	<WidgetGroup>
+		<ObjectName>Master and balance</ObjectName>
+		<Layout>vertical</Layout>
+		<SizePolicy>min,me</SizePolicy>
+		<Children>
+			
+			<WidgetGroup>
+				<ObjectName>Master Volume and Crossfader</ObjectName>
+				<Layout>horizontal</Layout>
+				<SizePolicy>f,min</SizePolicy>
+				<MinimumSize>60,-1</MinimumSize>
+				<MaximumSize>60,-1</MaximumSize>
+				<Children>
+					
+					<SliderComposed>
+						<TooltipId>crossfader</TooltipId>
+						<Handle>knob_pitch_sampler.png</Handle>
+						<Slider>slider_volume1.png</Slider>
+						<Horizontal>false</Horizontal>
+						<Connection>
+							<ConfigKey>[Master],crossfader</ConfigKey>
+							<EmitOnDownPress>false</EmitOnDownPress>
+						</Connection>
+					</SliderComposed>
+					
+					<SliderComposed>
+						<TooltipId>master_volume</TooltipId>
+						<Handle>knob_pitch_sampler.png</Handle>
+						<Slider>slider_volume1.png</Slider>
+						<Horizontal>false</Horizontal>
+						<Connection>
+							<ConfigKey>[Master],volume</ConfigKey>
+						</Connection>
+					</SliderComposed>
+					
+					
+				</Children>
+			</WidgetGroup>
+			
+			<Time>
+				<TooltipId>time</TooltipId>
+				<Style>
+					QLabel {
+						font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+						background-color	: transparent;
+						color				: #ffffff;
+					}
+				</Style>
+				<Alignment>center</Alignment>
+				<Size>60,30</Size>
+				<ShowSeconds>false</ShowSeconds>
+				<ClockFormat>24</ClockFormat>
+			</Time>
+			
+			<SliderComposed>
+				<TooltipId>master_balance</TooltipId>
+				<SizePolicy>f,me</SizePolicy>
+				<Size>60,30</Size>
+				<Style></Style>
+				<Handle>knob_crossfader.png</Handle>
+				<Slider>slider_60.png</Slider>
+				<Horizontal>true</Horizontal>
+				<Connection>
+					<ConfigKey>[Master],balance</ConfigKey>
+				</Connection>
+			</SliderComposed>
+			
+		</Children>
+	</WidgetGroup>
+
+
+
+</Template>
+
+
+
+
