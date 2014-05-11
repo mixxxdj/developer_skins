@@ -22,19 +22,23 @@ Master controls : volume, balance, pregain + time.
 					
 					<SliderComposed>
 						<TooltipId>crossfader</TooltipId>
-						<Handle>knob_pitch_sampler.png</Handle>
-						<Slider>slider_volume1.png</Slider>
+						<!--Handle>knob_pitch_sampler.png</Handle-->
+						<!--Slider>slider_volume1.png</Slider-->
+						<Slider>slider-vertical-30x125.svg</Slider>
+						<Handle>handle-vertical-30x10.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Master],crossfader</ConfigKey>
-							<EmitOnDownPress>false</EmitOnDownPress>
 						</Connection>
 					</SliderComposed>
 					
+					
+					
+					
 					<SliderComposed>
 						<TooltipId>master_volume</TooltipId>
-						<Handle>knob_pitch_sampler.png</Handle>
-						<Slider>slider_volume1.png</Slider>
+						<Slider>slider-vertical-30x125.svg</Slider>
+						<Handle>handle-vertical-30x10.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Master],volume</ConfigKey>
@@ -64,9 +68,8 @@ Master controls : volume, balance, pregain + time.
 				<TooltipId>master_balance</TooltipId>
 				<SizePolicy>f,me</SizePolicy>
 				<Size>60,30</Size>
-				<Style></Style>
-				<Handle>knob_crossfader.png</Handle>
-				<Slider>slider_60.png</Slider>
+				<Slider>slider-horizontal-60x30.svg</Slider>
+				<Handle>handle-horizontal-10x30.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>
 					<ConfigKey>[Master],balance</ConfigKey>
