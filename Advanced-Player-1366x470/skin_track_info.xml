@@ -57,25 +57,6 @@ Track info panel.
 						<Channel><Variable name="i"/></Channel>
 						<Size>220f,18</Size>
 					</TrackProperty>
-
-					<!--
-					**********************************************
-					Text- BPM number display
-					**********************************************
-					-->
-					<NumberBpm>
-						<TooltipId>visual_bpm</TooltipId>
-						<Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color: transparent; text-align: left; padding-left: 1px; }
-						</Style>
-						<Channel><Variable name="i"/></Channel>
-						<Size>60,18</Size>
-						<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
-						<Alignment>right</Alignment>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,visual_bpm</ConfigKey>
-						</Connection>
-					</NumberBpm>
 					
 					
 				</Children>
@@ -134,12 +115,50 @@ Track info panel.
 			
 			
 			<WidgetGroup>
-				<ObjectName>Track Info</ObjectName>
+				<ObjectName>Overview</ObjectName>
 				<Layout>horizontal</Layout>
-				<SizePolicy>e,e</SizePolicy>
-				<MinimumSize>300,20</MinimumSize>
+				<SizePolicy>me,me</SizePolicy>
+				<MinimumSize>-1,20</MinimumSize>
 				<MaximumSize>-1,20</MaximumSize>
 				<Children>
+					
+					<WidgetGroup>
+						<ObjectName>speed</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>f,f</SizePolicy>
+						<Size>100,20</Size>
+						<Children>
+							
+							<!--
+							**********************************************
+							Text - BPM + Pitch rate display
+							**********************************************
+							-->
+							<NumberBpm>
+								<TooltipId>visual_bpm</TooltipId>
+								<SizePolicy>min,me</SizePolicy>
+								<Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+								background-color: transparent; text-align: left; padding-left: 1px; }
+								</Style>
+								<Channel><Variable name="i"/></Channel>
+								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
+								<Alignment>right</Alignment>
+								<Connection>
+									<ConfigKey><Variable name="channel"/>,visual_bpm</ConfigKey>
+								</Connection>
+							</NumberBpm>
+							
+							<NumberRate>
+								<TooltipId>rate_display</TooltipId>
+								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+								background-color: transparent; text-align: right; }
+								</Style>
+								<Channel><Variable name="i"/></Channel>
+								<NumberOfDigits>4</NumberOfDigits>
+							</NumberRate>
+						
+						</Children>
+					</WidgetGroup>
 					
 					<!--
 					**********************************************
@@ -149,10 +168,8 @@ Track info panel.
 					-->
 					<VuMeter>
 						<TooltipId>channel_VuMeter</TooltipId>
-						<SizePolicy>e,e</SizePolicy>
+						<SizePolicy>me,me</SizePolicy>
 						<Style></Style>
-						<!--PathVu>btn_volume_display1_over.png</PathVu>
-						<PathBack>btn_volume_display1.png</PathBack-->
 						<PathVu>btn_volume_display_master1_over.png</PathVu>
 						<PathBack>btn_volume_display_master1.png</PathBack>
 						<Alignment>left</Alignment>
@@ -203,21 +220,6 @@ Track info panel.
 						</Connection>
 					</NumberPos>
 
-					<!--
-					**********************************************
-					Text- Pitch rate display
-					**********************************************
-					-->
-					<NumberRate>
-						<TooltipId>rate_display</TooltipId>
-						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color: transparent; text-align: right; }
-						</Style>
-						<Channel><Variable name="i"/></Channel>
-						<Size>50,13</Size>
-						<NumberOfDigits>4</NumberOfDigits>
-					</NumberRate>
-					
 					
 				</Children>
 			</WidgetGroup>

@@ -710,34 +710,8 @@ Track control panel.
 				</Connection>
 			</PushButton>
 			
-			
-			<!--
-			**********************************************
-			Tab- Show/hide Sampler widget group
-			**********************************************
-			-->
-			<PushButton>
-				<TooltipId>show_equalizers</TooltipId>
-				<Style></Style>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>tab_sampler.png</Pressed>
-					<Unpressed>tab_sampler.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>tab_sampler_over.png</Pressed>
-					<Unpressed>tab_sampler_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
-				</Connection>
-			</PushButton>
-
-			
-        </Children>
-      </WidgetGroup>
+		</Children>
+	</WidgetGroup>
 
 
 	<!--
@@ -746,8 +720,35 @@ Track control panel.
 	**********************************************
 	-->
 
-      <WidgetGroup>
-        <Layout>vertical</Layout>
+	<PushButton>
+		<Size>15f,110f</Size>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Text>&gt;&nbsp;
+&gt;&nbsp;
+&gt;&nbsp;
+&gt;&nbsp;
+&gt;&nbsp;
+&gt;&nbsp;</Text>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Text>&lt;&nbsp;
+&lt;&nbsp;
+&lt;&nbsp;
+&lt;&nbsp;
+&lt;&nbsp;
+&lt;&nbsp;
+</Text>
+		</State>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
+		</Connection>
+	</PushButton>
+	
+	<WidgetGroup>
+		<Layout>vertical</Layout>
 		<MinimumSize>70,110</MinimumSize>
 		<MaximumSize>70,110</MaximumSize>
         <Children>
