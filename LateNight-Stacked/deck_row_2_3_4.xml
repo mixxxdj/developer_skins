@@ -8,7 +8,7 @@
 		    <WidgetGroup>
 		        <ObjectName>TitleGutter</ObjectName>
 		        <Layout>horizontal</Layout>
-		        <SizePolicy>me,me</SizePolicy>
+		        <SizePolicy>me,min</SizePolicy>
 		        <Children>
 					<TrackProperty>
 						<TooltipId>track_title</TooltipId>
@@ -45,12 +45,12 @@
 			<WidgetGroup>
 				<ObjectName>ArtistRow</ObjectName>
 				<Layout>horizontal</Layout>
-				<SizePolicy>me, me</SizePolicy>
+				<SizePolicy>me,min</SizePolicy>
 				<Children>
 					<WidgetGroup>
 						<ObjectName>ArtistGutter</ObjectName>
 						<Layout>horizontal</Layout>
-						<SizePolicy>me, me</SizePolicy>
+						<SizePolicy>me,min</SizePolicy>
 						<Children>
 							<TrackProperty>
 								<TooltipId>track_artist</TooltipId>
@@ -68,7 +68,7 @@
 					<WidgetGroup>
                         <ObjectName>DurationGutter</ObjectName>
                         <Layout>horizontal</Layout>
-                        <SizePolicy>me,me</SizePolicy>
+                        <SizePolicy>me,min</SizePolicy>
                         <Children>
                             <TrackProperty>
                                 <TooltipId>track_duration</TooltipId>

@@ -1,5 +1,5 @@
 	<!--
-	LateNight Stacked, Resizable skin for Mixxx 1.12
+	LateNight Stacked-dev, Resizable skin for Mixxx 1.12
 	www.mixxx.org
 	Copyright (C) 2010-2013 jus <s.brandt@mixxx.org>, 2014 Owen Williams <owilliams@mixxx.org>
 	"LateNight" is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported license.
@@ -27,7 +27,7 @@
 <!DOCTYPE skin>
 <skin>
   <manifest>
-    <title>LateNight-Stacked</title>
+    <title>LateNight-Stacked-dev</title>
     <author>owilliams</author>
     <version>1.12.0.01</version>
     <description>A nighttime-compatible skin</description>
@@ -53,7 +53,7 @@
   <ObjectName>Mixxx</ObjectName>
   <Style src="skin:style.qss"/>
 
-  <MinimumSize>1280,800</MinimumSize>
+  <MinimumSize>1280,768</MinimumSize>
   <SizePolicy>me,me</SizePolicy>
   <Layout>vertical</Layout>
 
@@ -64,7 +64,10 @@
     <WidgetGroup>
         <ObjectName>SkinContainer</ObjectName>
         <Layout>horizontal</Layout>
-        <SizePolicy>me,min</SizePolicy>
+        <SizePolicy>me,max</SizePolicy>
+        <!-- <MinimumSize>1280,525</MinimumSize>-->
+        <!-- <MinimumSize>0,525</MinimumSize>-->
+        <MaximumSize>1920,525</MaximumSize>
         <Children>
             <!-- <WidgetGroup>
 	            <ObjectName>DeckLeftMargin</ObjectName>
@@ -116,9 +119,16 @@
             </PushButton>
         </Children>
     </WidgetGroup>
-
-    <Template src="skin:sample_decks_container.xml"/>
-    <Template src="skin:effect_rack.xml"/>
-    <Template src="skin:library.xml"/>
+    <WidgetGroup>
+        <ObjectName>UILowerHalf</ObjectName>
+        <Layout>vertical</Layout>
+        <SizePolicy>min,e</SizePolicy>
+        <MaximumSize>1920,800</MaximumSize>
+        <Children>
+            <Template src="skin:sample_decks_container.xml"/>
+            <Template src="skin:effect_rack.xml"/>
+            <Template src="skin:library.xml"/>
+        </Children>
+    </WidgetGroup>
   </Children>
 </skin>
