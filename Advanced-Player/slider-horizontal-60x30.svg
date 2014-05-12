@@ -5,5 +5,5 @@
 		width	="60"
 		height	="30"
 		style	="fill:#ffffff;"/>
-	<line x1="0" y1="15" x2="60" y2="15" stroke="#aaaaaa" stroke-width="2"/>
+	<line x1="0" y1="15" x2="60" y2="15" stroke="#aaaaaa" stroke-width="1"/>
 </svg>

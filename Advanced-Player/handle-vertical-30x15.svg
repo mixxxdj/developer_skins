@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	
+	<rect x="0" y="-1" width="30" height="16" style="fill:#ffffff; stroke-width:0; stroke:#eeeeee; stroke-linecap:sqare;" />
+	
+	<path d="M 1 6 l 0 -6 l 28 0 l 0 6" style="fill:none;stroke-width:1;stroke:#aaaaaa" />
+	<path d="M 1 7 l 0 6 l 28 0 l 0 -6" style="fill:none;stroke-width:1;stroke:#aaaaaa" />
+	
+	<path d="M 0.5 6 l 0 -6.5 l 29 0 l 0 6.5" style="fill:none;stroke-width:1;stroke:#999999" />
+	<path d="M 0.5 7 l 0 6.5 l 29 0 l 0 -6.5" style="fill:none;stroke-width:1;stroke:#999999" />
+	
+	<line x1="2" y1="6.5" x2="28" y2="6.5" stroke="#ff0000" stroke-width="1"/>
+	
+</svg>

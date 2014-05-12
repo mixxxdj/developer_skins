@@ -25,29 +25,21 @@ Track control panel.
 
       <WidgetGroup>
 		<Layout>vertical</Layout>
-		<MinimumSize>35,110</MinimumSize>
-		<MaximumSize>40,110</MaximumSize>
+		<Size>35,110</Size>
 		<Children>
 			
-			<!--
-			**********************************************
-			Slider- Pitch control
-			**********************************************
-			-->
 			<SliderComposed>
-				<TooltipId>rate</TooltipId>
-				<Style></Style>
-				<MinimumSize>35,75</MinimumSize>
-				<MaximumSize>35,75</MaximumSize>
-				<Handle>knob_pitch<Variable name="i"/>.png</Handle>
-				<Slider>slider_pitch<Variable name="i"/>.png</Slider>
+				<TooltipId>pitch_rate</TooltipId>
+				<Size>25,90</Size>
+				<Slider>slider-vertical-15x90.svg</Slider>
+				<Handle>handle-vertical-15x12.svg</Handle>
 				<Horizontal>false</Horizontal>
+				<Alignment>center</Alignment>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,rate</ConfigKey>
 					<EmitOnDownPress>false</EmitOnDownPress>
 				</Connection>
 			</SliderComposed>
-
 			
         </Children>
       </WidgetGroup>
@@ -63,8 +55,7 @@ Track control panel.
 
       <WidgetGroup>
 		<Layout>vertical</Layout>
-		<MinimumSize>35,40</MinimumSize>
-		<MaximumSize>40,60</MaximumSize>
+		<Size>35,110</Size>
 		<Children>
 			
 			<!--
@@ -113,14 +104,12 @@ Track control panel.
 			-->
 			<PushButton>
 				<TooltipId>beatsync_beatsync_tempo</TooltipId>
-				<Style></Style>
 				<NumberStates>1</NumberStates>
 				<State>
 					<Number>0</Number>
 					<Pressed>btn_sync<Variable name="i"/>_over.png</Pressed>
 					<Unpressed>btn_sync<Variable name="i"/>.png</Unpressed>
 				</State>
-				<Pos>41,241</Pos>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,beatsync</ConfigKey>
 					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
@@ -130,6 +119,33 @@ Track control panel.
 					<ConfigKey><Variable name="channel"/>,beatsync_tempo</ConfigKey>
 					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					<ButtonState>RightButton</ButtonState>
+				</Connection>
+			</PushButton>
+			
+			<!--
+			**********************************************
+			Button- Sync Master
+			**********************************************
+			-->
+			<PushButton>
+				<ObjectName>DeckSyncMaster</ObjectName>
+				<Size>40f,20f</Size>
+				<NumberStates>2</NumberStates>
+				<State>
+					<Number>0</Number>
+					<Text>mast</Text>
+					<!--Pressed>btn_sync<Variable name="i"/>_over.png</Pressed-->
+				</State>
+				<State>
+					<Number>1</Number>
+					<Text>MAST</Text>
+					<!--Unpressed>btn_sync<Variable name="i"/>.png</Unpressed-->
+					<!--Pressed>btn_sync<Variable name="i"/>.png</Pressed-->
+				</State>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,sync_master</ConfigKey>
+					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+					<ButtonState>LeftButton</ButtonState>
 				</Connection>
 			</PushButton>
 
@@ -552,39 +568,25 @@ Track control panel.
 
 	<!--
 	**********************************************
-	Column 5 : Volume
+	Column 5 : Channel Volume
 	**********************************************
 	-->
-
       <WidgetGroup>
         <Layout>vertical</Layout>
-		<MinimumSize>35,100</MinimumSize>
-		<MaximumSize>40,100</MaximumSize>
-        <Children>
+		<Size>25,100</Size>
+		<Children>
 			
-			
-			
-			<!--
-			**********************************************
-			Slider- Channel Volume
-			**********************************************
-			-->
 			<SliderComposed>
 				<TooltipId>channel_volume</TooltipId>
-				<MinimumSize>35,100</MinimumSize>
-				<MaximumSize>40,100</MaximumSize>
-				<Style></Style>
-				<!--Handle>knob_volume1.png</Handle>
-				<Slider>slider_volume1.png</Slider-->
-				<Handle>knob_pitch<Variable name="i"/>.png</Handle>
-				<Slider>slider_pitch<Variable name="i"/>.png</Slider>
+				<Size>25,90</Size>
+				<Slider>slider-vertical-25x90.svg</Slider>
+				<Handle>handle-vertical-25x12.svg</Handle>
 				<Horizontal>false</Horizontal>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,volume</ConfigKey>
 					<EmitOnDownPress>false</EmitOnDownPress>
 				</Connection>
 			</SliderComposed>
-			
 			
         </Children>
       </WidgetGroup>
@@ -599,8 +601,7 @@ Track control panel.
 
       <WidgetGroup>
         <Layout>vertical</Layout>
-		<MinimumSize>30,110</MinimumSize>
-		<MaximumSize>40,110</MaximumSize>
+			<Size>25,90</Size>
         <Children>
 			
 			<!--
@@ -610,13 +611,9 @@ Track control panel.
 			-->
 			<SliderComposed>
 				<TooltipId>pregain</TooltipId>
-				<MinimumSize>35,100</MinimumSize>
-				<MaximumSize>40,100</MaximumSize>
-				<Style></Style>
-				<!--Handle>knob_volume1.png</Handle>
-				<Slider>slider_volume1.png</Slider-->
-				<Handle>knob_pitch<Variable name="i"/>.png</Handle>
-				<Slider>slider_pitch<Variable name="i"/>.png</Slider>
+				<Size>25,90</Size>
+				<Slider>slider-vertical-25x90.svg</Slider>
+				<Handle>handle-vertical-25x12.svg</Handle>
 				<Horizontal>false</Horizontal>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
