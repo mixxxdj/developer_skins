@@ -728,8 +728,7 @@ Track control panel.
 &lt;&nbsp;
 &lt;&nbsp;
 &lt;&nbsp;
-&lt;&nbsp;
-</Text>
+&lt;&nbsp;</Text>
 		</State>
 		<Connection>
 			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
@@ -738,49 +737,70 @@ Track control panel.
 	
 	<WidgetGroup>
 		<Layout>vertical</Layout>
-		<MinimumSize>70,110</MinimumSize>
-		<MaximumSize>70,110</MaximumSize>
-        <Children>
+		<Size>70,110</Size>
+		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
+		<SizePolicy>f,me</SizePolicy>
+		<Children>
 			
-			<SliderComposed>
-				<TooltipId>filterHigh</TooltipId>
-				<SizePolicy>f,e</SizePolicy>
-				<Size>60,30</Size>
-				<Style></Style>
-				<Handle>knob_crossfader.png</Handle>
-				<Slider>slider_60.png</Slider>
-				<Horizontal>true</Horizontal>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,filterMid</ConfigKey>
-				</Connection>
-			</SliderComposed>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>me,me</SizePolicy>
+				<Children>
+					
+					<SliderComposed>
+						<TooltipId>filterHigh</TooltipId>
+						<SizePolicy>f,e</SizePolicy>
+						<Size>60,35</Size>
+						<Slider>slider-horizontal-60x25.svg</Slider>
+						<Handle>handle-horizontal-10x25.svg</Handle>
+						<Horizontal>true</Horizontal>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,filterMid</ConfigKey>
+						</Connection>
+					</SliderComposed>
+					
+				</Children>
+			</WidgetGroup>
 			
-			<SliderComposed>
-				<TooltipId>filterMid</TooltipId>
-				<SizePolicy>f,e</SizePolicy>
-				<Size>60,30</Size>
-				<Style></Style>
-				<Handle>knob_crossfader.png</Handle>
-				<Slider>slider_60.png</Slider>
-				<Horizontal>true</Horizontal>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,filterHigh</ConfigKey>
-				</Connection>
-			</SliderComposed>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>me,me</SizePolicy>
+				<Children>
+					
+					<SliderComposed>
+						<TooltipId>filterMid</TooltipId>
+						<SizePolicy>f,me</SizePolicy>
+						<Size>60,35</Size>
+						<Slider>slider-horizontal-60x25.svg</Slider>
+						<Handle>handle-horizontal-10x25.svg</Handle>
+						<Horizontal>true</Horizontal>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,filterHigh</ConfigKey>
+						</Connection>
+					</SliderComposed>
+					
+				</Children>
+			</WidgetGroup>
 			
-			<SliderComposed>
-				<TooltipId>filterLow</TooltipId>
-				<SizePolicy>f,e</SizePolicy>
-				<Size>60,30</Size>
-				<Style></Style>
-				<Handle>knob_crossfader.png</Handle>
-				<Slider>slider_60.png</Slider>
-				<Horizontal>true</Horizontal>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,filterLow</ConfigKey>
-				</Connection>
-			</SliderComposed>
-			
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>me,me</SizePolicy>
+				<Children>
+					
+					<SliderComposed>
+						<TooltipId>filterLow</TooltipId>
+						<SizePolicy>f,me</SizePolicy>
+						<Size>60,35</Size>
+						<Slider>slider-horizontal-60x25.svg</Slider>
+						<Handle>handle-horizontal-10x25.svg</Handle>
+						<Horizontal>true</Horizontal>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,filterLow</ConfigKey>
+						</Connection>
+					</SliderComposed>
+					
+				</Children>
+			</WidgetGroup>
         </Children>
 		<Connection>
 			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
