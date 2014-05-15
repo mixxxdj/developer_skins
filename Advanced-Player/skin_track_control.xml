@@ -11,8 +11,7 @@ Track control panel.
     <ObjectName>Deck</ObjectName>
     <Layout>horizontal</Layout>
     <SizePolicy>min,me</SizePolicy>
-    <MinimumSize>210,100</MinimumSize>
-    <MaximumSize>-1,110</MaximumSize>
+	<!--Style>QGroupBox { border: 1px solid red; }</Style-->
     <Children>
 
 
@@ -22,30 +21,6 @@ Track control panel.
 	Column 1
 	**********************************************
 	-->
-
-      <WidgetGroup>
-		<Layout>vertical</Layout>
-		<Size>35,110</Size>
-		<Children>
-			
-			<SliderComposed>
-				<TooltipId>pitch_rate</TooltipId>
-				<Size>25,90</Size>
-				<Slider>slider-vertical-15x90.svg</Slider>
-				<Handle>handle-vertical-15x12.svg</Handle>
-				<Horizontal>false</Horizontal>
-				<Alignment>center</Alignment>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,rate</ConfigKey>
-					<EmitOnDownPress>false</EmitOnDownPress>
-				</Connection>
-			</SliderComposed>
-			
-        </Children>
-      </WidgetGroup>
-
-
-
 	<!--
 	**********************************************
 	Column 2
@@ -70,6 +45,16 @@ Track control panel.
 				<Style></Style>
 				<NumberStates>2</NumberStates>
 				<RightClickIsPushButton>true</RightClickIsPushButton>
+				<!--State>
+					<Number>0</Number>
+					<Pressed>btn_eject1.png</Pressed>
+					<Unpressed>btn_eject1.png</Unpressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<Pressed>btn_eject<Variable name="i"/>_over.png</Pressed>
+					<Unpressed>btn_eject<Variable name="i"/>_over.png</Unpressed>
+				</State-->
 				<State>
 					<Number>0</Number>
 					<Pressed>btn_play<Variable name="i"/>.png</Pressed>
@@ -80,7 +65,6 @@ Track control panel.
 					<Pressed>btn_play<Variable name="i"/>_over.png</Pressed>
 					<Unpressed>btn_play<Variable name="i"/>_over.png</Unpressed>
 				</State>
-				<Pos>3,3</Pos>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,play</ConfigKey>
 					<EmitOnDownPress>true</EmitOnDownPress>
@@ -95,6 +79,41 @@ Track control panel.
 			</PushButton>
 			
 			
+			<!--
+			**********************************************
+			Button- Prelisten / Monitoring
+			**********************************************
+			-->
+			<PushButton>
+				<TooltipId>pfl</TooltipId>
+				<MinimumSize>30,20</MinimumSize>
+				<MaximumSize>40,30</MaximumSize>
+				<Style></Style>
+				<NumberStates>2</NumberStates>
+				<State>
+					<Number>0</Number>
+					<Pressed>btn_pfl_sampler.png</Pressed>
+					<Unpressed>btn_pfl_sampler.png</Unpressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<Pressed>btn_pfl_sampler_over.png</Pressed>
+					<Unpressed>btn_pfl_sampler_over.png</Unpressed>
+				</State>
+				<!--State>
+					<Number>0</Number>
+					<Pressed>btn_pfl<Variable name="i"/>.png</Pressed>
+					<Unpressed>btn_pfl<Variable name="i"/>.png</Unpressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<Pressed>btn_pfl<Variable name="i"/>_over.png</Pressed>
+					<Unpressed>btn_pfl<Variable name="i"/>_over.png</Unpressed>
+				</State-->
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
+				</Connection>
+			</PushButton>
 			
 			
 			<!--
@@ -174,33 +193,33 @@ Track control panel.
 			</PushButton-->
 			
 			
-			<!--
-			**********************************************
-			Button- Key lock
-			**********************************************
-			-->
-
-			<PushButton>
-				<TooltipId>keylock</TooltipId>
-				<MinimumSize>35,35</MinimumSize>
-				<MaximumSize>35,35</MaximumSize>
-				<Style></Style>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_keylock<Variable name="i"/>.png</Pressed>
-					<Unpressed>btn_keylock<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_keylock<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_keylock<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Pos>3,265</Pos>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
-				</Connection>
-			</PushButton>
+			
+			
+			
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					<PushButton>
+						<Size>15f,20f</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Text>&nbsp;&gt;&nbsp;</Text>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Text>&nbsp;&lt;&nbsp;</Text>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,show_cues</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
+			
 			
 			
 			
@@ -218,68 +237,62 @@ Track control panel.
 	**********************************************
 	-->
 
-      <WidgetGroup>
-        <Layout>vertical</Layout>
-		<MinimumSize>35,110</MinimumSize>
-		<MaximumSize>40,110</MaximumSize>
-        <Children>
-			
-			
-			<!--
-			**********************************************
-			Button- Fast forward and rewind
-			**********************************************
-			-->
+	<!--
+	**********************************************
+	Column 4
+	**********************************************
+	-->
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,me</SizePolicy>
+		<Children>
 			
 			<WidgetGroup>
-				<Layout>horizontal</Layout>
-				<MinimumSize>40,20</MinimumSize>
-				<MaximumSize>60,20</MaximumSize>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
 				<Children>
 					
+					<SliderComposed>
+						<TooltipId>pitch_rate</TooltipId>
+						<Size>25,90</Size>
+						<Slider>slider-vertical-15x90.svg</Slider>
+						<Handle>handle-vertical-15x12-<Variable name="i"/>.svg</Handle>
+						<Horizontal>false</Horizontal>
+						<Alignment>center</Alignment>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,rate</ConfigKey>
+							<EmitOnDownPress>false</EmitOnDownPress>
+						</Connection>
+					</SliderComposed>
+				
+					<!--
+					**********************************************
+					Button- Key lock
+					**********************************************
+					-->
+					
 					<PushButton>
-						<TooltipId>back_start</TooltipId>
-						<Style></Style>
-						<NumberStates>1</NumberStates>
+						<TooltipId>keylock</TooltipId>
+						<MinimumSize>35,35</MinimumSize>
+						<MaximumSize>35,35</MaximumSize>
+						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Pressed>btn_rewind<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_rewind<Variable name="i"/>.png</Unpressed>
+							<Pressed>btn_keylock_sampler.png</Pressed>
+							<Unpressed>btn_keylock_sampler.png</Unpressed>
 						</State>
-						<Pos>3,27</Pos>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_keylock_sampler_over.png</Pressed>
+							<Unpressed>btn_keylock_sampler_over.png</Unpressed>
+						</State>
+						<Pos>3,265</Pos>
 						<Connection>
-							<ConfigKey><Variable name="channel"/>,back</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,start</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>RightButton</ButtonState>
+							<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
 						</Connection>
 					</PushButton>
 					
-					<PushButton>
-						<TooltipId>fwd_end</TooltipId>
-						<Style></Style>
-						<NumberStates>1</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Pressed>btn_forward<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_forward<Variable name="i"/>.png</Unpressed>
-						</State>
-						<Pos>22,27</Pos>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,fwd</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,end</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>RightButton</ButtonState>
-						</Connection>
-					</PushButton>
+					
 				</Children>
 			</WidgetGroup>
 			
@@ -290,280 +303,183 @@ Track control panel.
 			-->
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<MinimumSize>40,20</MinimumSize>
-				<MaximumSize>60,40</MaximumSize>
+				<SizePolicy>min,me</SizePolicy>
 				<Children>
 					
+					<PushButton>
+						<TooltipId>hotcue</TooltipId>
+						<NumberStates>2</NumberStates>
+						<LeftClickIsPushButton>true</LeftClickIsPushButton>
+						<RightClickIsPushButton>true</RightClickIsPushButton>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_1_over.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_1.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_1.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_1_over.png</Unpressed>
+						</State>
+						<Pos>41,6</Pos>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_1_activate</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_1_clear</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>RightButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_1_enabled</ConfigKey>
+							<ConnectValueFromWidget>false</ConnectValueFromWidget>
+						</Connection>
+					</PushButton>
 					
-					<WidgetGroup>
-						<Layout>horizontal</Layout>
-						<MinimumSize>40,20</MinimumSize>
-						<MaximumSize>60,20</MaximumSize>
-						<Children>
-							
-							<PushButton>
-								<TooltipId>hotcue</TooltipId>
-								<Style></Style>
-								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
-								<State>
-									<Number>0</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_1_over.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_1.png</Unpressed>
-								</State>
-								<State>
-									<Number>1</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_1.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_1_over.png</Unpressed>
-								</State>
-								<Pos>41,6</Pos>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_1_activate</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_1_clear</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_1_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
-								</Connection>
-							</PushButton>
-							
-							<PushButton>
-								<TooltipId>hotcue</TooltipId>
-								<Style></Style>
-								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
-								<State>
-									<Number>0</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_2_over.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_2.png</Unpressed>
-								</State>
-								<State>
-									<Number>1</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_2.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_2_over.png</Unpressed>
-								</State>
-								<Pos>41,29</Pos>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_2_activate</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_2_clear</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_2_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
-								</Connection>
-							</PushButton>
-							
-						</Children>
-					</WidgetGroup>
+					<PushButton>
+						<TooltipId>hotcue</TooltipId>
+						<NumberStates>2</NumberStates>
+						<LeftClickIsPushButton>true</LeftClickIsPushButton>
+						<RightClickIsPushButton>true</RightClickIsPushButton>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_2_over.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_2.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_2.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_2_over.png</Unpressed>
+						</State>
+						<Pos>41,29</Pos>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_2_activate</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_2_clear</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>RightButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_2_enabled</ConfigKey>
+							<ConnectValueFromWidget>false</ConnectValueFromWidget>
+						</Connection>
+					</PushButton>
 					
-					<WidgetGroup>
-						<Layout>horizontal</Layout>
+					
+					<PushButton>
+						<TooltipId>hotcue</TooltipId>
+						<NumberStates>2</NumberStates>
+						<LeftClickIsPushButton>true</LeftClickIsPushButton>
+						<RightClickIsPushButton>true</RightClickIsPushButton>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_3_over.png</Pressed>
+							<Unpressed>btn_hotcue1_3.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_3.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_3_over.png</Unpressed>
+						</State>
+						<Pos>60,6</Pos>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_3_activate</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_3_clear</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>RightButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_3_enabled</ConfigKey>
+							<ConnectValueFromWidget>false</ConnectValueFromWidget>
+						</Connection>
+					</PushButton>
+					
+					<PushButton>
+						<TooltipId>hotcue</TooltipId>
+						<NumberStates>2</NumberStates>
+						<LeftClickIsPushButton>true</LeftClickIsPushButton>
+						<RightClickIsPushButton>true</RightClickIsPushButton>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_4_over.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_4.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_hotcue<Variable name="i"/>_4.png</Pressed>
+							<Unpressed>btn_hotcue<Variable name="i"/>_4_over.png</Unpressed>
+						</State>
+						<Pos>60,29</Pos>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_4_activate</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_4_clear</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>RightButton</ButtonState>
+							<ConnectValueToWidget>false</ConnectValueToWidget>
+						</Connection>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,hotcue_4_enabled</ConfigKey>
+							<ConnectValueFromWidget>false</ConnectValueFromWidget>
+						</Connection>
+					</PushButton>
+					
+					<!--
+					**********************************************
+					Button - Quantize
+					**********************************************
+					-->
+					<PushButton>
+						<TooltipId>quantize</TooltipId>
 						<MinimumSize>40,20</MinimumSize>
-						<MaximumSize>60,20</MaximumSize>
-						<Children>
-							
-							
-							<PushButton>
-								<TooltipId>hotcue</TooltipId>
-								<Style></Style>
-								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
-								<State>
-									<Number>0</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_3_over.png</Pressed>
-									<Unpressed>btn_hotcue1_3.png</Unpressed>
-								</State>
-								<State>
-									<Number>1</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_3.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_3_over.png</Unpressed>
-								</State>
-								<Pos>60,6</Pos>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_3_activate</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_3_clear</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_3_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
-								</Connection>
-							</PushButton>
-							
-							<PushButton>
-								<TooltipId>hotcue</TooltipId>
-								<Style></Style>
-								<NumberStates>2</NumberStates>
-								<LeftClickIsPushButton>true</LeftClickIsPushButton>
-								<RightClickIsPushButton>true</RightClickIsPushButton>
-								<State>
-									<Number>0</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_4_over.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_4.png</Unpressed>
-								</State>
-								<State>
-									<Number>1</Number>
-									<Pressed>btn_hotcue<Variable name="i"/>_4.png</Pressed>
-									<Unpressed>btn_hotcue<Variable name="i"/>_4_over.png</Unpressed>
-								</State>
-								<Pos>60,29</Pos>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_4_activate</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>LeftButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_4_clear</ConfigKey>
-									<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-									<ButtonState>RightButton</ButtonState>
-									<ConnectValueToWidget>false</ConnectValueToWidget>
-								</Connection>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,hotcue_4_enabled</ConfigKey>
-									<ConnectValueFromWidget>false</ConnectValueFromWidget>
-								</Connection>
-							</PushButton>
-							
-						</Children>
-					</WidgetGroup>
+						<MaximumSize>60,40</MaximumSize>
+						<Style></Style>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_quantize<Variable name="i"/>.png</Pressed>
+							<Unpressed>btn_quantize<Variable name="i"/>.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_quantize<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_quantize<Variable name="i"/>_over.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,quantize</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
 					
 				</Children>
 			</WidgetGroup>
 			
-        </Children>
-      </WidgetGroup>
-
-
-
-	<!--
-	**********************************************
-	Column 4
-	**********************************************
-	-->
-
-	  <WidgetGroup>
-		<Layout>vertical</Layout>
-		<MinimumSize>30,110</MinimumSize>
-		<MaximumSize>40,110</MaximumSize>
-		<Children>
-			
-			
-			<!--
-			**********************************************
-			Button - Quantize
-			**********************************************
-			-->
-			<PushButton>
-				<TooltipId>quantize</TooltipId>
-				<MinimumSize>40,20</MinimumSize>
-				<MaximumSize>60,40</MaximumSize>
-				<Style></Style>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_quantize<Variable name="i"/>.png</Pressed>
-					<Unpressed>btn_quantize<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_quantize<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_quantize<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,quantize</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-					<ButtonState>LeftButton</ButtonState>
-				</Connection>
-			</PushButton>
-			
-			
-			<!--
-			**********************************************
-			Button- Repeat (End of track mode)
-			**********************************************
-			-->
-			<PushButton>
-				<TooltipId>repeat</TooltipId>
-				<Style></Style>
-				<MinimumSize>40,20</MinimumSize>
-				<MaximumSize>60,40</MaximumSize>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_repeat<Variable name="i"/>.png</Pressed>
-					<Unpressed>btn_repeat<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_repeat<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_repeat<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,repeat</ConfigKey>
-				</Connection>
-			</PushButton>
-			
-			
-			<!--
-			**********************************************
-			Button- Prelisten / Monitoring
-			**********************************************
-			-->
-			<PushButton>
-				<TooltipId>pfl</TooltipId>
-				<MinimumSize>30,20</MinimumSize>
-				<MaximumSize>40,30</MaximumSize>
-				<Style></Style>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_pfl<Variable name="i"/>.png</Pressed>
-					<Unpressed>btn_pfl<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_pfl<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_pfl<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
-				</Connection>
-			</PushButton>
-			
-			
 		</Children>
-	  </WidgetGroup>
-
-
-
-
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,show_cues</ConfigKey>
+			<BindProperty>visible</BindProperty>
+		</Connection>
+	</WidgetGroup>
 
 
 	<!--
@@ -571,8 +487,8 @@ Track control panel.
 	Column 5 : Channel Volume
 	**********************************************
 	-->
-      <WidgetGroup>
-        <Layout>vertical</Layout>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
 		<Size>25,100</Size>
 		<Children>
 			
@@ -580,7 +496,7 @@ Track control panel.
 				<TooltipId>channel_volume</TooltipId>
 				<Size>25,90</Size>
 				<Slider>slider-vertical-25x90.svg</Slider>
-				<Handle>handle-vertical-25x12.svg</Handle>
+				<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
 				<Horizontal>false</Horizontal>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,volume</ConfigKey>
@@ -588,40 +504,66 @@ Track control panel.
 				</Connection>
 			</SliderComposed>
 			
-        </Children>
-      </WidgetGroup>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					<PushButton>
+						<Size>15f,20f</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Text>&nbsp;&gt;&nbsp;</Text>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Text>&nbsp;&lt;&nbsp;</Text>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,show_pregain</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
+			
+		</Children>
+	</WidgetGroup>
 
 
 
 	<!--
 	**********************************************
-	Column 6 : Frequency killers
+	Column 6 : Gain
 	**********************************************
 	-->
 
-      <WidgetGroup>
-        <Layout>vertical</Layout>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
 			<Size>25,90</Size>
-        <Children>
+			<SizePolicy>f,me</SizePolicy>
+			<Children>
 			
-			<!--
-			**********************************************
-			Slider- Channel Volume
-			**********************************************
-			-->
 			<SliderComposed>
 				<TooltipId>pregain</TooltipId>
 				<Size>25,90</Size>
 				<Slider>slider-vertical-25x90.svg</Slider>
-				<Handle>handle-vertical-25x12.svg</Handle>
+				<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
 				<Horizontal>false</Horizontal>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
 				</Connection>
 			</SliderComposed>
 			
-      </Children>
-      </WidgetGroup>
+			<Template src="skin:skin_spacer.xml"/>
+			
+		</Children>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,show_pregain</ConfigKey>
+			<BindProperty>visible</BindProperty>
+		</Connection>
+	</WidgetGroup>
 			
 	<!--
 	**********************************************
@@ -630,74 +572,127 @@ Track control panel.
 	-->
 	<WidgetGroup>
 		<Layout>vertical</Layout>
-		<SizePolicy>min,me</SizePolicy>
+		<SizePolicy>f,me</SizePolicy>
+		<Size>20,110</Size>
 		<Children>
 			
-			<PushButton>
-				<TooltipId>filterHighKill</TooltipId>
-				<SizePolicy>f,me</SizePolicy>
-				<Size>8,30</Size>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,filterHighKill</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-					<ButtonState>LeftButton</ButtonState>
-				</Connection>
-			</PushButton>
+			<Template src="skin:skin_spacer.xml"/>
 			
-			<PushButton>
-				<TooltipId>filterMidKill</TooltipId>
-				<SizePolicy>f,me</SizePolicy>
-				<!--Size>8,8</Size-->
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,filterMidKill</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-					<ButtonState>LeftButton</ButtonState>
-				</Connection>
-			</PushButton>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					<PushButton>
+						<TooltipId>filterHighKill</TooltipId>
+						<SizePolicy>f,me</SizePolicy>
+						<Size>8,30</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,filterHighKill</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
 			
-			<PushButton>
-				<TooltipId>filterLowKill</TooltipId>
-				<SizePolicy>f,me</SizePolicy>
-				<!--Size>8,8</Size-->
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,filterLowKill</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-					<ButtonState>LeftButton</ButtonState>
-				</Connection>
-			</PushButton>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					
+					<PushButton>
+						<TooltipId>filterMidKill</TooltipId>
+						<SizePolicy>f,me</SizePolicy>
+						<!--Size>8,8</Size-->
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,filterMidKill</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
+			
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					
+					<PushButton>
+						<TooltipId>filterLowKill</TooltipId>
+						<SizePolicy>f,me</SizePolicy>
+						<!--Size>8,8</Size-->
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+							<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,filterLowKill</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
+			
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					<PushButton>
+						<Size>15f,20f</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Text>&nbsp;&gt;&nbsp;</Text>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Text>&nbsp;&lt;&nbsp;</Text>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
 			
 		</Children>
 	</WidgetGroup>
@@ -709,32 +704,6 @@ Track control panel.
 	**********************************************
 	-->
 
-	<PushButton>
-		<Size>15f,110f</Size>
-		<NumberStates>2</NumberStates>
-		<State>
-			<Number>0</Number>
-			<Text>&gt;&nbsp;
-&gt;&nbsp;
-&gt;&nbsp;
-&gt;&nbsp;
-&gt;&nbsp;
-&gt;&nbsp;</Text>
-		</State>
-		<State>
-			<Number>1</Number>
-			<Text>&lt;&nbsp;
-&lt;&nbsp;
-&lt;&nbsp;
-&lt;&nbsp;
-&lt;&nbsp;
-&lt;&nbsp;</Text>
-		</State>
-		<Connection>
-			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
-		</Connection>
-	</PushButton>
-	
 	<WidgetGroup>
 		<Layout>vertical</Layout>
 		<Size>70,110</Size>
@@ -752,7 +721,7 @@ Track control panel.
 						<SizePolicy>f,e</SizePolicy>
 						<Size>60,35</Size>
 						<Slider>slider-horizontal-60x25.svg</Slider>
-						<Handle>handle-horizontal-10x25.svg</Handle>
+						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
 						<Horizontal>true</Horizontal>
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,filterMid</ConfigKey>
@@ -772,7 +741,7 @@ Track control panel.
 						<SizePolicy>f,me</SizePolicy>
 						<Size>60,35</Size>
 						<Slider>slider-horizontal-60x25.svg</Slider>
-						<Handle>handle-horizontal-10x25.svg</Handle>
+						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
 						<Horizontal>true</Horizontal>
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,filterHigh</ConfigKey>
@@ -792,7 +761,7 @@ Track control panel.
 						<SizePolicy>f,me</SizePolicy>
 						<Size>60,35</Size>
 						<Slider>slider-horizontal-60x25.svg</Slider>
-						<Handle>handle-horizontal-10x25.svg</Handle>
+						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
 						<Horizontal>true</Horizontal>
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,filterLow</ConfigKey>
@@ -801,20 +770,15 @@ Track control panel.
 					
 				</Children>
 			</WidgetGroup>
+			
+			
+			
         </Children>
 		<Connection>
 			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
 			<BindProperty>visible</BindProperty>
 		</Connection>
       </WidgetGroup>
-
-
-
-
-
-
-
-
 
 
     </Children>

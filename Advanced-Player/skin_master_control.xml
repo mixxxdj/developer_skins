@@ -9,63 +9,113 @@ Master controls : volume, balance, pregain + time.
 	<WidgetGroup>
 		<ObjectName>Master and balance</ObjectName>
 		<Layout>vertical</Layout>
+		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<SizePolicy>min,me</SizePolicy>
+		<MaximumSize>60,-i</MaximumSize>
 		<Children>
 			
 			<WidgetGroup>
-				<ObjectName>Master Volume and Crossfader</ObjectName>
+				<ObjectName>Master Volume and ...</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>f,min</SizePolicy>
 				<MinimumSize>60,-1</MinimumSize>
 				<MaximumSize>60,-1</MaximumSize>
 				<Children>
 					
+					
 					<SliderComposed>
-						<TooltipId>crossfader</TooltipId>
+						<TooltipId>headVolume</TooltipId>
 						<Slider>slider-vertical-30x125.svg</Slider>
 						<Handle>handle-vertical-30x15.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Connection>
-							<ConfigKey>[Master],crossfader</ConfigKey>
+							<ConfigKey>[Master],headVolume</ConfigKey>
 						</Connection>
-					</SliderComposed>
-					
-					
-					
-					
-					<SliderComposed>
-						<TooltipId>master_volume</TooltipId>
-						<Slider>slider-vertical-30x125.svg</Slider>
-						<Handle>handle-vertical-30x15.svg</Handle>
-						<Horizontal>false</Horizontal>
 						<Connection>
-							<ConfigKey>[Master],volume</ConfigKey>
+							<ConfigKey>[Master],show_headphone_controls</ConfigKey>
+							<BindProperty>visible</BindProperty>
 						</Connection>
 					</SliderComposed>
 					
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<SizePolicy>min,me</SizePolicy>
+						<Children>
+							
+							<SliderComposed>
+								<TooltipId>master_volume</TooltipId>
+								<Slider>slider-vertical-30x125.svg</Slider>
+								<Handle>handle-vertical-30x15.svg</Handle>
+								<Horizontal>false</Horizontal>
+								<Connection>
+									<ConfigKey>[Master],volume</ConfigKey>
+								</Connection>
+							</SliderComposed>
+							
+						</Children>
+					</WidgetGroup>
 					
 				</Children>
 			</WidgetGroup>
 			
-			<Time>
-				<TooltipId>time</TooltipId>
-				<Style>
-					QLabel {
-						font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color	: transparent;
-						color				: #ffffff;
-					}
-				</Style>
-				<Alignment>center</Alignment>
-				<Size>60,15</Size>
-				<ShowSeconds>false</ShowSeconds>
-				<ClockFormat>24</ClockFormat>
-			</Time>
+			<SliderComposed>
+				<TooltipId>headMix</TooltipId>
+				<SizePolicy>me,min</SizePolicy>
+				<Slider>slider-horizontal-60x30.svg</Slider>
+				<Handle>handle-horizontal-10x30.svg</Handle>
+				<Horizontal>true</Horizontal>
+				<Connection>
+					<ConfigKey>[Master],headMix</ConfigKey>
+				</Connection>
+				<Connection>
+					<ConfigKey>[Master],show_headphone_controls</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
+			</SliderComposed>
+			
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<SizePolicy>me,min</SizePolicy>
+				<Children>
+					
+					<Time>
+						<TooltipId>time</TooltipId>
+						<Style>
+							QLabel {
+								font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+								background-color	: transparent;
+								color				: #ffffff;
+							}
+						</Style>
+						<Alignment>center</Alignment>
+						<ShowSeconds>false</ShowSeconds>
+						<ClockFormat>24</ClockFormat>
+					</Time>
+					
+					<PushButton>
+						<Size>15f,20f</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_pfl_sampler.png</Pressed>
+							<Unpressed>btn_pfl_sampler.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Pressed>btn_pfl_sampler_over.png</Pressed>
+							<Unpressed>btn_pfl_sampler_over.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Master],show_headphone_controls</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
 			
 			<SliderComposed>
 				<TooltipId>master_balance</TooltipId>
 				<SizePolicy>f,me</SizePolicy>
-				<Size>60,40</Size>
 				<Slider>slider-horizontal-60x30.svg</Slider>
 				<Handle>handle-horizontal-10x30.svg</Handle>
 				<Horizontal>true</Horizontal>

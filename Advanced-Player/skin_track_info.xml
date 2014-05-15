@@ -17,7 +17,6 @@ Track info panel.
 				<ObjectName>Track Text Info</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>me,f</SizePolicy>
-				<MinimumSize>300,20</MinimumSize>
 				<MaximumSize>-1,20</MaximumSize>
 				<Children>
 					
@@ -29,7 +28,7 @@ Track info panel.
 					-->
 					<TrackProperty>
 						<TooltipId>track_artist</TooltipId>
-						<MinimumSize>40,20</MinimumSize>
+						<MinimumSize>150,20</MinimumSize>
 						<MaximumSize>150,20</MaximumSize>
 						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 						background-color: transparent; text-align: right; padding-left: 1px; }
@@ -48,14 +47,28 @@ Track info panel.
 					-->
 					<TrackProperty>
 						<TooltipId>track_title</TooltipId>
-						<SizePolicy>e,e</SizePolicy>
+						<SizePolicy>me,me</SizePolicy>
+						<MaximumSize>i,20</MaximumSize>
 						<Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 						background-color: transparent; text-align: right; padding-left: 1px; }
 						</Style>
 						<Alignment>left</Alignment>
 						<Property>title</Property>
 						<Channel><Variable name="i"/></Channel>
-						<Size>220f,18</Size>
+					</TrackProperty>
+					
+					<!--
+					**********************************************
+					Text- Times Played
+					**********************************************
+					-->
+					<TrackProperty>
+						<TooltipId>track_times_played</TooltipId>
+						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+						background-color: transparent; text-align: right; padding-left: 1px; }
+						</Style>
+						<Property>times_played</Property>
+						<Channel><Variable name="i"/></Channel>
 					</TrackProperty>
 					
 					
@@ -125,8 +138,8 @@ Track info panel.
 					<WidgetGroup>
 						<ObjectName>speed</ObjectName>
 						<Layout>horizontal</Layout>
-						<SizePolicy>f,f</SizePolicy>
-						<Size>100,20</Size>
+						<SizePolicy>min,f</SizePolicy>
+						<Size>i,20</Size>
 						<Children>
 							
 							<!--
@@ -154,71 +167,99 @@ Track info panel.
 								background-color: transparent; text-align: right; }
 								</Style>
 								<Channel><Variable name="i"/></Channel>
-								<NumberOfDigits>4</NumberOfDigits>
+								<NumberOfDigits>2</NumberOfDigits>
 							</NumberRate>
 						
 						</Children>
 					</WidgetGroup>
 					
-					<!--
-					**********************************************
-					Visual - Volume level display
-					TODO : sizes?
-					**********************************************
-					-->
-					<VuMeter>
-						<TooltipId>channel_VuMeter</TooltipId>
-						<SizePolicy>me,me</SizePolicy>
-						<Style></Style>
-						<PathVu>btn_volume_display_master1_over.png</PathVu>
-						<PathBack>btn_volume_display_master1.png</PathBack>
-						<Alignment>left</Alignment>
-						<Horizontal>true</Horizontal>
-						<PeakHoldSize>5</PeakHoldSize>
-						<PeakHoldTime>500</PeakHoldTime>
-						<PeakFallTime>50</PeakFallTime>
-						<PeakFallStep>1</PeakFallStep>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,VuMeter</ConfigKey>
-						</Connection>
-					</VuMeter>
-
-
-					<!--
-					**********************************************
-					Visual- Volume peak indicator
-					**********************************************
-					-->
-					<StatusLight>
-						<TooltipId>PeakIndicator</TooltipId>
-						<Alignment>left</Alignment>
-						<Style></Style>
-						<PathStatusLight>btn_clipping1_over.png</PathStatusLight>
-						<PathBack>btn_clipping1.png</PathBack>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,PeakIndicator</ConfigKey>
-						</Connection>
-					</StatusLight>
+					<Template src="skin:skin_spacer.xml"></Template>
 					
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<SizePolicy>min,f</SizePolicy>
+						<Size>i,20</Size>
+						<Children>
+							
+							<!--
+							**********************************************
+							Text- Playing position / Time remaining
+							**********************************************
+							-->
+							<NumberPos>
+								<TooltipId>track_time</TooltipId>
+								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+								background-color: transparent; text-align: right; padding-left: 1px; }
+								</Style>
+								<Channel><Variable name="i"/></Channel>
+								<SizePolicy>min,f</SizePolicy>
+								<Size>i,20</Size>
+								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
+								<Alignment>left</Alignment>
+								<NumberOfDigits>6</NumberOfDigits>
+								<Connection>
+									<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
+								</Connection>
+							</NumberPos>
+							
+							<!--
+							**********************************************
+							Visual - Volume level display
+							TODO : sizes?
+							**********************************************
+							-->
+							<VuMeter>
+								<TooltipId>channel_VuMeter</TooltipId>
+								<SizePolicy>min,f</SizePolicy>
+								<Size>i,20</Size>
+								<PathVu>btn_volume_display_master1_over.png</PathVu>
+								<PathBack>btn_volume_display_master1.png</PathBack>
+								<Alignment>left</Alignment>
+								<Horizontal>true</Horizontal>
+								<PeakHoldSize>5</PeakHoldSize>
+								<PeakHoldTime>500</PeakHoldTime>
+								<PeakFallTime>50</PeakFallTime>
+								<PeakFallStep>1</PeakFallStep>
+								<Connection>
+									<ConfigKey><Variable name="channel"/>,VuMeter</ConfigKey>
+								</Connection>
+							</VuMeter>
+
+
+							<!--
+							**********************************************
+							Visual- Volume peak indicator
+							**********************************************
+							-->
+							<StatusLight>
+								<TooltipId>PeakIndicator</TooltipId>
+								<Alignment>left</Alignment>
+								<SizePolicy>min,f</SizePolicy>
+								<Size>i,20</Size>
+								<PathStatusLight>btn_clipping1_over.png</PathStatusLight>
+								<PathBack>btn_clipping1.png</PathBack>
+								<Connection>
+									<ConfigKey><Variable name="channel"/>,PeakIndicator</ConfigKey>
+								</Connection>
+							</StatusLight>
+							
+						</Children>
+					</WidgetGroup>
+							
 					<!--
 					**********************************************
-					Text- Playing position / Time remaining
+					Text- Bitrate
+					TODO
 					**********************************************
-					-->
-					<NumberPos>
-						<TooltipId>track_time</TooltipId>
+					->
+					<TrackProperty>
+						<TooltipId>track_bitrate</TooltipId>
 						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 						background-color: transparent; text-align: right; padding-left: 1px; }
 						</Style>
+						<Property>times_played</Property>
 						<Channel><Variable name="i"/></Channel>
-						<Size>90,16</Size>
-						<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
-						<Alignment>left</Alignment>
-						<NumberOfDigits>6</NumberOfDigits>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
-						</Connection>
-					</NumberPos>
+					</TrackProperty-->
 					
 					
 				</Children>

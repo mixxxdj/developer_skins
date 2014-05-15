@@ -131,6 +131,27 @@
 					</Children>
 				</WidgetGroup>
 				
+				
+				<WidgetGroup>
+					<ObjectName>Crossfader</ObjectName>
+					<Layout>vertical</Layout>
+					<SizePolicy>f,me</SizePolicy>
+					<Size>33,-1</Size>
+					<Children>
+						
+						<SliderComposed>
+							<TooltipId>crossfader</TooltipId>
+							<Slider>slider-vertical-30x125.svg</Slider>
+							<Handle>handle-vertical-30x15.svg</Handle>
+							<Horizontal>false</Horizontal>
+							<Connection>
+								<ConfigKey>[Master],crossfader</ConfigKey>
+							</Connection>
+						</SliderComposed>
+					
+					</Children>
+				</WidgetGroup>
+				
 			</Children>
 		</WidgetGroup>
 		
