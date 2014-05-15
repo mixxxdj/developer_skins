@@ -142,6 +142,7 @@ Track info panel.
 						<Size>i,20</Size>
 						<Children>
 							
+							
 							<!--
 							**********************************************
 							Text - BPM + Pitch rate display
@@ -170,6 +171,21 @@ Track info panel.
 								<NumberOfDigits>2</NumberOfDigits>
 							</NumberRate>
 						
+							<!--
+							**********************************************
+							Text - Key
+							**********************************************
+							-->
+							<TrackProperty>
+								<TooltipId>track_times_played</TooltipId>
+								<SizePolicy>min,me</SizePolicy>
+								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+								background-color: transparent; text-align: right; padding-left: 1px; }
+								</Style>
+								<Property>key</Property>
+								<Channel><Variable name="i"/></Channel>
+							</TrackProperty>
+							
 						</Children>
 					</WidgetGroup>
 					
