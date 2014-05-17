@@ -122,8 +122,13 @@
 					</WidgetGroup>
 				</Children>
 			</WidgetGroup>
+            <WidgetGroup>
+                <SizePolicy>me,min</SizePolicy>
+                <Layout>horizontal</Layout>
+                <Children></Children>
+            </WidgetGroup>
 			<WidgetGroup> <!-- Master Controls -->
-			    <SizePolicy>me,min</SizePolicy>
+			    <SizePolicy>min,min</SizePolicy>
                 <MinimumSize>55,310</MinimumSize>
                 <Children>
                     <Knob>

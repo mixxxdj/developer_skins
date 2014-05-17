@@ -10,29 +10,34 @@
     <SizePolicy>me, min</SizePolicy>
     <!-- It would be nice if we could be totally dynamic, but having a set
     height for this row really helps. -->
-    <MinimumSize>1024, 350</MinimumSize>
+    <MinimumSize>1024,</MinimumSize>
     <Children>
         <WidgetGroup>
             <ObjectName>DeckLeftMargin</ObjectName>
             <Layout>vertical</Layout>
-            <SizePolicy>me,min</SizePolicy>
+            <SizePolicy>min,min</SizePolicy>
             <Children>
                 <WidgetGroup>
                     <ObjectName>MicContainer</ObjectName>
                     <Layout>vertical</Layout>
-                    <SizePolicy>me,min</SizePolicy>
+                    <SizePolicy>min,min</SizePolicy>
                     <MinimumSize>0,207</MinimumSize>
                     <Children>
                         <Template src="skin:microphone.xml"/>
                     </Children>
                 </WidgetGroup>
                 <WidgetGroup>
+                  <Layout>horizontal</Layout>
+                  <SizePolicy>f,min</SizePolicy>
+                  <Size>64,</Size>
+                  <Children></Children>
+                </WidgetGroup>
+                <!-- <WidgetGroup>
                     <ObjectName>FourDeckButton</ObjectName>
                     <Layout>vertical</Layout>
                     <SizePolicy>min,min</SizePolicy>
-                    <!--  This size is the size of the whole widget minus the
-                    size of the microphone box -->
-                    <MinimumSize>-1, 140</MinimumSize>
+                     This size is the size of the whole widget minus the
+                    size of the microphone box
                     <Children>
 			            <PushButton>
 			                <Size>40f,20f</Size>
@@ -58,7 +63,7 @@
 			                </Connection>
 			            </PushButton>
 				    </Children>
-			    </WidgetGroup>
+			    </WidgetGroup> -->
             </Children>
         </WidgetGroup>
 
@@ -96,8 +101,7 @@
         <WidgetGroup>
             <ObjectName>DeckRightMargin</ObjectName>
             <Layout>horizontal</Layout>
-            <SizePolicy>me,min</SizePolicy>
-            <MinimumSize>90,325</MinimumSize>
+            <SizePolicy>min,min</SizePolicy>
             <Children>
                 <Time>
                     <Style>QLabel { font: bold 16px/19px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;

@@ -60,7 +60,7 @@
   </Background>
 
   <!-- <MinimumSize>1750,-1</MinimumSize>-->
-  <MinimumSize>1100,-1</MinimumSize>
+  <MinimumSize>1650,-1</MinimumSize>
   <SizePolicy>me,me</SizePolicy>
   <Layout>vertical</Layout>
 
