@@ -22,7 +22,6 @@ Master controls : volume, balance, pregain + time.
 				<MaximumSize>60,-1</MaximumSize>
 				<Children>
 					
-					
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>
 						<Slider>slider-vertical-30x125.svg</Slider>
@@ -78,6 +77,22 @@ Master controls : volume, balance, pregain + time.
 				<SizePolicy>me,min</SizePolicy>
 				<Children>
 					
+					<PushButton>
+						<Size>15f,20f</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Unpressed>btn_b_off.png</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Unpressed>btn_b_off.png</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Master],show_balance_controls</ConfigKey>
+						</Connection>
+					</PushButton>
+					
 					<Time>
 						<TooltipId>time</TooltipId>
 						<Style>
@@ -97,12 +112,10 @@ Master controls : volume, balance, pregain + time.
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Pressed>btn_pfl_sampler.png</Pressed>
 							<Unpressed>btn_pfl_sampler.png</Unpressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Pressed>btn_pfl_sampler_over.png</Pressed>
 							<Unpressed>btn_pfl_sampler_over.png</Unpressed>
 						</State>
 						<Connection>
@@ -121,6 +134,10 @@ Master controls : volume, balance, pregain + time.
 				<Horizontal>true</Horizontal>
 				<Connection>
 					<ConfigKey>[Master],balance</ConfigKey>
+				</Connection>
+				<Connection>
+					<ConfigKey>[Master],show_balance_controls</ConfigKey>
+					<BindProperty>visible</BindProperty>
 				</Connection>
 			</SliderComposed>
 			

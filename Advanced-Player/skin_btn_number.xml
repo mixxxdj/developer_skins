@@ -1,0 +1,45 @@
+<!DOCTYPE template>
+<!--
+Description:
+Opener.
+-->
+<Template>
+	
+	<PushButton>
+		<TooltipId>hotcue_<Variable name="i"/>_<Variable name="number"/></TooltipId>
+		<NumberStates>2</NumberStates>
+		<LeftClickIsPushButton>true</LeftClickIsPushButton>
+		<RightClickIsPushButton>true</RightClickIsPushButton>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>_over.png</Pressed>
+			<Unpressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>.png</Pressed>
+			<Unpressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>_over.png</Unpressed>
+		</State>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,hotcue_<Variable name="number"/>_activate</ConfigKey>
+			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			<ButtonState>LeftButton</ButtonState>
+			<ConnectValueToWidget>false</ConnectValueToWidget>
+		</Connection>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,hotcue_<Variable name="number"/>_clear</ConfigKey>
+			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			<ButtonState>RightButton</ButtonState>
+			<ConnectValueToWidget>false</ConnectValueToWidget>
+		</Connection>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,hotcue_<Variable name="number"/>_enabled</ConfigKey>
+			<ConnectValueFromWidget>false</ConnectValueFromWidget>
+		</Connection>
+	</PushButton>
+	
+</Template>
+
+
+
+

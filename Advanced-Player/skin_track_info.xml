@@ -122,9 +122,6 @@ Track info panel.
 					<EmitOnDownPress>false</EmitOnDownPress>
 				</Connection>
 			</Overview>
-
-
-			
 			
 			
 			<WidgetGroup>
@@ -170,7 +167,7 @@ Track info panel.
 								<Channel><Variable name="i"/></Channel>
 								<NumberOfDigits>2</NumberOfDigits>
 							</NumberRate>
-						
+							
 							<!--
 							**********************************************
 							Text - Key
@@ -212,7 +209,7 @@ Track info panel.
 								<Size>i,20</Size>
 								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
 								<Alignment>left</Alignment>
-								<NumberOfDigits>6</NumberOfDigits>
+								<!--NumberOfDigits>6</NumberOfDigits marche pas ?-->
 								<Connection>
 									<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
 								</Connection>

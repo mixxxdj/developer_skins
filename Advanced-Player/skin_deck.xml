@@ -9,7 +9,7 @@ A deck with essential controls.
     <Layout>vertical</Layout>
 	<SizePolicy>e,e</SizePolicy>
 	<!--MinimumSize>300,300</MinimumSize-->
-	<MaximumSize>-1,-1</MaximumSize>
+	<MaximumSize>-1,110</MaximumSize>
     <Children>
 		
       <WidgetGroup>

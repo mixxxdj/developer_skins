@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+	width="25"
+	height="79">
+	<rect
+		width	="25"
+		height	="79"
+		style	="fill:#ffffff;"/>
+	<line x1="13" y1="0" x2="13" y2="79" stroke="#aaaaaa" stroke-width="1"/>
+</svg>

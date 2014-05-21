@@ -16,6 +16,7 @@
 			<attribute config_key="[Channel2],keylock">1</attribute>
 			<attribute config_key="[Channel1],quantize">1</attribute>
 			<attribute config_key="[Channel2],quantize">1</attribute>
+			<attribute config_key="[Master],headMix">1</attribute>
 		</attributes>
 	</manifest>
 
@@ -121,11 +122,11 @@
 					<Children>
 						
 						<Template src="skin:skin_deck.xml">
-							<SetVariable name="i">2</SetVariable>
+							<SetVariable name="i">1</SetVariable>
 						</Template>
 						
 						<Template src="skin:skin_deck.xml">
-							<SetVariable name="i">1</SetVariable>
+							<SetVariable name="i">2</SetVariable>
 						</Template>
 						
 					</Children>
@@ -144,6 +145,7 @@
 							<Slider>slider-vertical-30x125.svg</Slider>
 							<Handle>handle-vertical-30x15.svg</Handle>
 							<Horizontal>false</Horizontal>
+							<Reverse>true</Reverse>
 							<Connection>
 								<ConfigKey>[Master],crossfader</ConfigKey>
 							</Connection>
