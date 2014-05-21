@@ -6,6 +6,11 @@
 #UILowerHalf {
 }
 
+#HorizBorder {
+  border-bottom: 1px solid #585858;
+  background-color: #1e1e1e;
+}
+
 #DecksLeftContainer, #DecksRightContainer, #SkinContainer {
   background-color: #0f0f0f;
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
@@ -104,6 +109,7 @@
   border: 1px solid #585858;
   border-left: 0px;
   border-right: 0px;
+  border-top: 0px;
 }
 
 #ClockWidget {
@@ -309,6 +315,10 @@ qproperty-layoutAlignment: 'AlignCenter';
   border-left:0px;
   border-right:0px;
   border-bottom:0px;
+  background-color: #0f0f0f;
+}
+
+#UIButtonMargin {
   background-color: #0f0f0f;
 }
 

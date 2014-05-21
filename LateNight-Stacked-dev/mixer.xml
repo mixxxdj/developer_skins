@@ -2,8 +2,8 @@
 	<WidgetGroup>
 	    <ObjectName>Mixer</ObjectName>
 		<SizePolicy>e,max</SizePolicy>
-        <MinimumSize>150,-1</MinimumSize>
-		<MaximumSize>1000,-1</MaximumSize>
+        <MinimumSize>150,</MinimumSize>
+		<MaximumSize>1000,</MaximumSize>
 		<Layout>horizontal</Layout>
 		<Children>
 		    <WidgetGroup>
@@ -15,7 +15,7 @@
                 </Children>
             </WidgetGroup>
 			<WidgetGroup>
-			    <ObjectName>PrimaryMixer</ObjectName> 
+			    <ObjectName>PrimaryMixer</ObjectName>
 				<Layout>vertical</Layout>
 				<SizePolicy>me,max</SizePolicy>
 				<Children>
@@ -28,8 +28,9 @@
                               <Children>
                                  <WidgetGroup>
                                     <ObjectName>MasterSync</ObjectName>
-                                    <SizePolicy>max,me</SizePolicy>
-                                    <Layout>horizontal</Layout>
+                                    <SizePolicy>f,me</SizePolicy>
+                                    <Size>50,</Size>
+                                    <Layout>vertical</Layout>
                                     <Children>
                                         <PushButton>
                                             <TooltipId>sync_master</TooltipId>
@@ -62,7 +63,7 @@
                                                 }
                                             </Style>
                                             <Channel>1</Channel>
-                                            <NumberOfDigits>1</NumberOfDigits>
+                                            <NumberOfDigits>2</NumberOfDigits>
                                             <Connection>
                                                 <ConfigKey>[InternalClock],bpm</ConfigKey>
                                             </Connection>
@@ -96,7 +97,7 @@
 				                <ObjectName>MixerLeftMargin</ObjectName>
 				                <Layout>horizontal</Layout>
 				                <SizePolicy>me,min</SizePolicy>
-				                <MinimumSize>1,-1</MinimumSize>
+				                <MinimumSize>1,</MinimumSize>
 				                <Children>
 				                </Children>
 				            </WidgetGroup>
@@ -126,7 +127,7 @@
 											<Template src="skin:mixer_channel.xml">
 												<SetVariable name="channum">1</SetVariable>
 											</Template>
-											<Template src="skin:mixer_channel.xml">
+											<Template src="skin:mixer_channel_reversed.xml">
 												<SetVariable name="channum">2</SetVariable>
 											</Template>
 				                           <WidgetGroup>
@@ -175,7 +176,7 @@
                                 <ObjectName>MixerRightMargin</ObjectName>
                                 <Layout>horizontal</Layout>
                                 <SizePolicy>me,min</SizePolicy>
-                                <MinimumSize>1,-1</MinimumSize>
+                                <MinimumSize>1,</MinimumSize>
                                 <Children>
                                 </Children>
                             </WidgetGroup>
@@ -183,14 +184,14 @@
 					</WidgetGroup>
 				</Children>
 			</WidgetGroup>
-			<WidgetGroup> 
+			<WidgetGroup>
 			    <ObjectName>MasterControls</ObjectName>
 			    <SizePolicy>max,min</SizePolicy>
                 <MinimumSize>100,220</MinimumSize>
                 <Layout>vertical</Layout>
                 <Children>
-                    
-                    <WidgetGroup> 
+
+                    <WidgetGroup>
                         <Size>100,100</Size>
                         <Children>
                             <StatusLight>
@@ -244,7 +245,7 @@
                                 </Connection>
                             </VuMeter>
                         </Children>
-                    </WidgetGroup>  
+                    </WidgetGroup>
                     <WidgetGroup>
                         <ObjectName>MasterKnobs</ObjectName>
                         <SizePolicy>f,f</SizePolicy>
@@ -315,5 +316,5 @@
                 </Children>
             </WidgetGroup>
 		</Children>
-	</WidgetGroup> 
+	</WidgetGroup>
 </Template>
