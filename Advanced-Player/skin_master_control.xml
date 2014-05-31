@@ -22,10 +22,28 @@ Master controls : volume, balance, pregain + time.
 				<MaximumSize>60,-1</MaximumSize>
 				<Children>
 					
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<SizePolicy>min,me</SizePolicy>
+						<Children>
+							
+							<SliderComposed>
+								<TooltipId>master_volume</TooltipId>
+								<Slider>slider-vertical-30x125.svg</Slider>
+								<Handle>handle-vertical-30x15-green.svg</Handle>
+								<Horizontal>false</Horizontal>
+								<Connection>
+									<ConfigKey>[Master],volume</ConfigKey>
+								</Connection>
+							</SliderComposed>
+							
+						</Children>
+					</WidgetGroup>
+					
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>
 						<Slider>slider-vertical-30x125.svg</Slider>
-						<Handle>handle-vertical-30x15.svg</Handle>
+						<Handle>handle-vertical-30x15-purple.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Master],headVolume</ConfigKey>
@@ -36,24 +54,6 @@ Master controls : volume, balance, pregain + time.
 						</Connection>
 					</SliderComposed>
 					
-					<WidgetGroup>
-						<Layout>vertical</Layout>
-						<SizePolicy>min,me</SizePolicy>
-						<Children>
-							
-							<SliderComposed>
-								<TooltipId>master_volume</TooltipId>
-								<Slider>slider-vertical-30x125.svg</Slider>
-								<Handle>handle-vertical-30x15.svg</Handle>
-								<Horizontal>false</Horizontal>
-								<Connection>
-									<ConfigKey>[Master],volume</ConfigKey>
-								</Connection>
-							</SliderComposed>
-							
-						</Children>
-					</WidgetGroup>
-					
 				</Children>
 			</WidgetGroup>
 			
@@ -61,7 +61,7 @@ Master controls : volume, balance, pregain + time.
 				<TooltipId>headMix</TooltipId>
 				<SizePolicy>me,min</SizePolicy>
 				<Slider>slider-horizontal-60x30.svg</Slider>
-				<Handle>handle-horizontal-10x30.svg</Handle>
+				<Handle>handle-horizontal-10x30-purple.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>
 					<ConfigKey>[Master],headMix</ConfigKey>
@@ -83,10 +83,12 @@ Master controls : volume, balance, pregain + time.
 						<State>
 							<Number>0</Number>
 							<Unpressed>btn_b_off.png</Unpressed>
+							<Pressed>btn_b_off.png</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Unpressed>btn_b_off.png</Unpressed>
+							<Unpressed>btn_b_on.png</Unpressed>
+							<Pressed>btn_b_on.png</Pressed>
 						</State>
 						<Connection>
 							<ConfigKey>[Master],show_balance_controls</ConfigKey>
@@ -112,11 +114,11 @@ Master controls : volume, balance, pregain + time.
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Unpressed>btn_pfl_sampler.png</Unpressed>
+							<Unpressed>btn_headphone_off.png</Unpressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Unpressed>btn_pfl_sampler_over.png</Unpressed>
+							<Unpressed>btn_headphone_on.png</Unpressed>
 						</State>
 						<Connection>
 							<ConfigKey>[Master],show_headphone_controls</ConfigKey>
@@ -130,7 +132,7 @@ Master controls : volume, balance, pregain + time.
 				<TooltipId>master_balance</TooltipId>
 				<SizePolicy>f,me</SizePolicy>
 				<Slider>slider-horizontal-60x30.svg</Slider>
-				<Handle>handle-horizontal-10x30.svg</Handle>
+				<Handle>handle-horizontal-10x30-green.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>
 					<ConfigKey>[Master],balance</ConfigKey>

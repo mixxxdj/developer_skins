@@ -7,12 +7,12 @@ Track control panel.
 	<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
 	
 	
-  <WidgetGroup>
-    <ObjectName>Deck</ObjectName>
-    <Layout>horizontal</Layout>
-    <SizePolicy>min,me</SizePolicy>
+	<WidgetGroup>
+	<ObjectName>Deck</ObjectName>
+	<Layout>horizontal</Layout>
+	<SizePolicy>min,me</SizePolicy>
 	<!--Style>QGroupBox { border: 1px solid red; }</Style-->
-    <Children>
+	<Children>
 
 
 
@@ -26,9 +26,9 @@ Track control panel.
 	Column 2
 	**********************************************
 	-->
-
-
-      <WidgetGroup>
+	
+	
+	<WidgetGroup>
 		<Layout>vertical</Layout>
 		<Size>35,110</Size>
 		<Children>
@@ -45,25 +45,16 @@ Track control panel.
 				<Style></Style>
 				<NumberStates>2</NumberStates>
 				<RightClickIsPushButton>true</RightClickIsPushButton>
-				<!--State>
-					<Number>0</Number>
-					<Pressed>btn_eject1.png</Pressed>
-					<Unpressed>btn_eject1.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_eject<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_eject<Variable name="i"/>_over.png</Unpressed>
-				</State-->
 				<State>
 					<Number>0</Number>
 					<!--Pressed>btn_play_off.svg</Pressed-->
 					<Unpressed>btn_play.png</Unpressed>
+					<Pressed>btn_play.png</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
-					<!--Pressed>btn_play<Variable name="i"/>_over.png</Pressed-->
-					<Unpressed>btn_pause.png</Unpressed>
+					<Unpressed>btn_pause_<Variable name="i"/>.png</Unpressed>
+					<Pressed>btn_pause_<Variable name="i"/>.png</Pressed>
 				</State>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,play</ConfigKey>
@@ -92,24 +83,14 @@ Track control panel.
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
-					<Pressed>btn_pfl_sampler.png</Pressed>
-					<Unpressed>btn_pfl_sampler.png</Unpressed>
+					<Pressed>btn_headphone_off.png</Pressed>
+					<Unpressed>btn_headphone_off.png</Unpressed>
 				</State>
 				<State>
 					<Number>1</Number>
-					<Pressed>btn_pfl_sampler_over.png</Pressed>
-					<Unpressed>btn_pfl_sampler_over.png</Unpressed>
+					<Pressed>btn_headphone_<Variable name="i"/>.png</Pressed>
+					<Unpressed>btn_headphone_<Variable name="i"/>.png</Unpressed>
 				</State>
-				<!--State>
-					<Number>0</Number>
-					<Pressed>btn_pfl<Variable name="i"/>.png</Pressed>
-					<Unpressed>btn_pfl<Variable name="i"/>.png</Unpressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<Pressed>btn_pfl<Variable name="i"/>_over.png</Pressed>
-					<Unpressed>btn_pfl<Variable name="i"/>_over.png</Unpressed>
-				</State-->
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
 				</Connection>
@@ -123,22 +104,28 @@ Track control panel.
 			-->
 			<PushButton>
 				<TooltipId>beatsync_beatsync_tempo</TooltipId>
-				<NumberStates>1</NumberStates>
+				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
-					<!--Pressed>btn_sync<Variable name="i"/>_over.png</Pressed-->
 					<Unpressed>btn_s_off.png</Unpressed>
+					<Pressed>btn_s_off.png</Pressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<Unpressed>btn_s_<Variable name="i"/>.png</Unpressed>
+					<Pressed>btn_s_<Variable name="i"/>.png</Pressed>
 				</State>
 				<Connection>
-					<ConfigKey><Variable name="channel"/>,beatsync</ConfigKey>
+					<!--ConfigKey><Variable name="channel"/>,beatsync</ConfigKey-->
+					<ConfigKey><Variable name="channel"/>,sync_enabled</ConfigKey>
 					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					<ButtonState>LeftButton</ButtonState>
 				</Connection>
-				<Connection>
+				<!--Connection>
 					<ConfigKey><Variable name="channel"/>,beatsync_tempo</ConfigKey>
 					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					<ButtonState>RightButton</ButtonState>
-				</Connection>
+				</Connection-->
 			</PushButton>
 			
 			<!--
@@ -153,14 +140,12 @@ Track control panel.
 				<State>
 					<Number>0</Number>
 					<Unpressed>btn_m_off.png</Unpressed>
-					<!--Pressed>icon_fist_4.png</Pressed>
-					<Unpressed>icon_fist_4.png</Unpressed-->
+					<Pressed>btn_m_off.png</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
-					<Unpressed>btn_m_off.png</Unpressed>
-					<!--Unpressed>icon_fist_4.png</Unpressed-->
-					<!--Pressed>btn_sync<Variable name="i"/>.png</Pressed-->
+					<Unpressed>btn_m_<Variable name="i"/>.png</Unpressed>
+					<Pressed>btn_m_<Variable name="i"/>.png</Pressed>
 				</State>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,sync_master</ConfigKey>
@@ -232,8 +217,8 @@ Track control panel.
 					
 					<SliderComposed>
 						<TooltipId>pitch_rate</TooltipId>
-						<Size>25,90</Size>
-						<Slider>slider-vertical-15x90.svg</Slider>
+						<!--Size>25,90</Size-->
+						<Slider>slider-vertical-15x79.svg</Slider>
 						<Handle>handle-vertical-15x12-<Variable name="i"/>.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Alignment>center</Alignment>
@@ -245,7 +230,7 @@ Track control panel.
 				
 					<WidgetGroup>
 						<Layout>vertical</Layout>
-						<SizePolicy>min,min</SizePolicy>
+						<SizePolicy>min,me</SizePolicy>
 						<Children>
 							
 							<!--
@@ -256,8 +241,8 @@ Track control panel.
 							
 							<PushButton>
 								<TooltipId>keylock</TooltipId>
-								<MinimumSize>35,35</MinimumSize>
-								<MaximumSize>35,35</MaximumSize>
+								<MinimumSize>15,21</MinimumSize>
+								<MaximumSize>15,21</MaximumSize>
 								<NumberStates>2</NumberStates>
 								<State>
 									<Number>0</Number>
@@ -266,8 +251,8 @@ Track control panel.
 								</State>
 								<State>
 									<Number>1</Number>
-									<Pressed>btn_keylock_sampler_over.png</Pressed>
-									<Unpressed>btn_keylock_sampler_over.png</Unpressed>
+									<Pressed>btn_keylock_sampler_<Variable name="i"/>.png</Pressed>
+									<Unpressed>btn_keylock_sampler_<Variable name="i"/>.png</Unpressed>
 								</State>
 								<Pos>3,265</Pos>
 								<Connection>
@@ -290,6 +275,7 @@ Track control panel.
 			<WidgetGroup>
 				<Layout>vertical</Layout>
 				<SizePolicy>min,me</SizePolicy>
+				<MinimumSize>24,-1</MinimumSize>
 				<Children>
 					
 					<Template src="skin:skin_btn_number.xml">
@@ -356,7 +342,7 @@ Track control panel.
 	-->
 	<WidgetGroup>
 		<Layout>vertical</Layout>
-		<Size>25,110</Size>
+		<MinimumSize>30,-1</MinimumSize>
 		<Children>
 			
 			<SliderComposed>
@@ -606,16 +592,16 @@ Track control panel.
 			
 			
 			
-        </Children>
+		</Children>
 		<Connection>
 			<ConfigKey><Variable name="channel"/>,show_equalizers</ConfigKey>
 			<BindProperty>visible</BindProperty>
 		</Connection>
-      </WidgetGroup>
+	</WidgetGroup>
 
 
-    </Children>
-  </WidgetGroup>
+	</Children>
+	</WidgetGroup>
 </Template>
 
 

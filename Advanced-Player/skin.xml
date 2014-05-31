@@ -143,11 +143,15 @@
 						<SliderComposed>
 							<TooltipId>crossfader</TooltipId>
 							<Slider>slider-vertical-30x125.svg</Slider>
-							<Handle>handle-vertical-30x15.svg</Handle>
+							<Handle>handle-vertical-30x15-green.svg</Handle>
 							<Horizontal>false</Horizontal>
-							<Reverse>true</Reverse>
+							<!--Reverse>true</Reverse-->
 							<Connection>
 								<ConfigKey>[Master],crossfader</ConfigKey>
+								<Transform>
+									<Invert/>
+									<Add>1</Add>
+								</Transform>
 							</Connection>
 						</SliderComposed>
 					
