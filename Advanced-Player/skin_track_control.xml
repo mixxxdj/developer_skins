@@ -185,6 +185,8 @@ Track control panel.
 			</Template>
 			
 			
+			
+			
         </Children>
       </WidgetGroup>
 
@@ -279,19 +281,35 @@ Track control panel.
 				<Children>
 					
 					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
 						<SetVariable name="number">1</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
 					</Template>
 					
 					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
 						<SetVariable name="number">2</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
 					</Template>
 					
 					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
 						<SetVariable name="number">3</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
 					</Template>
 					
 					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
 						<SetVariable name="number">4</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
 					</Template>
 					
 					<!--
@@ -323,6 +341,54 @@ Track control panel.
 							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+			<!--
+			**********************************************
+			Beatloop
+			**********************************************
+			-->
+			<WidgetGroup>
+				<ObjectName>BeatLoopLowerRow</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<MinimumSize>24,-1</MinimumSize>
+				<Children>
+					
+					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">4</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">8</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">16</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:skin_btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">32</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
 					
 				</Children>
 			</WidgetGroup>

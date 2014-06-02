@@ -6,36 +6,44 @@ Opener.
 <Template>
 	
 	<PushButton>
-		<TooltipId>hotcue_<Variable name="i"/>_<Variable name="number"/></TooltipId>
+		<TooltipId><Variable name="tooltip_id"/></TooltipId>
+		
 		<NumberStates>2</NumberStates>
+		
 		<LeftClickIsPushButton>true</LeftClickIsPushButton>
 		<RightClickIsPushButton>true</RightClickIsPushButton>
+		
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>_over.png</Pressed>
-			<Unpressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>.png</Unpressed>
+			<Pressed>btn_number_<Variable name="i"/>_<Variable name="number"/>_over.png</Pressed>
+			<Unpressed>btn_number_<Variable name="i"/>_<Variable name="number"/>.png</Unpressed>
 		</State>
+		
 		<State>
 			<Number>1</Number>
-			<Pressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>.png</Pressed>
-			<Unpressed>btn_hotcue<Variable name="i"/>_<Variable name="number"/>_over.png</Unpressed>
+			<Pressed>btn_number_<Variable name="i"/>_<Variable name="number"/>.png</Pressed>
+			<Unpressed>btn_number_<Variable name="i"/>_<Variable name="number"/>_over.png</Unpressed>
 		</State>
+		
 		<Connection>
-			<ConfigKey><Variable name="channel"/>,hotcue_<Variable name="number"/>_activate</ConfigKey>
+			<ConfigKey><Variable name="channel"/>,<Variable name="left_control"/></ConfigKey>
 			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			<ConnectValueToWidget>false</ConnectValueToWidget>
 			<ButtonState>LeftButton</ButtonState>
-			<ConnectValueToWidget>false</ConnectValueToWidget>
 		</Connection>
+		
 		<Connection>
-			<ConfigKey><Variable name="channel"/>,hotcue_<Variable name="number"/>_clear</ConfigKey>
+			<ConfigKey><Variable name="channel"/>,<Variable name="right_control"/></ConfigKey>
 			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-			<ButtonState>RightButton</ButtonState>
 			<ConnectValueToWidget>false</ConnectValueToWidget>
+			<ButtonState>RightButton</ButtonState>
 		</Connection>
+		
 		<Connection>
-			<ConfigKey><Variable name="channel"/>,hotcue_<Variable name="number"/>_enabled</ConfigKey>
+			<ConfigKey><Variable name="channel"/>,<Variable name="display_control"/></ConfigKey>
 			<ConnectValueFromWidget>false</ConnectValueFromWidget>
 		</Connection>
+		
 	</PushButton>
 	
 </Template>
@@ -43,3 +51,75 @@ Opener.
 
 
 
+<!--
+
+Button- Hotcue
+<PushButton>
+	<TooltipId>hotcue</TooltipId>
+	<Style></Style>
+	<NumberStates>2</NumberStates>
+	<LeftClickIsPushButton>true</LeftClickIsPushButton>
+	<RightClickIsPushButton>true</RightClickIsPushButton>
+	<State>
+		<Number>0</Number>
+		<Pressed>btn_hotcue_sampler_1_over.png</Pressed>
+		<Unpressed>btn_hotcue_sampler_1.png</Unpressed>
+	</State>
+	<State>
+		<Number>1</Number>
+		<Pressed>btn_hotcue_sampler_1.png</Pressed>
+		<Unpressed>btn_hotcue_sampler_1_over.png</Unpressed>
+	</State>
+	<Connection>
+		<ConfigKey>[Sampler1],hotcue_1_activate</ConfigKey>
+		<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+		<ButtonState>LeftButton</ButtonState>
+		<ConnectValueToWidget>false</ConnectValueToWidget>
+	</Connection>
+	<Connection>
+		<ConfigKey>[Sampler1],hotcue_1_clear</ConfigKey>
+		<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+		<ButtonState>RightButton</ButtonState>
+		<ConnectValueToWidget>false</ConnectValueToWidget>
+	</Connection>
+	<Connection>
+		<ConfigKey>[Sampler1],hotcue_1_enabled</ConfigKey>
+		<ConnectValueFromWidget>false</ConnectValueFromWidget>
+	</Connection>
+</PushButton>
+
+Button - Beatloop
+<PushButton>
+	<TooltipId>beatloop</TooltipId>
+	<Style></Style>
+	<NumberStates>2</NumberStates>
+	<LeftClickIsPushButton>true</LeftClickIsPushButton>
+	<RightClickIsPushButton>true</RightClickIsPushButton>
+	<State>
+		<Number>0</Number>
+		<Pressed>btn_beatloop1_1.png</Pressed>
+		<Unpressed>btn_beatloop1_1.png</Unpressed>
+	</State>
+	<State>
+		<Number>1</Number>
+		<Pressed>btn_beatloop1_1_over.png</Pressed>
+		<Unpressed>btn_beatloop1_1_over.png</Unpressed>
+	</State>
+	<Connection>
+		<ConfigKey>[Channel1],beatloop_1_toggle</ConfigKey>
+		<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+		<ButtonState>LeftButton</ButtonState>
+	</Connection>
+	<Connection>
+		<ConfigKey>[Channel1],beatlooproll_1_activate</ConfigKey>
+		<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+		<ButtonState>RightButton</ButtonState>
+	</Connection>
+	<Connection>
+		<ConfigKey>[Channel1],beatloop_1_enabled</ConfigKey>
+		<ConnectValueFromWidget>false</ConnectValueFromWidget>
+	</Connection>
+</PushButton>
+
+
+-->
