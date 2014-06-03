@@ -9,15 +9,17 @@ Track info panel.
 		<ObjectName>Track Info</ObjectName>
 		<Layout>vertical</Layout>
 		<SizePolicy>me,me</SizePolicy>
+		<!--MinimumSize>210,<Variable name="height"/></MinimumSize-->
 		<MinimumSize>210,-1</MinimumSize>
-		<Style>QGroupBox { border: 1px solid red; }</Style>
+		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<Children>
 			
 			<WidgetGroup>
 				<ObjectName>Track Text Info</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>me,f</SizePolicy>
-				<MaximumSize>-1,27</MaximumSize>
+				<MinimumSize>-1,16</MinimumSize>
+				<MaximumSize>-1,16</MaximumSize>
 				<Children>
 					
 					
@@ -85,7 +87,7 @@ Track info panel.
 			-->
 			<Overview>
 				<TooltipId>waveform_overview</TooltipId>
-				<SizePolicy>me,me</SizePolicy>
+				<SizePolicy>me,f</SizePolicy>
 				<MinimumSize>150,51</MinimumSize>
 				<MaximumSize>-1,51</MaximumSize>
 				<Channel><Variable name="i"/></Channel>
@@ -127,7 +129,7 @@ Track info panel.
 				<ObjectName>Overview</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>me,f</SizePolicy>
-				<MaximumSize>-1,27</MaximumSize>
+				<MaximumSize>-1,35</MaximumSize>
 				<Children>
 					
 					<WidgetGroup>
@@ -276,6 +278,10 @@ Track info panel.
 				</Children>
 			</WidgetGroup>
 			
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">4</SetVariable>
+			</Template>
 			
 			
 		</Children>

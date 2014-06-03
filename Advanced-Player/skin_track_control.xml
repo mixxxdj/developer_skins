@@ -481,8 +481,9 @@ Track control panel.
 		<ObjectName>KillersColumn</ObjectName>
 		<Layout>vertical</Layout>
 		<SizePolicy>f,me</SizePolicy>
-		<Style>QGroupBox { border: 1px solid red; }</Style>
-		<Size>20,110</Size>
+		<MinimumSize>20,-1</MinimumSize>
+		<MaximumSize>20,-1</MaximumSize>
+		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<Children>
 			
 			<Template src="skin:skin_spacer_vx.xml">
@@ -491,40 +492,22 @@ Track control panel.
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<SizePolicy>min,min</SizePolicy>
+				<SizePolicy>min,f</SizePolicy>
+				<MinimumSize>-1,56</MinimumSize>
+				<MaximumSize>-1,56</MaximumSize>
 				<Children>
 					
 					<Template src="skin:skin_btn_killer.xml">
 						<SetVariable name="frequency">High</SetVariable>
 					</Template>
 					
-				</Children>
-			</WidgetGroup>
-			
-			<Template src="skin:skin_spacer_v.xml">
-				<SetVariable name="height">21</SetVariable>
-			</Template>
-			
-			<WidgetGroup>
-				<Layout>vertical</Layout>
-				<SizePolicy>min,min</SizePolicy>
-				<Children>
+					<Template src="skin:skin_spacer_v.xml"/>
 					
 					<Template src="skin:skin_btn_killer.xml">
 						<SetVariable name="frequency">Mid</SetVariable>
 					</Template>
 					
-				</Children>
-			</WidgetGroup>
-			
-			<Template src="skin:skin_spacer_v.xml">
-				<SetVariable name="height">21</SetVariable>
-			</Template>
-			
-			<WidgetGroup>
-				<Layout>vertical</Layout>
-				<SizePolicy>min,min</SizePolicy>
-				<Children>
+					<Template src="skin:skin_spacer_v.xml"/>
 					
 					<Template src="skin:skin_btn_killer.xml">
 						<SetVariable name="frequency">Low</SetVariable>
@@ -534,7 +517,7 @@ Track control panel.
 			</WidgetGroup>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">3</SetVariable>
+				<SetVariable name="height">7</SetVariable>
 			</Template>
 			
 			<Template src="skin:skin_opener.xml">
@@ -558,78 +541,49 @@ Track control panel.
 	<WidgetGroup>
 		<ObjectName>EqualizersColumn</ObjectName>
 		<Layout>vertical</Layout>
-		<Size>70,110</Size>
-		<Style>QGroupBox { border: 1px solid red; }</Style>
-		<SizePolicy>f,f</SizePolicy>
+		<SizePolicy>f,me</SizePolicy>
+		<MinimumSize>70,-1</MinimumSize>
+		<MaximumSize>70,-1</MaximumSize>
+		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<Children>
 			
-			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">14</SetVariable>
+				<SetVariable name="height">0</SetVariable>
 			</Template>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<SizePolicy>me,me</SizePolicy>
+				<SizePolicy>me,min</SizePolicy>
 				<Children>
 					
-					<SliderComposed>
-						<TooltipId>filterHigh</TooltipId>
-						<SizePolicy>f,e</SizePolicy>
-						<Size>60,35</Size>
-						<Slider>slider-horizontal-60x25.svg</Slider>
-						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
-						<Horizontal>true</Horizontal>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,filterMid</ConfigKey>
-						</Connection>
-					</SliderComposed>
+					<Template src="skin:skin_btn_eq.xml">
+						<SetVariable name="frequency">High</SetVariable>
+						<SetVariable name="height">25</SetVariable>
+					</Template>
 					
-				</Children>
-			</WidgetGroup>
-			
-			<WidgetGroup>
-				<Layout>vertical</Layout>
-				<SizePolicy>me,me</SizePolicy>
-				<Children>
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">5</SetVariable>
+					</Template>
 					
-					<SliderComposed>
-						<TooltipId>filterMid</TooltipId>
-						<SizePolicy>f,me</SizePolicy>
-						<Size>60,35</Size>
-						<Slider>slider-horizontal-60x25.svg</Slider>
-						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
-						<Horizontal>true</Horizontal>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,filterHigh</ConfigKey>
-						</Connection>
-					</SliderComposed>
+					<Template src="skin:skin_btn_eq.xml">
+						<SetVariable name="frequency">Mid</SetVariable>
+						<SetVariable name="height">25</SetVariable>
+					</Template>
 					
-				</Children>
-			</WidgetGroup>
-			
-			<WidgetGroup>
-				<Layout>vertical</Layout>
-				<SizePolicy>me,me</SizePolicy>
-				<Children>
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">5</SetVariable>
+					</Template>
 					
-					<SliderComposed>
-						<TooltipId>filterLow</TooltipId>
-						<SizePolicy>f,me</SizePolicy>
-						<Size>60,33</Size>
-						<Slider>slider-horizontal-60x25.svg</Slider>
-						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
-						<Horizontal>true</Horizontal>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,filterLow</ConfigKey>
-						</Connection>
-					</SliderComposed>
+					<Template src="skin:skin_btn_eq.xml">
+						<SetVariable name="frequency">Low</SetVariable>
+						<SetVariable name="height">25</SetVariable>
+					</Template>
 					
 				</Children>
 			</WidgetGroup>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">8</SetVariable>
+				<SetVariable name="height">10</SetVariable>
 			</Template>
 			
 		</Children>
