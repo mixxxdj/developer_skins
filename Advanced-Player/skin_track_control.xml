@@ -216,6 +216,7 @@ Track control panel.
 				<Layout>vertical</Layout>
 				<SizePolicy>min,me</SizePolicy>
 				<MinimumSize>20,-1</MinimumSize>
+				<MaximumSize>20,-1</MaximumSize>
 				<Children>
 					
 					<SliderComposed>
@@ -233,7 +234,9 @@ Track control panel.
 				
 					<WidgetGroup>
 						<Layout>vertical</Layout>
-						<SizePolicy>min,me</SizePolicy>
+						<SizePolicy>f,min</SizePolicy>
+						<MinimumSize>17,24</MinimumSize>
+						<MaximumSize>17,24</MaximumSize>
 						<Children>
 							
 							<!--
@@ -244,8 +247,6 @@ Track control panel.
 							
 							<PushButton>
 								<TooltipId>keylock</TooltipId>
-								<MinimumSize>15,21</MinimumSize>
-								<MaximumSize>15,21</MaximumSize>
 								<NumberStates>2</NumberStates>
 								<State>
 									<Number>0</Number>
@@ -257,7 +258,6 @@ Track control panel.
 									<Pressed>btn_keylock_sampler_<Variable name="i"/>.png</Pressed>
 									<Unpressed>btn_keylock_sampler_<Variable name="i"/>.png</Unpressed>
 								</State>
-								<Pos>3,265</Pos>
 								<Connection>
 									<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
 								</Connection>
