@@ -4,22 +4,17 @@ Description:
 A deck with essential controls.
 -->
 <Template>
-  <WidgetGroup>
-    <ObjectName>Deck</ObjectName>
-    <Layout>vertical</Layout>
-	<SizePolicy>e,e</SizePolicy>
-	<!--MinimumSize>300,300</MinimumSize-->
-	<MaximumSize>-1,110</MaximumSize>
-    <Children>
-		
-      <WidgetGroup>
-        <Layout>horizontal</Layout>
-        <Children>
-          <Template src="skin:skin_track_control.xml"/>
-          <Template src="skin:skin_track_info.xml"/>
-        </Children>
-      </WidgetGroup>
-      <!--Template src="skin:spacer.xml"/-->
-    </Children>
-  </WidgetGroup>
+	<WidgetGroup>
+		<ObjectName>Deck<Variable name="i"/></ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,f</SizePolicy>
+		<MinimumSize>-1,<Variable name="height"/></MinimumSize>
+		<MaximumSize>-1,<Variable name="height"/></MaximumSize>
+		<Children>
+			
+			<Template src="skin:skin_track_control.xml"/>
+			<Template src="skin:skin_track_info.xml"/>
+			
+		</Children>
+	</WidgetGroup>
 </Template>

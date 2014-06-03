@@ -10,9 +10,6 @@ Button with a number
 		
 		<NumberStates>2</NumberStates>
 		
-		<LeftClickIsPushButton>true</LeftClickIsPushButton>
-		<RightClickIsPushButton>true</RightClickIsPushButton>
-		
 		<State>
 			<Number>0</Number>
 			<Pressed>btn_number_<Variable name="i"/>_<Variable name="number"/>_over.png</Pressed>

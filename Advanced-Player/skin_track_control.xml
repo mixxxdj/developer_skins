@@ -30,7 +30,8 @@ Track control panel.
 	
 	<WidgetGroup>
 		<Layout>vertical</Layout>
-		<Size>35,110</Size>
+		<MinimumSize>35,-1</MinimumSize>
+		<MaximumSize>35,-1</MaximumSize>
 		<Children>
 			
 			<!--
@@ -42,7 +43,6 @@ Track control panel.
 				<TooltipId>play_cue_set</TooltipId>
 				<MinimumSize>20,20</MinimumSize>
 				<MaximumSize>40,30</MaximumSize>
-				<Style></Style>
 				<NumberStates>2</NumberStates>
 				<RightClickIsPushButton>true</RightClickIsPushButton>
 				<State>
@@ -207,6 +207,7 @@ Track control panel.
 	**********************************************
 	-->
 	<WidgetGroup>
+		<ObjectName>PositionningColumn</ObjectName>
 		<Layout>horizontal</Layout>
 		<SizePolicy>min,me</SizePolicy>
 		<Children>
@@ -407,6 +408,7 @@ Track control panel.
 	**********************************************
 	-->
 	<WidgetGroup>
+		<ObjectName>VolumeColumn</ObjectName>
 		<Layout>vertical</Layout>
 		<MinimumSize>30,-1</MinimumSize>
 		<Children>
@@ -476,107 +478,71 @@ Track control panel.
 	**********************************************
 	-->
 	<WidgetGroup>
+		<ObjectName>KillersColumn</ObjectName>
 		<Layout>vertical</Layout>
 		<SizePolicy>f,me</SizePolicy>
+		<Style>QGroupBox { border: 1px solid red; }</Style>
 		<Size>20,110</Size>
 		<Children>
 			
-			<Template src="skin:skin_spacer.xml"/>
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">21</SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<SizePolicy>min,me</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<Children>
 					
-					<PushButton>
-						<TooltipId>filterHighKill</TooltipId>
-						<SizePolicy>f,me</SizePolicy>
-						<Size>8,30</Size>
-						<NumberStates>2</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
-						</State>
-						<State>
-							<Number>1</Number>
-							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
-						</State>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,filterHighKill</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-					</PushButton>
+					<Template src="skin:skin_btn_killer.xml">
+						<SetVariable name="frequency">High</SetVariable>
+					</Template>
 					
 				</Children>
 			</WidgetGroup>
 			
+			<Template src="skin:skin_spacer_v.xml">
+				<SetVariable name="height">21</SetVariable>
+			</Template>
+			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<SizePolicy>min,me</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<Children>
 					
-					
-					<PushButton>
-						<TooltipId>filterMidKill</TooltipId>
-						<SizePolicy>f,me</SizePolicy>
-						<!--Size>8,8</Size-->
-						<NumberStates>2</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
-						</State>
-						<State>
-							<Number>1</Number>
-							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
-						</State>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,filterMidKill</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-					</PushButton>
+					<Template src="skin:skin_btn_killer.xml">
+						<SetVariable name="frequency">Mid</SetVariable>
+					</Template>
 					
 				</Children>
 			</WidgetGroup>
 			
+			<Template src="skin:skin_spacer_v.xml">
+				<SetVariable name="height">21</SetVariable>
+			</Template>
+			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<SizePolicy>min,me</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<Children>
 					
-					
-					<PushButton>
-						<TooltipId>filterLowKill</TooltipId>
-						<SizePolicy>f,me</SizePolicy>
-						<!--Size>8,8</Size-->
-						<NumberStates>2</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
-						</State>
-						<State>
-							<Number>1</Number>
-							<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
-						</State>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,filterLowKill</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-					</PushButton>
+					<Template src="skin:skin_btn_killer.xml">
+						<SetVariable name="frequency">Low</SetVariable>
+					</Template>
 					
 				</Children>
 			</WidgetGroup>
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
 			
 			<Template src="skin:skin_opener.xml">
 				<SetVariable name="action">show_equalizers</SetVariable>
+			</Template>
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">1</SetVariable>
 			</Template>
 			
 		</Children>
@@ -590,11 +556,17 @@ Track control panel.
 	-->
 
 	<WidgetGroup>
+		<ObjectName>EqualizersColumn</ObjectName>
 		<Layout>vertical</Layout>
 		<Size>70,110</Size>
-		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
-		<SizePolicy>f,me</SizePolicy>
+		<Style>QGroupBox { border: 1px solid red; }</Style>
+		<SizePolicy>f,f</SizePolicy>
 		<Children>
+			
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">14</SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
@@ -644,7 +616,7 @@ Track control panel.
 					<SliderComposed>
 						<TooltipId>filterLow</TooltipId>
 						<SizePolicy>f,me</SizePolicy>
-						<Size>60,35</Size>
+						<Size>60,33</Size>
 						<Slider>slider-horizontal-60x25.svg</Slider>
 						<Handle>handle-horizontal-10x25-<Variable name="i"/>.svg</Handle>
 						<Horizontal>true</Horizontal>
@@ -656,7 +628,9 @@ Track control panel.
 				</Children>
 			</WidgetGroup>
 			
-			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">8</SetVariable>
+			</Template>
 			
 		</Children>
 		<Connection>

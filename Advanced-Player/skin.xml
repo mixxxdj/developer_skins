@@ -1,22 +1,28 @@
 <!DOCTYPE skin>
 <skin>
 	<manifest>
-		<title>Advanced-Player-1366x470</title>
+		<title>Advanced-Player</title>
 		<author>jclaveau</author>
 		<version>1.12.0.01</version>
-		<description>A test skin.</description>
+		<description>A proof of concept that Mixxx can be an amazing player</description>
 		<language>en</language>
 		<license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
 		<attributes>
 			<attribute config_key="[Master],num_decks">2</attribute>
 			<attribute config_key="[Master],num_preview_decks">0</attribute>
 			<!--Optionally, make elements visible on skin load-->
-			<attribute config_key="[PreviewDeck],show_previewdeck">0</attribute>
+			<!--attribute config_key="[PreviewDeck],show_previewdeck">0</attribute-->
 			<attribute config_key="[Channel1],keylock">1</attribute>
 			<attribute config_key="[Channel2],keylock">1</attribute>
+			
 			<attribute config_key="[Channel1],quantize">1</attribute>
 			<attribute config_key="[Channel2],quantize">1</attribute>
+			
+			<attribute config_key="[Channel1],sync_enabled">1</attribute>
+			<attribute config_key="[Channel2],sync_enabled">1</attribute>
+			
 			<attribute config_key="[Master],headMix">1</attribute>
+			
 		</attributes>
 	</manifest>
 
@@ -123,10 +129,12 @@
 						
 						<Template src="skin:skin_deck.xml">
 							<SetVariable name="i">1</SetVariable>
+							<SetVariable name="height">131</SetVariable>
 						</Template>
 						
 						<Template src="skin:skin_deck.xml">
 							<SetVariable name="i">2</SetVariable>
+							<SetVariable name="height">131</SetVariable>
 						</Template>
 						
 					</Children>

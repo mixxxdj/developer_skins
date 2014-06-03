@@ -7,6 +7,8 @@ Opener.
 	<WidgetGroup>
 		<Layout>horizontal</Layout>
 		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
+		<Size>16,21</Size>
+		<SizePolicy>min,min</SizePolicy>
 		<Children>
 			
 			<PushButton>
@@ -22,7 +24,7 @@ Opener.
 					<Unpressed>btn_rewind1.png</Unpressed>
 				</State>
 				<Connection>
-					<ConfigKey><Variable name="channel"/>,<Variable name="action"/></ConfigKey>
+					<ConfigKey persist="true"><Variable name="channel"/>,<Variable name="action"/></ConfigKey>
 				</Connection>
 			</PushButton>
 			

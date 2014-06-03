@@ -1,0 +1,29 @@
+<!DOCTYPE template>
+<!--
+Description:
+Killer button
+-->
+<Template>
+	
+	<PushButton>
+		<TooltipId>filter<Variable name="frequency"/>Kill</TooltipId>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+			<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
+			<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
+		</State>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,filter<Variable name="frequency"/>Kill</ConfigKey>
+			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	
+</Template>
+

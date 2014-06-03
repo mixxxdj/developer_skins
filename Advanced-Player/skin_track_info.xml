@@ -9,15 +9,15 @@ Track info panel.
 		<ObjectName>Track Info</ObjectName>
 		<Layout>vertical</Layout>
 		<SizePolicy>me,me</SizePolicy>
-		<MinimumSize>210,100</MinimumSize>
-		<MaximumSize>-1,110</MaximumSize>
+		<MinimumSize>210,-1</MinimumSize>
+		<Style>QGroupBox { border: 1px solid red; }</Style>
 		<Children>
 			
 			<WidgetGroup>
 				<ObjectName>Track Text Info</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>me,f</SizePolicy>
-				<MaximumSize>-1,20</MaximumSize>
+				<MaximumSize>-1,27</MaximumSize>
 				<Children>
 					
 					
@@ -28,8 +28,8 @@ Track info panel.
 					-->
 					<TrackProperty>
 						<TooltipId>track_artist</TooltipId>
-						<MinimumSize>150,20</MinimumSize>
-						<MaximumSize>150,20</MaximumSize>
+						<MinimumSize>150,-1</MinimumSize>
+						<MaximumSize>150,-1</MaximumSize>
 						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 						background-color: transparent; text-align: right; padding-left: 1px; }
 						</Style>
@@ -86,9 +86,8 @@ Track info panel.
 			<Overview>
 				<TooltipId>waveform_overview</TooltipId>
 				<SizePolicy>me,me</SizePolicy>
-				<MinimumSize>150,50</MinimumSize>
-				<MaximumSize>-1,50</MaximumSize>
-				<Style></Style>
+				<MinimumSize>150,51</MinimumSize>
+				<MaximumSize>-1,51</MaximumSize>
 				<Channel><Variable name="i"/></Channel>
 				<BgColor>#FFFFFF</BgColor>
 				<SignalHighColor>#FFE300</SignalHighColor>
@@ -127,9 +126,8 @@ Track info panel.
 			<WidgetGroup>
 				<ObjectName>Overview</ObjectName>
 				<Layout>horizontal</Layout>
-				<SizePolicy>me,me</SizePolicy>
-				<MinimumSize>-1,20</MinimumSize>
-				<MaximumSize>-1,20</MaximumSize>
+				<SizePolicy>me,f</SizePolicy>
+				<MaximumSize>-1,27</MaximumSize>
 				<Children>
 					
 					<WidgetGroup>
