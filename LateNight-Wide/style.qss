@@ -63,7 +63,7 @@
 }
 
 #DeckLeftMargin {
-  qproperty-layoutAlignment: 'AlignLeft | AlignTop'; 
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom'; 
   border: 0px solid #585858;
   border-left: 0px;
   border-right: 0px;
@@ -144,15 +144,14 @@
 }
 
 #RateGutter {
-  qproperty-layoutAlignment: 'AlignCenter | AlignBottom';
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
   text-align: center;
-  padding-top: 0px;
+  padding-top: 2px;
 }
 
 #ColumnThree {
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
   padding: 3px;
-  padding-left:10px;
 }
 
 #LoopSizeButtons {
@@ -180,26 +179,23 @@
   qproperty-layoutAlignment: 'AlignRight | AlignBottom';
 }
 
-#RateButtons, #RatePermButtons, #RateTempButtons {
+#RateButtons, #RatePermButtons, #RateTempButtons, #HotcuesAndFF {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
 }
 
 #ColumnOne {
-  qproperty-layoutAlignment: 'AlignLeft';
+  qproperty-layoutAlignment: 'AlignCenter';
 }
 
 #ColumnTwo {
-  padding: 3px;
-  padding-left: 10px;
+  padding: 1px;
+  padding-left: 3px;
   qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
 }
 
 #DeckButtons {
-  padding: 3px;
-}
-
-#ColumnTwo {
-  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+  padding: 1px;
+  padding-top: 5px;
 }
 
 #ToolbarButtons {
@@ -263,6 +259,7 @@ qproperty-layoutAlignment: 'AlignCenter';
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   padding-left: 5px;
   padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 #Crossfader {
@@ -328,6 +325,10 @@ qproperty-layoutAlignment: 'AlignCenter';
 
 #AlignLeftBottom {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+}
+
+#AlignCenter {
+  qproperty-layoutAlignment: 'AlignCenter';
 }
 
 #VinylStatusTop1, #VinylStatusTop3 {

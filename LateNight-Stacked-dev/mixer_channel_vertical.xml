@@ -1,8 +1,8 @@
 <Template>
   <WidgetGroup>  <!-- Channel1 controls -->
     <ObjectName>MixerChannel</ObjectName>
-    <SizePolicy>me,min</SizePolicy>
-    <MinimumSize>80,260</MinimumSize>
+    <SizePolicy>f,f</SizePolicy>
+    <Size>85,260</Size>
     <!-- Channel1 controls -->
     <Children>
       <SliderComposed>

@@ -2,9 +2,8 @@
     <WidgetGroup>
         <ObjectName>DeckContainer</ObjectName>
         <Layout>vertical</Layout>
-        <SizePolicy>me,min</SizePolicy>
-        <MinimumSize>340,-1</MinimumSize>
-        <MaximumSize>340,-1</MaximumSize>
+        <SizePolicy>e,min</SizePolicy>
+        <MinimumSize>240,-1</MinimumSize>
         <Children>
             <WidgetGroup>
                 <ObjectName>VinylStatusTop<Variable name="channum" /></ObjectName>
