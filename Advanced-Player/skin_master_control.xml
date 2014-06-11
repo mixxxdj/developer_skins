@@ -9,22 +9,43 @@ Master controls : volume, balance, pregain + time.
 	<WidgetGroup>
 		<ObjectName>Master and balance</ObjectName>
 		<Layout>vertical</Layout>
-		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
+		<Style>QGroupBox { border: 1px solid red; }</Style>
 		<SizePolicy>min,me</SizePolicy>
+		<MinimumSize>40,-1</MinimumSize>
 		<MaximumSize>60,-i</MaximumSize>
 		<Children>
+			
+			<Time>
+				<SizePolicy>me,f</SizePolicy>
+				<MinimumSize>40,21</MinimumSize>
+				<MaximumSize>60,21</MaximumSize>
+				<TooltipId>time</TooltipId>
+				<Style>
+					QLabel {
+						font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+						background-color	: transparent;
+						color				: #ffffff;
+					}
+				</Style>
+				<Alignment>center</Alignment>
+				<ShowSeconds>false</ShowSeconds>
+				<ClockFormat>24</ClockFormat>
+			</Time>
+			
 			
 			<WidgetGroup>
 				<ObjectName>Master Volume and ...</ObjectName>
 				<Layout>horizontal</Layout>
-				<SizePolicy>f,min</SizePolicy>
-				<MinimumSize>60,-1</MinimumSize>
+				<SizePolicy>me,min</SizePolicy>
+				<MinimumSize>40,-1</MinimumSize>
 				<MaximumSize>60,-1</MaximumSize>
 				<Children>
 					
 					<WidgetGroup>
 						<Layout>vertical</Layout>
 						<SizePolicy>min,me</SizePolicy>
+						<MinimumSize>40,125</MinimumSize>
+						<MaximumSize>60,170</MaximumSize>
 						<Children>
 							
 							<SliderComposed>
@@ -72,9 +93,26 @@ Master controls : volume, balance, pregain + time.
 				</Connection>
 			</SliderComposed>
 			
+			<SliderComposed>
+				<TooltipId>master_balance</TooltipId>
+				<SizePolicy>f,me</SizePolicy>
+				<Slider>slider-horizontal-60x30.svg</Slider>
+				<Handle>handle-horizontal-10x30-green.svg</Handle>
+				<Horizontal>true</Horizontal>
+				<Connection>
+					<ConfigKey>[Master],balance</ConfigKey>
+				</Connection>
+				<Connection>
+					<ConfigKey>[Master],show_balance_controls</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
+			</SliderComposed>
+			
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
 				<SizePolicy>me,min</SizePolicy>
+				<MinimumSize>40,27</MinimumSize>
+				<MaximumSize>60,-1</MaximumSize>
 				<Children>
 					
 					<PushButton>
@@ -95,20 +133,6 @@ Master controls : volume, balance, pregain + time.
 						</Connection>
 					</PushButton>
 					
-					<Time>
-						<TooltipId>time</TooltipId>
-						<Style>
-							QLabel {
-								font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-								background-color	: transparent;
-								color				: #ffffff;
-							}
-						</Style>
-						<Alignment>center</Alignment>
-						<ShowSeconds>false</ShowSeconds>
-						<ClockFormat>24</ClockFormat>
-					</Time>
-					
 					<PushButton>
 						<Size>15f,20f</Size>
 						<NumberStates>2</NumberStates>
@@ -127,21 +151,6 @@ Master controls : volume, balance, pregain + time.
 					
 				</Children>
 			</WidgetGroup>
-			
-			<SliderComposed>
-				<TooltipId>master_balance</TooltipId>
-				<SizePolicy>f,me</SizePolicy>
-				<Slider>slider-horizontal-60x30.svg</Slider>
-				<Handle>handle-horizontal-10x30-green.svg</Handle>
-				<Horizontal>true</Horizontal>
-				<Connection>
-					<ConfigKey>[Master],balance</ConfigKey>
-				</Connection>
-				<Connection>
-					<ConfigKey>[Master],show_balance_controls</ConfigKey>
-					<BindProperty>visible</BindProperty>
-				</Connection>
-			</SliderComposed>
 			
 		</Children>
 	</WidgetGroup>
