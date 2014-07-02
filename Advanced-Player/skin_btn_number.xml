@@ -12,6 +12,19 @@ Button with a number
 		
 		<State>
 			<Number>0</Number>
+			<!--Pressed>btn_number_<Variable name="i"/>_<Variable name="number"/>_over.png</Pressed-->
+			<Pressed>
+				<svg height="16" width="16">
+					<rect x="0" y="0" width="16" height="16" style="fill:#000000; stroke-width:1; stroke:#ff0000; stroke-linecap:sqare;" />
+					<text x="0" y="15" style="fill:#ff0000; font-size: 16px; font-weight: bold;"><Variable name="number"/></text>
+				</svg>
+			</Pressed>
+			<Unpressed>
+				<svg height="16" width="16">
+					<rect x="0" y="0" width="16" height="16" style="fill:#000000; stroke-width:1; stroke:#aaaaaa; stroke-linecap:sqare;" />
+					<text x="0" y="15" style="fill:#aaaaaa; font-size: 16px; font-weight: bold;"><Variable name="number"/></text>
+				</svg>
+			</Unpressed>
 			<Pressed>btn_number_<Variable name="i"/>_<Variable name="number"/>_over.png</Pressed>
 			<Unpressed>btn_number_<Variable name="i"/>_<Variable name="number"/>.png</Unpressed>
 		</State>
