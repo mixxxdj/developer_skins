@@ -5,23 +5,26 @@ Button with a number
 -->
 <Template>
 	
+	<SetVariable name="text"><Variable name="number"/></SetVariable>
+	
 	<PushButton>
 		<TooltipId><Variable name="tooltip_id"/></TooltipId>
 		
 		<NumberStates>2</NumberStates>
 		
-		<!--SetVariable name="text"><Variable name="number"/></SetVariable-->
-		
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_text_little_1x1_<Variable name="i"/>.svg</Pressed>
-			<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
+			<Unpressed>btn_text_little_1x1.svg</Unpressed>
+			<Pressed>btn_text_little_1x1.svg</Pressed>
 		</State>
 		
 		<State>
 			<Number>1</Number>
-			<Pressed>btn_text_little_1x1_<Variable name="i"/>.svg</Pressed>
-			<Unpressed>btn_text_little_1x1_<Variable name="i"/>.svg</Unpressed>
+			<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+			<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+			<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+			<Pressed>btn_text_little_1x1.svg</Pressed>
+			<Unpressed>btn_text_little_1x1.svg</Unpressed>
 		</State>
 		
 		<Connection>

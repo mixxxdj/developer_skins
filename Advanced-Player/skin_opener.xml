@@ -17,13 +17,13 @@ Opener.
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
-					<SetVariable name="number">+</SetVariable>
+					<SetVariable name="text">+</SetVariable>
 					<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
 					<Pressed>btn_text_little_1x1_off.svg</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
-					<SetVariable name="number">-</SetVariable>
+					<SetVariable name="text">-</SetVariable>
 					<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
 					<Pressed>btn_text_little_1x1_off.svg</Pressed>
 				</State>
