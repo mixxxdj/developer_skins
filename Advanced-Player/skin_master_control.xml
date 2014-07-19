@@ -9,7 +9,7 @@ Master controls : volume, balance, pregain + time.
 	<WidgetGroup>
 		<ObjectName>Master and balance</ObjectName>
 		<Layout>vertical</Layout>
-		<Style>QGroupBox { border: 1px solid red; }</Style>
+		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<SizePolicy>min,me</SizePolicy>
 		<MinimumSize>40,-1</MinimumSize>
 		<MaximumSize>60,-i</MaximumSize>
@@ -50,7 +50,16 @@ Master controls : volume, balance, pregain + time.
 							
 							<SliderComposed>
 								<TooltipId>master_volume</TooltipId>
-								<Slider>slider-vertical-30x125.svg</Slider>
+								<!--Slider>slider-vertical-30x125.svg</Slider-->
+								<Slider>
+									<svg width="30" height="125">
+										<rect
+											width	="30"
+											height	="125"
+											style	="fill:#ffffff;"/>
+										<line x1="15" y1="0" x2="15" y2="125" stroke="#aaaaaa" stroke-width="1"/>
+									</svg>
+								</Slider>
 								<Handle>handle-vertical-30x15-green.svg</Handle>
 								<Horizontal>false</Horizontal>
 								<Connection>
@@ -115,7 +124,7 @@ Master controls : volume, balance, pregain + time.
 				<MaximumSize>60,-1</MaximumSize>
 				<Children>
 					
-					<PushButton>
+					<!--PushButton>
 						<Size>15f,20f</Size>
 						<NumberStates>2</NumberStates>
 						<State>
@@ -131,23 +140,54 @@ Master controls : volume, balance, pregain + time.
 						<Connection>
 							<ConfigKey>[Master],show_balance_controls</ConfigKey>
 						</Connection>
-					</PushButton>
+					</PushButton-->
 					
+					<SetVariable name="text">B</SetVariable>
 					<PushButton>
-						<Size>15f,20f</Size>
+						<ObjectName>BalanceToggle</ObjectName>
+						<Size>20,22</Size>
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Unpressed>btn_headphone_off.png</Unpressed>
+							<Unpressed>btn_text_1x1_off.svg</Unpressed>
+							<Pressed>btn_text_1x1_off.svg</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Unpressed>btn_headphone_on.png</Unpressed>
+							<Unpressed>btn_text_1x1_green.svg</Unpressed>
+							<Pressed>btn_text_1x1_green.svg</Pressed>
+						</State>
+						<Connection>
+							<ConfigKey>[Master],show_balance_controls</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<SetVariable name="text">H</SetVariable>
+					<PushButton>
+						<TooltipId>pfl</TooltipId>
+						<MinimumSize>30,20</MinimumSize>
+						<MaximumSize>40,30</MaximumSize>
+						<NumberStates>2</NumberStates>
+						<RightClickIsPushButton>true</RightClickIsPushButton>
+						<State>
+							<Number>0</Number>
+							<Unpressed>btn_text_1x1_off.svg</Unpressed>
+							<Pressed>btn_text_1x1_off.svg</Pressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<Unpressed>btn_text_1x1_purple.svg</Unpressed>
+							<Pressed>btn_text_1x1_purple.svg</Pressed>
 						</State>
 						<Connection>
 							<ConfigKey>[Master],show_headphone_controls</ConfigKey>
 						</Connection>
 					</PushButton>
+					
 					
 				</Children>
 			</WidgetGroup>

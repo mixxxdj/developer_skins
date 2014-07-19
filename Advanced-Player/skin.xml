@@ -130,6 +130,9 @@
 						<Template src="skin:skin_deck.xml">
 							<SetVariable name="i">1</SetVariable>
 							<SetVariable name="height">111</SetVariable>
+							<SetVariable name="dark_color">#dddddd</SetVariable>
+							<SetVariable name="light_color">#999999</SetVariable>
+							<SetVariable name="text_color">#aaaaaa</SetVariable>
 						</Template>
 						
 						<Template src="skin:skin_deck.xml">

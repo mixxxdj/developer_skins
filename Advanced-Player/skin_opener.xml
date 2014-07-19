@@ -11,17 +11,21 @@ Opener.
 		<SizePolicy>min,min</SizePolicy>
 		<Children>
 			
+			<SetVariable name="number">+</SetVariable>
+			
 			<PushButton>
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
-					<Pressed>btn_forward1.png</Pressed>
-					<Unpressed>btn_forward1.png</Unpressed>
+					<SetVariable name="number">+</SetVariable>
+					<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
+					<Pressed>btn_text_little_1x1_off.svg</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
-					<Pressed>btn_rewind1.png</Pressed>
-					<Unpressed>btn_rewind1.png</Unpressed>
+					<SetVariable name="number">-</SetVariable>
+					<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
+					<Pressed>btn_text_little_1x1_off.svg</Pressed>
 				</State>
 				<Connection>
 					<ConfigKey persist="true"><Variable name="channel"/>,<Variable name="action"/></ConfigKey>
