@@ -308,18 +308,22 @@ Track control panel.
 							**********************************************
 							-->
 							
+							<SetVariable name="text">K</SetVariable>
 							<PushButton>
 								<TooltipId>keylock</TooltipId>
 								<NumberStates>2</NumberStates>
 								<State>
 									<Number>0</Number>
-									<Pressed>btn_keylock_sampler.png</Pressed>
-									<Unpressed>btn_keylock_sampler.png</Unpressed>
+									<Pressed>btn_text_little_1x1.svg</Pressed>
+									<Unpressed>btn_text_little_1x1.svg</Unpressed>
 								</State>
 								<State>
 									<Number>1</Number>
-									<Pressed>btn_keylock_sampler_<Variable name="i"/>.png</Pressed>
-									<Unpressed>btn_keylock_sampler_<Variable name="i"/>.png</Unpressed>
+									<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+									<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+									<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+									<Pressed>btn_text_little_1x1.svg</Pressed>
+									<Unpressed>btn_text_little_1x1.svg</Unpressed>
 								</State>
 								<Connection>
 									<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
@@ -339,9 +343,8 @@ Track control panel.
 				<MinimumSize>24,-1</MinimumSize>
 				<Children>
 					
-					<SliderComposed>
+					<!--SliderComposed>
 						<TooltipId>pitch_rate</TooltipId>
-						<!--Size>25,90</Size-->
 						<Slider>slider-vertical-15x79.svg</Slider>
 						<Handle>handle-vertical-15x12-<Variable name="i"/>.svg</Handle>
 						<Horizontal>false</Horizontal>
@@ -350,38 +353,46 @@ Track control panel.
 							<ConfigKey><Variable name="channel"/>,rate_temp</ConfigKey>
 							<EmitOnDownPress>false</EmitOnDownPress>
 						</Connection>
-					</SliderComposed>
-				
+					</SliderComposed-->
+					
+					<SetVariable name="text">&lt;</SetVariable>
 					<PushButton>
 						<TooltipId>rate_temp_up</TooltipId>
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Pressed>btn_keylock_sampler.png</Pressed>
-							<Unpressed>btn_keylock_sampler.png</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Pressed>btn_keylock_sampler_<Variable name="i"/>.png</Pressed>
-							<Unpressed>btn_keylock_sampler_<Variable name="i"/>.png</Unpressed>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,rate_temp_up</ConfigKey>
 						</Connection>
 					</PushButton>
 					
+					<SetVariable name="text">&gt;</SetVariable>
 					<PushButton>
 						<TooltipId>rate_temp_down</TooltipId>
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Pressed>btn_keylock_sampler.png</Pressed>
-							<Unpressed>btn_keylock_sampler.png</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Pressed>btn_keylock_sampler_<Variable name="i"/>.png</Pressed>
-							<Unpressed>btn_keylock_sampler_<Variable name="i"/>.png</Unpressed>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,rate_temp_down</ConfigKey>
@@ -456,6 +467,7 @@ Track control panel.
 					Button - Quantize
 					**********************************************
 					-->
+					<SetVariable name="text">Q</SetVariable>
 					<PushButton>
 						<TooltipId>quantize</TooltipId>
 						<MinimumSize>40,20</MinimumSize>
@@ -464,15 +476,16 @@ Track control panel.
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Pressed>btn_magnet_off.png</Pressed>
-							<Unpressed>btn_magnet_off.png</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<!--Pressed>btn_quantize<Variable name="i"/>_over.png</Pressed>
-							<Unpressed>btn_quantize<Variable name="i"/>_over.png</Unpressed -->
-							<Pressed>btn_magnet_<Variable name="i"/>.png</Pressed>
-							<Unpressed>btn_magnet_<Variable name="i"/>.png</Unpressed>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,quantize</ConfigKey>
