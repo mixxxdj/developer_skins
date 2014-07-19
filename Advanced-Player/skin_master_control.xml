@@ -149,16 +149,19 @@ Master controls : volume, balance, pregain + time.
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Unpressed>btn_text_1x1_off.svg</Unpressed>
-							<Pressed>btn_text_1x1_off.svg</Pressed>
+							<Unpressed>btn_text_1x1.svg</Unpressed>
+							<Pressed>btn_text_1x1.svg</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Unpressed>btn_text_1x1_green.svg</Unpressed>
-							<Pressed>btn_text_1x1_green.svg</Pressed>
+							<SetVariable name="dark_color">#99ff99</SetVariable>
+							<SetVariable name="light_color">#00ff00</SetVariable>
+							<SetVariable name="text_color">#00ff00</SetVariable>
+							<Unpressed>btn_text_1x1.svg</Unpressed>
+							<Pressed>btn_text_1x1.svg</Pressed>
 						</State>
 						<Connection>
-							<ConfigKey>[Master],show_balance_controls</ConfigKey>
+							<ConfigKey persist="true">[Master],show_balance_controls</ConfigKey>
 						</Connection>
 					</PushButton>
 					
@@ -175,16 +178,20 @@ Master controls : volume, balance, pregain + time.
 						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
-							<Unpressed>btn_text_1x1_off.svg</Unpressed>
-							<Pressed>btn_text_1x1_off.svg</Pressed>
+							<Unpressed>btn_text_1x1.svg</Unpressed>
+							<Pressed>btn_text_1x1.svg</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
-							<Unpressed>btn_text_1x1_purple.svg</Unpressed>
-							<Pressed>btn_text_1x1_purple.svg</Pressed>
+							<!--SetVariable name="dark_color">#ed55ff</SetVariable-->
+							<SetVariable name="dark_color">#fe99ff</SetVariable>
+							<SetVariable name="light_color">#ba00ff</SetVariable>
+							<SetVariable name="text_color">#ba00ff</SetVariable>
+							<Unpressed>btn_text_1x1.svg</Unpressed>
+							<Pressed>btn_text_1x1.svg</Pressed>
 						</State>
 						<Connection>
-							<ConfigKey>[Master],show_headphone_controls</ConfigKey>
+							<ConfigKey persist="true">[Master],show_headphone_controls</ConfigKey>
 						</Connection>
 					</PushButton>
 					

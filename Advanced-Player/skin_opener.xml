@@ -18,14 +18,14 @@ Opener.
 				<State>
 					<Number>0</Number>
 					<SetVariable name="text">+</SetVariable>
-					<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
-					<Pressed>btn_text_little_1x1_off.svg</Pressed>
+					<Unpressed>btn_text_little_1x1.svg</Unpressed>
+					<Pressed>btn_text_little_1x1.svg</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
 					<SetVariable name="text">-</SetVariable>
-					<Unpressed>btn_text_little_1x1_off.svg</Unpressed>
-					<Pressed>btn_text_little_1x1_off.svg</Pressed>
+					<Unpressed>btn_text_little_1x1.svg</Unpressed>
+					<Pressed>btn_text_little_1x1.svg</Pressed>
 				</State>
 				<Connection>
 					<ConfigKey persist="true"><Variable name="channel"/>,<Variable name="action"/></ConfigKey>
