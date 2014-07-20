@@ -1,0 +1,18 @@
+<svg
+	width="60"	var-width="width"
+	height="25"	var-height="height"
+	>
+	
+	<rect
+		width="60"	var-width="width"
+		height="25"	var-height="height"
+		style="fill: #ffffff; var( fill, background_color ); "/>
+	
+	<line
+		x1="0"	
+		x2="60"	var-x2="width"
+		y1="13"	var-y1="offset"
+		y2="13"	var-y2="offset"
+		style="stroke: #cccccc; stroke-width: 1;"/>
+	
+</svg>

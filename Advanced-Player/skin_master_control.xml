@@ -12,7 +12,7 @@ Master controls : volume, balance, pregain + time.
 		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<SizePolicy>min,me</SizePolicy>
 		<MinimumSize>40,-1</MinimumSize>
-		<MaximumSize>60,-i</MaximumSize>
+		<MaximumSize>87,-i</MaximumSize>
 		<Children>
 			
 			<Time>
@@ -90,10 +90,14 @@ Master controls : volume, balance, pregain + time.
 				</Children>
 			</WidgetGroup>
 			
+			<SetVariable name="width">69</SetVariable>
+			<SetVariable name="height">33</SetVariable>
+			<SetVariable name="offset">16.5</SetVariable>
+			
 			<SliderComposed>
 				<TooltipId>headMix</TooltipId>
 				<SizePolicy>me,min</SizePolicy>
-				<Slider>slider-horizontal-60x30.svg</Slider>
+				<Slider>slider-horizontal.svg</Slider>
 				<Handle>handle-horizontal-10x30-purple.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>
@@ -108,7 +112,7 @@ Master controls : volume, balance, pregain + time.
 			<SliderComposed>
 				<TooltipId>master_balance</TooltipId>
 				<SizePolicy>f,me</SizePolicy>
-				<Slider>slider-horizontal-60x30.svg</Slider>
+				<Slider>slider-horizontal.svg</Slider>
 				<Handle>handle-horizontal-10x30-green.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>

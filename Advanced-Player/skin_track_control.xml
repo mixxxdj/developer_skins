@@ -719,7 +719,7 @@ Track control panel.
 					
 					<Template src="skin:skin_btn_eq.xml">
 						<SetVariable name="frequency">High</SetVariable>
-						<SetVariable name="height">25</SetVariable>
+						<SetVariable name="offset">19.5</SetVariable>
 					</Template>
 					
 					<Template src="skin:skin_spacer_vx.xml">
@@ -729,6 +729,7 @@ Track control panel.
 					<Template src="skin:skin_btn_eq.xml">
 						<SetVariable name="frequency">Mid</SetVariable>
 						<SetVariable name="height">25</SetVariable>
+						<SetVariable name="offset">13.5</SetVariable>
 					</Template>
 					
 					<Template src="skin:skin_spacer_vx.xml">
@@ -738,6 +739,7 @@ Track control panel.
 					<Template src="skin:skin_btn_eq.xml">
 						<SetVariable name="frequency">Low</SetVariable>
 						<SetVariable name="height">25</SetVariable>
+						<SetVariable name="offset">7.5</SetVariable>
 					</Template>
 					
 				</Children>
