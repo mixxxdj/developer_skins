@@ -48,19 +48,15 @@ Master controls : volume, balance, pregain + time.
 						<MaximumSize>60,170</MaximumSize>
 						<Children>
 							
+							<SetVariable name="width">33</SetVariable>
+							<SetVariable name="height">125</SetVariable>
+							<SetVariable name="offset">16.5</SetVariable>
+							
 							<SetVariable name="color">#00ff00</SetVariable>
+							
 							<SliderComposed>
 								<TooltipId>master_volume</TooltipId>
-								<!--Slider>slider-vertical-30x125.svg</Slider-->
-								<Slider>
-									<svg width="30" height="125">
-										<rect
-											width	="30"
-											height	="125"
-											style	="fill:#ffffff;"/>
-										<line x1="15" y1="0" x2="15" y2="125" stroke="#aaaaaa" stroke-width="1"/>
-									</svg>
-								</Slider>
+								<Slider>slider-vertical.svg</Slider>
 								<Handle>handle-vertical-30x15.svg</Handle>
 								<Horizontal>false</Horizontal>
 								<Connection>
@@ -71,10 +67,15 @@ Master controls : volume, balance, pregain + time.
 						</Children>
 					</WidgetGroup>
 					
+					<SetVariable name="width">33</SetVariable>
+					<SetVariable name="height">125</SetVariable>
+					<SetVariable name="offset">16.5</SetVariable>
+					
 					<SetVariable name="color">#ba00ff</SetVariable>
+					
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>
-						<Slider>slider-vertical-30x125.svg</Slider>
+						<Slider>slider-vertical.svg</Slider>
 						<Handle>handle-vertical-30x15.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Connection>
