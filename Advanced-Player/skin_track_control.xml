@@ -46,13 +46,89 @@ Track control panel.
 				<SetVariable name="height">8</SetVariable>
 			</Template>
 			
-			<Template src="skin:skin_opener.xml">
-				<SetVariable name="action">show_pregain</SetVariable>
-			</Template>
+			
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<MinimumSize>33,15</MinimumSize>
+				<MaximumSize>33,15</MaximumSize>
+				<Children>
+					
+					<!--
+					**********************************************
+					Button- Prelisten / Monitoring
+					**********************************************
+					-->
+					<SetVariable name="text">H</SetVariable>
+					<PushButton>
+						<TooltipId>pfl</TooltipId>
+						<MinimumSize>30,20</MinimumSize>
+						<MaximumSize>40,30</MaximumSize>
+						<NumberStates>2</NumberStates>
+						<RightClickIsPushButton>true</RightClickIsPushButton>
+						<State>
+							<Number>0</Number>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<Template src="skin:skin_opener.xml">
+						<SetVariable name="action">show_pregain</SetVariable>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
 			
 		</Children>
 	</WidgetGroup>
 
+	<!--
+	**********************************************
+	 : Gain
+	**********************************************
+	-->
+
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+			<Size>25,90</Size>
+			<SizePolicy>f,me</SizePolicy>
+			<Children>
+			
+			<SliderComposed>
+				<TooltipId>pregain</TooltipId>
+				<Size>25,90</Size>
+				<Slider>slider-vertical-25x90.svg</Slider>
+				<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
+				<Horizontal>false</Horizontal>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
+				</Connection>
+			</SliderComposed>
+			
+			<Template src="skin:skin_spacer.xml"/>
+			
+		</Children>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,show_pregain</ConfigKey>
+			<BindProperty>visible</BindProperty>
+		</Connection>
+	</WidgetGroup>
+			
 
 	<!--
 	**********************************************
@@ -72,7 +148,6 @@ Track control panel.
 			 Button- Play
 			****************************************
 			-->
-			<SetVariable name="text">P</SetVariable>
 			<PushButton>
 				<TooltipId>play_cue_set</TooltipId>
 				<MinimumSize>20,20</MinimumSize>
@@ -81,16 +156,18 @@ Track control panel.
 				<RightClickIsPushButton>true</RightClickIsPushButton>
 				<State>
 					<Number>0</Number>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
+					<SetVariable name="text">P</SetVariable>
+					<Unpressed>btn_text_1.3x2.svg</Unpressed>
+					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
+					<SetVariable name="text">P</SetVariable>
 					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
 					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
 					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
+					<Unpressed>btn_text_1.3x2.svg</Unpressed>
+					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,play</ConfigKey>
@@ -111,40 +188,6 @@ Track control panel.
 			
 			<!--
 			**********************************************
-			Button- Prelisten / Monitoring
-			**********************************************
-			-->
-			<SetVariable name="text">H</SetVariable>
-			<PushButton>
-				<TooltipId>pfl</TooltipId>
-				<MinimumSize>30,20</MinimumSize>
-				<MaximumSize>40,30</MaximumSize>
-				<NumberStates>2</NumberStates>
-				<RightClickIsPushButton>true</RightClickIsPushButton>
-				<State>
-					<Number>0</Number>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
-				</Connection>
-			</PushButton>
-			
-			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">3</SetVariable>
-			</Template>
-			
-			<!--
-			**********************************************
 			Button- Beat sync
 			**********************************************
 			-->
@@ -154,93 +197,88 @@ Track control panel.
 				<NumberStates>2</NumberStates>
 				<State>
 					<Number>0</Number>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
+					<Unpressed>btn_text_1.3x2.svg</Unpressed>
+					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>
 				<State>
 					<Number>1</Number>
 					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
 					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
 					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
+					<Unpressed>btn_text_1.3x2.svg</Unpressed>
+					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>
 				<Connection>
-					<!--ConfigKey><Variable name="channel"/>,beatsync</ConfigKey-->
 					<ConfigKey><Variable name="channel"/>,sync_enabled</ConfigKey>
 					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 					<ButtonState>LeftButton</ButtonState>
 				</Connection>
-				<!--Connection>
-					<ConfigKey><Variable name="channel"/>,beatsync_tempo</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-					<ButtonState>RightButton</ButtonState>
-				</Connection-->
 			</PushButton>
 			
 			<Template src="skin:skin_spacer_vx.xml">
 				<SetVariable name="height">3</SetVariable>
 			</Template>
 			
-			<!--
-			**********************************************
-			Button- Sync Master
-			**********************************************
-			-->
-			<SetVariable name="text">M</SetVariable>
-			<PushButton>
-				<ObjectName>DeckSyncMaster</ObjectName>
-				<Size>40f,20f</Size>
-				<NumberStates>2</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
-				</State>
-				<State>
-					<Number>1</Number>
-					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-					<Unpressed>btn_text_1x1.svg</Unpressed>
-					<Pressed>btn_text_1x1.svg</Pressed>
-				</State>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,sync_master</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-					<ButtonState>LeftButton</ButtonState>
-				</Connection>
-			</PushButton>
-
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<MinimumSize>33,15</MinimumSize>
+				<MaximumSize>33,15</MaximumSize>
+				<Children>
+					
+					<SetVariable name="text">&lt;</SetVariable>
+					<PushButton>
+						<TooltipId>rate_temp_up</TooltipId>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,rate_temp_up</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<SetVariable name="text">&gt;</SetVariable>
+					<PushButton>
+						<TooltipId>rate_temp_down</TooltipId>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,rate_temp_down</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+				</Children>
+			</WidgetGroup>
+			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">3</SetVariable>
+				<SetVariable name="height">20</SetVariable>
 			</Template>
-			
-			
-			<!--
-			**********************************************
-			Button- BPM Tap
-			**********************************************
-			Little trickery here:
-			BPM tap is transparent png directly over BPM display, so it became BPM and TAP at once,
-			changed tooltip accordingly
-			-->
-			<!--PushButton>
-				<TooltipId>bpm_tap_visual_bpm</TooltipId>
-				<Style></Style>
-				<NumberStates>1</NumberStates>
-				<State>
-					<Number>0</Number>
-					<Pressed>btn_tap1_over.png</Pressed>
-					<Unpressed>btn_tap1.png</Unpressed>
-				</State>
-				<Pos>307,80</Pos>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,bpm_tap</ConfigKey>
-					<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-				</Connection>
-			</PushButton-->
-			
 			
 			
 			<Template src="skin:skin_opener.xml">
@@ -295,44 +333,16 @@ Track control panel.
 						</Connection>
 					</SliderComposed>
 				
-					<WidgetGroup>
+					<!--WidgetGroup>
 						<Layout>vertical</Layout>
 						<SizePolicy>f,min</SizePolicy>
 						<MinimumSize>17,24</MinimumSize>
 						<MaximumSize>17,24</MaximumSize>
 						<Children>
 							
-							<!--
-							**********************************************
-							Button- Key lock
-							**********************************************
-							-->
-							
-							<SetVariable name="text">K</SetVariable>
-							<PushButton>
-								<TooltipId>keylock</TooltipId>
-								<NumberStates>2</NumberStates>
-								<State>
-									<Number>0</Number>
-									<Pressed>btn_text_little_1x1.svg</Pressed>
-									<Unpressed>btn_text_little_1x1.svg</Unpressed>
-								</State>
-								<State>
-									<Number>1</Number>
-									<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-									<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-									<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-									<Pressed>btn_text_little_1x1.svg</Pressed>
-									<Unpressed>btn_text_little_1x1.svg</Unpressed>
-								</State>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
-								</Connection>
-							</PushButton>
-							
 							
 						</Children>
-					</WidgetGroup>
+					</WidgetGroup-->
 					
 				</Children>
 			</WidgetGroup>
@@ -355,31 +365,74 @@ Track control panel.
 						</Connection>
 					</SliderComposed-->
 					
-					<SetVariable name="text">&lt;</SetVariable>
+					<!--
+					**********************************************
+					Button- Sync Master
+					**********************************************
+					-->
+					<SetVariable name="text">M</SetVariable>
 					<PushButton>
-						<TooltipId>rate_temp_up</TooltipId>
+						<ObjectName>DeckSyncMaster</ObjectName>
+						<Size>40f,20f</Size>
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Pressed>btn_text_little_1x1.svg</Pressed>
 							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
 							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
 							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
 							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-							<Pressed>btn_text_little_1x1.svg</Pressed>
 							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
 						</State>
 						<Connection>
-							<ConfigKey><Variable name="channel"/>,rate_temp_up</ConfigKey>
+							<ConfigKey><Variable name="channel"/>,sync_master</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
 						</Connection>
 					</PushButton>
 					
-					<SetVariable name="text">&gt;</SetVariable>
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<!--
+					**********************************************
+					Button - BPM Tap
+					**********************************************
+					-->
+					<SetVariable name="text">T</SetVariable>
 					<PushButton>
-						<TooltipId>rate_temp_down</TooltipId>
+						<TooltipId>bpm_tap</TooltipId>
+						<NumberStates>1</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,bpm_tap</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<!--
+					**********************************************
+					Button - Quantize
+					**********************************************
+					-->
+					<SetVariable name="text">Q</SetVariable>
+					<PushButton>
+						<TooltipId>quantize</TooltipId>
+						<MinimumSize>40,20</MinimumSize>
+						<MaximumSize>60,40</MaximumSize>
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
@@ -395,7 +448,41 @@ Track control panel.
 							<Unpressed>btn_text_little_1x1.svg</Unpressed>
 						</State>
 						<Connection>
-							<ConfigKey><Variable name="channel"/>,rate_temp_down</ConfigKey>
+							<ConfigKey><Variable name="channel"/>,quantize</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<!--
+					**********************************************
+					Button- Key lock
+					**********************************************
+					-->
+					
+					<SetVariable name="text">K</SetVariable>
+					<PushButton>
+						<TooltipId>keylock</TooltipId>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
 						</Connection>
 					</PushButton>
 					
@@ -457,42 +544,6 @@ Track control panel.
 						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
 						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
 					</Template>
-					
-					<Template src="skin:skin_spacer_vx.xml">
-						<SetVariable name="height">3</SetVariable>
-					</Template>
-					
-					<!--
-					**********************************************
-					Button - Quantize
-					**********************************************
-					-->
-					<SetVariable name="text">Q</SetVariable>
-					<PushButton>
-						<TooltipId>quantize</TooltipId>
-						<MinimumSize>40,20</MinimumSize>
-						<MaximumSize>60,40</MaximumSize>
-						<Style></Style>
-						<NumberStates>2</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Pressed>btn_text_little_1x1.svg</Pressed>
-							<Unpressed>btn_text_little_1x1.svg</Unpressed>
-						</State>
-						<State>
-							<Number>1</Number>
-							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-							<Pressed>btn_text_little_1x1.svg</Pressed>
-							<Unpressed>btn_text_little_1x1.svg</Unpressed>
-						</State>
-						<Connection>
-							<ConfigKey><Variable name="channel"/>,quantize</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-					</PushButton>
 					
 				</Children>
 			</WidgetGroup>
@@ -574,38 +625,6 @@ Track control panel.
 	**********************************************
 	-->
 
-	<!--
-	**********************************************
-	Column 6 : Gain
-	**********************************************
-	-->
-
-	<WidgetGroup>
-		<Layout>vertical</Layout>
-			<Size>25,90</Size>
-			<SizePolicy>f,me</SizePolicy>
-			<Children>
-			
-			<SliderComposed>
-				<TooltipId>pregain</TooltipId>
-				<Size>25,90</Size>
-				<Slider>slider-vertical-25x90.svg</Slider>
-				<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
-				<Horizontal>false</Horizontal>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
-				</Connection>
-			</SliderComposed>
-			
-			<Template src="skin:skin_spacer.xml"/>
-			
-		</Children>
-		<Connection>
-			<ConfigKey><Variable name="channel"/>,show_pregain</ConfigKey>
-			<BindProperty>visible</BindProperty>
-		</Connection>
-	</WidgetGroup>
-			
 	<!--
 	**********************************************
 	Column 6 : Frequency killers

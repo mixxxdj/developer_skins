@@ -7,7 +7,7 @@ Opener.
 	<WidgetGroup>
 		<Layout>horizontal</Layout>
 		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
-		<Size>16,21</Size>
+		<Size>15,</Size>
 		<SizePolicy>min,min</SizePolicy>
 		<Children>
 			
