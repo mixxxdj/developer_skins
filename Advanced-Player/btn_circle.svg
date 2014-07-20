@@ -1,0 +1,10 @@
+<svg height="9" width="9">
+	<rect x="0" y="0" width="21" height="21" style="fill:#ffffff; stroke-width:0; var(fill, background_color);" />
+	
+	<circle	cx="4.5" cy="4.5" r="4"
+			style="fill: none; stroke-width:1; stroke: #cccccc; var(stroke, dark_color);" />
+	
+	<circle	cx="4.5" cy="4.5" r="3.5"
+			style="fill: none; stroke-width:1.5; stroke: #999999; var(stroke, light_color);" />
+	
+</svg>

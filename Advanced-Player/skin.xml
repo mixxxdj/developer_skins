@@ -154,10 +154,11 @@
 					<Size>33,-1</Size>
 					<Children>
 						
+						<SetVariable name="color">#00ff00</SetVariable>
 						<SliderComposed>
 							<TooltipId>crossfader</TooltipId>
 							<Slider>slider-vertical-30x125.svg</Slider>
-							<Handle>handle-vertical-30x15-green.svg</Handle>
+							<Handle>handle-vertical-30x15.svg</Handle>
 							<Horizontal>false</Horizontal>
 							<Connection>
 								<ConfigKey>[Master],crossfader</ConfigKey>

@@ -5,18 +5,21 @@ Killer button
 -->
 <Template>
 	
+	
 	<PushButton>
 		<TooltipId>filter<Variable name="frequency"/>Kill</TooltipId>
 		<NumberStates>2</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-			<Unpressed>btn_kill<Variable name="i"/>.png</Unpressed>
+			<Unpressed>btn_circle.svg</Unpressed>
+			<Pressed>btn_circle.svg</Pressed>
 		</State>
 		<State>
 			<Number>1</Number>
-			<Pressed>btn_kill<Variable name="i"/>_over.png</Pressed>
-			<Unpressed>btn_kill<Variable name="i"/>_over.png</Unpressed>
+			<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+			<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+			<Unpressed>btn_circle.svg</Unpressed>
+			<Pressed>btn_circle.svg</Pressed>
 		</State>
 		<Connection>
 			<ConfigKey><Variable name="channel"/>,filter<Variable name="frequency"/>Kill</ConfigKey>

@@ -48,6 +48,7 @@ Master controls : volume, balance, pregain + time.
 						<MaximumSize>60,170</MaximumSize>
 						<Children>
 							
+							<SetVariable name="color">#00ff00</SetVariable>
 							<SliderComposed>
 								<TooltipId>master_volume</TooltipId>
 								<!--Slider>slider-vertical-30x125.svg</Slider-->
@@ -60,7 +61,7 @@ Master controls : volume, balance, pregain + time.
 										<line x1="15" y1="0" x2="15" y2="125" stroke="#aaaaaa" stroke-width="1"/>
 									</svg>
 								</Slider>
-								<Handle>handle-vertical-30x15-green.svg</Handle>
+								<Handle>handle-vertical-30x15.svg</Handle>
 								<Horizontal>false</Horizontal>
 								<Connection>
 									<ConfigKey>[Master],volume</ConfigKey>
@@ -70,10 +71,11 @@ Master controls : volume, balance, pregain + time.
 						</Children>
 					</WidgetGroup>
 					
+					<SetVariable name="color">#ba00ff</SetVariable>
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>
 						<Slider>slider-vertical-30x125.svg</Slider>
-						<Handle>handle-vertical-30x15-purple.svg</Handle>
+						<Handle>handle-vertical-30x15.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Connection>
 							<ConfigKey>[Master],headVolume</ConfigKey>
