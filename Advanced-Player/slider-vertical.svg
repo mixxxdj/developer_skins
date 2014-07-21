@@ -14,4 +14,11 @@
 		y2="79"		var-y2="height"
 		style="stroke-width: 1; stroke: #cccccc;"/>
 	
+	<text	x="7.5"	var-x="text_x"
+			y="62"	var-y="text_y"
+			text-anchor="middle"
+			style="fill:#aaaaaa; font-size: 10px; font-weight: bold; var(fill, text_color);">
+				<Variable name="text"/>
+	</text>
+	
 </svg>

@@ -15,7 +15,10 @@ Track control panel.
 	<Children>
 
 
-
+	<Template src="skin:skin_spacer_vx.xml">
+		<SetVariable name="height">7</SetVariable>
+	</Template>
+	
 	<!--
 	**********************************************
 	Column 1
@@ -24,14 +27,20 @@ Track control panel.
 	<WidgetGroup>
 		<ObjectName>VolumeColumn</ObjectName>
 		<Layout>vertical</Layout>
-		<MinimumSize>30,-1</MinimumSize>
+		<MinimumSize>33,-1</MinimumSize>
 		<Children>
 			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">14</SetVariable>
+			</Template>
+			
 			<SetVariable name="width">25</SetVariable>
-			<!--SetVariable name="height">75</SetVariable-->
 			<SetVariable name="height">69</SetVariable>
 			<SetVariable name="offset">12.5</SetVariable>
-			<SetVariable name="text">vol</SetVariable>
+			
+			<SetVariable name="text">vol.</SetVariable>
+			<SetVariable name="text_x">12.5</SetVariable>
+			<SetVariable name="text_y">65</SetVariable>
 			
 			<SliderComposed>
 				<TooltipId>channel_volume</TooltipId>
@@ -47,7 +56,7 @@ Track control panel.
 			</SliderComposed>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">8</SetVariable>
+				<SetVariable name="height">4</SetVariable>
 			</Template>
 			
 			
@@ -112,10 +121,18 @@ Track control panel.
 			<Size>25,90</Size>
 			<SizePolicy>f,me</SizePolicy>
 			<Children>
-			
+				
+				<Template src="skin:skin_spacer_vx.xml">
+					<SetVariable name="height">14</SetVariable>
+				</Template>
+				
 				<SetVariable name="width">25</SetVariable>
 				<SetVariable name="height">69</SetVariable>
 				<SetVariable name="offset">12.5</SetVariable>
+				
+				<SetVariable name="text">gain</SetVariable>
+				<SetVariable name="text_x">12.5</SetVariable>
+				<SetVariable name="text_y">65</SetVariable>
 				
 				<SliderComposed>
 					<TooltipId>pregain</TooltipId>
@@ -142,6 +159,10 @@ Track control panel.
 	</WidgetGroup>
 			
 
+	<Template src="skin:skin_spacer_vx.xml">
+		<SetVariable name="height">7</SetVariable>
+	</Template>
+	
 	<!--
 	**********************************************
 	Column 2
@@ -154,6 +175,10 @@ Track control panel.
 		<MinimumSize>35,-1</MinimumSize>
 		<MaximumSize>35,-1</MaximumSize>
 		<Children>
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">14</SetVariable>
+			</Template>
 			
 			<!--
 			****************************************
@@ -289,7 +314,7 @@ Track control panel.
 			</WidgetGroup>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">20</SetVariable>
+				<SetVariable name="height">10</SetVariable>
 			</Template>
 			
 			

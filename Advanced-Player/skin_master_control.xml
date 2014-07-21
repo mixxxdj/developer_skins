@@ -16,9 +16,9 @@ Master controls : volume, balance, pregain + time.
 		<Children>
 			
 			<Time>
-				<SizePolicy>me,f</SizePolicy>
+				<SizePolicy>min,f</SizePolicy>
 				<MinimumSize>40,21</MinimumSize>
-				<MaximumSize>60,21</MaximumSize>
+				<MaximumSize>87,21</MaximumSize>
 				<TooltipId>time</TooltipId>
 				<Style>
 					QLabel {
@@ -36,9 +36,9 @@ Master controls : volume, balance, pregain + time.
 			<WidgetGroup>
 				<ObjectName>Master Volume and ...</ObjectName>
 				<Layout>horizontal</Layout>
-				<SizePolicy>me,min</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<MinimumSize>40,-1</MinimumSize>
-				<MaximumSize>60,-1</MaximumSize>
+				<MaximumSize>87,-1</MaximumSize>
 				<Children>
 					
 					<WidgetGroup>
@@ -53,6 +53,10 @@ Master controls : volume, balance, pregain + time.
 							<SetVariable name="offset">16.5</SetVariable>
 							
 							<SetVariable name="color">#00ff00</SetVariable>
+							
+							<SetVariable name="text">master</SetVariable>
+							<SetVariable name="text_x">16.5</SetVariable>
+							<SetVariable name="text_y">120</SetVariable>
 							
 							<SliderComposed>
 								<TooltipId>master_volume</TooltipId>
@@ -72,6 +76,10 @@ Master controls : volume, balance, pregain + time.
 					<SetVariable name="offset">16.5</SetVariable>
 					
 					<SetVariable name="color">#ba00ff</SetVariable>
+					
+					<SetVariable name="text">head</SetVariable>
+					<SetVariable name="text_x">16.5</SetVariable>
+					<SetVariable name="text_y">120</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>
@@ -93,6 +101,10 @@ Master controls : volume, balance, pregain + time.
 			<SetVariable name="width">69</SetVariable>
 			<SetVariable name="height">33</SetVariable>
 			<SetVariable name="offset">16.5</SetVariable>
+			<SetVariable name="text_x">34.5</SetVariable>
+			<SetVariable name="text_y">30</SetVariable>
+			
+			<SetVariable name="text">head. mix</SetVariable>
 			
 			<SliderComposed>
 				<TooltipId>headMix</TooltipId>
@@ -108,6 +120,8 @@ Master controls : volume, balance, pregain + time.
 					<BindProperty>visible</BindProperty>
 				</Connection>
 			</SliderComposed>
+			
+			<SetVariable name="text">balance</SetVariable>
 			
 			<SliderComposed>
 				<TooltipId>master_balance</TooltipId>
@@ -126,28 +140,10 @@ Master controls : volume, balance, pregain + time.
 			
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
-				<SizePolicy>me,min</SizePolicy>
+				<SizePolicy>min,min</SizePolicy>
 				<MinimumSize>40,27</MinimumSize>
-				<MaximumSize>60,-1</MaximumSize>
+				<MaximumSize>87,-1</MaximumSize>
 				<Children>
-					
-					<!--PushButton>
-						<Size>15f,20f</Size>
-						<NumberStates>2</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Unpressed>btn_b_off.png</Unpressed>
-							<Pressed>btn_b_off.png</Pressed>
-						</State>
-						<State>
-							<Number>1</Number>
-							<Unpressed>btn_b_on.png</Unpressed>
-							<Pressed>btn_b_on.png</Pressed>
-						</State>
-						<Connection>
-							<ConfigKey>[Master],show_balance_controls</ConfigKey>
-						</Connection>
-					</PushButton-->
 					
 					<SetVariable name="text">B</SetVariable>
 					<PushButton>
@@ -207,9 +203,7 @@ Master controls : volume, balance, pregain + time.
 			
 		</Children>
 	</WidgetGroup>
-
-
-
+	
 </Template>
 
 

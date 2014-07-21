@@ -118,7 +118,15 @@
 			<SizePolicy>me,max</SizePolicy>
 			<Children>
 				
+				<Template src="skin:skin_spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
+				
 				<Template src="skin:skin_master_control.xml">
+				</Template>
+				
+				<Template src="skin:skin_spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
 				</Template>
 				
 				<WidgetGroup>
@@ -146,6 +154,9 @@
 					</Children>
 				</WidgetGroup>
 				
+				<Template src="skin:skin_spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
 				
 				<WidgetGroup>
 					<ObjectName>Crossfader</ObjectName>
@@ -159,6 +170,10 @@
 						<SetVariable name="offset">16.5</SetVariable>
 						
 						<SetVariable name="color">#00ff00</SetVariable>
+						
+						<SetVariable name="text">xfader</SetVariable>
+						<SetVariable name="text_x">16.5</SetVariable>
+						<SetVariable name="text_y">120</SetVariable>
 						
 						<SliderComposed>
 							<TooltipId>crossfader</TooltipId>
@@ -176,6 +191,10 @@
 					
 					</Children>
 				</WidgetGroup>
+				
+				<Template src="skin:skin_spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
 				
 			</Children>
 		</WidgetGroup>
