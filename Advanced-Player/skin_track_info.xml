@@ -223,22 +223,29 @@ Track info panel.
 							-->
 							<VuMeter>
 								<TooltipId>channel_VuMeter</TooltipId>
-								<SizePolicy>min,f</SizePolicy>
-								<Size>i,20</Size>
-								<PathVu>btn_volume_display_master1_over.png</PathVu>
-								<PathBack>btn_volume_display_master1.png</PathBack>
+								<SizePolicy>min,min</SizePolicy>
+								
+								<PathVu>vumeter_on.svg</PathVu>
+								<PathBack>vumeter_off.svg</PathBack>
+								
 								<Alignment>left</Alignment>
 								<Horizontal>true</Horizontal>
+								
 								<PeakHoldSize>5</PeakHoldSize>
 								<PeakHoldTime>500</PeakHoldTime>
 								<PeakFallTime>50</PeakFallTime>
 								<PeakFallStep>1</PeakFallStep>
+								
 								<Connection>
 									<ConfigKey><Variable name="channel"/>,VuMeter</ConfigKey>
 								</Connection>
 							</VuMeter>
-
-
+							
+							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">3</SetVariable>
+							</Template>
+							
 							<!--
 							**********************************************
 							Visual- Volume peak indicator
@@ -247,10 +254,9 @@ Track info panel.
 							<StatusLight>
 								<TooltipId>PeakIndicator</TooltipId>
 								<Alignment>left</Alignment>
-								<SizePolicy>min,f</SizePolicy>
-								<Size>i,20</Size>
-								<PathStatusLight>btn_clipping1_over.png</PathStatusLight>
-								<PathBack>btn_clipping1.png</PathBack>
+								<SizePolicy>min,min</SizePolicy>
+								<PathStatusLight>led_on.svg</PathStatusLight>
+								<PathBack>led_off.svg</PathBack>
 								<Connection>
 									<ConfigKey><Variable name="channel"/>,PeakIndicator</ConfigKey>
 								</Connection>
