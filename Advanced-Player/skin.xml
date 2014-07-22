@@ -161,19 +161,19 @@
 				<WidgetGroup>
 					<ObjectName>Crossfader</ObjectName>
 					<Layout>vertical</Layout>
-					<SizePolicy>f,me</SizePolicy>
+					<SizePolicy>f,min</SizePolicy>
 					<Size>33,-1</Size>
 					<Children>
 						
 						<SetVariable name="width">33</SetVariable>
-						<SetVariable name="height">125</SetVariable>
+						<SetVariable name="height">111</SetVariable>
 						<SetVariable name="offset">16.5</SetVariable>
 						
 						<SetVariable name="color">#00ff00</SetVariable>
 						
 						<SetVariable name="text">xfader</SetVariable>
 						<SetVariable name="text_x">16.5</SetVariable>
-						<SetVariable name="text_y">120</SetVariable>
+						<SetVariable name="text_y">106</SetVariable>
 						
 						<SliderComposed>
 							<TooltipId>crossfader</TooltipId>
@@ -188,6 +188,12 @@
 								</Transform>
 							</Connection>
 						</SliderComposed>
+						
+						<Template src="skin:skin_spacer_vx.xml">
+							<SetVariable name="height">7</SetVariable>
+						</Template>
+						
+					
 					
 					</Children>
 				</WidgetGroup>

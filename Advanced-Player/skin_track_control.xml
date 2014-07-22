@@ -31,7 +31,7 @@ Track control panel.
 		<Children>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">14</SetVariable>
+				<SetVariable name="height">12</SetVariable>
 			</Template>
 			
 			<SetVariable name="width">25</SetVariable>
@@ -56,7 +56,7 @@ Track control panel.
 			</SliderComposed>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">4</SetVariable>
+				<SetVariable name="height">6</SetVariable>
 			</Template>
 			
 			
@@ -136,7 +136,6 @@ Track control panel.
 				
 				<SliderComposed>
 					<TooltipId>pregain</TooltipId>
-					<Size>25,90</Size>
 					<Slider>slider-vertical.svg</Slider>
 					<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
 					<Horizontal>false</Horizontal>
@@ -203,6 +202,7 @@ Track control panel.
 					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
 					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
 					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+					<SetVariable name="background_color">#FF9955</SetVariable>
 					<Unpressed>btn_text_1.3x2.svg</Unpressed>
 					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>
@@ -339,6 +339,10 @@ Track control panel.
 	**********************************************
 	-->
 
+	<Template src="skin:skin_spacer_vx.xml">
+		<SetVariable name="height">7</SetVariable>
+	</Template>
+	
 	<!--
 	**********************************************
 	Column 4
@@ -353,18 +357,22 @@ Track control panel.
 			<WidgetGroup>
 				<Layout>vertical</Layout>
 				<SizePolicy>min,me</SizePolicy>
-				<MinimumSize>21,-1</MinimumSize>
-				<MaximumSize>21,-1</MaximumSize>
+				<MinimumSize>25,-1</MinimumSize>
+				<MaximumSize>25,-1</MaximumSize>
 				<Children>
 					
-					<SetVariable name="width">15</SetVariable>
+					<SetVariable name="width">25</SetVariable>
 					<SetVariable name="height">69</SetVariable>
-					<SetVariable name="offset">7.5</SetVariable>
+					<SetVariable name="offset">12.5</SetVariable>
+					
+					<SetVariable name="text">pitch</SetVariable>
+					<SetVariable name="text_x">12.5</SetVariable>
+					<SetVariable name="text_y">65</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>pitch_rate</TooltipId>
 						<Slider>slider-vertical.svg</Slider>
-						<Handle>handle-vertical-15x12-<Variable name="i"/>.svg</Handle>
+						<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Alignment>center</Alignment>
 						<Connection>
@@ -379,6 +387,10 @@ Track control panel.
 					
 				</Children>
 			</WidgetGroup>
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">7</SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
@@ -513,8 +525,8 @@ Track control panel.
 					
 				</Children>
 			</WidgetGroup>
-					
-					
+			
+			
 			<!--
 			**********************************************
 			Button- Hotcue
@@ -703,7 +715,7 @@ Track control panel.
 			</WidgetGroup>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">13</SetVariable>
+				<SetVariable name="height">12</SetVariable>
 			</Template>
 			
 			<Template src="skin:skin_opener.xml">
@@ -711,7 +723,7 @@ Track control panel.
 			</Template>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">1</SetVariable>
+				<SetVariable name="height">2</SetVariable>
 			</Template>
 			
 		</Children>
