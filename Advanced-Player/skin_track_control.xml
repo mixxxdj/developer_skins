@@ -199,11 +199,10 @@ Track control panel.
 				<State>
 					<Number>1</Number>
 					<SetVariable name="text">P</SetVariable>
-					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
 					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
 					<!--SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable-->
 					<SetVariable name="text_color">#aaaaaa</SetVariable>
-					<SetVariable name="background_color">url(#grad1)</SetVariable>
+					<SetVariable name="background_color">url(#grad<Variable name="i"/>)</SetVariable>
 					<Unpressed>btn_text_1.3x2.svg</Unpressed>
 					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>

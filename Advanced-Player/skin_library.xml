@@ -8,7 +8,7 @@
     <ObjectName>LibraryContainer</ObjectName>
     <!-- Fixed is interesting here. Ignore is the only thing that lets it shrink
          to nothing. -->
-    <SizePolicy>me,i</SizePolicy>
+    <SizePolicy>me,me</SizePolicy>
     <MinimumSize>0,0</MinimumSize>
     <Children>
       <!-- Main Library -->
