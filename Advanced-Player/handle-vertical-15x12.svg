@@ -4,14 +4,14 @@
 			style="fill:#ffffff; stroke-width:0; stroke:#eeeeee; stroke-linecap:sqare;" />
 	
 	<path	d="M 1 4 l 0 -4 l 13 0 l 0 4"
-			style="fill: none; stroke-width: 1; stroke:#aaaaaa" />
+			style="fill: none; stroke-width: 1; stroke-opacity: 0.5; var( stroke, light_color );" />
 	<path	d="M 1 5 l 0 4 l 13 0 l 0 -4"
-			style="fill: none; stroke-width: 1; stroke:#aaaaaa" />
+			style="fill: none; stroke-width: 1; var( stroke, light_color );" />
 	
 	<path	d="M 0.5 4 l 0 -4.5 l 14 0 l 0 4.5"
-			style="fill:none;stroke-width:1;stroke:#999999" />
+			style="fill:none; stroke-width:1; stroke-opacity: 0.5;  var( stroke, light_color );" />
 	<path	d="M 0.5 5 l 0 4.5 l 14 0 l 0 -4.5"
-			style="fill:none;stroke-width:1;stroke:#999999" />
+			style="fill:none; stroke-width:1; var( stroke, light_color );" />
 	
 	<line	x1="2" y1="4.5" x2="13" y2="4.5"
 			style="stroke: #13a9fc; stroke-width: 1; var( stroke, color );"/>

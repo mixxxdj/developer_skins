@@ -20,13 +20,6 @@ Master controls : volume, balance, pregain + time.
 				<MinimumSize>40,21</MinimumSize>
 				<MaximumSize>87,21</MaximumSize>
 				<TooltipId>time</TooltipId>
-				<Style>
-					QLabel {
-						font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color	: transparent;
-						color				: #ffffff;
-					}
-				</Style>
 				<Alignment>center</Alignment>
 				<ShowSeconds>false</ShowSeconds>
 				<ClockFormat>24</ClockFormat>
@@ -49,14 +42,14 @@ Master controls : volume, balance, pregain + time.
 						<Children>
 							
 							<SetVariable name="width">33</SetVariable>
-							<SetVariable name="height">125</SetVariable>
+							<SetVariable name="height">105</SetVariable>
 							<SetVariable name="offset">16.5</SetVariable>
 							
 							<SetVariable name="color">#00ff00</SetVariable>
 							
 							<SetVariable name="text">master</SetVariable>
 							<SetVariable name="text_x">16.5</SetVariable>
-							<SetVariable name="text_y">120</SetVariable>
+							<SetVariable name="text_y">100</SetVariable>
 							
 							<SliderComposed>
 								<TooltipId>master_volume</TooltipId>
@@ -72,14 +65,14 @@ Master controls : volume, balance, pregain + time.
 					</WidgetGroup>
 					
 					<SetVariable name="width">33</SetVariable>
-					<SetVariable name="height">125</SetVariable>
+					<SetVariable name="height">105</SetVariable>
 					<SetVariable name="offset">16.5</SetVariable>
 					
 					<SetVariable name="color">#ba00ff</SetVariable>
 					
 					<SetVariable name="text">head</SetVariable>
 					<SetVariable name="text_x">16.5</SetVariable>
-					<SetVariable name="text_y">120</SetVariable>
+					<SetVariable name="text_y">100</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>
@@ -90,7 +83,7 @@ Master controls : volume, balance, pregain + time.
 							<ConfigKey>[Master],headVolume</ConfigKey>
 						</Connection>
 						<Connection>
-							<ConfigKey>[Master],show_headphone_controls</ConfigKey>
+							<ConfigKey persist="true">[Master],show_headphone_controls</ConfigKey>
 							<BindProperty>visible</BindProperty>
 						</Connection>
 					</SliderComposed>
@@ -98,42 +91,57 @@ Master controls : volume, balance, pregain + time.
 				</Children>
 			</WidgetGroup>
 			
+			
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<SizePolicy>min,min</SizePolicy>
+				<MinimumSize>33,21</MinimumSize>
+				<MaximumSize>69,21</MaximumSize>
+				<Children>
+			
+					<SetVariable name="width">33</SetVariable>
+					<SetVariable name="height">21</SetVariable>
+					<SetVariable name="offset">16.5</SetVariable>
+					<SetVariable name="text_x">34.5</SetVariable>
+					<SetVariable name="text_y">30</SetVariable>
+					
+					<SetVariable name="text">head. mix</SetVariable>
+					<SetVariable name="color">#ba00ff</SetVariable>
+					
+					<SliderComposed>
+						<TooltipId>headMix</TooltipId>
+						<SizePolicy>me,min</SizePolicy>
+						<Slider>slider-horizontal.svg</Slider>
+						<Handle>handle-horizontal-10x30.svg</Handle>
+						<Horizontal>true</Horizontal>
+						<Connection>
+							<ConfigKey>[Master],headMix</ConfigKey>
+						</Connection>
+						<Connection>
+							<ConfigKey persist="true">[Master],show_headphone_controls</ConfigKey>
+							<BindProperty>visible</BindProperty>
+						</Connection>
+					</SliderComposed>
+					
+				</Children>
+			</WidgetGroup>
+			
+			
 			<SetVariable name="width">69</SetVariable>
-			<SetVariable name="height">33</SetVariable>
-			<SetVariable name="offset">16.5</SetVariable>
-			<SetVariable name="text_x">34.5</SetVariable>
-			<SetVariable name="text_y">30</SetVariable>
-			
-			<SetVariable name="text">head. mix</SetVariable>
-			
-			<SliderComposed>
-				<TooltipId>headMix</TooltipId>
-				<SizePolicy>me,min</SizePolicy>
-				<Slider>slider-horizontal.svg</Slider>
-				<Handle>handle-horizontal-10x30-purple.svg</Handle>
-				<Horizontal>true</Horizontal>
-				<Connection>
-					<ConfigKey>[Master],headMix</ConfigKey>
-				</Connection>
-				<Connection>
-					<ConfigKey>[Master],show_headphone_controls</ConfigKey>
-					<BindProperty>visible</BindProperty>
-				</Connection>
-			</SliderComposed>
-			
 			<SetVariable name="text">balance</SetVariable>
+			<SetVariable name="color">#00ff00</SetVariable>
 			
 			<SliderComposed>
 				<TooltipId>master_balance</TooltipId>
 				<SizePolicy>f,me</SizePolicy>
 				<Slider>slider-horizontal.svg</Slider>
-				<Handle>handle-horizontal-10x30-green.svg</Handle>
+				<Handle>handle-horizontal-10x30.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>
 					<ConfigKey>[Master],balance</ConfigKey>
 				</Connection>
 				<Connection>
-					<ConfigKey>[Master],show_balance_controls</ConfigKey>
+					<ConfigKey persist="true">[Master],show_balance_controls</ConfigKey>
 					<BindProperty>visible</BindProperty>
 				</Connection>
 			</SliderComposed>
@@ -152,16 +160,16 @@ Master controls : volume, balance, pregain + time.
 						<NumberStates>2</NumberStates>
 						<State>
 							<Number>0</Number>
-							<Unpressed>btn_text_1x1.svg</Unpressed>
-							<Pressed>btn_text_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
 							<SetVariable name="dark_color">#99ff99</SetVariable>
 							<SetVariable name="light_color">#00ff00</SetVariable>
 							<SetVariable name="text_color">#00ff00</SetVariable>
-							<Unpressed>btn_text_1x1.svg</Unpressed>
-							<Pressed>btn_text_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
 						</State>
 						<Connection>
 							<ConfigKey persist="true">[Master],show_balance_controls</ConfigKey>
@@ -181,16 +189,16 @@ Master controls : volume, balance, pregain + time.
 						<RightClickIsPushButton>true</RightClickIsPushButton>
 						<State>
 							<Number>0</Number>
-							<Unpressed>btn_text_1x1.svg</Unpressed>
-							<Pressed>btn_text_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
 						</State>
 						<State>
 							<Number>1</Number>
 							<SetVariable name="dark_color">#fe99ff</SetVariable>
 							<SetVariable name="light_color">#ba00ff</SetVariable>
 							<SetVariable name="text_color">#ba00ff</SetVariable>
-							<Unpressed>btn_text_1x1.svg</Unpressed>
-							<Pressed>btn_text_1x1.svg</Pressed>
+							<Unpressed>btn_text_little_1x1.svg</Unpressed>
+							<Pressed>btn_text_little_1x1.svg</Pressed>
 						</State>
 						<Connection>
 							<ConfigKey persist="true">[Master],show_headphone_controls</ConfigKey>

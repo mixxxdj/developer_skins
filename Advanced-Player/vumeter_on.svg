@@ -7,18 +7,19 @@
 		</linearGradient>
 	</defs>
 	
-	<rect x="0" y="0" width="69" height="15" style="fill:#ffffff; stroke-width:0;" />
+	<rect x="0" y="0" width="69" height="15" style="fill:#191919; stroke-width:0;" />
 	
 	<!-- background_color seems broken by schemes (odd antialiazing of texts) -->
 	<rect	x="1"
 			y="0.5"
 			width="67"
-			height="13"
+			height="14"
 			style="fill:url(#grad1); stroke-width:0;" />
 	
-	<rect	x="1.5" y="1.5" width="67" height="13"
-			style="fill:none; stroke-width:1; stroke:#dddddd; var(stroke, dark_color);"/>
 	<rect	x="0.5" y="0.5" width="68" height="14" rx="1" ry="1"
 			style="fill:none; stroke-width:1; stroke:#999999; var(stroke, light_color);" />
+	
+	<!--rect	x="1.5" y="1" width="67" height="13"
+			style="fill:none; stroke-width:1; stroke:#dddddd; stroke-opacity: 0.5; var(stroke, light_color);"/-->
 	
 </svg>

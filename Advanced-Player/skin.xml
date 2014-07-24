@@ -41,6 +41,10 @@
 	
 	<Schemes>
 		<Scheme>
+			<Name>5pm (Classic Mixxx)</Name>
+			<Filters/>
+		</Scheme>
+		<Scheme>
 			<Name>11pm (Dark Mixxx)</Name>
 			<Filters>
 				<Invert/>
@@ -70,10 +74,6 @@
 					<Amount>-50</Amount>
 				</Add>
 			</Filters>
-		</Scheme>
-		<Scheme>
-			<Name>5pm (Classic Mixxx)</Name>
-			<Filters/>
 		</Scheme>
 	</Schemes>
 	

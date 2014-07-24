@@ -47,7 +47,7 @@ Track control panel.
 				<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 				<SizePoicy>min,min</SizePoicy>
 				<Slider>slider-vertical.svg</Slider>
-				<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
+				<Handle>handle-vertical-25x12.svg</Handle>
 				<Horizontal>false</Horizontal>
 				<Connection>
 					<ConfigKey><Variable name="channel"/>,volume</ConfigKey>
@@ -137,7 +137,7 @@ Track control panel.
 				<SliderComposed>
 					<TooltipId>pregain</TooltipId>
 					<Slider>slider-vertical.svg</Slider>
-					<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
+					<Handle>handle-vertical-25x12.svg</Handle>
 					<Horizontal>false</Horizontal>
 					<Connection>
 						<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
@@ -201,8 +201,9 @@ Track control panel.
 					<SetVariable name="text">P</SetVariable>
 					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
 					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
-					<SetVariable name="background_color">#FF9955</SetVariable>
+					<!--SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable-->
+					<SetVariable name="text_color">#aaaaaa</SetVariable>
+					<SetVariable name="background_color">url(#grad1)</SetVariable>
 					<Unpressed>btn_text_1.3x2.svg</Unpressed>
 					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>
@@ -372,7 +373,7 @@ Track control panel.
 					<SliderComposed>
 						<TooltipId>pitch_rate</TooltipId>
 						<Slider>slider-vertical.svg</Slider>
-						<Handle>handle-vertical-25x12-<Variable name="i"/>.svg</Handle>
+						<Handle>handle-vertical-25x12.svg</Handle>
 						<Horizontal>false</Horizontal>
 						<Alignment>center</Alignment>
 						<Connection>
@@ -604,9 +605,6 @@ Track control panel.
 					
 					<Template src="skin:skin_btn_number.xml">
 						<SetVariable name="tooltip_id">beatloop</SetVariable>
-						<SetVariable name="dark_color">#dddddd</SetVariable>
-						<SetVariable name="light_color">#999999</SetVariable>
-						<SetVariable name="text_color">#aaaaaa</SetVariable>
 						<SetVariable name="number">4</SetVariable>
 						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
 						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
@@ -755,6 +753,9 @@ Track control panel.
 				<Children>
 					
 					<Template src="skin:skin_btn_eq.xml">
+						<SetVariable name="text">High</SetVariable>
+						<SetVariable name="text_x">55</SetVariable>
+						<SetVariable name="text_y">15</SetVariable>
 						<SetVariable name="frequency">High</SetVariable>
 						<SetVariable name="offset">19.5</SetVariable>
 					</Template>
@@ -764,6 +765,9 @@ Track control panel.
 					</Template>
 					
 					<Template src="skin:skin_btn_eq.xml">
+						<SetVariable name="text">Mid</SetVariable>
+						<SetVariable name="text_x">55</SetVariable>
+						<SetVariable name="text_y">25</SetVariable>
 						<SetVariable name="frequency">Mid</SetVariable>
 						<SetVariable name="height">25</SetVariable>
 						<SetVariable name="offset">13.5</SetVariable>
@@ -774,6 +778,9 @@ Track control panel.
 					</Template>
 					
 					<Template src="skin:skin_btn_eq.xml">
+						<SetVariable name="text">Low</SetVariable>
+						<SetVariable name="text_x">55</SetVariable>
+						<SetVariable name="text_y">20</SetVariable>
 						<SetVariable name="frequency">Low</SetVariable>
 						<SetVariable name="height">25</SetVariable>
 						<SetVariable name="offset">7.5</SetVariable>

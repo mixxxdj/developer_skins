@@ -32,13 +32,9 @@ Track info panel.
 						<TooltipId>track_artist</TooltipId>
 						<MinimumSize>150,-1</MinimumSize>
 						<MaximumSize>150,-1</MaximumSize>
-						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color: transparent; text-align: right; padding-left: 1px; }
-						</Style>
 						<Alignment>left</Alignment>
 						<Property>artist</Property>
 						<Channel><Variable name="i"/></Channel>
-						<!--Size>190f,16</Size-->
 					</TrackProperty>
 					
 					
@@ -51,9 +47,6 @@ Track info panel.
 						<TooltipId>track_title</TooltipId>
 						<SizePolicy>me,me</SizePolicy>
 						<MaximumSize>i,20</MaximumSize>
-						<Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color: transparent; text-align: right; padding-left: 1px; }
-						</Style>
 						<Alignment>left</Alignment>
 						<Property>title</Property>
 						<Channel><Variable name="i"/></Channel>
@@ -66,9 +59,6 @@ Track info panel.
 					-->
 					<TrackProperty>
 						<TooltipId>track_times_played</TooltipId>
-						<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-						background-color: transparent; text-align: right; padding-left: 1px; }
-						</Style>
 						<Property>times_played</Property>
 						<Channel><Variable name="i"/></Channel>
 					</TrackProperty>
@@ -148,9 +138,6 @@ Track info panel.
 							<NumberBpm>
 								<TooltipId>visual_bpm</TooltipId>
 								<SizePolicy>min,me</SizePolicy>
-								<Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-								background-color: transparent; text-align: left; padding-left: 1px; }
-								</Style>
 								<Channel><Variable name="i"/></Channel>
 								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
 								<Alignment>right</Alignment>
@@ -161,9 +148,6 @@ Track info panel.
 							
 							<NumberRate>
 								<TooltipId>rate_display</TooltipId>
-								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-								background-color: transparent; text-align: right; }
-								</Style>
 								<Channel><Variable name="i"/></Channel>
 								<NumberOfDigits>2</NumberOfDigits>
 							</NumberRate>
@@ -176,9 +160,6 @@ Track info panel.
 							<TrackProperty>
 								<TooltipId>track_times_played</TooltipId>
 								<SizePolicy>min,me</SizePolicy>
-								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-								background-color: transparent; text-align: right; padding-left: 1px; }
-								</Style>
 								<Property>key</Property>
 								<Channel><Variable name="i"/></Channel>
 							</TrackProperty>
@@ -201,9 +182,6 @@ Track info panel.
 							-->
 							<NumberPos>
 								<TooltipId>track_time</TooltipId>
-								<Style>QLabel { font: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-								background-color: transparent; text-align: right; padding-left: 1px; }
-								</Style>
 								<Channel><Variable name="i"/></Channel>
 								<SizePolicy>min,f</SizePolicy>
 								<Size>i,20</Size>
@@ -214,6 +192,21 @@ Track info panel.
 									<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
 								</Connection>
 							</NumberPos>
+							
+							<!--
+							**********************************************
+							Text- Playing position / Time remaining
+							**********************************************
+							-->
+							<TrackProperty>
+								<TooltipId>track_duration</TooltipId>
+								<Channel><Variable name="i"/></Channel>
+								<Property>durationFormatted</Property>
+								<SizePolicy>min,f</SizePolicy>
+								<Size>i,20</Size>
+								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
+								<Alignment>left</Alignment>
+							</TrackProperty>
 							
 							<!--
 							**********************************************

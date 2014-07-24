@@ -4,6 +4,118 @@
 }
 
 
+
+QLabel {
+    font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+    background-color	: transparent;
+    color				: #ffffff;
+}
+
+
+/* Library styling is hard */
+
+QTableView, QTextBrowser, QTreeView {
+  border: 1px solid #585858;
+  font: 15px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  color: #cfb32c;
+  background-color: #0f0f0f;
+  alternate-background-color: #1a1a1a;
+}
+
+/* checkbox in library "Played" column */
+QTableView::indicator { width: 12px; height: 12px;}
+QTableView::indicator:checked { background: url(skin:/style/style_checkbox_checked.png);}
+QTableView::indicator:unchecked { background: url(skin:/style/style_checkbox_unchecked.png);}
+QTableView::item:selected {
+  color: #cfb32c;
+  background-color: #725309;
+}
+
+/* Button in library "Preview" column */
+QPushButton#LibraryPreviewButton { 
+  width: 23px; 
+  height: 12px; 
+  background: transparent; 
+  border: 0px; 
+}
+/*QPushButton#LibraryPreviewButton:focus { 
+  background-color: #725309;
+}*/
+/*#LibraryBPMWidget, #LibraryBPMButton, #LibraryBPMSpinBox {
+  background-color: #ff0; 
+}*/
+
+QPushButton#LibraryPreviewButton:!checked{ image: url(skin:/style/style_library_preview_play.png); }
+QPushButton#LibraryPreviewButton:checked{ image: url(skin:/style/style_library_preview_pause.png); }
+
+QHeaderView { 
+  font: 13px/15px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; 
+  color: #cfb32c;
+  background-color: #0f0f0f;
+}
+QHeaderView::section {
+  height: 18px;
+  border: 1px solid #585858;
+  border-left: 0px;
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
+}
+
+
+
+
+
+
+/* QScrollbar styling is even harder */
+QScrollBar:horizontal {
+  border: 1px solid #585858;
+  min-width: 12px;
+  height: 15px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  padding: 1px;
+}
+QScrollBar:vertical {
+  border: 1px solid #585858;
+  min-height: 12px;
+  width: 15px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  padding: 1px;
+}
+/* "add-page" and "sub-page" are the gutter of the scrollbar */
+QScrollBar::add-page, QScrollBar::sub-page {
+  min-width: 15px;
+  min-height: 15px;
+  border: 2px;
+  background-color: #1a1a1a;
+  border-radius: 3px;
+} 
+QScrollBar::handle:horizontal {
+  min-width: 25px; 
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #725309, stop:1 #412f05);
+  border-radius: 3px;
+  border: 1px solid #725309;
+} 
+QScrollBar::handle:vertical {
+  min-height: 25px; 
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #725309, stop:1 #412f05);
+  border-radius: 3px;
+  border: 1px solid #725309;
+} 
+/* Turn off buttons */
+QScrollBar::add-line:horizontal, QScrollBar::add-line:vertical {
+  width: 0px;
+  height: 0px;
+  border: 0px solid white;
+}
+QScrollBar::sub-line:horizontal, QScrollBar::sub-line:vertical {
+  width: 0px;
+  height: 0px;
+  border: 0px solid white;
+} 
+
+
+
 /** /
 
 #Deck1 {

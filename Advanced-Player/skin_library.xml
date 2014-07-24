@@ -18,12 +18,7 @@
         <!-- Fixed is interesting here. Ignore is the only thing that lets it
              shrink to nothing. -->
         <SizePolicy>me,f</SizePolicy>
-        <MinimumSize>0,0</MinimumSize>
-				<BgColor>#FFFFFF</BgColor>
-				<FgColor>#191919</FgColor>
-				<BgColorRowEven>#FFFFFF</BgColorRowEven>
-				<BgColorRowUneven>#E8F8F8</BgColorRowUneven>
-				<LegacyTableViewStyle>true</LegacyTableViewStyle>
+        <MinimumSize>0,100</MinimumSize>
         <Children>
           <Splitter>
             <ObjectName>LibrarySplitter</ObjectName>

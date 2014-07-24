@@ -5,14 +5,14 @@
 	<rect
 		width="15"	var-width="width"
 		height="79"	var-height="height"
-		style="fill: #ffffff; var( fill, background_color );" />
+		style="fill: #191919; var( fill, background_color );" />
 	
 	<line
 		x1="7.5"	var-x1="offset"
 		x2="7.5"	var-x2="offset"
 		y1="0"
 		y2="79"		var-y2="height"
-		style="stroke-width: 1; stroke: #cccccc;"/>
+		style="stroke-width: 1; stroke: #888888;"/>
 	
 	<text	x="7.5"	var-x="text_x"
 			y="62"	var-y="text_y"
