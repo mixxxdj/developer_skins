@@ -34,6 +34,8 @@ Track control panel.
 				<SetVariable name="height">12</SetVariable>
 			</Template>
 			
+			<SetVariable name="color"><Variable name="track_light_color"/></SetVariable>
+			
 			<SetVariable name="width">25</SetVariable>
 			<SetVariable name="height">69</SetVariable>
 			<SetVariable name="offset">12.5</SetVariable>
@@ -202,7 +204,7 @@ Track control panel.
 					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
 					<!--SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable-->
 					<SetVariable name="text_color">#aaaaaa</SetVariable>
-					<SetVariable name="background_color">url(#grad<Variable name="i"/>)</SetVariable>
+					<SetVariable name="background_color">url(#grad)</SetVariable>
 					<Unpressed>btn_text_1.3x2.svg</Unpressed>
 					<Pressed>btn_text_1.3x2.svg</Pressed>
 				</State>

@@ -17,7 +17,8 @@ QLabel {
 QTableView, QTextBrowser, QTreeView {
   border: 1px solid #585858;
   font: 15px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-  color: #cfb32c;
+  /* color: #cfb32c; */
+  color: #bbbbbb;
   background-color: #0f0f0f;
   alternate-background-color: #1a1a1a;
 }
