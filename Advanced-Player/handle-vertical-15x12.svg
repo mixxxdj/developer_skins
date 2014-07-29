@@ -9,7 +9,7 @@
 			style="fill: none; stroke-width: 1; var( stroke, light_color );" />
 	
 	<path	d="M 0.5 4 l 0 -4.5 l 14 0 l 0 4.5"
-			style="fill:none; stroke-width:1; stroke-opacity: 0.5;  var( stroke, light_color );" />
+			style="fill:none; stroke-width:1; stroke-opacity: 0.5; var( stroke, light_color );" />
 	<path	d="M 0.5 5 l 0 4.5 l 14 0 l 0 -4.5"
 			style="fill:none; stroke-width:1; var( stroke, light_color );" />
 	
