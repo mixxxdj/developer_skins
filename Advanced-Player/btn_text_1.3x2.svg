@@ -1,45 +1,49 @@
-<svg width="33" height="21">
-
+<svg width="33" height="21" xmlns="http://www.w3.org/2000/svg">
+	
 	<defs>
 		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
 			<stop offset="0%"	style="stop-color: #333333; stop-opacity: 1;" />
 			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
 		</linearGradient>
 		
+		<linearGradient id="grad_transparent_light" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #dddddd; stop-opacity: 0.2;" />
+			<stop offset="100%"	style="stop-color: #dddddd; stop-opacity: 0;" />
+		</linearGradient>
+		
 		<linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
 			<stop offset="0%"	style="stop-color: #13a9fc; stop-opacity: 0.5; var( stop-color, track_light_color );" />
 			<stop offset="100%"	style="stop-color: #13a9fc; stop-opacity: 0.2; var( stop-color, track_light_color );" />
 		</linearGradient>
-		
 	</defs>
 	
 	
+	<g transform="translate( 0.5, 0.5 )">
 	
-	<rect x="0" y="0" width="33" height="21" style="fill:#191919; stroke-width:0;" />
-	
-	<!-- background_color seems broken by schemes (odd antialiazing of texts) -->
-	<rect	x="1"
-			y="1"
-			width="31"
-			height="21"
-			style="fill:url(#grad_def); stroke-width:0; var(fill, background_color);" />
-	
-	<rect	x="1" y="1" width="31" height="19"
-			style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5;"/>
-	
-	<rect	x="0.5" y="0.5" width="32" height="20" rx="1" ry="1"
-			style="fill:none; stroke-width:1; stroke:#dddddd; var(stroke, light_color);" />
-	
-	<text	x="17.5" y="16"
-			text-anchor="middle"
-			style="fill:#000000; font-size: 14px; font-weight: bold; opacity: 0.5; ">
-				<Variable name="text"/>
-	</text>
-	
-	<text	x="16.5" y="15.5"
-			text-anchor="middle"
-			style="fill:#ffffff; font-size: 14px; font-weight: bold; var(fill, text_color);">
-				<Variable name="text"/>
-	</text>
+		<!-- border and inner background -->
+		<rect	x="0" y="0" width="32" height="20" rx="1" ry="1"
+				style="fill:url(#grad_def); stroke-width:1; stroke:#dddddd; var(stroke, light_color); var(fill, background_color);" />
+		
+		
+		<!-- border inner shadow -->
+		<rect	x="1" y="1" width="30" height="18"
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.25;"/>
+		
+		
+		<!-- text shadow -->
+		<text	x="17" y="15.5"
+				text-anchor="middle"
+				style="fill:#000000; font-size: 14px; font-weight: bold; opacity: 0.5; ">
+					<Variable name="text"/>
+		</text>
+		
+		
+		<!-- text -->
+		<text	x="16" y="15"
+				text-anchor="middle"
+				style="fill:#ffffff; font-size: 14px; font-weight: bold; var(fill, text_color);">
+					<Variable name="text"/>
+		</text>
+	</g>
 	
 </svg>
