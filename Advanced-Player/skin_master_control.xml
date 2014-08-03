@@ -114,11 +114,14 @@ Master controls : volume, balance, pregain + time.
 					<SetVariable name="text">head. mix</SetVariable>
 					<SetVariable name="color">#ba00ff</SetVariable>
 					
+					<SetVariable name="handle_width">11</SetVariable>
+					<SetVariable name="handle_height">21</SetVariable>
+					
 					<SliderComposed>
 						<TooltipId>headMix</TooltipId>
 						<SizePolicy>me,min</SizePolicy>
 						<Slider>slider-horizontal.svg</Slider>
-						<Handle>handle-horizontal-10x30.svg</Handle>
+						<Handle>handle-horizontal.svg</Handle>
 						<Horizontal>true</Horizontal>
 						<Connection>
 							<ConfigKey>[Master],headMix</ConfigKey>
@@ -137,11 +140,14 @@ Master controls : volume, balance, pregain + time.
 			<SetVariable name="text">balance</SetVariable>
 			<SetVariable name="color">#00ff00</SetVariable>
 			
+			<SetVariable name="handle_width">11</SetVariable>
+			<SetVariable name="handle_height">21</SetVariable>
+			
 			<SliderComposed>
 				<TooltipId>master_balance</TooltipId>
 				<SizePolicy>f,me</SizePolicy>
 				<Slider>slider-horizontal.svg</Slider>
-				<Handle>handle-horizontal-10x30.svg</Handle>
+				<Handle>handle-horizontal.svg</Handle>
 				<Horizontal>true</Horizontal>
 				<Connection>
 					<ConfigKey>[Master],balance</ConfigKey>

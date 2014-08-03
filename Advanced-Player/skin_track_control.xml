@@ -41,7 +41,7 @@ Track control panel.
 			<SetVariable name="offset">12.5</SetVariable>
 			
 			<SetVariable name="handle_width">25</SetVariable>
-			<SetVariable name="handle_height">15</SetVariable>
+			<SetVariable name="handle_height">13</SetVariable>
 			
 			<SetVariable name="text">vol.</SetVariable>
 			<SetVariable name="text_x">12.5</SetVariable>
@@ -135,6 +135,9 @@ Track control panel.
 				<SetVariable name="height">69</SetVariable>
 				<SetVariable name="offset">12.5</SetVariable>
 				
+				<SetVariable name="handle_width">25</SetVariable>
+				<SetVariable name="handle_height">11</SetVariable>
+				
 				<SetVariable name="text">gain</SetVariable>
 				<SetVariable name="text_x">12.5</SetVariable>
 				<SetVariable name="text_y">65</SetVariable>
@@ -142,7 +145,7 @@ Track control panel.
 				<SliderComposed>
 					<TooltipId>pregain</TooltipId>
 					<Slider>slider-vertical.svg</Slider>
-					<Handle>handle-vertical-25x12.svg</Handle>
+					<Handle>handle-vertical.svg</Handle>
 					<Horizontal>false</Horizontal>
 					<Connection>
 						<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
@@ -371,7 +374,7 @@ Track control panel.
 					<SetVariable name="offset">12.5</SetVariable>
 					
 					<SetVariable name="handle_width">25</SetVariable>
-					<SetVariable name="handle_height">15</SetVariable>
+					<SetVariable name="handle_height">13</SetVariable>
 					
 					<SetVariable name="text">pitch</SetVariable>
 					<SetVariable name="text_x">12.5</SetVariable>

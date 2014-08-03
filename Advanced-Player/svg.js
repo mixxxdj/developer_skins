@@ -1,6 +1,6 @@
 this.templateHooks = {};
 
-this.regexpQuote = function (str, delimiter) {
+regexpQuote = function (str, delimiter) {
     return String(str).replace(
         new RegExp(
             '[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]',
@@ -10,7 +10,7 @@ this.regexpQuote = function (str, delimiter) {
     );
 }
 
-this.hookNames = function(){
+hookNames = function(){
     var hookNames = ['variable'];
     for( var i in this.templateHooks )
         hookNames.push(i);
@@ -23,3 +23,20 @@ this.hookNames = function(){
     
     return hookNames;
 }
+
+variable = function( varName ){
+    if( varName in this ){
+        return this[varName];
+    }
+    return '';
+}
+
+prop = function( propName, value ){
+    if( value.length ){
+        return propName + ':' + value + ';';
+    }
+    return '';
+}
+
+this.templateHooks.variable = variable;
+this.templateHooks.prop = prop;
