@@ -137,6 +137,9 @@
 						<SetVariable name="height">111</SetVariable>
 						<SetVariable name="offset">16.5</SetVariable>
 						
+						<SetVariable name="handle_width">33</SetVariable>
+						<SetVariable name="handle_height">15</SetVariable>
+						
 						<SetVariable name="color">#00ff00</SetVariable>
 						
 						<SetVariable name="text">xfader</SetVariable>
@@ -146,7 +149,7 @@
 						<SliderComposed>
 							<TooltipId>crossfader</TooltipId>
 							<Slider>slider-vertical.svg</Slider>
-							<Handle>handle-vertical-30x15.svg</Handle>
+							<Handle>handle-vertical.svg</Handle>
 							<Horizontal>false</Horizontal>
 							<Connection>
 								<ConfigKey>[Master],crossfader</ConfigKey>

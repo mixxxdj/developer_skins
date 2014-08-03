@@ -1,16 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 	
-	<rect x="0" y="0" width="12" height="30" style="fill:#191919;" />
+	<script>
+		var border_path = function( widthName, heightName ){
+			if( widthName in this && widthName in this ){
+				return "M 5.5 0.5 l -5 0 l 0 28 l 5 0";
+			}
+			return false;
+		}
+	</script>
 	
-	<!-- foncé -->
-	<path d="M 5.5 0.5 l -5 0 l 0 28 l 5 0" style="fill:none; stroke-width:1; stroke: #aaaaaa;" />
-	<path d="M 6.5 0.5 l 5 0 l 0 28 l -5 0" style="fill:none; stroke-width:1; stroke: #aaaaaa;" />
+	<!--rect x="0" y="0" width="12" height="30" style="fill:#191919;" /-->
 	
-	<path d="M 5.5 0 l -5.5 0 l 0 29 l 5.5 0" style="fill:none; stroke-width:1; stroke:#999999;" />
-	<path d="M 6.5 0 l 5.5 0 l 0 29 l -5.5 0" style="fill:none; stroke-width:1; stroke:#999999;" />
+	<g transform="translate( 0.5, 0.5 )">
 	
-	<line	x1="6" y1="1" x2="6" y2="28.5"
-			style="stroke: #ff0000; stroke-width: 1; var( stroke, color );"/>
+		<!-- foncé -->
+		<path d="M 5 1 l -5 0 l 0 28 l 5 0" style="fill:none; stroke-width:1; stroke: #aaaaaa;" />
+		<path d="M 6 1 l 5 0 l 0 28 l -5 0" style="fill:none; stroke-width:1; stroke: #aaaaaa;" />
+		
+		<path d="M 5 0 l -5.5 0 l 0 29 l 5.5 0" style="fill:none; stroke-width:1; stroke:#999999;" />
+		<path d="M 6 0 l 5.5 0 l 0 29 l -5.5 0" style="fill:none; stroke-width:1; stroke:#999999;" />
+		
+		<line	x1="6" y1="1" x2="6" y2="28.5"
+				style="stroke: #ff0000; stroke-width: 1; var( stroke, color );"/>
+		
+	</g>
 	
 </svg>
 

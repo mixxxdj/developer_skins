@@ -1,0 +1,88 @@
+<svg	xmlns	= "http://www.w3.org/2000/svg"
+		width	= "25"	var-width	= "handle_width"
+		height	= "13"	var-height	= "handle_height"
+	>
+	
+	<script src="svg.js">
+		// <![CDATA[
+		
+		this.variable = function( varName ){
+			if( varName in this ){
+				return this[varName];
+			}
+			return '';
+		}
+		
+		this.prop = function( propName, value ){
+			if( value.length ){
+				return propName + ':' + value + ';';
+			}
+			return '';
+		}
+		
+		this.borderPath = function( width, height, offset, up ){
+			var path = '';
+			
+			if( width > 0 && height > 0 ){
+				
+				var finalWidth = width - 2 * offset;
+				var finalHeight = height - offset;
+				
+				if( up ){
+					
+					path =	"M " + offset + " " + ( finalHeight + offset ) + " " +
+							"l " + 0 + " " + ( -finalHeight ) + " " +
+							"l " + finalWidth + " " + 0 + " " +
+							"l " + 0 + " " + finalHeight;
+				} else {
+					path =	"M " + offset + " " + ( height + 2 ) + " " +
+							"l " + 0 + " " + finalHeight + " " +
+							"l " + finalWidth + " " + 0 + " " +
+							"l " + 0 + " " + (-finalHeight);
+				}
+			}
+			
+			return path;
+		}
+		
+		this.templateHooks = {
+			borderPath : this.borderPath,
+			prop : this.prop,
+			variable : this.variable,
+		}
+		
+		shapeWidth	= handle_width - 1;
+		shapeHeight	= (handle_height - 1) / 2 - 1;
+		// ]]>
+	</script>
+	
+	<g transform="translate( 0.5, 0.5 )">
+		
+		<rect	x="0" y="0" width="25" height="13"
+				expr-width	= "handle_width - 1"
+				expr-height	= "handle_height - 1"
+				style="fill:#191919; stroke-width:0; stroke:#eeeeee; stroke-linecap:sqare;" />
+		
+		
+		<path	d="M 1 4 l 0 -4 l 23 0 l 0 4" expr-d="borderPath( shapeWidth, shapeHeight, 1, true )"
+				style="fill:none; stroke-width:1; stroke:#aaaaaa; stroke-opacity: 0.5;" />
+		
+		<path	d="M 1 5 l 0 4 l 23 0 l 0 -4" expr-d="borderPath( shapeWidth, shapeHeight, 1, false )"
+				style="fill:none; stroke-width:1; stroke:#aaaaaa; stroke-opacity: 0.5;" />
+		
+		
+		<path	d="M 0.5 4 l 0 -4.5 l 24 0 l 0 4.5" expr-d="borderPath( shapeWidth, shapeHeight, 0, true )"
+				style="fill:none; stroke-width:1; stroke:#aaaaaa;" />
+		
+		<path	d="M 0.5 5 l 0 4.5 l 24 0 l 0 -4.5" expr-d="borderPath( shapeWidth, shapeHeight, 0, false )"
+				style="fill:none; stroke-width:1; stroke:#aaaaaa;" />
+		
+		
+		<line	x1="1" y1="6" x2="23" y2="6"
+				expr-x2	= "shapeWidth - 1"
+				expr-y1	= "shapeHeight + 1"
+				expr-y2	= "shapeHeight + 1"
+				style="stroke: #13a9fc; stroke-width: 1; prop( 'stroke', color );"/>
+		
+	</g>
+</svg>
