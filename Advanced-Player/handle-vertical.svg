@@ -37,18 +37,25 @@
 		// ]]>
 	</script>
 	
+	<defs>
+		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #333333; stop-opacity: 1;" />
+			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
+		</linearGradient>
+	</defs>
+	
 	<rect	x="0" y="0" width="25" height="13"
 			expr-width	= "handle_width - 1"
 			expr-height	= "handle_height - 1"
-			style="fill:#191919; stroke-width:0; stroke:#eeeeee; stroke-linecap:sqare;" />
+			style="fill: url(#grad_def); stroke-width:0;" />
 	
 	<g transform="translate( 0.5, 0.5 )">
 		
 		<path	d="M 1 5 l 0 -4 l 22 0 l 0 4" expr-d="borderPath( shapeWidth, shapeHeight, 1, true )"
-				style="fill:none; stroke-width:1; stroke:#aaaaaa; stroke-opacity: 0.5; stroke-linecap: square;" />
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5; stroke-linecap: square;" />
 		
 		<path	d="M 1 7 l 0 4 l 22 0 l 0 -4" expr-d="borderPath( shapeWidth, shapeHeight, 1, false )"
-				style="fill:none; stroke-width:1; stroke:#aaaaaa; stroke-opacity: 0.5; stroke-linecap: square;" />
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5; stroke-linecap: square;" />
 		
 		
 		<path	d="M 0 5 l 0 -5 l 24 0 l 0 5" expr-d="borderPath( shapeWidth, shapeHeight, 0, true )"
