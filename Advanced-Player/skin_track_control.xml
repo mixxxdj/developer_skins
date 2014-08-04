@@ -33,7 +33,7 @@ Track control panel.
 		<Children>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">12</SetVariable>
+				<SetVariable name="height">14</SetVariable>
 			</Template>
 			
 			<!--
@@ -82,7 +82,7 @@ Track control panel.
 			</VuMeter>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">6</SetVariable>
+				<SetVariable name="height">4</SetVariable>
 			</Template>
 			
 			
@@ -116,7 +116,7 @@ Track control panel.
 		<Children>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">14</SetVariable>
+				<SetVariable name="height">16</SetVariable>
 			</Template>
 			
 			<WidgetGroup>
@@ -180,7 +180,7 @@ Track control panel.
 			</WidgetGroup>
 				
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">6</SetVariable>
+				<SetVariable name="height">4</SetVariable>
 			</Template>
 				
 			
