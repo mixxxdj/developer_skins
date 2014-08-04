@@ -43,7 +43,7 @@ Master controls : volume, balance, pregain + time.
 							
 							<SetVariable name="width">33</SetVariable>
 							<SetVariable name="height">105</SetVariable>
-							<SetVariable name="offset">16.5</SetVariable>
+							<SetVariable name="offset">16</SetVariable>
 							
 							<SetVariable name="handle_width">33</SetVariable>
 							<SetVariable name="handle_height">15</SetVariable>
@@ -51,7 +51,7 @@ Master controls : volume, balance, pregain + time.
 							<SetVariable name="color">#00ff00</SetVariable>
 							
 							<SetVariable name="text">master</SetVariable>
-							<SetVariable name="text_x">16.5</SetVariable>
+							<SetVariable name="text_x">16</SetVariable>
 							<SetVariable name="text_y">100</SetVariable>
 							
 							<SliderComposed>

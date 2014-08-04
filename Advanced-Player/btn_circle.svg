@@ -1,11 +1,21 @@
 <svg height="9" width="9">
+
+	<script src="svg.js">
+		<![CDATA[
+			
+		]]>
+	</script>
+	
 	<rect	x="0" y="0" width="21" height="21"
-			style="fill:#191919; stroke-width:0; var(fill, background_color);" />
+			style="fill:#191919; stroke-width:0; prop('fill', 'background_color');" />
 	
-	<circle	cx="4.5" cy="4.5" r="4"
-			style="fill: none; stroke-width:1; stroke: #cccccc; var(stroke, dark_color);" />
-	
-	<circle	cx="4.5" cy="4.5" r="3.5"
-			style="fill: none; stroke-width:1.5; stroke: #aaaaaa; var(stroke, light_color);" />
-	
+	<g transform="translate( 0.5, 0.5 )">
+		
+		<circle	cx="4" cy="4" r="4"
+				style="fill: none; stroke-width:1; stroke: #cccccc; prop('stroke', 'dark_color');" />
+		
+		<circle	cx="4" cy="4" r="3.5"
+				style="fill: none; stroke-width:1.5; stroke: #aaaaaa; prop('stroke', 'light_color');" />
+		
+	</g>
 </svg>

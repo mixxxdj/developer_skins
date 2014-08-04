@@ -129,13 +129,13 @@ Track control panel.
 					
 					<SetVariable name="width">15</SetVariable>
 					<SetVariable name="height">69</SetVariable>
-					<SetVariable name="offset">7.5</SetVariable>
+					<SetVariable name="offset">7</SetVariable>
 					
 					<SetVariable name="handle_width">15</SetVariable>
 					<SetVariable name="handle_height">11</SetVariable>
 					
 					<SetVariable name="text">gain</SetVariable>
-					<SetVariable name="text_x">12.5</SetVariable>
+					<SetVariable name="text_x">12</SetVariable>
 					<SetVariable name="text_y">65</SetVariable>
 					
 					<SliderComposed>
@@ -154,13 +154,13 @@ Track control panel.
 					
 					<SetVariable name="width">25</SetVariable>
 					<SetVariable name="height">69</SetVariable>
-					<SetVariable name="offset">12.5</SetVariable>
+					<SetVariable name="offset">12</SetVariable>
 					
 					<SetVariable name="handle_width">25</SetVariable>
 					<SetVariable name="handle_height">13</SetVariable>
 					
 					<SetVariable name="text">vol.</SetVariable>
-					<SetVariable name="text_x">12.5</SetVariable>
+					<SetVariable name="text_x">12</SetVariable>
 					<SetVariable name="text_y">65</SetVariable>
 					
 					<SliderComposed>
@@ -434,7 +434,7 @@ Track control panel.
 					
 					<SetVariable name="width">25</SetVariable>
 					<SetVariable name="height">69</SetVariable>
-					<SetVariable name="offset">12.5</SetVariable>
+					<SetVariable name="offset">12</SetVariable>
 					
 					<SetVariable name="handle_width">25</SetVariable>
 					<SetVariable name="handle_height">13</SetVariable>
