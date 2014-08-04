@@ -81,7 +81,7 @@ Track info panel.
 				<MinimumSize>150,51</MinimumSize>
 				<MaximumSize>-1,51</MaximumSize>
 				<Channel><Variable name="i"/></Channel>
-				<BgColor>#FFFFFF</BgColor>
+				<BgColor>#191919</BgColor>
 				<SignalHighColor>#FFE300</SignalHighColor>
 				<SignalMidColor>#0099FF</SignalMidColor>
 				<SignalLowColor>#FF0035</SignalLowColor>

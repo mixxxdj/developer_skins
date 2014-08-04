@@ -41,7 +41,7 @@
 	
 	<defs>
 		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
-			<stop offset="0%"	style="stop-color: #333333; stop-opacity: 1;" />
+			<stop offset="0%"	style="stop-color: #444444; stop-opacity: 1;" />
 			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
 		</linearGradient>
 	</defs>
@@ -62,11 +62,17 @@
 		
 		
 		<path	d="M 6 0 l -6 0 l 0 32 l 6 0" expr-d="borderPath( shapeWidth, shapeHeight, 0, true )"
-				style="fill:none; stroke-width:1; stroke:#aaaaaa; stroke-linecap: square;" />
+				style="fill:none; stroke-width:1; stroke:#dddddd; stroke-linecap: square;" />
 		
 		<path	d="M 8 0 l 6 0 l 0 32 l -6 0" expr-d="borderPath( shapeWidth, shapeHeight, 0, false )"
-				style="fill:none; stroke-width:1; stroke:#aaaaaa; stroke-linecap: square;" />
+				style="fill:none; stroke-width:1; stroke:#dddddd; stroke-linecap: square;" />
 		
+		
+		<line	x1="7" y1="1" x2="7" y2="31"
+				expr-x1	= "shapeWidth + 0"
+				expr-x2	= "shapeWidth + 0"
+				expr-y2	= "shapeHeight - 1"
+				style="stroke: #000000; stroke-width: 1; stroke-opacity: 0.2;"/>
 		
 		<line	x1="7" y1="1" x2="7" y2="31"
 				expr-x1	= "shapeWidth + 1"
