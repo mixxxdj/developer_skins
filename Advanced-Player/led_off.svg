@@ -9,5 +9,5 @@
 			style="fill:none; stroke-width:1; stroke:#dddddd; var(stroke, dark_color);" /-->
 	
 	<rect	x="0.5" y="0.5" width="14" height="14" rx="1" ry="1"
-			style="fill:none; stroke-width:1; stroke:#999999; var(stroke, light_color);" />
+			style="fill:none; stroke-width:1; stroke:#cccccc; var(stroke, light_color);" />
 </svg>

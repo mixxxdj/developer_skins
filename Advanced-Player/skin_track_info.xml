@@ -186,12 +186,16 @@ Track info panel.
 								<SizePolicy>min,f</SizePolicy>
 								<Size>i,20</Size>
 								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
-								<Alignment>left</Alignment>
+								<Alignment>right</Alignment>
 								<!--NumberOfDigits>6</NumberOfDigits marche pas ?-->
 								<Connection>
 									<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
 								</Connection>
 							</NumberPos>
+							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">6</SetVariable>
+							</Template>
 							
 							<!--
 							**********************************************
@@ -205,55 +209,10 @@ Track info panel.
 								<SizePolicy>min,f</SizePolicy>
 								<Size>i,20</Size>
 								<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
-								<Alignment>left</Alignment>
+								<Alignment>right</Alignment>
 							</TrackProperty>
 							
-							<!--
-							**********************************************
-							Visual - Volume level display
-							TODO : sizes?
-							**********************************************
-							-->
-							<VuMeter>
-								<TooltipId>channel_VuMeter</TooltipId>
-								<SizePolicy>min,min</SizePolicy>
-								
-								<PathVu>vumeter_on.svg</PathVu>
-								<PathBack>vumeter_off.svg</PathBack>
-								
-								<Alignment>left</Alignment>
-								<Horizontal>true</Horizontal>
-								
-								<PeakHoldSize>5</PeakHoldSize>
-								<PeakHoldTime>500</PeakHoldTime>
-								<PeakFallTime>50</PeakFallTime>
-								<PeakFallStep>1</PeakFallStep>
-								
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,VuMeter</ConfigKey>
-								</Connection>
-							</VuMeter>
 							
-							
-							<Template src="skin:skin_spacer_vx.xml">
-								<SetVariable name="height">3</SetVariable>
-							</Template>
-							
-							<!--
-							**********************************************
-							Visual- Volume peak indicator
-							**********************************************
-							-->
-							<StatusLight>
-								<TooltipId>PeakIndicator</TooltipId>
-								<Alignment>left</Alignment>
-								<SizePolicy>min,min</SizePolicy>
-								<PathStatusLight>led_on.svg</PathStatusLight>
-								<PathBack>led_off.svg</PathBack>
-								<Connection>
-									<ConfigKey><Variable name="channel"/>,PeakIndicator</ConfigKey>
-								</Connection>
-							</StatusLight>
 							
 						</Children>
 					</WidgetGroup>

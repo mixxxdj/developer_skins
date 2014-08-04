@@ -11,13 +11,13 @@
 		</linearGradient>
 	</defs>
 	
-	<rect x="0" y="0" width="15" height="15" style="fill:url(#grad_def); stroke-width:0; prop('fill', background_color);" />
+	<rect x="0" y="0" width="15" height="15" style="fill:url(#grad_def); stroke-width:0; prop('fill', 'background_color');" />
 	
 	<rect	x="1" y="1" width="13" height="13"
 			style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5;"/>
 	
 	<rect	x="0.5" y="0.5" width="14" height="14" rx="1" ry="1"
-			style="fill:none; stroke-width:1; stroke:#dddddd; prop('stroke', light_color);" />
+			style="fill:none; stroke-width:1; stroke:#dddddd; prop('stroke', 'light_color');" />
 	
 	<text	x="8.5" y="12"
 			text-anchor="middle"
@@ -27,7 +27,7 @@
 	
 	<text	x="7.5" y="11.5"
 			text-anchor="middle"
-			style="fill:#aaaaaa; font-size: 11px; font-weight: bold; prop('fill', text_color);">
+			style="fill:#ffffff; font-size: 11px; font-weight: bold; prop('fill', 'text_color');">
 				<Variable name="text"/>
 	</text>
 </svg>

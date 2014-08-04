@@ -31,12 +31,15 @@ variable = function( varName ){
     return '';
 }
 
-prop = function( propName, value ){
-    if( value.length ){
+
+global = this;
+templateHooks.prop = prop = function( propName, varName ){
+    // print( varName );
+    
+    if( (varName in global) && (value = global[varName]).length ){
         return propName + ':' + value + ';';
     }
     return '';
 }
 
 this.templateHooks.variable = variable;
-this.templateHooks.prop = prop;

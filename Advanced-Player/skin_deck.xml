@@ -7,7 +7,7 @@ A deck with essential controls.
 	<WidgetGroup>
 		<ObjectName>Deck<Variable name="i"/></ObjectName>
 		<Layout>horizontal</Layout>
-		<SizePolicy>me,f</SizePolicy>
+		<SizePolicy>min,f</SizePolicy>
 		<MinimumSize>-1,<Variable name="height"/></MinimumSize>
 		<MaximumSize>-1,<Variable name="height"/></MaximumSize>
 		<Children>
