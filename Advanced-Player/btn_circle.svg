@@ -15,8 +15,8 @@
 	
 	<defs>
 		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
-			<stop offset="0%"	style="stop-color: #ffffff; stop-opacity: 0.5;" />
-			<stop offset="100%"	style="stop-color: #ffffff; stop-opacity: 0.2;" />
+			<stop offset="0%"	style="stop-color: #ffffff; stop-opacity: 1;" />
+			<stop offset="100%"	style="stop-color: #ffffff; stop-opacity: 0.6;" />
 		</linearGradient>
 		
 		<radialGradient id="grad_light">
@@ -30,7 +30,6 @@
 			expr-height="height"
 			style="fill:#191919; stroke-width:0; prop('fill', 'background_color');" />
 	
-	<!--circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" /-->
 	
 	<g transform="translate( 0.5, 0.5 )">
 		
