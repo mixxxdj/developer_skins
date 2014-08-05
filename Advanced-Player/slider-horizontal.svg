@@ -6,6 +6,7 @@
 	<script src="svg.js">
 		<![CDATA[
 			margin = margin || 0;
+			offset = Number(offset);
 		]]>
 	</script>
 	
@@ -19,13 +20,19 @@
 				x2="60"	expr-x2="width - margin"
 				y1="12"	expr-y1="offset - 1"
 				y2="12"	expr-y2="offset - 1"
+				style="stroke: #444444; stroke-width: 1;"/>
+		
+		<line	x1="0"	expr-x1="margin"
+				x2="60"	expr-x2="width - margin"
+				y1="13"	expr-y1="offset"
+				y2="13"	expr-y2="offset"
 				style="stroke: #000000; stroke-width: 1; stroke-opacity: 0.5;"/>
 		
 		<line	x1="0"	expr-x1="margin"
 				x2="60"	expr-x2="width - margin"
-				y1="12"	expr-y1="offset"
-				y2="12"	expr-y2="offset"
-				style="stroke: #888888; stroke-width: 1;"/>
+				y1="14"	expr-y1="offset + 1"
+				y2="14"	expr-y2="offset + 1"
+				style="stroke: #505050; stroke-width: 1;"/>
 		
 		
 		<text	x="10" var-x="text_x"
