@@ -28,7 +28,7 @@ Track control panel.
 		<ObjectName>VolumeColumn</ObjectName>
 		<Layout>vertical</Layout>
 		<SizePolicy>min,min</SizePolicy>
-		<MinimumSize>33,-1</MinimumSize>
+		<MinimumSize>15,-1</MinimumSize>
 		<MaximumSize>33,-1</MaximumSize>
 		<Children>
 			
@@ -102,6 +102,10 @@ Track control panel.
 		</Children>
 	</WidgetGroup>
 
+	<Template src="skin:skin_spacer_vx.xml">
+		<SetVariable name="height">7</SetVariable>
+	</Template>
+	
 	<!--
 	**********************************************
 	 : Gain
@@ -226,13 +230,10 @@ Track control panel.
 			<BindProperty>visible</BindProperty>
 		</Connection>
 	</WidgetGroup>
-			
-
-
-
-
+	
+	
 	<Template src="skin:skin_spacer_vx.xml">
-		<SetVariable name="height">7</SetVariable>
+		<SetVariable name="height">20</SetVariable>
 	</Template>
 	
 	<!--
@@ -744,6 +745,10 @@ Track control panel.
 	**********************************************
 	-->
 
+	<Template src="skin:skin_spacer_vx.xml">
+		<SetVariable name="height">10</SetVariable>
+	</Template>
+	
 	<!--
 	**********************************************
 	Column 6 : Frequency killers
@@ -818,10 +823,6 @@ Track control panel.
 		<MaximumSize>70,-1</MaximumSize>
 		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
 		<Children>
-			
-			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">0</SetVariable>
-			</Template>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>

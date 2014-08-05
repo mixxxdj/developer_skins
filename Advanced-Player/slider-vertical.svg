@@ -35,7 +35,7 @@
 			x2="8"	expr-x2="offset + 1"
 			y1="0"	expr-y1="margin"
 			y2="79"	expr-y2="height - margin"
-			style="stroke-width: 1; stroke: #505050; "/>
+			style="stroke-width: 1; stroke: #444444; "/>
 		
 		<text	x="7"	var-x="text_x"
 				y="62"	var-y="text_y"

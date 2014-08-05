@@ -9,8 +9,12 @@ Master controls : volume, balance, pregain + time.
 	<WidgetGroup>
 		<ObjectName>Master and balance</ObjectName>
 		<Layout>vertical</Layout>
-		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
-		<SizePolicy>min,me</SizePolicy>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<SizePolicy>min,min</SizePolicy>
 		<MinimumSize>40,-1</MinimumSize>
 		<MaximumSize>87,-i</MaximumSize>
 		<Children>
@@ -27,48 +31,44 @@ Master controls : volume, balance, pregain + time.
 			
 			
 			<WidgetGroup>
-				<ObjectName>Master Volume and ...</ObjectName>
+				<ObjectName>Master Volume and Headphone Volume</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>min,min</SizePolicy>
 				<MinimumSize>40,-1</MinimumSize>
 				<MaximumSize>87,-1</MaximumSize>
 				<Children>
 					
-					<WidgetGroup>
-						<Layout>vertical</Layout>
-						<SizePolicy>min,me</SizePolicy>
-						<MinimumSize>40,125</MinimumSize>
-						<MaximumSize>60,170</MaximumSize>
-						<Children>
-							
-							<SetVariable name="width">33</SetVariable>
-							<SetVariable name="height">105</SetVariable>
-							<SetVariable name="offset">16</SetVariable>
-							<SetVariable name="margin">7.5</SetVariable>
-							
-							<SetVariable name="handle_width">29</SetVariable>
-							<SetVariable name="handle_height">15</SetVariable>
-							
-							<SetVariable name="color">#00ff00</SetVariable>
-							
-							<SetVariable name="text">master</SetVariable>
-							<SetVariable name="text_x">16</SetVariable>
-							<SetVariable name="text_y">100</SetVariable>
-							
-							<SliderComposed>
-								<TooltipId>master_volume</TooltipId>
-								<Slider>slider-vertical.svg</Slider>
-								<Handle>handle-vertical.svg</Handle>
-								<Horizontal>false</Horizontal>
-								<Connection>
-									<ConfigKey>[Master],volume</ConfigKey>
-								</Connection>
-							</SliderComposed>
-							
-						</Children>
-					</WidgetGroup>
+					<!-- volume -->
+					<SetVariable name="width">33</SetVariable>
+					<SetVariable name="height">105</SetVariable>
+					<SetVariable name="offset">16</SetVariable>
+					<SetVariable name="margin">7.5</SetVariable>
 					
-					<SetVariable name="width">29</SetVariable>
+					<SetVariable name="handle_width">33</SetVariable>
+					<SetVariable name="handle_height">15</SetVariable>
+					
+					<SetVariable name="color">#00ff00</SetVariable>
+					
+					<SetVariable name="text">master</SetVariable>
+					<SetVariable name="text_x">16</SetVariable>
+					<SetVariable name="text_y">100</SetVariable>
+					
+					<SliderComposed>
+						<TooltipId>master_volume</TooltipId>
+						<Slider>slider-vertical.svg</Slider>
+						<Handle>handle-vertical.svg</Handle>
+						<Horizontal>false</Horizontal>
+						<Connection>
+							<ConfigKey>[Master],volume</ConfigKey>
+						</Connection>
+					</SliderComposed>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<!-- headphone -->
+					<SetVariable name="width">33</SetVariable>
 					<SetVariable name="height">105</SetVariable>
 					<SetVariable name="offset">16</SetVariable>
 					
@@ -103,12 +103,11 @@ Master controls : volume, balance, pregain + time.
 				<Layout>horizontal</Layout>
 				<SizePolicy>min,min</SizePolicy>
 				<MinimumSize>33,21</MinimumSize>
-				<MaximumSize>69,21</MaximumSize>
 				<Children>
-			
-					<SetVariable name="width">33</SetVariable>
+					
+					<SetVariable name="width">50</SetVariable>
 					<SetVariable name="height">21</SetVariable>
-					<SetVariable name="offset">16</SetVariable>
+					<SetVariable name="offset">6</SetVariable>
 					<SetVariable name="text_x">34.5</SetVariable>
 					<SetVariable name="text_y">30</SetVariable>
 					
@@ -136,28 +135,44 @@ Master controls : volume, balance, pregain + time.
 				</Children>
 			</WidgetGroup>
 			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
 			
-			<SetVariable name="width">69</SetVariable>
-			<SetVariable name="text">balance</SetVariable>
-			<SetVariable name="color">#00ff00</SetVariable>
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<SizePolicy>min,min</SizePolicy>
+				<MinimumSize>33,21</MinimumSize>
+				<Children>
+					
+					<SetVariable name="width">69</SetVariable>
+					<SetVariable name="text">balance</SetVariable>
+					<SetVariable name="color">#00ff00</SetVariable>
+					
+					<SetVariable name="handle_width">11</SetVariable>
+					<SetVariable name="handle_height">21</SetVariable>
+					
+					<SliderComposed>
+						<TooltipId>master_balance</TooltipId>
+						<!--SizePolicy>f,me</SizePolicy-->
+						<Slider>slider-horizontal.svg</Slider>
+						<Handle>handle-horizontal.svg</Handle>
+						<Horizontal>true</Horizontal>
+						<Connection>
+							<ConfigKey>[Master],balance</ConfigKey>
+						</Connection>
+						<Connection>
+							<ConfigKey persist="true">[Master],show_balance_controls</ConfigKey>
+							<BindProperty>visible</BindProperty>
+						</Connection>
+					</SliderComposed>
+					
+				</Children>
+			</WidgetGroup>
 			
-			<SetVariable name="handle_width">11</SetVariable>
-			<SetVariable name="handle_height">21</SetVariable>
-			
-			<SliderComposed>
-				<TooltipId>master_balance</TooltipId>
-				<SizePolicy>f,me</SizePolicy>
-				<Slider>slider-horizontal.svg</Slider>
-				<Handle>handle-horizontal.svg</Handle>
-				<Horizontal>true</Horizontal>
-				<Connection>
-					<ConfigKey>[Master],balance</ConfigKey>
-				</Connection>
-				<Connection>
-					<ConfigKey persist="true">[Master],show_balance_controls</ConfigKey>
-					<BindProperty>visible</BindProperty>
-				</Connection>
-			</SliderComposed>
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">17</SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
