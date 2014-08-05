@@ -44,8 +44,9 @@ Master controls : volume, balance, pregain + time.
 							<SetVariable name="width">33</SetVariable>
 							<SetVariable name="height">105</SetVariable>
 							<SetVariable name="offset">16</SetVariable>
+							<SetVariable name="margin">7.5</SetVariable>
 							
-							<SetVariable name="handle_width">33</SetVariable>
+							<SetVariable name="handle_width">29</SetVariable>
 							<SetVariable name="handle_height">15</SetVariable>
 							
 							<SetVariable name="color">#00ff00</SetVariable>
@@ -67,17 +68,17 @@ Master controls : volume, balance, pregain + time.
 						</Children>
 					</WidgetGroup>
 					
-					<SetVariable name="width">33</SetVariable>
+					<SetVariable name="width">29</SetVariable>
 					<SetVariable name="height">105</SetVariable>
-					<SetVariable name="offset">16.5</SetVariable>
+					<SetVariable name="offset">16</SetVariable>
 					
-					<SetVariable name="handle_width">33</SetVariable>
+					<SetVariable name="handle_width">29</SetVariable>
 					<SetVariable name="handle_height">15</SetVariable>
 					
 					<SetVariable name="color">#ba00ff</SetVariable>
 					
 					<SetVariable name="text">head</SetVariable>
-					<SetVariable name="text_x">16.5</SetVariable>
+					<SetVariable name="text_x">16</SetVariable>
 					<SetVariable name="text_y">100</SetVariable>
 					
 					<SliderComposed>
@@ -107,7 +108,7 @@ Master controls : volume, balance, pregain + time.
 			
 					<SetVariable name="width">33</SetVariable>
 					<SetVariable name="height">21</SetVariable>
-					<SetVariable name="offset">16.5</SetVariable>
+					<SetVariable name="offset">16</SetVariable>
 					<SetVariable name="text_x">34.5</SetVariable>
 					<SetVariable name="text_y">30</SetVariable>
 					

@@ -7,6 +7,7 @@ Equalizer slider
 	
 	<SetVariable name="width">69</SetVariable>
 	<SetVariable name="height">25</SetVariable>
+	<SetVariable name="margin">5.5</SetVariable>
 	
 	<SetVariable name="handle_width">11</SetVariable>
 	<SetVariable name="handle_height"><Variable name="height"/></SetVariable>
@@ -16,7 +17,6 @@ Equalizer slider
 		<TooltipId>filter<Variable name="frequency"/></TooltipId>
 		
 		<Slider>slider-horizontal.svg</Slider>
-		<!--Handle>handle-horizontal-10x<Variable name="height"/>.svg</Handle-->
 		<Handle>handle-horizontal.svg</Handle>
 		
 		<Horizontal>true</Horizontal>

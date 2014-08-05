@@ -1,24 +1,39 @@
-<svg
-	width="60"	var-width="width"
-	height="25"	var-height="height"
+<svg	xmlns	= "http://www.w3.org/2000/svg"
+		width="60"	var-width="width"
+		height="25"	var-height="height"
 	>
+	
+	<script src="svg.js">
+		<![CDATA[
+			margin = margin || 0;
+		]]>
+	</script>
 	
 	<rect	width="60"	var-width="width"
 			height="25"	var-height="height"
 			style="fill: #191919; var( fill, background_color ); "/>
 	
-	<line	x1="0"	
-			x2="60"	var-x2="width"
-			y1="13"	var-y1="offset"
-			y2="13"	var-y2="offset"
-			style="stroke: #888888; stroke-width: 1;"/>
+	<g transform="translate( 0.5, 0.5 )">
 	
-	
-	<text	x="10.5" var-x="text_x"
-			y="15.5" var-y="text_y"
-			text-anchor="middle"
-			style="fill:#aaaaaa; font-size: 10px; font-weight: bold; var(fill, text_color);">
-				<Variable name="text"/>
-	</text>
+		<line	x1="0"	expr-x1="margin"
+				x2="60"	expr-x2="width - margin"
+				y1="12"	expr-y1="offset - 1"
+				y2="12"	expr-y2="offset - 1"
+				style="stroke: #000000; stroke-width: 1; stroke-opacity: 0.5;"/>
+		
+		<line	x1="0"	expr-x1="margin"
+				x2="60"	expr-x2="width - margin"
+				y1="12"	expr-y1="offset"
+				y2="12"	expr-y2="offset"
+				style="stroke: #888888; stroke-width: 1;"/>
+		
+		
+		<text	x="10" var-x="text_x"
+				y="15" var-y="text_y"
+				text-anchor="middle"
+				style="fill:#aaaaaa; font-size: 10px; font-weight: bold; prop('fill', 'text_color');">
+					<Variable name="text"/>
+		</text>
+	</g>	
 	
 </svg>
