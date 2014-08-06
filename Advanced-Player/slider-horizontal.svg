@@ -6,12 +6,13 @@
 	<script src="svg.js">
 		<![CDATA[
 			margin = Number(margin) || 0;
-			offset = Number(offset);
+			offset = Math.round(Number(offset));
 			width = Number(width);
 			text_x = Number(text_x);
 			text_y = Number(text_y);
 			
 			degreesColor = '#666666';
+			sectionColor = '#888888';
 			
 			shapeWidth = width - margin * 2;
 		]]>
@@ -25,8 +26,8 @@
 		
 		<!-- degrees -->
 		<line
-			x1="0"		expr-x1="margin"
-			x2="60"		expr-x2="shapeWidth + margin"
+			x1="0"	expr-x1="margin"
+			x2="60"	expr-x2="shapeWidth + margin"
 			y1="12"	expr-y1="offset"
 			y2="12"	expr-y2="offset"
 			stroke-dasharray="1, 1"
@@ -38,7 +39,7 @@
 			x2="0"	expr-x2="margin - 0.5"
 			y1="6"	expr-y1="offset - 6"
 			y2="18"	expr-y2="offset + 6"
-			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- 1/4 line -->
 		<line
@@ -46,7 +47,7 @@
 			x2="13"	expr-x2="Math.round(shapeWidth / 4 + margin)"
 			y1="6"	expr-y1="offset - 4"
 			y2="18"	expr-y2="offset + 4"
-			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- middle line -->
 		<line
@@ -54,7 +55,7 @@
 			x2="13"	expr-x2="Math.round(shapeWidth / 2 + margin)"
 			y1="6"	expr-y1="offset - 6"
 			y2="18"	expr-y2="offset + 6"
-			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- 3/4 line -->
 		<line
@@ -62,7 +63,7 @@
 			x2="13"	expr-x2="Math.round(shapeWidth / 4 * 3 + margin)"
 			y1="6"	expr-y1="offset - 4"
 			y2="18"	expr-y2="offset + 4"
-			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- right line -->
 		<line
@@ -70,7 +71,7 @@
 			x2="60"	expr-x2="Math.round(shapeWidth + margin)"
 			y1="6"	expr-y1="offset - 6"
 			y2="18"	expr-y2="offset + 6"
-			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- label shadow -->
 		<text	x="7"	expr-x="text_x + 0.5"
