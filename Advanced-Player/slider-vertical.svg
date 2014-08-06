@@ -4,8 +4,15 @@
 	
 	<script src="svg.js">
 		<![CDATA[
-			margin = margin || 0;
+			margin = Number(margin) || 0;
 			offset = Number(offset);
+			height = Number(height);
+			text_x = Number(text_x);
+			text_y = Number(text_y);
+			
+			shapeHeight = height - margin * 2;
+			
+			degreesColor = '#666666';
 		]]>
 	</script>
 	
@@ -16,33 +23,86 @@
 	
 	<g transform="translate( 0.5, 0.5 )">
 		
+		<!-- degrees -->
 		<line
-			x1="6"	expr-x1="offset - 1"
-			x2="6"	expr-x2="offset - 1"
-			y1="0"	expr-y1="margin"
-			y2="79"	expr-y2="height - margin"
-			style="stroke-width: 1; stroke: #444444; "/>
+			x1="7"		expr-x1="offset"
+			x2="7"		expr-x2="offset"
+			y1="0.5"	expr-y1="margin"
+			y2="79.5"	expr-y2="Math.round(height - margin)"
+			stroke-dasharray="1, 1"
+			style="stroke-width: 5; stroke: #ffffff; prop( 'stroke', 'degreesColor' );"/>
 		
+		<!-- top line -->
 		<line
-			x1="7"	expr-x1="offset"
-			x2="7"	expr-x2="offset"
-			y1="0"	expr-y1="margin"
-			y2="79"	expr-y2="height - margin"
-			style="stroke-width: 1; stroke: #000000; stroke-opacity: 0.5; "/>
+			x1="1"	expr-x1="offset - 6"
+			x2="13"	expr-x2="offset + 6"
+			y1="0"	expr-y1="margin - 0.5"
+			y2="0"	expr-y2="margin - 0.5"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
 		
+		<!-- 1/4 line -->
 		<line
-			x1="8"	expr-x1="offset + 1"
-			x2="8"	expr-x2="offset + 1"
-			y1="0"	expr-y1="margin"
-			y2="79"	expr-y2="height - margin"
-			style="stroke-width: 1; stroke: #444444; "/>
+			x1="1"	expr-x1="offset - 4"
+			x2="13"	expr-x2="offset + 4"
+			y1="19"	expr-y1="Math.round(shapeHeight / 4 + margin)"
+			y2="19"	expr-y2="Math.round(shapeHeight / 4 + margin)"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
 		
+		<!-- middle line -->
+		<line
+			x1="1"	expr-x1="offset - 6"
+			x2="13"	expr-x2="offset + 6"
+			y1="39"	expr-y1="Math.round(shapeHeight / 2 + margin)"
+			y2="39"	expr-y2="Math.round(shapeHeight / 2 + margin)"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+		
+		<!-- 3/4 line -->
+		<line
+			x1="1"	expr-x1="offset - 4"
+			x2="13"	expr-x2="offset + 4"
+			y1="59"	expr-y1="Math.round(shapeHeight / 4 * 3 + margin)"
+			y2="59"	expr-y2="Math.round(shapeHeight / 4 * 3 + margin)"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+		
+		<!-- bottom line -->
+		<line
+			x1="1"	expr-x1="offset - 6"
+			x2="13"	expr-x2="offset + 6"
+			y1="78"	expr-y1="height - margin + 0.5"
+			y2="78"	expr-y2="height - margin + 0.5"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'degreesColor' ); stroke-linecap: square;"/>
+		
+		<!-- label shadow -->
+		<text	x="7"	expr-x="text_x + 0.5"
+				y="62"	expr-y="text_y + 0.5"
+				text-anchor="middle"
+				style="fill:#000000; font-size: 10px; font-weight: bold;">
+					<Variable name="text"/>
+		</text>
+		
+		<!-- label -->
 		<text	x="7"	var-x="text_x"
 				y="62"	var-y="text_y"
 				text-anchor="middle"
 				style="fill:#aaaaaa; font-size: 10px; font-weight: bold; prop('fill', 'text_color');">
 					<Variable name="text"/>
 		</text>
+		
+		<!-- slit -->
+		<line
+			x1="7"	expr-x1="offset"
+			x2="7"	expr-x2="offset"
+			y1="1"	expr-y1="margin + 1"
+			y2="77"	expr-y2="height - margin - 1"
+			style="stroke-width: 1; stroke: #000000; stroke-opacity: 1; stroke-linecap: square;"/>
+		
+		<!-- light reflection -->
+		<line
+			x1="8"	expr-x1="offset + 1"
+			x2="8"	expr-x2="offset + 1"
+			y1="0"	expr-y1="margin"
+			y2="79"	expr-y2="height - margin"
+			style="stroke-width: 1; stroke: #ffffff; stroke-opacity: 0.1"/>
 		
 	</g>
 	

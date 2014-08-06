@@ -143,9 +143,9 @@ Track control panel.
 					<SetVariable name="handle_width">15</SetVariable>
 					<SetVariable name="handle_height">11</SetVariable>
 					
-					<SetVariable name="text">gain</SetVariable>
-					<SetVariable name="text_x">12</SetVariable>
-					<SetVariable name="text_y">65</SetVariable>
+					<SetVariable name="text">gai</SetVariable>
+					<SetVariable name="text_x">6</SetVariable>
+					<SetVariable name="text_y">60</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>pregain</TooltipId>
@@ -171,7 +171,7 @@ Track control panel.
 					
 					<SetVariable name="text">vol.</SetVariable>
 					<SetVariable name="text_x">12</SetVariable>
-					<SetVariable name="text_y">65</SetVariable>
+					<SetVariable name="text_y">60</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>channel_volume</TooltipId>
@@ -449,7 +449,7 @@ Track control panel.
 					
 					<SetVariable name="text">pitch</SetVariable>
 					<SetVariable name="text_x">12.5</SetVariable>
-					<SetVariable name="text_y">65</SetVariable>
+					<SetVariable name="text_y">60</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>pitch_rate</TooltipId>

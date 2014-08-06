@@ -37,10 +37,15 @@ Master controls : volume, balance, pregain + time.
 				<Children>
 					
 					<SetVariable name="text">bal</SetVariable>
-					<SetVariable name="text_x">20</SetVariable>
-					<SetVariable name="text_y">10</SetVariable>
+					<SetVariable name="text_x">13</SetVariable>
+					<SetVariable name="text_y">21</SetVariable>
 					
 					<SetVariable name="width">50</SetVariable>
+					<SetVariable name="height">21</SetVariable>
+					<SetVariable name="offset">10.5</SetVariable>
+					<SetVariable name="margin">5.5</SetVariable>
+					
+					
 					<SetVariable name="color">#00ff00</SetVariable>
 					
 					<SetVariable name="handle_width">11</SetVariable>
@@ -89,7 +94,7 @@ Master controls : volume, balance, pregain + time.
 					
 					<SetVariable name="text">master</SetVariable>
 					<SetVariable name="text_x">16</SetVariable>
-					<SetVariable name="text_y">100</SetVariable>
+					<SetVariable name="text_y">90</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>master_volume</TooltipId>
@@ -117,7 +122,7 @@ Master controls : volume, balance, pregain + time.
 					
 					<SetVariable name="text">head</SetVariable>
 					<SetVariable name="text_x">16</SetVariable>
-					<SetVariable name="text_y">100</SetVariable>
+					<SetVariable name="text_y">90</SetVariable>
 					
 					<SliderComposed>
 						<TooltipId>headVolume</TooltipId>

@@ -5,7 +5,7 @@ Equalizer slider
 -->
 <Template>
 	
-	<SetVariable name="width">69</SetVariable>
+	<SetVariable name="width">70</SetVariable>
 	<SetVariable name="height">25</SetVariable>
 	<SetVariable name="margin">5.5</SetVariable>
 	
