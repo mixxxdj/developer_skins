@@ -21,9 +21,9 @@
 			var computePosition = function( position ){
 				var out = Math.round( position );
 				if( out % 2 != 0 )
-					out++;
+					out--;
 				
-				return Math.round( out + margin );
+				return out + Math.round( margin );
 			}
 			
 			
