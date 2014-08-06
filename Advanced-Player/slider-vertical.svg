@@ -14,6 +14,18 @@
 			
 			degreesColor = '#666666';
 			sectionColor = '#888888';
+			
+			// compute the position to be relative to the slider
+			// and exactly aligned on pixel grid and degrees grid
+			var computePosition = function( position ){
+				var out = Math.round( position );
+				if( out % 2 != 0 )
+					out++;
+				
+				return Math.round( out + margin );
+			}
+			
+			
 		]]>
 	</script>
 	
@@ -45,24 +57,24 @@
 		<line
 			x1="1"	expr-x1="offset - 4"
 			x2="13"	expr-x2="offset + 4"
-			y1="19"	expr-y1="Math.round(shapeHeight / 4 + margin)"
-			y2="19"	expr-y2="Math.round(shapeHeight / 4 + margin)"
+			y1="19"	expr-y1="computePosition( shapeHeight / 4 )"
+			y2="19"	expr-y2="computePosition( shapeHeight / 4 )"
 			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- middle line -->
 		<line
 			x1="1"	expr-x1="offset - 6"
 			x2="13"	expr-x2="offset + 6"
-			y1="39"	expr-y1="Math.round(shapeHeight / 2 + margin)"
-			y2="39"	expr-y2="Math.round(shapeHeight / 2 + margin)"
+			y1="39"	expr-y1="computePosition( shapeHeight / 2 )"
+			y2="39"	expr-y2="computePosition( shapeHeight / 2 )"
 			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- 3/4 line -->
 		<line
 			x1="1"	expr-x1="offset - 4"
 			x2="13"	expr-x2="offset + 4"
-			y1="59"	expr-y1="Math.round(shapeHeight / 4 * 3 + margin)"
-			y2="59"	expr-y2="Math.round(shapeHeight / 4 * 3 + margin)"
+			y1="59"	expr-y1="computePosition( shapeHeight / 4 * 3 )"
+			y2="59"	expr-y2="computePosition( shapeHeight / 4 * 3 )"
 			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
 		
 		<!-- bottom line -->

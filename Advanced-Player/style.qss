@@ -53,12 +53,16 @@ QPushButton#LibraryPreviewButton {
   background: transparent; 
   border: 0px; 
 }
+
 /*QPushButton#LibraryPreviewButton:focus { 
   background-color: #725309;
 }*/
-/*#LibraryBPMWidget, #LibraryBPMButton, #LibraryBPMSpinBox {
-  background-color: #ff0; 
-}*/
+
+/**/
+#LibraryBPMWidget,#LibraryBPMButton, #LibraryBPMSpinBox {
+  background-color: #888888; 
+}
+/**/
 
 QPushButton#LibraryPreviewButton:!checked{ image: url(skin:/style/style_library_preview_play.png); }
 QPushButton#LibraryPreviewButton:checked{ image: url(skin:/style/style_library_preview_pause.png); }
@@ -68,6 +72,7 @@ QHeaderView {
   color: #cfb32c;
   background-color: #0f0f0f;
 }
+
 QHeaderView::section {
   height: 18px;
   border: 1px solid #585858;
