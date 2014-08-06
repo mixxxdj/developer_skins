@@ -835,8 +835,8 @@ Track control panel.
 					
 					<Template src="skin:skin_btn_eq.xml">
 						<SetVariable name="text">High</SetVariable>
-						<SetVariable name="text_x">55</SetVariable>
-						<SetVariable name="text_y">15</SetVariable>
+						<SetVariable name="text_x">54</SetVariable>
+						<SetVariable name="text_y">11</SetVariable>
 						<SetVariable name="frequency">High</SetVariable>
 						<SetVariable name="offset">19</SetVariable>
 					</Template>
@@ -847,8 +847,8 @@ Track control panel.
 					
 					<Template src="skin:skin_btn_eq.xml">
 						<SetVariable name="text">Mid</SetVariable>
-						<SetVariable name="text_x">55</SetVariable>
-						<SetVariable name="text_y">25</SetVariable>
+						<SetVariable name="text_x">54</SetVariable>
+						<SetVariable name="text_y">24</SetVariable>
 						<SetVariable name="frequency">Mid</SetVariable>
 						<SetVariable name="height">25</SetVariable>
 						<SetVariable name="offset">13</SetVariable>
@@ -860,10 +860,10 @@ Track control panel.
 					
 					<Template src="skin:skin_btn_eq.xml">
 						<SetVariable name="text">Low</SetVariable>
-						<SetVariable name="text_x">55</SetVariable>
+						<SetVariable name="text_x">54</SetVariable>
 						<SetVariable name="text_y">20</SetVariable>
 						<SetVariable name="frequency">Low</SetVariable>
-						<SetVariable name="height">25</SetVariable>
+						<SetVariable name="height">27</SetVariable>
 						<SetVariable name="offset">7</SetVariable>
 					</Template>
 					
