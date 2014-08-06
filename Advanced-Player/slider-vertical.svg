@@ -105,8 +105,8 @@
 		<line
 			x1="7"	expr-x1="offset"
 			x2="7"	expr-x2="offset"
-			y1="1"	expr-y1="margin + 1"
-			y2="77"	expr-y2="height - margin - 1"
+			y1="1"	expr-y1="Math.round(margin)"
+			y2="77"	expr-y2="Math.round(height - margin - 1)"
 			style="stroke-width: 1; stroke: #000000; stroke-opacity: 1; stroke-linecap: square;"/>
 		
 		<!-- light reflection -->
