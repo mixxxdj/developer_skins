@@ -146,11 +146,19 @@ Track info panel.
 								</Connection>
 							</NumberBpm>
 							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">3</SetVariable>
+							</Template>
+							
 							<NumberRate>
 								<TooltipId>rate_display</TooltipId>
 								<Channel><Variable name="i"/></Channel>
 								<NumberOfDigits>2</NumberOfDigits>
 							</NumberRate>
+							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">6</SetVariable>
+							</Template>
 							
 							<!--
 							**********************************************
@@ -192,6 +200,14 @@ Track info panel.
 									<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
 								</Connection>
 							</NumberPos>
+							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">6</SetVariable>
+							</Template>
+							
+							<Label>
+								<Text>/</Text>
+							</Label>
 							
 							<Template src="skin:skin_spacer_vx.xml">
 								<SetVariable name="height">6</SetVariable>
