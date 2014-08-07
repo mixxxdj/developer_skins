@@ -165,6 +165,28 @@ Track info panel.
 							Text - Key
 							**********************************************
 							-->
+							<Key>
+								<TooltipId>visual_key</TooltipId>
+								<!--Style>font; bg-color; color; text-align; (padding);
+								</Style-->
+								<DisplayCents>false</DisplayCents>
+								<Connection>
+									<ConfigKey><Variable name="channel"/>,visual_key</ConfigKey>
+								</Connection>
+							</Key>
+							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">0</SetVariable>
+							</Template>
+							
+							<Label>
+								<Text>/</Text>
+							</Label>
+							
+							<Template src="skin:skin_spacer_vx.xml">
+								<SetVariable name="height">0</SetVariable>
+							</Template>
+							
 							<TrackProperty>
 								<TooltipId>track_times_played</TooltipId>
 								<SizePolicy>min,me</SizePolicy>
