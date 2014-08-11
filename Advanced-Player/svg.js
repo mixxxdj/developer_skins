@@ -1,5 +1,11 @@
 this.templateHooks = {};
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+
 regexpQuote = function (str, delimiter) {
     return String(str).replace(
         new RegExp(

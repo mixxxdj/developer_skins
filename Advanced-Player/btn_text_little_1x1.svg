@@ -1,7 +1,7 @@
 <svg height="15" width="15">
 	<script src="svg.js">
-		// <![CDATA[
-		// ]]>
+		<![CDATA[
+		]]>
 	</script>
 
 	<defs>
@@ -27,7 +27,7 @@
 	
 	<text	x="7.5" y="11.5"
 			text-anchor="middle"
-			style="fill:#ffffff; font-size: 11px; font-weight: bold; prop('fill', 'text_color');">
+			style="fill:#ffffff; font-size: 11px; font-weight: bold; prop('fill', 'text_color'); font-family: loma, impact, serif;">
 				<Variable name="text"/>
 	</text>
 </svg>

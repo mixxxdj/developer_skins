@@ -45,7 +45,7 @@
 		<!-- text -->
 		<text	x="16" y="15"
 				text-anchor="middle"
-				style="fill:#ffffff; font-size: 14px; font-weight: bold; prop('fill', 'text_color');">
+				style="fill:#ffffff; font-size: 14px; font-weight: bold; prop('fill', 'text_color'); font-family: loma, impact, serif;">
 					<Variable name="text"/>
 		</text>
 	</g>
