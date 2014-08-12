@@ -45,7 +45,7 @@ Track control panel.
 			Visual- Volume peak indicator
 			**********************************************
 			-->
-			<SetVariable name="peak_width">13</SetVariable>
+			<SetVariable name="peak_width">11</SetVariable>
 			<SetVariable name="peak_height">13</SetVariable>
 			<StatusLight>
 				<TooltipId>PeakIndicator</TooltipId>
@@ -67,8 +67,8 @@ Track control panel.
 			TODO : sizes?
 			**********************************************
 			-->
-			<SetVariable name="vumeter_width">13</SetVariable>
-			<SetVariable name="vumeter_height">51</SetVariable>
+			<SetVariable name="vumeter_width">11</SetVariable>
+			<SetVariable name="vumeter_height">53</SetVariable>
 			
 			<VuMeter>
 				<TooltipId>channel_VuMeter</TooltipId>
@@ -88,7 +88,7 @@ Track control panel.
 			</VuMeter>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">4</SetVariable>
+				<SetVariable name="height">7</SetVariable>
 			</Template>
 			
 			
