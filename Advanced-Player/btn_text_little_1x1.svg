@@ -19,15 +19,15 @@
 	<rect	x="0.5" y="0.5" width="14" height="14" rx="1" ry="1"
 			style="fill:none; stroke-width:1; stroke:#dddddd; prop('stroke', 'light_color');" />
 	
-	<text	x="8.5" y="12"
+	<text	x="9" y="13"
 			text-anchor="middle"
-			style="fill:#000000; font-size: 11px; font-weight: bold; opacity: 0.5;">
+			style="fill:#000000; font-size: 25px; font-weight: bold; opacity: 0.5; font-family: Squary, loma, serif;">
 				<Variable name="text"/>
 	</text>
 	
-	<text	x="7.5" y="11.5"
+	<text	x="8" y="11.5"
 			text-anchor="middle"
-			style="fill:#ffffff; font-size: 11px; font-weight: bold; prop('fill', 'text_color'); font-family: loma, impact, serif;">
+			style="fill:#ffffff; font-size: 25px; font-weight: bold; prop('fill', 'text_color'); font-family: Squary, loma, serif;">
 				<Variable name="text"/>
 	</text>
 </svg>

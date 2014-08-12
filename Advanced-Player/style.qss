@@ -6,7 +6,8 @@
 
 
 QLabel {
-    font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+    /* font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif ;*/
+    font				: Squary, bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
     background-color	: transparent;
     color				: #ffffff;
 }

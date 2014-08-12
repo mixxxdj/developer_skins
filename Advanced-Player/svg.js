@@ -37,15 +37,29 @@ variable = function( varName ){
     return '';
 }
 
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
 
 global = this;
 templateHooks.prop = prop = function( propName, varName ){
-    // print( varName );
+    var out = '';
     
-    if( (varName in global) && (value = global[varName]).length ){
-        return propName + ':' + value + ';';
+    if( (varName in global) ){
+        var value = global[varName];
+        
+        if( isNumber(value) ){
+            out = propName + ':' + value + ';';
+        } else if( value.length ) {
+            out = propName + ':' + value + ';';
+        }
+        
+    } else {
+        print( 'Unable to find ' + varName + ' for prop hook.' );
     }
-    return '';
+    
+    // print( varName + ' => ' out + ' | ' + (varName in global) );
+    return out;
 }
 
 
