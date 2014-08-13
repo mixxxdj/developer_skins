@@ -21,14 +21,18 @@ Master controls : volume, balance, pregain + time.
 			
 			<Time>
 				<SizePolicy>min,f</SizePolicy>
-				<MinimumSize>40,21</MinimumSize>
-				<MaximumSize>87,21</MaximumSize>
+				<MinimumSize>40,27</MinimumSize>
+				<MaximumSize>87,27</MaximumSize>
 				<TooltipId>time</TooltipId>
 				<Alignment>center</Alignment>
 				<ShowSeconds>false</ShowSeconds>
 				<ClockFormat>24</ClockFormat>
 			</Time>
 			
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
@@ -77,13 +81,13 @@ Master controls : volume, balance, pregain + time.
 				<ObjectName>Master Volume and Headphone Volume</ObjectName>
 				<Layout>horizontal</Layout>
 				<SizePolicy>min,min</SizePolicy>
-				<MinimumSize>40,-1</MinimumSize>
-				<MaximumSize>87,-1</MaximumSize>
+				<MinimumSize>40,120</MinimumSize>
+				<MaximumSize>87,</MaximumSize>
 				<Children>
 					
 					<!-- volume -->
 					<SetVariable name="width">33</SetVariable>
-					<SetVariable name="height">105</SetVariable>
+					<SetVariable name="height">119</SetVariable>
 					<SetVariable name="offset">16</SetVariable>
 					<SetVariable name="margin">7.5</SetVariable>
 					
@@ -110,9 +114,9 @@ Master controls : volume, balance, pregain + time.
 						<SetVariable name="height">3</SetVariable>
 					</Template>
 					
-					<!-- headphone -->
+					<!-- headphone volume -->
 					<SetVariable name="width">33</SetVariable>
-					<SetVariable name="height">105</SetVariable>
+					<SetVariable name="height">119</SetVariable>
 					<SetVariable name="offset">16</SetVariable>
 					
 					<SetVariable name="handle_width">29</SetVariable>
@@ -141,13 +145,16 @@ Master controls : volume, balance, pregain + time.
 				</Children>
 			</WidgetGroup>
 			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>horizontal</Layout>
 				<SizePolicy>min,min</SizePolicy>
 				<MinimumSize>33,21</MinimumSize>
 				<Children>
-					
+					<!-- head mix -->
 					<SetVariable name="width">50</SetVariable>
 					<SetVariable name="height">21</SetVariable>
 					<SetVariable name="offset">6</SetVariable>
@@ -179,7 +186,7 @@ Master controls : volume, balance, pregain + time.
 			</WidgetGroup>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">17</SetVariable>
+				<SetVariable name="height">3</SetVariable>
 			</Template>
 			
 			<WidgetGroup>

@@ -111,6 +111,10 @@
 							<SetVariable name="track_text_color">#13a9fc</SetVariable>
 						</Template>
 						
+						<Template src="skin:skin_spacer_vx.xml">
+							<SetVariable name="height">0</SetVariable>
+						</Template>
+						
 						<Template src="skin:skin_deck.xml">
 							<SetVariable name="i">2</SetVariable>
 							<SetVariable name="height">111</SetVariable>

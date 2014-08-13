@@ -4,7 +4,7 @@
 	>
 	
 	<script src="svg.js">
-		// <![CDATA[
+		<![CDATA[
 		
 		borderPath = templateHooks.borderPath = function( width, height, offset, up ){
 			var path = '';
@@ -34,7 +34,7 @@
 		shapeWidth	= handle_width - 1;
 		shapeHeight	= (handle_height - 1) / 2 - 1;
 		
-		// ]]>
+		]]>
 	</script>
 	
 	<defs>

@@ -11,7 +11,11 @@ Track info panel.
 		<SizePolicy>me,me</SizePolicy>
 		<!--MinimumSize>210,<Variable name="height"/></MinimumSize-->
 		<MinimumSize>210,-1</MinimumSize>
-		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
 		<Children>
 			
 			<WidgetGroup>
