@@ -8,7 +8,7 @@ Track info panel.
 	<WidgetGroup>
 		<ObjectName>Track Info</ObjectName>
 		<Layout>vertical</Layout>
-		<SizePolicy>me,me</SizePolicy>
+		<SizePolicy>me,min</SizePolicy>
 		<!--MinimumSize>210,<Variable name="height"/></MinimumSize-->
 		<MinimumSize>210,-1</MinimumSize>
 		<Style>
@@ -79,44 +79,114 @@ Track info panel.
 			Visual- Waveform overview
 			**********************************************
 			-->
-			<Overview>
-				<TooltipId>waveform_overview</TooltipId>
-				<SizePolicy>me,f</SizePolicy>
-				<MinimumSize>150,51</MinimumSize>
-				<MaximumSize>-1,51</MaximumSize>
-				<Channel><Variable name="i"/></Channel>
-				<BgColor>#191919</BgColor>
-				<SignalHighColor>#FFE300</SignalHighColor>
-				<SignalMidColor>#0099FF</SignalMidColor>
-				<SignalLowColor>#FF0035</SignalLowColor>
-				<SignalColor>#FF8000</SignalColor>
-				<PlayPosColor>#00FF00</PlayPosColor>
-				<EndOfTrackColor>#EA0000</EndOfTrackColor>
-				<DefaultMark>
-					<Align>bottom</Align>
-					<Color>#00FF00</Color>
-					<TextColor>#CCCCCC</TextColor>
-					<Text> %1 </Text>
-				</DefaultMark>
-				<MarkRange>
-					<StartControl>loop_start_position</StartControl>
-					<EndControl>loop_end_position</EndControl>
-					<EnabledControl>loop_enabled</EnabledControl>
-					<Color>#00FF00</Color>
-					<DisabledColor>#008000</DisabledColor>
-				</MarkRange>
-				<Mark>
-					<Control>cue_point</Control>
-					<Text>C</Text>
-					<Align>top</Align>
-					<Color>#00FF00</Color>
-					<TextColor>#CCCCCC</TextColor>
-				</Mark>
-				<Connection>
-					<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
-					<EmitOnDownPress>false</EmitOnDownPress>
-				</Connection>
-			</Overview>
+			
+			<Splitter>
+				<!--ObjectName>LibrarySplitter</ObjectName-->
+				<Orientation>horizontal</Orientation>
+				<SizePolicy>me,min</SizePolicy>
+				<Children>
+					
+					<Visual>
+						<TooltipId>waveform_display</TooltipId>
+						<Style></Style>
+						<Channel><Variable name="i"/></Channel>
+						<BgColor>#191919</BgColor>
+						<!--BgPixmap>style/style_bg_waveform1.png</BgPixmap-->
+						<SignalHighColor>#eeaa00</SignalHighColor>
+						<SignalMidColor>#13a9fc</SignalMidColor>
+						<SignalLowColor>#cc0022</SignalLowColor>
+						<!--SignalColor>#FF8080</SignalColor-->
+						<SignalColor>#cccccc</SignalColor>
+						
+						<BeatColor>#88ff88</BeatColor>
+						<BeatHighlightColor></BeatHighlightColor>
+						<PlayPosColor>#00FF00</PlayPosColor>
+						
+						<!--EndOfTrackColor>#EA0000</EndOfTrackColor-->
+						<EndOfTrackColor><Variable name="track_light_color"/></EndOfTrackColor>
+						
+						<DefaultMark>
+							<Align>top</Align>
+							<Color>#00FF00</Color>
+							<TextColor>#FFFFFF</TextColor>
+							<Text> %1 </Text>
+						</DefaultMark>
+						<MarkRange>
+							<StartControl>loop_start_position</StartControl>
+							<EndControl>loop_end_position</EndControl>
+							<EnabledControl>loop_enabled</EnabledControl>
+							<Color>#00FF00</Color>
+							<DisabledColor>#FFFFFF</DisabledColor>
+						</MarkRange>
+						<Mark>
+							<Control>loop_start_position</Control>
+							<Text>IN</Text>
+							<Align>bottom</Align>
+							<Color>#00FF00</Color>
+							<TextColor>#FFFFFF</TextColor>
+						</Mark>
+						<Mark>
+							<Control>loop_end_position</Control>
+							<Text>OUT</Text>
+							<Align>bottom</Align>
+							<Color>#00FF00</Color>
+							<TextColor>#FFFFFF</TextColor>
+						</Mark>
+						<!--
+						The hotcues not represented by a button in the current skin show only in the waveform under two circumstances:
+							- if a MIDI device which supports more hotcues than buttons are in the current skin has them activated
+							- if you change from a skin which supports more hotcues than buttons are in the current skin (and has them activated)
+						-->
+						<Mark>
+							<Control>cue_point</Control>
+							<Text>CUE</Text>
+							<Align>top</Align>
+							<Color>#FF001C</Color>
+							<TextColor>#FFFFFF</TextColor>
+						</Mark>
+					</Visual>
+					
+					<Overview>
+						<TooltipId>waveform_overview</TooltipId>
+						<SizePolicy>me,f</SizePolicy>
+						<MinimumSize>150,51</MinimumSize>
+						<MaximumSize>-1,51</MaximumSize>
+						<Channel><Variable name="i"/></Channel>
+						<BgColor>#191919</BgColor>
+						<SignalHighColor>#FFE300</SignalHighColor>
+						<SignalMidColor>#0099FF</SignalMidColor>
+						<SignalLowColor>#FF0035</SignalLowColor>
+						<SignalColor>#FF8000</SignalColor>
+						<PlayPosColor>#00FF00</PlayPosColor>
+						<EndOfTrackColor>#EA0000</EndOfTrackColor>
+						<DefaultMark>
+							<Align>bottom</Align>
+							<Color>#00FF00</Color>
+							<TextColor>#CCCCCC</TextColor>
+							<Text> %1 </Text>
+						</DefaultMark>
+						<MarkRange>
+							<StartControl>loop_start_position</StartControl>
+							<EndControl>loop_end_position</EndControl>
+							<EnabledControl>loop_enabled</EnabledControl>
+							<Color>#00FF00</Color>
+							<DisabledColor>#008000</DisabledColor>
+						</MarkRange>
+						<Mark>
+							<Control>cue_point</Control>
+							<Text>C</Text>
+							<Align>top</Align>
+							<Color>#00FF00</Color>
+							<TextColor>#CCCCCC</TextColor>
+						</Mark>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
+							<EmitOnDownPress>false</EmitOnDownPress>
+						</Connection>
+					</Overview>
+					
+				</Children>
+			</Splitter>
 			
 			
 			<WidgetGroup>

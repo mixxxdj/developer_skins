@@ -251,10 +251,9 @@ Track control panel.
 	
 	<!--
 	**********************************************
-	Column 2
+	Column 2 : play ...
 	**********************************************
 	-->
-	
 	
 	<WidgetGroup>
 		<Layout>vertical</Layout>
@@ -416,10 +415,6 @@ Track control panel.
       </WidgetGroup>
 
 
-
-
-
-
 	<!--
 	**********************************************
 	Column 3 
@@ -432,7 +427,7 @@ Track control panel.
 	
 	<!--
 	**********************************************
-	Column 4
+	Column 4 : pitch + controls + cues + loops
 	**********************************************
 	-->
 	<WidgetGroup>
@@ -441,15 +436,29 @@ Track control panel.
 		<SizePolicy>min,me</SizePolicy>
 		<Children>
 			
+			<!--
+			**********************************************
+			Pitch
+			**********************************************
+			-->
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<SizePolicy>min,me</SizePolicy>
-				<MinimumSize>25,-1</MinimumSize>
-				<MaximumSize>25,-1</MaximumSize>
+				<SizePolicy>min,min</SizePolicy>
+				<MinimumSize>29,me</MinimumSize>
+				<MaximumSize>29,-1</MaximumSize>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid red; }
+					/**/
+				</Style>
 				<Children>
 					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height">2</SetVariable>
+					</Template>
+					
 					<SetVariable name="width">25</SetVariable>
-					<SetVariable name="height">69</SetVariable>
+					<SetVariable name="height">81</SetVariable>
 					<SetVariable name="offset">12</SetVariable>
 					<SetVariable name="margin">6.5</SetVariable>
 					
@@ -473,7 +482,7 @@ Track control panel.
 					</SliderComposed>
 					
 					<Template src="skin:skin_spacer_vx.xml">
-						<SetVariable name="height">6</SetVariable>
+						<SetVariable name="height">22</SetVariable>
 					</Template>
 					
 				</Children>
@@ -482,6 +491,8 @@ Track control panel.
 			<Template src="skin:skin_spacer_vx.xml">
 				<SetVariable name="height">7</SetVariable>
 			</Template>
+			
+			<SetVariable name="btns_column_margin_bottom">12</SetVariable>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
@@ -614,6 +625,10 @@ Track control panel.
 						<SetVariable name="height">6</SetVariable>
 					</Template>
 					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height"><Variable name="btns_column_margin_bottom"/></SetVariable>
+					</Template>
+					
 				</Children>
 			</WidgetGroup>
 			
@@ -675,6 +690,10 @@ Track control panel.
 					
 					<Template src="skin:skin_spacer_vx.xml">
 						<SetVariable name="height">6</SetVariable>
+					</Template>
+					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height"><Variable name="btns_column_margin_bottom"/></SetVariable>
 					</Template>
 					
 				</Children>
@@ -741,6 +760,10 @@ Track control panel.
 						<SetVariable name="height">6</SetVariable>
 					</Template>
 					
+					<Template src="skin:skin_spacer_vx.xml">
+						<SetVariable name="height"><Variable name="btns_column_margin_bottom"/></SetVariable>
+					</Template>
+					
 				</Children>
 			</WidgetGroup>
 			
@@ -773,7 +796,11 @@ Track control panel.
 		<SizePolicy>f,me</SizePolicy>
 		<MinimumSize>20,-1</MinimumSize>
 		<MaximumSize>20,-1</MaximumSize>
-		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
 		<Children>
 			
 			<Template src="skin:skin_spacer_vx.xml">
@@ -781,7 +808,7 @@ Track control panel.
 			</Template>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">7</SetVariable>
+				<SetVariable name="height">10</SetVariable>
 			</Template>
 			
 			<WidgetGroup>
@@ -837,9 +864,17 @@ Track control panel.
 		<Layout>vertical</Layout>
 		<SizePolicy>f,me</SizePolicy>
 		<MinimumSize>70,-1</MinimumSize>
-		<MaximumSize>70,-1</MaximumSize>
-		<!--Style>QGroupBox { border: 1px solid red; }</Style-->
+		<MaximumSize>90,-1</MaximumSize>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
 		<Children>
+			
+			<Template src="skin:skin_spacer_vx.xml">
+				<SetVariable name="height"><Variable name="margin_up"/></SetVariable>
+			</Template>
 			
 			<WidgetGroup>
 				<Layout>vertical</Layout>
@@ -884,7 +919,7 @@ Track control panel.
 			</WidgetGroup>
 			
 			<Template src="skin:skin_spacer_vx.xml">
-				<SetVariable name="height">10</SetVariable>
+				<SetVariable name="height">20</SetVariable>
 			</Template>
 			
 		</Children>

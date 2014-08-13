@@ -20,6 +20,7 @@
         <SizePolicy>me,f</SizePolicy>
         <MinimumSize>0,100</MinimumSize>
         <Children>
+            
           <Splitter>
             <ObjectName>LibrarySplitter</ObjectName>
             <Orientation>horizontal</Orientation>
@@ -54,6 +55,7 @@
               
             </Children>
           </Splitter>
+          
         </Children>
       </WidgetGroup>
 
