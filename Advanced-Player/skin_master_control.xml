@@ -175,6 +175,10 @@ Master controls : volume, balance, pregain + time.
 						<Horizontal>true</Horizontal>
 						<Connection>
 							<ConfigKey>[Master],headMix</ConfigKey>
+							<Transform>
+								<Invert/>
+								<Add>1</Add>
+							</Transform>
 						</Connection>
 						<Connection>
 							<ConfigKey persist="true">[Master],show_headphone_controls</ConfigKey>

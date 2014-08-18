@@ -92,11 +92,10 @@ Track info panel.
 						<Channel><Variable name="i"/></Channel>
 						<BgColor>#191919</BgColor>
 						<!--BgPixmap>style/style_bg_waveform1.png</BgPixmap-->
-						<SignalHighColor>#eeaa00</SignalHighColor>
+						<SignalHighColor>#eecc00</SignalHighColor>
 						<SignalMidColor>#13a9fc</SignalMidColor>
 						<SignalLowColor>#cc0022</SignalLowColor>
-						<!--SignalColor>#FF8080</SignalColor-->
-						<SignalColor>#cccccc</SignalColor>
+						<SignalColor>#666666</SignalColor>
 						
 						<BeatColor>#88ff88</BeatColor>
 						<BeatHighlightColor></BeatHighlightColor>
@@ -158,7 +157,7 @@ Track info panel.
 						<SignalLowColor>#FF0035</SignalLowColor>
 						<SignalColor>#FF8000</SignalColor>
 						<PlayPosColor>#00FF00</PlayPosColor>
-						<EndOfTrackColor>#EA0000</EndOfTrackColor>
+						<EndOfTrackColor><Variable name="track_light_color"/></EndOfTrackColor>
 						<DefaultMark>
 							<Align>bottom</Align>
 							<Color>#00FF00</Color>
