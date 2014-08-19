@@ -1,6 +1,6 @@
 <svg	xmlns	= "http://www.w3.org/2000/svg"
-		width="60"	var-width="width"
-		height="25"	var-height="height"
+		width="60"	expr-width="width"
+		height="25"	expr-height="height"
 	>
 	
 	<script src="svg.js">
@@ -42,8 +42,8 @@
 		</linearGradient>
 	</defs>
 	
-	<rect	width="60"	var-width="width"
-			height="25"	var-height="height"
+	<rect	width="60"	expr-width="width"
+			height="25"	expr-height="height"
 			style="fill: #191919; var( fill, background_color ); "/>
 	
 	<g transform="translate( 0.5, 0.5 )">
@@ -106,8 +106,8 @@
 		</text>
 		
 		<!-- label -->
-		<text	x="7"	var-x="text_x"
-				y="62"	var-y="text_y"
+		<text	x="7"	expr-x="text_x"
+				y="62"	expr-y="text_y"
 				text-anchor="middle"
 				style="fill:#aaaaaa; font-size: 10px; font-weight: bold; prop('fill', 'text_color');">
 					<Variable name="text"/>

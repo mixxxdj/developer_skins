@@ -1,6 +1,6 @@
 <svg	xmlns	= "http://www.w3.org/2000/svg"
-		width	= "15"	var-width	= "peak_width"
-		height	= "69"	var-height	= "peak_height"
+		width	= "15"	expr-width	= "peak_width"
+		height	= "69"	expr-height	= "peak_height"
 	>
 	
 	<script src="svg.js">

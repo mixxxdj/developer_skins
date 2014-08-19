@@ -1,6 +1,6 @@
 <svg	xmlns	= "http://www.w3.org/2000/svg"
-		width	= "15"	var-width	= "handle_width"
-		height	= "33"	var-height	= "handle_height"
+		width	= "15"	expr-width	= "handle_width"
+		height	= "33"	expr-height	= "handle_height"
 	>
 	
 	<script src="svg.js">
@@ -48,8 +48,8 @@
 	
 	
 	<rect	x="0" y="0"
-			width	= "15"	var-width	= "handle_width"
-			height	= "33"	var-height	= "handle_height"
+			width	= "15"	expr-width	= "handle_width"
+			height	= "33"	expr-height	= "handle_height"
 			style	= "fill: url(#grad_def); stroke-linecap: sqare;" />
 	
 	<g transform="translate( 0.5, 0.5 )">

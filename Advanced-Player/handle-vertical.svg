@@ -1,6 +1,6 @@
 <svg	xmlns	= "http://www.w3.org/2000/svg"
-		width	= "25"	var-width	= "handle_width"
-		height	= "13"	var-height	= "handle_height"
+		width	= "25"	expr-width	= "handle_width"
+		height	= "13"	expr-height	= "handle_height"
 	>
 	
 	<script src="svg.js">

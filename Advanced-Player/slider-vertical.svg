@@ -1,6 +1,6 @@
 <svg	xmlns= "http://www.w3.org/2000/svg"
-		width="15"	var-width="width"
-		height="79"	var-height="height"
+		width="15"	expr-width="width"
+		height="79"	expr-height="height"
 		expr-viewBox="'0 0 ' + width + ' ' + height" >
 	
 	<script src="svg.js">
@@ -41,8 +41,8 @@
 	</defs>
 	
 	<rect
-		width="15"	var-width="width"
-		height="79"	var-height="height"
+		width="15"	expr-width="width"
+		height="79"	expr-height="height"
 		style="fill: #191919; prop( 'fill', 'background_color' );" />
 	
 	<g transform="translate( 0.5, 0.5 )">
@@ -105,8 +105,8 @@
 		</text>
 		
 		<!-- label -->
-		<text	x="7"	var-x="text_x"
-				y="62"	var-y="text_y"
+		<text	x="7"	expr-x="text_x"
+				y="62"	expr-y="text_y"
 				text-anchor="middle"
 				style="fill:#aaaaaa; font-size: 10px; font-weight: bold; prop('fill', 'text_color');">
 					<Variable name="text"/>
