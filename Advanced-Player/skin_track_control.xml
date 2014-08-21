@@ -478,6 +478,10 @@ Track control panel.
 						<Connection>
 							<ConfigKey><Variable name="channel"/>,rate</ConfigKey>
 							<EmitOnDownPress>false</EmitOnDownPress>
+							<Transform>
+								<Invert/>
+								<Add>1</Add>
+							</Transform>
 						</Connection>
 					</SliderComposed>
 					
