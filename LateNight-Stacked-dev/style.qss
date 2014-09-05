@@ -1,3 +1,6 @@
+#UIButtons {
+}
+
 #DecksSizer {
   background-color: #0f0f0f;
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
@@ -126,6 +129,12 @@
 #MasterControls {
 }
 
+#AuxContainer {
+  qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
+  padding-bottom: 6px;
+  padding-right: 3px;
+}
+
 #MixerContainer {
   qproperty-layoutAlignment: 'AlignLeft | AlignBottom';
   background-color: #1e1e1e;
@@ -223,6 +232,10 @@
 
 #PlayCue {
   qproperty-layoutAlignment: 'AlignRight | AlignBottom';
+}
+
+#RateSlider {
+  padding-bottom:4px;
 }
 
 #RateButtons, #RatePermButtons, #RateTempButtons {
@@ -454,6 +467,16 @@ qproperty-layoutAlignment: 'AlignCenter';
   margin: 5px;
 }
 
+#AuxBorder {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignBottom';
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+#AuxPflSpace {
+  padding-top: 2px;
+}
+
 #SamplerDecksContainer {
   background-color: #0e0e0e;
   border-top: 1px solid #585858;
@@ -549,12 +572,16 @@ qproperty-layoutAlignment: 'AlignCenter';
   padding: 2px;
 }
 
+#TextColor1, #TextColor2 {
+  color: #eece33;
+}
 
-
+#TextColor3, #TextColor4 {
+  color: #09B2AE;
+}
 
 #TitleGutter WLabel, #EffectUnitNameContainer WLabel {
   font: bold 16px/19px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-  color: #eece33;
   text-transform: none;
   text-align: left;
 }

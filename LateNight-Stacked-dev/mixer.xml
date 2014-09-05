@@ -2,18 +2,18 @@
 	<WidgetGroup>
 	    <ObjectName>Mixer</ObjectName>
 		<SizePolicy>e,max</SizePolicy>
-        <MinimumSize>150,</MinimumSize>
+        <MinimumSize>450,</MinimumSize>
 		<MaximumSize>1000,</MaximumSize>
 		<Layout>horizontal</Layout>
 		<Children>
-		    <WidgetGroup>
+            <!-- <WidgetGroup>
                 <ObjectName>MicContainer</ObjectName>
                 <Layout>vertical</Layout>
                 <SizePolicy>max,min</SizePolicy>
                 <Children>
                     <Template src="skin:microphone.xml"/>
                 </Children>
-            </WidgetGroup>
+            </WidgetGroup> -->
 			<WidgetGroup>
 			    <ObjectName>PrimaryMixer</ObjectName>
 				<Layout>vertical</Layout>
@@ -49,7 +49,6 @@
                                             <Pos>4,4</Pos>
                                             <Connection>
                                                 <ConfigKey>[InternalClock],sync_master</ConfigKey>
-                                                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                                 <ButtonState>LeftButton</ButtonState>
                                             </Connection>
                                         </PushButton>
@@ -109,8 +108,27 @@
 									<WidgetGroup>
 									    <SizePolicy>max,min</SizePolicy>
 										<Layout>horizontal</Layout>
-                                        <MaximumSize>400,400</MaximumSize>
+                                        <MaximumSize>520,400</MaximumSize>
 										<Children>
+                                           <WidgetGroup>
+                                               <ObjectName>AuxContainer</ObjectName>
+                                               <Layout>horizontal</Layout>
+                                               <SizePolicy>max,min</SizePolicy>
+                                               <Children>
+                                                   <Template src="skin:aux.xml">
+                                                       <SetVariable name="channum">1</SetVariable>
+                                                   </Template>
+                                                   <Template src="skin:aux.xml">
+                                                       <SetVariable name="channum">2</SetVariable>
+                                                   </Template>
+                                                   <Template src="skin:aux.xml">
+                                                       <SetVariable name="channum">3</SetVariable>
+                                                   </Template>
+                                                   <Template src="skin:aux.xml">
+                                                       <SetVariable name="channum">4</SetVariable>
+                                                   </Template>
+                                               </Children>
+                                           </WidgetGroup>
 										   <WidgetGroup>
 										        <SizePolicy>max,min</SizePolicy>
 									            <Layout>horizontal</Layout>
@@ -163,7 +181,6 @@
 														<Horizontal>true</Horizontal>
 														<Connection>
 															<ConfigKey>[Master],crossfader</ConfigKey>
-															<EmitOnDownPress>false</EmitOnDownPress>
 														</Connection>
 													</SliderComposed>
 												</Children>
@@ -190,7 +207,10 @@
                 <MinimumSize>100,220</MinimumSize>
                 <Layout>vertical</Layout>
                 <Children>
-
+                    <WidgetGroup>
+                        <Layout>horizontal</Layout>
+                        <SizePolicy>max,me</SizePolicy>
+                    </WidgetGroup>
                     <WidgetGroup>
                         <Size>100,100</Size>
                         <Children>
@@ -312,6 +332,16 @@
                               <Text>Pre/Main</Text>
                           </Label>
                        </Children>
+                    </WidgetGroup>
+                    <WidgetGroup>
+                        <Layout>horizontal</Layout>
+                        <SizePolicy>max,me</SizePolicy>
+                    </WidgetGroup>
+                    <WidgetGroup>
+                        <Layout>horizontal</Layout>
+                        <SizePolicy>f,f</SizePolicy>
+                        <Size>103,40</Size>
+                        <BackPath>style/mixxx_logo.png</BackPath>
                     </WidgetGroup>
                 </Children>
             </WidgetGroup>

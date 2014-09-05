@@ -3,7 +3,7 @@
         <ObjectName>Deck</ObjectName>
         <Layout>horizontal</Layout>
         <SizePolicy>me, min</SizePolicy>
-        <MaximumSize>1000, 300</MaximumSize>
+        <MaximumSize>680, 300</MaximumSize>
         <Children>
             <WidgetGroup>
                 <ObjectName>RateContainer<Variable name="channum" /></ObjectName>
@@ -14,12 +14,13 @@
                    <WidgetGroup>
                        <ObjectName>RateAdjust</ObjectName>
                        <Layout>vertical</Layout>
-                       <SizePolicy>min,min</SizePolicy>
+                       <SizePolicy>min,me</SizePolicy>
 	                   <Children>
                            <Key>
+                              <ObjectName>TextColor<Variable name="channum" /></ObjectName>
                               <Style>QLabel { font: bold 16px/18px Lucida Grande, Lucida Sans
                                   Unicode, Arial, Verdana, sans-serif;
-                                  background-color: transparent; color: #EECE33; padding: 0px; margin: 0px;}
+                                  background-color: transparent; color: padding: 0px; margin: 0px;}
                               </Style>
                               <Group>[Channel<Variable name="channum"/>]</Group>
                               <SizePolicy>min,min</SizePolicy>
@@ -28,10 +29,11 @@
                               </Connection>
                            </Key>
                            <NumberBpm>
+                              <ObjectName>TextColor<Variable name="channum" /></ObjectName>
                               <TooltipId>visual_bpm</TooltipId>
                               <Style>QLabel { font: bold 16px/18px Lucida Grande, Lucida Sans
                                   Unicode, Arial, Verdana, sans-serif;
-                                  background-color: transparent; color: #EECE33; padding: 0px; margin: 0px;}
+                                  background-color: transparent; padding: 0px; margin: 0px;}
                               </Style>
                               <Channel>
                                   <Variable name="channum" />
@@ -45,7 +47,7 @@
 				                <TooltipId>rate_display</TooltipId>
 				                <Style>QLabel { font: bold 14px/16px Lucida Grande, Lucida Sans
 				                    Unicode, Arial, Verdana, sans-serif;
-				                    background-color: transparent; color: #EECE33; text-align:center;}
+				                    background-color: transparent; color: <Variable name="deck_color" />; text-align:center;}
 				                </Style>
 				                <Channel>
 				                    <Variable name="channum" />
@@ -54,20 +56,26 @@
 				            </NumberRate>-->
 			            </Children>
 		            </WidgetGroup>
-  		            <SliderComposed>
-  		                <TooltipId>rate</TooltipId>
-  		                <Handle>knob_pitch1.png</Handle>
-  		                <Slider>slider_pitch1.png</Slider>
-  		                <Horizontal>false</Horizontal>
-  		                <Connection>
-  		                    <ConfigKey>[Channel<Variable name="channum" />],rate</ConfigKey>
-  		                    <EmitOnDownPress>false</EmitOnDownPress>
-  		                </Connection>
-  		            </SliderComposed>
+                    <WidgetGroup>
+                        <SizePolicy>min,min</SizePolicy>
+                        <Layout>horizontal</Layout>
+                        <ObjectName>RateSlider</ObjectName>
+                        <Children>
+        		            <SliderComposed>
+        		                <TooltipId>rate</TooltipId>
+        		                <Handle>knob_pitch1.png</Handle>
+        		                <Slider>slider_pitch1.png</Slider>
+        		                <Horizontal>false</Horizontal>
+        		                <Connection>
+        		                    <ConfigKey>[Channel<Variable name="channum" />],rate</ConfigKey>
+        		                </Connection>
+        		            </SliderComposed>
+                        </Children>
+                    </WidgetGroup>
 		            <WidgetGroup>
 		                <ObjectName>RateButtons</ObjectName>
 		                <Layout>vertical</Layout>
-		                <SizePolicy>min,me</SizePolicy>
+		                <SizePolicy>min,min</SizePolicy>
 		                <Children>
 		                    <WidgetGroup>
 		                        <ObjectName>RatePermButtons</ObjectName>
@@ -83,12 +91,10 @@
 		                                </State>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_perm_down</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>LeftButton</ButtonState>
 		                                </Connection>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_perm_down_small</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>RightButton</ButtonState>
 		                                </Connection>
 		                            </PushButton>
@@ -102,12 +108,10 @@
 		                                </State>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_perm_up</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>LeftButton</ButtonState>
 		                                </Connection>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_perm_up_small</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>RightButton</ButtonState>
 		                                </Connection>
 		                            </PushButton>
@@ -127,12 +131,10 @@
 		                                </State>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_temp_down</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>LeftButton</ButtonState>
 		                                </Connection>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_temp_down_small</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>RightButton</ButtonState>
 		                                </Connection>
 		                            </PushButton>
@@ -146,12 +148,10 @@
 		                                </State>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_temp_up</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>LeftButton</ButtonState>
 		                                </Connection>
 		                                <Connection>
 		                                    <ConfigKey>[Channel<Variable name="channum" />],rate_temp_up_small</ConfigKey>
-		                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
 		                                    <ButtonState>RightButton</ButtonState>
 		                                </Connection>
 		                            </PushButton>
@@ -180,17 +180,15 @@
                                 </State>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],sync_enabled</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>LeftButton</ButtonState>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],beatsync_tempo</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>RightButton</ButtonState>
                                 </Connection>
                             </PushButton>
                             <!-- Disable explicit master for now. -->
-                            <!-- <PushButton>
+                            <PushButton>
                                 <TooltipId>sync_master</TooltipId>
                                 <Style></Style>
                                 <NumberStates>2</NumberStates>
@@ -206,10 +204,9 @@
                                 </State>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],sync_master</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>LeftButton</ButtonState>
                                 </Connection>
-                            </PushButton> -->
+                            </PushButton>
                         </Children>
                     </WidgetGroup>
 	            </Children>
