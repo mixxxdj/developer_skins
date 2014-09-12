@@ -4,8 +4,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
-
 regexpQuote = function (str, delimiter) {
     return String(str).replace(
         new RegExp(
@@ -15,6 +13,21 @@ regexpQuote = function (str, delimiter) {
         '\\$&'
     );
 }
+
+// console
+if( !('console' in this ) ){
+    console = {
+        log : function(){
+            var out = [],
+                i   = 0;
+            for( ; i<arguments.length; i++ ){
+                out.push( JSON.stringify(arguments[i]) );
+            }
+            print(out.join(' '));
+        }
+    }
+}
+
 
 hookNames = function(){
     var hookNames = ['variable'];
@@ -118,3 +131,5 @@ pointsToPath = function( points ){
 }
 
 this.templateHooks.pointsToPath = pointsToPath;
+
+

@@ -6,26 +6,25 @@
 	<script src="svg.js">
 		// <![CDATA[
 			
-			print('#############################################################');
+			console.log('#############################################################');
 			if( !('width' in this) )
 				width = 33;
 			if( !('height' in this) )
 				height = 21;
 			
-			print('#############################################################');
+			console.log('#############################################################');
 			var center = {
 				x	: (width - 1) / 2,
 				y	: (height - 1) / 2,
 			}
 			
-			print('#############################################################');
+			console.log('#############################################################');
 			if( !('shapeWidth' in this) )
 				shapeWidth = 10;
 			if( !('shapeHeight' in this) )
 				shapeHeight = 10;
 			
-			print('#############################################################');
-			print(JSON.stringify(shapeHeight));
+			console.log('#############################################################');
 			
 			shape = {
 				rect1	: {
@@ -42,7 +41,7 @@
 				}
 			};
 			
-			print(JSON.stringify(shape));
+			console.log(shapeHeight, shape);
 		// ]]>
 	</script>
 	<defs>
@@ -81,16 +80,16 @@
 		
 		
 		<!-- transform="matrix(10,0,0,10,10,10)" -->
-		<rect	x="1"		expr-x="shape.rect1.x"
-				y="1"		expr-y="shape.rect1.y"
-				width="30"	expr-width="shape.rect1.width"
-				height="18"	expr-height="shape.rect1.height"
+		<rect	x="10.75"		expr-x="shape.rect1.x"
+				y="4.75"		expr-y="shape.rect1.y"
+				width="3.5"		expr-width="shape.rect1.width"
+				height="10.5"	expr-height="shape.rect1.height"
 				style="fill:#ffffff; stroke-width:0;"/>
 		
-		<rect	x="1"		expr-x="shape.rect2.x"
-				y="1"		expr-y="shape.rect2.y"
-				width="30"	expr-width="shape.rect2.width"
-				height="18"	expr-height="shape.rect2.height"
+		<rect	x="17.75"		expr-x="shape.rect2.x"
+				y="4.75"		expr-y="shape.rect2.y"
+				width="3.5"		expr-width="shape.rect2.width"
+				height="10.5"	expr-height="shape.rect2.height"
 				style="fill:#ffffff; stroke-width:0;"/>
 		
 	</g>
