@@ -55,7 +55,7 @@ templateHooks.prop = prop = function( propName, varName ){
         }
         
     } else {
-        print( 'Unable to find ' + varName + ' for prop hook.' );
+        // print( 'Unable to find ' + varName + ' for prop hook.' );
     }
     
     // print( varName + ' => ' out + ' | ' + (varName in global) );
@@ -94,3 +94,27 @@ function describeArc(x, y, radius, startAngle, endAngle){
 /**/
 
 this.templateHooks.variable = variable;
+
+
+
+
+
+pointsToPath = function( points ){
+    // print('#############################################################');
+    var path	= '',
+        currentPoint;
+    
+    for( var i in points ){
+        currentPoint = [
+            points[i].type,
+            points[i].x,
+            points[i].y,
+        ];
+        path += currentPoint.join(' ') + ' ';
+    }
+    
+    // print( path );
+    return path;
+}
+
+this.templateHooks.pointsToPath = pointsToPath;
