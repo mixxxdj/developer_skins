@@ -12,7 +12,7 @@
     <Layout>vertical</Layout>
     <SizePolicy>me,f</SizePolicy>
     <MinimumSize>300,60</MinimumSize>
-    <MaximumSize>350,-1</MaximumSize>
+    <MaximumSize>380,-1</MaximumSize>
     <Children>
       <WidgetGroup>
         <ObjectName>EffectUnitNameRow</ObjectName>
@@ -44,7 +44,6 @@
                   <Text>⏏</Text>
                 </State>
                 <Connection>
-                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                   <ConfigKey><Variable name="group"/>,clear</ConfigKey>
                 </Connection>
               </PushButton>
@@ -58,7 +57,6 @@
                 </State>
                 <Connection>
                   <ConfigKey><Variable name="group"/>,prev_chain</ConfigKey>
-                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                   <ButtonState>LeftButton</ButtonState>
                 </Connection>
               </PushButton>
@@ -72,7 +70,6 @@
                 </State>
                 <Connection>
                   <ConfigKey><Variable name="group"/>,next_chain</ConfigKey>
-                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                   <ButtonState>LeftButton</ButtonState>
                 </Connection>
               </PushButton>
@@ -91,13 +88,10 @@
                 </State>
                 <Connection>
                   <ConfigKey persist="true"><Variable name="group"/>,enabled</ConfigKey>
-                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                   <ButtonState>LeftButton</ButtonState>
-                  <ConnectValueToWidget>false</ConnectValueToWidget>
                 </Connection>
                 <Connection>
                   <ConfigKey persist="true"><Variable name="group"/>,enabled</ConfigKey>
-                  <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                 </Connection>
               </PushButton>
             </Children>
@@ -133,6 +127,10 @@
                   <Template src="skin:effect_parameter_knob.xml">
                     <SetVariable name="Effect">1</SetVariable>
                     <SetVariable name="EffectParameter">3</SetVariable>
+                  </Template>
+                  <Template src="skin:effect_parameter_knob.xml">
+                    <SetVariable name="Effect">1</SetVariable>
+                    <SetVariable name="EffectParameter">4</SetVariable>
                   </Template>
                 </Children>
               </WidgetGroup>
@@ -177,6 +175,10 @@
                         <SetVariable name="group_name">Head</SetVariable>
                         <SetVariable name="group_group">[Headphone]</SetVariable>
                       </Template>
+                      <Template src="skin:effect_unit_group_control_button.xml">
+                        <SetVariable name="group_name">AUX1</SetVariable>
+                        <SetVariable name="group_group">[Auxiliary1]</SetVariable>
+                      </Template>
                     </Children>
                   </WidgetGroup>
                   <WidgetGroup>
@@ -192,6 +194,10 @@
                         <SetVariable name="group_name">CH2</SetVariable>
                         <SetVariable name="group_group">[Channel2]</SetVariable>
                       </Template>
+                      <Template src="skin:effect_unit_group_control_button.xml">
+                        <SetVariable name="group_name">AUX2</SetVariable>
+                        <SetVariable name="group_group">[Auxiliary2]</SetVariable>
+                      </Template>
                     </Children>
                   </WidgetGroup>
                   <WidgetGroup>
@@ -206,6 +212,10 @@
                       <Template src="skin:effect_unit_group_control_button.xml">
                         <SetVariable name="group_name">CH4</SetVariable>
                         <SetVariable name="group_group">[Channel4]</SetVariable>
+                      </Template>
+                      <Template src="skin:effect_unit_group_control_button.xml">
+                        <SetVariable name="group_name">AUX3</SetVariable>
+                        <SetVariable name="group_group">[Auxiliary3]</SetVariable>
                       </Template>
                     </Children>
                   </WidgetGroup>
