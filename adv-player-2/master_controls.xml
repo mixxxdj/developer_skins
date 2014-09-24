@@ -274,9 +274,8 @@ Master controls : volume, balance, pregain + time.
 						</State>
 						<State>
 							<Number>1</Number>
-							<SetVariable name="dark_color">#99ff99</SetVariable>
-							<SetVariable name="light_color">#00ff00</SetVariable>
 							<SetVariable name="text_color">#00ff00</SetVariable>
+							<SetVariable name="border_color">#00ff00</SetVariable>
 							<Unpressed>btn_text.svg</Unpressed>
 							<Pressed>btn_text.svg</Pressed>
 						</State>
@@ -302,12 +301,11 @@ Master controls : volume, balance, pregain + time.
 							<Number>0</Number>
 							<Unpressed>btn_headphones.svg</Unpressed>
 							<Pressed>btn_headphones.svg</Pressed>
+							<SetVariable name="color"></SetVariable>
 						</State>
 						<State>
 							<Number>1</Number>
-							<SetVariable name="dark_color">#fe99ff</SetVariable>
-							<SetVariable name="light_color">#ba00ff</SetVariable>
-							<SetVariable name="text_color">#ba00ff</SetVariable>
+							<SetVariable name="color">#ba00ff</SetVariable>
 							<Unpressed>btn_headphones.svg</Unpressed>
 							<Pressed>btn_headphones.svg</Pressed>
 						</State>
