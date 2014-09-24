@@ -39,6 +39,7 @@ Track control panel.
 				<Number>0</Number>
 				<SetVariable name="shapeWidth">10.5</SetVariable>
 				<SetVariable name="shapeHeight">10.5</SetVariable>
+				<SetVariable name="color"></SetVariable>
 				<Unpressed>btn_play.svg</Unpressed>
 				<Pressed>btn_play.svg</Pressed>
 			</State>
@@ -46,10 +47,6 @@ Track control panel.
 				<Number>1</Number>
 				<SetVariable name="shapeWidth">10.5</SetVariable>
 				<SetVariable name="shapeHeight">10.5</SetVariable>
-				<!--SetVariable name="text">P</SetVariable-->
-				<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-				<!--SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable-->
-				<!--SetVariable name="text_color">#aaaaaa</SetVariable-->
 				<SetVariable name="background_color">url(#grad)</SetVariable>
 				<Unpressed>btn_pause.svg</Unpressed>
 				<Pressed>btn_pause.svg</Pressed>
@@ -95,14 +92,12 @@ Track control panel.
 					<RightClickIsPushButton>true</RightClickIsPushButton>
 					<State>
 						<Number>0</Number>
+						<SetVariable name="color"></SetVariable>
 						<Unpressed>btn_headphones.svg</Unpressed>
 						<Pressed>btn_headphones.svg</Pressed>
 					</State>
 					<State>
 						<Number>1</Number>
-						<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-						<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-						<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
 						<Unpressed>btn_headphones.svg</Unpressed>
 						<Pressed>btn_headphones.svg</Pressed>
 					</State>
@@ -122,11 +117,6 @@ Track control panel.
 		</Template>
 		
 		
-		<!--Template src="skin:spacer_vx.xml">
-			<SetVariable name="height">34</SetVariable>
-		</Template-->
-		
-		
 		<!--
 		**********************************************
 		Button- Beat sync
@@ -137,14 +127,12 @@ Track control panel.
 			<NumberStates>2</NumberStates>
 			<State>
 				<Number>0</Number>
+				<SetVariable name="color"></SetVariable>
 				<Unpressed>btn_sync.svg</Unpressed>
 				<Pressed>btn_sync.svg</Pressed>
 			</State>
 			<State>
 				<Number>1</Number>
-				<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-				<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-				<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
 				<Unpressed>btn_sync.svg</Unpressed>
 				<Pressed>btn_sync.svg</Pressed>
 			</State>
@@ -187,6 +175,8 @@ Track control panel.
 						<Number>1</Number>
 						<Pressed>btn_text.svg</Pressed>
 						<Unpressed>btn_text.svg</Unpressed>
+						<SetVariable name="border_color" expression="color"/>
+						<SetVariable name="text_color" expression="color"/>
 					</State>
 					<Connection>
 						<ConfigKey><Variable name="channel"/>,rate_temp_up</ConfigKey>
@@ -210,6 +200,8 @@ Track control panel.
 						<Number>1</Number>
 						<Pressed>btn_text.svg</Pressed>
 						<Unpressed>btn_text.svg</Unpressed>
+						<SetVariable name="border_color" expression="color"/>
+						<SetVariable name="text_color" expression="color"/>
 					</State>
 					<Connection>
 						<ConfigKey><Variable name="channel"/>,rate_temp_down</ConfigKey>

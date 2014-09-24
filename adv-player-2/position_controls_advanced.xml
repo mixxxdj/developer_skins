@@ -111,9 +111,8 @@ Track control panel.
 						</State>
 						<State>
 							<Number>1</Number>
-							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<SetVariable name="border_color" expression="color"/>
+							<SetVariable name="text_color" expression="color"/>
 							<Unpressed>btn_text.svg</Unpressed>
 							<Pressed>btn_text.svg</Pressed>
 						</State>
@@ -170,9 +169,8 @@ Track control panel.
 						</State>
 						<State>
 							<Number>1</Number>
-							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<SetVariable name="border_color" expression="color"/>
+							<SetVariable name="text_color" expression="color"/>
 							<Pressed>btn_text.svg</Pressed>
 							<Unpressed>btn_text.svg</Unpressed>
 						</State>
@@ -204,9 +202,8 @@ Track control panel.
 						</State>
 						<State>
 							<Number>1</Number>
-							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<SetVariable name="border_color" expression="color"/>
+							<SetVariable name="text_color" expression="color"/>
 							<Pressed>btn_text.svg</Pressed>
 							<Unpressed>btn_text.svg</Unpressed>
 						</State>
@@ -245,6 +242,8 @@ Track control panel.
 						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
 						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -257,6 +256,8 @@ Track control panel.
 						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
 						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -269,6 +270,8 @@ Track control panel.
 						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
 						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -281,6 +284,8 @@ Track control panel.
 						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
 						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -314,6 +319,8 @@ Track control panel.
 						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
 						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -326,6 +333,8 @@ Track control panel.
 						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
 						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -338,6 +347,8 @@ Track control panel.
 						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
 						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -350,6 +361,8 @@ Track control panel.
 						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
 						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
 						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+						<SetVariable name="active_border_color" expression="color"/>
+						<SetVariable name="active_text_color" expression="color"/>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">

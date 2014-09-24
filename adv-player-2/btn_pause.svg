@@ -55,8 +55,8 @@
 		</linearGradient>
 		
 		<linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-			<stop offset="0%"	style="stop-color: #13a9fc; stop-opacity: 0.5; prop( 'stop-color', 'track_light_color' );" />
-			<stop offset="100%"	style="stop-color: #13a9fc; stop-opacity: 0.2; prop( 'stop-color', 'track_light_color' );" />
+			<stop offset="0%"	style="stop-color: #13a9fc; stop-opacity: 0.5; prop( 'stop-color', 'color' );" />
+			<stop offset="100%"	style="stop-color: #13a9fc; stop-opacity: 0.2; prop( 'stop-color', 'color' );" />
 		</linearGradient>
 		
 	</defs>
@@ -68,7 +68,7 @@
 		<rect	x="0" y="0" rx="1" ry="1"
 				width="32"	expr-width="width - 1"
 				height="20"	expr-height="height - 1"
-				style="fill:url(#grad_def); stroke-width:1; stroke:#cccccc; prop('stroke', 'light_color'); prop('fill', 'background_color');" />
+				style="fill:url(#grad_def); stroke-width:1; stroke:#cccccc; prop('stroke', 'color'); prop('fill', 'background_color');" />
 		
 		
 		<!-- border inner shadow -->

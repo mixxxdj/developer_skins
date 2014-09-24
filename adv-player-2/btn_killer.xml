@@ -16,7 +16,6 @@ Killer button
 		</State>
 		<State>
 			<Number>1</Number>
-			<SetVariable name="color"><Variable name="track_light_color"/></SetVariable>
 			<Unpressed>btn_circle.svg</Unpressed>
 			<Pressed>btn_circle.svg</Pressed>
 		</State>

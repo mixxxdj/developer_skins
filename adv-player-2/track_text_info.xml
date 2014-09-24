@@ -51,15 +51,11 @@ Description: Artist, name...
 			
 			<!--
 			**********************************************
-			Text- Times Played
+			Duration
 			**********************************************
 			-->
-			<TrackProperty>
-				<TooltipId>track_times_played</TooltipId>
-				<Property>times_played</Property>
-				<Channel><Variable name="i"/></Channel>
-			</TrackProperty>
-			
+			<Template src="skin:track_duration_info.xml">
+			</Template>
 			
 		</Children>
 	</WidgetGroup>

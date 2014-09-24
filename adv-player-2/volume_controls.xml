@@ -30,8 +30,6 @@ Description: track gain and volume
 				<Children>
 					
 					<!-- gain -->
-					<SetVariable name="color"><Variable name="track_light_color"/></SetVariable>
-					
 					<SetVariable name="width">15</SetVariable>
 					<SetVariable name="height">119</SetVariable>
 					<SetVariable name="offset">7</SetVariable>

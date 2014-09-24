@@ -32,10 +32,6 @@ Description: decks
 				<SizePolicy>min,me</SizePolicy>
 				<Children>
 					
-					<!--Template src="skin:spacer_vx.xml">
-						<SetVariable name="height">2</SetVariable>
-					</Template-->
-					
 					<Template src="skin:vumeter.xml">
 						<SetVariable name="wrapper_height" expression="track_line_height"/>
 						<SetVariable name="margin_top" expression="2"/>
@@ -50,17 +46,9 @@ Description: decks
 						<SetVariable name="vumeter_control">VuMeter</SetVariable>
 					</Template>
 					
-					<!--Template src="skin:spacer_vx.xml">
-						<SetVariable name="height">10</SetVariable>
-					</Template-->
-					
 					<Template src="skin:spacer_vx.xml">
 						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
 					</Template>
-					
-					<!--Template src="skin:spacer_vx.xml">
-						<SetVariable name="height">5</SetVariable>
-					</Template-->
 					
 					<Template src="skin:vumeter.xml">
 						<SetVariable name="wrapper_height" expression="track_line_height"/>
@@ -75,10 +63,6 @@ Description: decks
 						<SetVariable name="peak_control">PeakIndicator</SetVariable>
 						<SetVariable name="vumeter_control">VuMeter</SetVariable>
 					</Template>
-					
-					<!--Template src="skin:spacer_vx.xml">
-						<SetVariable name="height">9</SetVariable>
-					</Template-->
 					
 					<WidgetGroup>
 						<Layout>horizontal</Layout>
@@ -114,23 +98,17 @@ Description: decks
 					</Template>
 					
 					<Template src="skin:volume_controls.xml">
+						<SetVariable name="color">#ff0000</SetVariable>
 						<SetVariable name="i">1</SetVariable>
 					</Template>
-					
-					<!--Template src="skin:spacer_vx.xml">
-						<SetVariable name="height">4</SetVariable>
-					</Template-->
 					
 					<Template src="skin:spacer_vx.xml">
 						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
 					</Template>
 					
-					<!--Template src="skin:spacer_vx.xml">
-						<SetVariable name="height">4</SetVariable>
-					</Template-->
-					
 					<Template src="skin:volume_controls.xml">
 						<SetVariable name="i">2</SetVariable>
+						<SetVariable name="color">#13a9fc</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -162,6 +140,7 @@ Description: decks
 					
 					<Template src="skin:position_controls.xml">
 						<SetVariable name="i">1</SetVariable>
+						<SetVariable name="color">#ff0000</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -170,6 +149,7 @@ Description: decks
 					
 					<Template src="skin:position_controls.xml">
 						<SetVariable name="i">2</SetVariable>
+						<SetVariable name="color">#13a9fc</SetVariable>
 					</Template>
 					
 					<WidgetGroup>
@@ -207,6 +187,9 @@ Description: decks
 					
 					<Template src="skin:position_controls_advanced.xml">
 						<SetVariable name="i">1</SetVariable>
+						<SetVariable name="track_light_color">#ff0000</SetVariable>
+						<SetVariable name="track_text_color">#ff0000</SetVariable>
+						<SetVariable name="color">#ff0000</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -215,6 +198,9 @@ Description: decks
 					
 					<Template src="skin:position_controls_advanced.xml">
 						<SetVariable name="i">2</SetVariable>
+						<SetVariable name="track_light_color">#13a9fc</SetVariable>
+						<SetVariable name="track_text_color">#13a9fc</SetVariable>
+						<SetVariable name="color">#13a9fc</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -246,6 +232,7 @@ Description: decks
 					
 					<Template src="skin:killers.xml">
 						<SetVariable name="i">1</SetVariable>
+						<SetVariable name="color">#ff0000</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -254,6 +241,7 @@ Description: decks
 					
 					<Template src="skin:killers.xml">
 						<SetVariable name="i">2</SetVariable>
+						<SetVariable name="color">#13a9fc</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -297,6 +285,7 @@ Description: decks
 					
 					<Template src="skin:equalizers.xml">
 						<SetVariable name="i">1</SetVariable>
+						<SetVariable name="color">#ff0000</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -305,6 +294,7 @@ Description: decks
 					
 					<Template src="skin:equalizers.xml">
 						<SetVariable name="i">2</SetVariable>
+						<SetVariable name="color">#13a9fc</SetVariable>
 					</Template>
 					
 					<Template src="skin:spacer_vx.xml">
@@ -356,13 +346,17 @@ Description: decks
 								</Style>
 								<Children>
 									
+									<!-- BPM -->
 									<Template src="skin:track_bpm_info.xml">
 										<SetVariable name="i">1</SetVariable>
 									</Template>
 									
-									<Template src="skin:track_duration_info.xml">
-										<SetVariable name="i">1</SetVariable>
-									</Template>
+									<!-- Times Played -->
+									<TrackProperty>
+										<TooltipId>track_times_played</TooltipId>
+										<Property>times_played</Property>
+										<Channel>1</Channel>
+									</TrackProperty>
 									
 								</Children>
 							</WidgetGroup>
@@ -443,9 +437,12 @@ Description: decks
 										<SetVariable name="i">2</SetVariable>
 									</Template>
 									
-									<Template src="skin:track_duration_info.xml">
-										<SetVariable name="i">2</SetVariable>
-									</Template>
+									<!-- Times Played -->
+									<TrackProperty>
+										<TooltipId>track_times_played</TooltipId>
+										<Property>times_played</Property>
+										<Channel>2</Channel>
+									</TrackProperty>
 									
 								</Children>
 							</WidgetGroup>

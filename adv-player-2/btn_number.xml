@@ -23,9 +23,8 @@ Button with a number
 		
 		<State>
 			<Number>1</Number>
-			<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
-			<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
-			<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+			<SetVariable name="border_color" expression="active_border_color"/>
+			<SetVariable name="text_color" expression="active_text_color"/>
 			<Pressed>btn_text.svg</Pressed>
 			<Unpressed>btn_text.svg</Unpressed>
 		</State>
