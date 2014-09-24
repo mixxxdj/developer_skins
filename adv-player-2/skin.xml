@@ -1,0 +1,139 @@
+<!DOCTYPE skin>
+<skin>
+	<manifest>
+		<title>Advanced-Player</title>
+		<author>jclaveau</author>
+		<version>1.12.0.01</version>
+		<description>A proof of concept that Mixxx can be an amazing player</description>
+		<language>en</language>
+		<license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
+		<attributes>
+			<attribute config_key="[Master],num_decks">2</attribute>
+			<attribute config_key="[Master],num_preview_decks">0</attribute>
+			<!--Optionally, make elements visible on skin load-->
+			<!--attribute config_key="[PreviewDeck],show_previewdeck">0</attribute-->
+			<attribute config_key="[Channel1],keylock">1</attribute>
+			<attribute config_key="[Channel2],keylock">1</attribute>
+			
+			<attribute config_key="[Channel1],quantize">1</attribute>
+			<attribute config_key="[Channel2],quantize">1</attribute>
+			
+			<!--attribute config_key="[Channel1],sync_enabled">1</attribute>
+			<attribute config_key="[Channel2],sync_enabled">1</attribute-->
+			
+			<attribute config_key="[Master],headMix">0</attribute>
+			
+		</attributes>
+	</manifest>
+
+	<ObjectName>Mixxx</ObjectName>
+	<Style src="skin:style.qss"/>
+
+	<MinimumSize>400,-1</MinimumSize>
+	<SizePolicy>me,me</SizePolicy>
+	<Layout>vertical</Layout>
+	
+	
+	<Children>
+		
+		
+		<WidgetGroup>
+			<ObjectName>Decks and Master</ObjectName>
+			<Layout>horizontal</Layout>
+			<SizePolicy>me,max</SizePolicy>
+			<Children>
+				
+				<Template src="skin:spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
+				
+				<Template src="skin:master_controls.xml">
+				</Template>
+				
+				<Template src="skin:spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
+				
+				<Template src="skin:decks.xml">
+				</Template>
+				
+				<Template src="skin:spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
+				
+				<WidgetGroup>
+					<ObjectName>Crossfader</ObjectName>
+					<Layout>vertical</Layout>
+					<SizePolicy>f,min</SizePolicy>
+					<Style>
+						/**/
+						QGroupBox { border: 1px solid green; }
+						/**/
+						QGroupBox { border: 1px solid transparent; }
+						/**/
+					</Style>
+					<Children>
+						
+						<SetVariable name="width">33</SetVariable>
+						<!--SetVariable name="height">111</SetVariable-->
+						<SetVariable name="height">137</SetVariable>
+						<SetVariable name="margin">15.5</SetVariable>
+						<SetVariable name="offset">16</SetVariable>
+						
+						<SetVariable name="handle_width">33</SetVariable>
+						<SetVariable name="handle_height">15</SetVariable>
+						
+						<SetVariable name="color">#00ff00</SetVariable>
+						
+						<SetVariable name="text">xfader</SetVariable>
+						<SetVariable name="text_x">16</SetVariable>
+						<SetVariable name="text_y">134</SetVariable>
+						
+						<SliderComposed>
+							<TooltipId>crossfader</TooltipId>
+							<Slider>slider-vertical.svg</Slider>
+							<Handle>handle-vertical.svg</Handle>
+							<Horizontal>false</Horizontal>
+							<Connection>
+								<ConfigKey>[Master],crossfader</ConfigKey>
+								<Transform>
+									<Invert/>
+									<Add>1</Add>
+								</Transform>
+							</Connection>
+						</SliderComposed>
+						
+						<Template src="skin:spacer_vx.xml">
+							<SetVariable name="height">17</SetVariable>
+						</Template>
+						
+					
+					
+					</Children>
+				</WidgetGroup>
+				
+				<Template src="skin:spacer_vx.xml">
+					<SetVariable name="height">7</SetVariable>
+				</Template>
+				
+			</Children>
+		</WidgetGroup>
+		
+		<Template src="skin:spacer_vx.xml">
+			<SetVariable name="height">5</SetVariable>
+		</Template>
+		
+		<Template src="skin:library.xml">
+		</Template>
+		
+	</Children>
+</skin>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,369 @@
+<!DOCTYPE template>
+<!--
+Description:
+Track control panel.
+-->
+<Template>
+	
+	<!--
+	**********************************************
+	Column 4 : pitch + controls + cues + loops
+	**********************************************
+	-->
+	<WidgetGroup>
+		<ObjectName>AdvancedPositionColumn</ObjectName>
+		<Layout>horizontal</Layout>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<SizePolicy>min,me</SizePolicy>
+		<MinimumSize>-1,<Variable name="track_line_height"/></MinimumSize>
+		<MaximumSize>-1,<Variable name="track_line_height"/></MaximumSize>
+		<Children>
+			
+			<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			<!--
+			**********************************************
+			Pitch
+			**********************************************
+			-->
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,min</SizePolicy>
+				<MinimumSize>29,me</MinimumSize>
+				<MaximumSize>29,-1</MaximumSize>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid red; }
+					/**/
+				</Style>
+				<Children>
+					
+					<SetVariable name="width">25</SetVariable>
+					<SetVariable name="height">113</SetVariable>
+					<SetVariable name="offset">12</SetVariable>
+					<SetVariable name="margin">6.5</SetVariable>
+					
+					<SetVariable name="handle_width">25</SetVariable>
+					<SetVariable name="handle_height">13</SetVariable>
+					
+					<SetVariable name="text">pitch</SetVariable>
+					<SetVariable name="text_x">12.5</SetVariable>
+					<SetVariable name="text_y">60</SetVariable>
+					
+					<SliderComposed>
+						<TooltipId>pitch_rate</TooltipId>
+						<Slider>slider-vertical.svg</Slider>
+						<Handle>handle-vertical.svg</Handle>
+						<Horizontal>false</Horizontal>
+						<Alignment>center</Alignment>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,rate</ConfigKey>
+							<EmitOnDownPress>false</EmitOnDownPress>
+							<Transform>
+								<Invert/>
+								<Add>1</Add>
+							</Transform>
+						</Connection>
+					</SliderComposed>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">2</SetVariable>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">7</SetVariable>
+			</Template>
+			
+			<SetVariable name="btns_column_margin_bottom">12</SetVariable>
+			
+			<SetVariable name="spacer_height">6</SetVariable>
+			<SetVariable name="margin_bottom">0</SetVariable>
+			
+			<SetVariable name="width">21</SetVariable>
+			<SetVariable name="height">21</SetVariable>
+			
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<MinimumSize>24,-1</MinimumSize>
+				<Children>
+					
+					<!--
+					**********************************************
+					Button- Sync Master
+					**********************************************
+					-->
+					<SetVariable name="text">M</SetVariable>
+					<PushButton>
+						<ObjectName>DeckSyncMaster</ObjectName>
+						<Size>40f,20f</Size>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Unpressed>btn_text.svg</Unpressed>
+							<Pressed>btn_text.svg</Pressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Unpressed>btn_text.svg</Unpressed>
+							<Pressed>btn_text.svg</Pressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,sync_master</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<!--
+					**********************************************
+					Button - BPM Tap
+					**********************************************
+					-->
+					<SetVariable name="text">T</SetVariable>
+					<PushButton>
+						<TooltipId>bpm_tap</TooltipId>
+						<NumberStates>1</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Unpressed>btn_text.svg</Unpressed>
+							<Pressed>btn_text.svg</Pressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,bpm_tap</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<!--
+					**********************************************
+					Button - Quantize
+					**********************************************
+					-->
+					<SetVariable name="text">Q</SetVariable>
+					<PushButton>
+						<TooltipId>quantize</TooltipId>
+						<MinimumSize>40,20</MinimumSize>
+						<MaximumSize>60,40</MaximumSize>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_text.svg</Pressed>
+							<Unpressed>btn_text.svg</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text.svg</Pressed>
+							<Unpressed>btn_text.svg</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,quantize</ConfigKey>
+							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+							<ButtonState>LeftButton</ButtonState>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<!--
+					**********************************************
+					Button- Key lock
+					**********************************************
+					-->
+					
+					<SetVariable name="text">K</SetVariable>
+					<PushButton>
+						<TooltipId>keylock</TooltipId>
+						<NumberStates>2</NumberStates>
+						<State>
+							<Number>0</Number>
+							<Pressed>btn_text.svg</Pressed>
+							<Unpressed>btn_text.svg</Unpressed>
+						</State>
+						<State>
+							<Number>1</Number>
+							<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+							<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+							<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+							<Pressed>btn_text.svg</Pressed>
+							<Unpressed>btn_text.svg</Unpressed>
+						</State>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,keylock</ConfigKey>
+						</Connection>
+					</PushButton>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height" expression="margin_bottom"/>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
+			
+			
+			<!--
+			**********************************************
+			Button- Hotcue
+			**********************************************
+			-->
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<MinimumSize>24,-1</MinimumSize>
+				<Children>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
+						<SetVariable name="number">1</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
+						<SetVariable name="number">2</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
+						<SetVariable name="number">3</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">hotcue</SetVariable>
+						<SetVariable name="number">4</SetVariable>
+						<SetVariable name="left_control">hotcue_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="right_control">hotcue_<Variable name="number"/>_clear</SetVariable>
+						<SetVariable name="display_control">hotcue_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height" expression="margin_bottom"/>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
+			
+			
+			<!--
+			**********************************************
+			Beatloop
+			**********************************************
+			-->
+			<WidgetGroup>
+				<ObjectName>BeatLoopLowerRow</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<MinimumSize>24,-1</MinimumSize>
+				<Children>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">4</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">8</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">16</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="spacer_height"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:btn_number.xml">
+						<SetVariable name="tooltip_id">beatloop</SetVariable>
+						<SetVariable name="number">32</SetVariable>
+						<SetVariable name="left_control">beatloop_<Variable name="number"/>_toggle</SetVariable>
+						<SetVariable name="right_control">beatlooproll_<Variable name="number"/>_activate</SetVariable>
+						<SetVariable name="display_control">beatloop_<Variable name="number"/>_enabled</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height" expression="margin_bottom"/>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">7</SetVariable>
+			</Template>
+			
+		</Children>
+	</WidgetGroup>
+
+</Template>

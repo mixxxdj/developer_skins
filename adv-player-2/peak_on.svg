@@ -1,0 +1,40 @@
+<svg	xmlns	= "http://www.w3.org/2000/svg"
+		width	= "15"	expr-width	= "peak_width"
+		height	= "69"	expr-height	= "peak_height"
+	>
+	
+	<script src="svg.js">
+		// <![CDATA[
+		
+			peak_width	= Number( peak_width );
+			peak_height	= Number( peak_height );
+			margin	= Number( margin );
+			
+			
+			shapeWidth		= peak_width - 1 - margin * 2;
+			shapeHeight		= peak_height - 1;
+			
+			this.degreesWidth	= shapeWidth - 2;
+			
+		// ]]>
+	</script>
+	
+	<g transform="translate( 0.5, 0.5 )">
+	
+		<rect	x="0" expr-x="margin" y="0"
+				width	= "14"	expr-width	= "shapeWidth"
+				height	= "68"	expr-height	= "shapeHeight"
+				style="fill: #191919; stroke-width:1; stroke:#666666;" />
+		
+		<!-- degrees -->
+		<line
+			x1="7"		expr-x1="shapeWidth / 2 + margin"
+			x2="7"		expr-x2="shapeWidth / 2 + margin"
+			y1="1.5"
+			y2="66.5"	expr-y2="shapeHeight - 1"
+			stroke-dasharray="1, 1"
+			style="stroke-width: 11; prop( 'stroke-width', 'degreesWidth' ); stroke: #DD0000;"/>
+		
+	</g>
+	
+</svg>

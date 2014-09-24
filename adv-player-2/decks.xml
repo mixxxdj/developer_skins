@@ -1,0 +1,487 @@
+<!DOCTYPE template>
+<!--
+Description: decks
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>Decks</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,me</SizePolicy>
+		<Style>
+			/**/
+			QGroupBox { border: 1px solid green; }
+			/**/
+			QGroupBox { border: 1px solid transparent; }
+			/**/
+		</Style>
+		<Children>
+			
+			<SetVariable name="middle_space">5</SetVariable>
+			<SetVariable name="track_line_height">127</SetVariable>
+			
+			<!-- vumeter + peakmeter -->
+			<WidgetGroup>
+				<ObjectName>VolumeColumn</ObjectName>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid green; }
+					/**/
+				</Style>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					<!--Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">2</SetVariable>
+					</Template-->
+					
+					<Template src="skin:vumeter.xml">
+						<SetVariable name="wrapper_height" expression="track_line_height"/>
+						<SetVariable name="margin_top" expression="2"/>
+						<SetVariable name="i">1</SetVariable>
+						<SetVariable name="height">102</SetVariable>
+						<SetVariable name="width">13</SetVariable>
+						<SetVariable name="space">6</SetVariable>
+						<SetVariable name="peak_height">21</SetVariable>
+						<SetVariable name="margin">2</SetVariable>
+						<SetVariable name="channel">[Channel1]</SetVariable>
+						<SetVariable name="peak_control">PeakIndicator</SetVariable>
+						<SetVariable name="vumeter_control">VuMeter</SetVariable>
+					</Template>
+					
+					<!--Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">10</SetVariable>
+					</Template-->
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
+					</Template>
+					
+					<!--Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">5</SetVariable>
+					</Template-->
+					
+					<Template src="skin:vumeter.xml">
+						<SetVariable name="wrapper_height" expression="track_line_height"/>
+						<SetVariable name="margin_top" expression="2"/>
+						<SetVariable name="i">2</SetVariable>
+						<SetVariable name="height">102</SetVariable>
+						<SetVariable name="width">13</SetVariable>
+						<SetVariable name="space">6</SetVariable>
+						<SetVariable name="peak_height">21</SetVariable>
+						<SetVariable name="margin">2</SetVariable>
+						<SetVariable name="channel">[Channel2]</SetVariable>
+						<SetVariable name="peak_control">PeakIndicator</SetVariable>
+						<SetVariable name="vumeter_control">VuMeter</SetVariable>
+					</Template>
+					
+					<!--Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">9</SetVariable>
+					</Template-->
+					
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<SizePolicy>min,me</SizePolicy>
+						<MinimumSize>i,17</MinimumSize>
+						<MaximumSize>i,17</MaximumSize>
+						<Children>
+							
+							<Template src="skin:opener.xml">
+								<SetVariable name="action">show_volume_controls</SetVariable>
+							</Template>
+						</Children>
+					</WidgetGroup>
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+			<!-- volume control (openable via show_volume_controls)-->
+			<WidgetGroup>
+				<ObjectName>VolumeColumn</ObjectName>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid red; }
+					/**/
+				</Style>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Children>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">1</SetVariable>
+					</Template>
+					
+					<Template src="skin:volume_controls.xml">
+						<SetVariable name="i">1</SetVariable>
+					</Template>
+					
+					<!--Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">4</SetVariable>
+					</Template-->
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
+					</Template>
+					
+					<!--Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">4</SetVariable>
+					</Template-->
+					
+					<Template src="skin:volume_controls.xml">
+						<SetVariable name="i">2</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">15</SetVariable>
+					</Template>
+					
+				</Children>
+				<Connection>
+					<ConfigKey>show_volume_controls</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
+			</WidgetGroup>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">7</SetVariable>
+			</Template>
+			
+			<!-- position main -->
+			<WidgetGroup>
+				<ObjectName>MainPositionColumn</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid green; }
+					/**/
+				</Style>
+				<Children>
+					
+					<Template src="skin:position_controls.xml">
+						<SetVariable name="i">1</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:position_controls.xml">
+						<SetVariable name="i">2</SetVariable>
+					</Template>
+					
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<SizePolicy>min,me</SizePolicy>
+						<MinimumSize>i,17</MinimumSize>
+						<MaximumSize>i,17</MaximumSize>
+						<Children>
+							
+							<Template src="skin:opener.xml">
+								<SetVariable name="action">show_position_controls</SetVariable>
+							</Template>
+							
+						</Children>
+					</WidgetGroup>
+					
+				</Children>
+			</WidgetGroup>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">7</SetVariable>
+			</Template>
+			
+			<!-- position advanced (openable via show_position_controls) -->
+			<WidgetGroup>
+				<ObjectName>AdvancedPositionColumn</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid green; }
+					/**/
+				</Style>
+				<Children>
+					
+					<Template src="skin:position_controls_advanced.xml">
+						<SetVariable name="i">1</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:position_controls_advanced.xml">
+						<SetVariable name="i">2</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">15</SetVariable>
+					</Template>
+					
+				</Children>
+				<Connection>
+					<ConfigKey>show_position_controls</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
+			</WidgetGroup>
+			
+			<!-- killers -->
+			<WidgetGroup>
+				<ObjectName>KillersColumn</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid green; }
+					/**/
+				</Style>
+				<Children>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">25</SetVariable>
+					</Template>
+					
+					<Template src="skin:killers.xml">
+						<SetVariable name="i">1</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:killers.xml">
+						<SetVariable name="i">2</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">25</SetVariable>
+					</Template>
+					
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<SizePolicy>min,me</SizePolicy>
+						<MinimumSize>15,17</MinimumSize>
+						<MaximumSize>100,17</MaximumSize>
+						<Children>
+							
+							<Template src="skin:opener.xml">
+								<SetVariable name="action">show_equalizers</SetVariable>
+							</Template>
+							
+						</Children>
+					</WidgetGroup>
+					
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+			<!-- equalizers (openable via show_equalizers) -->
+			<WidgetGroup>
+				<ObjectName>EqualizersColumn</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,me</SizePolicy>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid green; }
+					/**/
+				</Style>
+				<Children>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">25</SetVariable>
+					</Template>
+					
+					<Template src="skin:equalizers.xml">
+						<SetVariable name="i">1</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height"><Variable name="middle_space"/></SetVariable>
+					</Template>
+					
+					<Template src="skin:equalizers.xml">
+						<SetVariable name="i">2</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">25</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">17</SetVariable>
+					</Template>
+					
+				</Children>
+				<Connection>
+					<ConfigKey>show_equalizers</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
+			</WidgetGroup>
+			
+			
+			
+			
+			<!-- tracks info -->
+			<WidgetGroup>
+				<ObjectName>TracksInfoColumn</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>me,me</SizePolicy>
+				<Style>
+					/** /
+					QGroupBox { border: 1px solid green; }
+					/** /
+					QGroupBox { border: 1px solid transparent; }
+					/**/
+				</Style>
+				<Children>
+					
+					<!-- decks related line -->
+					<WidgetGroup>
+						<ObjectName>DecksInfo</ObjectName>
+						<Layout>vertical</Layout>
+						<SizePolicy>me,me</SizePolicy>
+						<Children>
+							
+							
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<SizePolicy>min,f</SizePolicy>
+								<Size>i,14</Size>
+								<Style>
+									QGroupBox { border: 0; }
+								</Style>
+								<Children>
+									
+									<Template src="skin:track_bpm_info.xml">
+										<SetVariable name="i">1</SetVariable>
+									</Template>
+									
+									<Template src="skin:track_duration_info.xml">
+										<SetVariable name="i">1</SetVariable>
+									</Template>
+									
+								</Children>
+							</WidgetGroup>
+							
+							<Template src="skin:track_text_info.xml">
+								<SetVariable name="i">1</SetVariable>
+							</Template>
+							
+							<Splitter>
+								<ObjectName>SoundView</ObjectName>
+								<Orientation>horizontal</Orientation>
+								<SizePolicy>me,min</SizePolicy>
+								<MinimumSize>150,175</MinimumSize>
+								<MaximumSize>-1,175</MaximumSize>
+								<Children>
+									
+									<WidgetGroup>
+										<ObjectName>WaveformColumn</ObjectName>
+										<Layout>vertical</Layout>
+										<SizePolicy>me,me</SizePolicy>
+										<Children>
+											
+											<Template src="skin:waveform.xml">
+												<SetVariable name="i">1</SetVariable>
+											</Template>
+											
+											<Template src="skin:spacer_vx.xml">
+												<SetVariable name="height">40</SetVariable>
+											</Template>
+											
+											<Template src="skin:waveform.xml">
+												<SetVariable name="i">2</SetVariable>
+											</Template>
+											
+										</Children>
+									</WidgetGroup>
+									
+									<WidgetGroup>
+										<ObjectName>OverviewColumn</ObjectName>
+										<Layout>vertical</Layout>
+										<SizePolicy>me,me</SizePolicy>
+										<Children>
+											
+											<Template src="skin:overview.xml">
+												<SetVariable name="i">1</SetVariable>
+												<SetVariable name="channel">[Channel1]</SetVariable>
+											</Template>
+											
+											<Template src="skin:spacer_vx.xml">
+												<SetVariable name="height">40</SetVariable>
+											</Template>
+											
+											<Template src="skin:overview.xml">
+												<SetVariable name="i">2</SetVariable>
+												<SetVariable name="channel">[Channel2]</SetVariable>
+											</Template>
+											
+										</Children>
+									</WidgetGroup>
+									
+								</Children>
+							</Splitter>
+							
+							<Template src="skin:track_text_info.xml">
+								<SetVariable name="i">2</SetVariable>
+							</Template>
+							
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<SizePolicy>min,f</SizePolicy>
+								<Size>i,14</Size>
+								<Style>
+									QGroupBox { border: 0; }
+								</Style>
+								<Children>
+									
+									<Template src="skin:track_bpm_info.xml">
+										<SetVariable name="i">2</SetVariable>
+									</Template>
+									
+									<Template src="skin:track_duration_info.xml">
+										<SetVariable name="i">2</SetVariable>
+									</Template>
+									
+								</Children>
+							</WidgetGroup>
+							
+						</Children>
+					</WidgetGroup>
+					
+					<!-- global (time...) -->
+					
+					<WidgetGroup>
+						<ObjectName>DecksInfo</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>me,f</SizePolicy>
+						<MinimumSize>-1,17</MinimumSize>
+						<MaximumSize>-1,17</MaximumSize>
+						<Children>
+							
+							<Time>
+								<SizePolicy>min,f</SizePolicy>
+								<MinimumSize>40,17</MinimumSize>
+								<MaximumSize>87,17</MaximumSize>
+								<TooltipId>time</TooltipId>
+								<Alignment>center</Alignment>
+								<ShowSeconds>false</ShowSeconds>
+								<ClockFormat>24</ClockFormat>
+							</Time>
+						</Children>
+					</WidgetGroup>
+					
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+		</Children>
+	</WidgetGroup>
+	
+	
+</Template>

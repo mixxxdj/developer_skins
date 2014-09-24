@@ -1,0 +1,17 @@
+<!DOCTYPE template>
+<!--
+Description:
+Spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,me</SizePolicy>
+		<Children>
+		</Children>
+	</WidgetGroup>
+</Template>
+
+
+
+

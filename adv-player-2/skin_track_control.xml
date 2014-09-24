@@ -1,0 +1,30 @@
+<!DOCTYPE template>
+<!--
+Description:
+Track control panel.
+-->
+<Template>
+	<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+	
+	
+	<WidgetGroup>
+	<ObjectName>Deck</ObjectName>
+	<Layout>horizontal</Layout>
+	<SizePolicy>min,me</SizePolicy>
+	<Style>
+		/** /
+		QGroupBox { border: 1px solid red; }
+		/**/
+	</Style>
+	<Children>
+
+	<SetVariable name="margin_up">0</SetVariable>
+
+	
+	</Children>
+	</WidgetGroup>
+</Template>
+
+
+
+

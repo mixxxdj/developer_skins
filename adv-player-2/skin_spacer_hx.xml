@@ -1,0 +1,18 @@
+<!DOCTYPE template>
+<!--
+Description:
+Horizontal spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,min</SizePolicy>
+		<Size><Variable name="width"/></Size>
+		<Children>
+		</Children>
+	</WidgetGroup>
+</Template>
+
+
+
+

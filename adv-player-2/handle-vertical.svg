@@ -1,0 +1,105 @@
+<svg	xmlns	= "http://www.w3.org/2000/svg"
+		width	= "25"	expr-width	= "handle_width"
+		height	= "13"	expr-height	= "Number(handle_height) + Math.round(Number(margin))"
+	>
+	
+	<script src="svg.js">
+		<![CDATA[
+		
+		borderPath = templateHooks.borderPath = function( width, height, offset, up ){
+			var path = '';
+			
+			if( width > 0 && height > 0 ){
+				
+				var finalWidth = width - 2 * offset;
+				var finalHeight = height - offset;
+				
+				if( up ){
+					
+					path =	"M " + offset + " " + ( finalHeight + offset ) + " " +
+							"l " + 0 + " " + ( -finalHeight ) + " " +
+							"l " + finalWidth + " " + 0 + " " +
+							"l " + 0 + " " + finalHeight;
+				} else {
+					path =	"M " + offset + " " + ( height + 2 ) + " " +
+							"l " + 0 + " " + finalHeight + " " +
+							"l " + finalWidth + " " + 0 + " " +
+							"l " + 0 + " " + (-finalHeight);
+				}
+			}
+			
+			return path;
+		};
+		
+		shapeWidth	= handle_width - 1;
+		shapeHeight	= (handle_height - 1) / 2 - 1;
+		
+		margin = Math.round(margin/2);
+		]]>
+	</script>
+	
+	<defs>
+		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #444444; stop-opacity: 1;" />
+			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
+		</linearGradient>
+		
+		<linearGradient id="grad_shadow" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #000000; stop-opacity: .6;" />
+			<stop offset="100%"	style="stop-color: #000000; stop-opacity: 0;" />
+		</linearGradient>
+	</defs>
+	
+	<!-- background -->
+	<rect	x="0" y="0" width="25" height="13"
+			expr-width	= "handle_width - 1"
+			expr-height	= "handle_height - 1"
+			style="fill: url(#grad_def); stroke-width:0;"
+			 transform="translate( 0, variable('margin') )"
+			/>
+	
+	<!-- shadow -->
+	<rect	x="0" y="0" width="25" height="13"
+			expr-width	= "handle_width"
+			expr-y	= "handle_height - 1"
+			expr-height	= "5"
+			style="fill: url(#grad_shadow); stroke-width:0;"
+			 transform="translate( 0.5, variable('margin') )"
+			/>
+	
+	<g transform="translate( 0.5, 0.5 ) translate( 0, variable('margin') )">
+		
+		<path	d="M 1 5 l 0 -4 l 22 0 l 0 4" expr-d="borderPath( shapeWidth, shapeHeight, 1, true )"
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5; stroke-linecap: square;" />
+		
+		<path	d="M 1 7 l 0 4 l 22 0 l 0 -4" expr-d="borderPath( shapeWidth, shapeHeight, 1, false )"
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5; stroke-linecap: square;" />
+		
+		
+		<path	d="M 0 5 l 0 -5 l 24 0 l 0 5" expr-d="borderPath( shapeWidth, shapeHeight, 0, true )"
+				style="fill:none; stroke-width:1; stroke:#cccccc; stroke-linecap: square;" />
+		
+		<path	d="M 0 7 l 0 5 l 24 0 l 0 -5" expr-d="borderPath( shapeWidth, shapeHeight, 0, false )"
+				style="fill:none; stroke-width:1; stroke:#cccccc; stroke-linecap: square;" />
+		
+		
+		<line	x1="1" y1="6" x2="23" y2="6"
+				expr-x2	= "shapeWidth - 1"
+				expr-y1	= "shapeHeight"
+				expr-y2	= "shapeHeight"
+				style="stroke: #000000; stroke-width: 1; stroke-opacity: 0.2;"/>
+		
+		<line	x1="1" y1="6" x2="23" y2="6"
+				expr-x2	= "shapeWidth - 1"
+				expr-y1	= "shapeHeight + 1"
+				expr-y2	= "shapeHeight + 1"
+				style="stroke: #13a9fc; stroke-width: 1; prop( 'stroke', 'color' );"/>
+		
+		<line	x1="1" y1="6" x2="23" y2="6"
+				expr-x2	= "shapeWidth - 1"
+				expr-y1	= "shapeHeight + 2"
+				expr-y2	= "shapeHeight + 2"
+				style="stroke: #dddddd; stroke-width: 1; stroke-opacity: 0.2;"/>
+		
+	</g>
+</svg>

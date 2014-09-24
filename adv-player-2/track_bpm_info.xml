@@ -1,0 +1,94 @@
+<!DOCTYPE template>
+<!--
+Description: bpm, pitch, key
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>speed</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,f</SizePolicy>
+		<Size>i,16</Size>
+		<Style>
+			/**/
+			QGroupBox { border: 1px solid green; }
+			/**/
+			QGroupBox { border: 1px solid transparent; }
+			/**/
+		</Style>
+		<Children>
+			
+			<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			
+			<!--
+			**********************************************
+			Text - BPM + Pitch rate display
+			**********************************************
+			-->
+			<NumberBpm>
+				<TooltipId>visual_bpm</TooltipId>
+				<SizePolicy>min,me</SizePolicy>
+				<Channel><Variable name="i"/></Channel>
+				<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
+				<Alignment>left</Alignment>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,visual_bpm</ConfigKey>
+				</Connection>
+			</NumberBpm>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
+			
+			<NumberRate>
+				<TooltipId>rate_display</TooltipId>
+				<Channel><Variable name="i"/></Channel>
+				<NumberOfDigits>2</NumberOfDigits>
+			</NumberRate>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">10</SetVariable>
+			</Template>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">9</SetVariable>
+			</Template>
+			
+			<!--
+			**********************************************
+			Text - Key
+			**********************************************
+			-->
+			<Key>
+				<TooltipId>visual_key</TooltipId>
+				<!--Style>font; bg-color; color; text-align; (padding);
+				</Style-->
+				<DisplayCents>false</DisplayCents>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,visual_key</ConfigKey>
+				</Connection>
+			</Key>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">0</SetVariable>
+			</Template>
+			
+			<Label>
+				<Text>/</Text>
+			</Label>
+			
+			<TrackProperty>
+				<TooltipId>track_times_played</TooltipId>
+				<SizePolicy>min,me</SizePolicy>
+				<Property>key</Property>
+				<Channel><Variable name="i"/></Channel>
+			</TrackProperty>
+			
+			<Template src="skin:skin_spacer_h.xml">
+				<SetVariable name="height">0</SetVariable>
+			</Template>
+			
+		</Children>
+	</WidgetGroup>
+	
+</Template>

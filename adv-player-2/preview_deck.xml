@@ -1,0 +1,213 @@
+<!DOCTYPE template>
+<!--
+Description: preview deck
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>PrevewDeck</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,min</SizePolicy>
+		<MinimumSize>-1,70</MinimumSize>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid green; }
+			/** /
+			QGroupBox { border: 1px solid transparent; }
+			/**/
+		</Style>
+		<Children>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
+			
+			
+			<!-- Preview Deck Column 1 Row 1 -->
+			<WidgetGroup>
+				<ObjectName>PreviewColumnOne</ObjectName>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,min</SizePolicy>
+				<MinimumSize>-1,40</MinimumSize>
+				<Children>
+					
+					<WidgetGroup>
+						<ObjectName>PreviewTitleEject</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>me,min</SizePolicy>
+						<Children>
+							
+							<Text>
+								<TooltipId>text</TooltipId>
+								<Align>left</Align>
+								<Group>[PreviewDeck1]</Group>
+							</Text>
+							
+							<!--WidgetGroup>
+								<ObjectName>AlignRightTop</ObjectName>
+								<Layout>horizontal</Layout>
+								<SizePolicy>me,min</SizePolicy>
+								<Children>
+									<PushButton>
+										<TooltipId>eject</TooltipId>
+										<NumberStates>1</NumberStates>
+										<State>
+											<Number>0</Number>
+											<Pressed>btn_eject1_over.png</Pressed>
+											<Unpressed>btn_eject1.png</Unpressed>
+										</State>
+										<Connection>
+											<ConfigKey>[PreviewDeck1],eject</ConfigKey>
+											<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+											<ButtonState>LeftButton</ButtonState>
+											<ConnectValueToWidget>false</ConnectValueToWidget>
+										</Connection>
+									</PushButton>
+								</Children>
+							</WidgetGroup-->
+						</Children>
+					</WidgetGroup>
+					
+					<WidgetGroup>
+						<ObjectName>PreviewPlayOverview</ObjectName>
+						<Layout>horizontal</Layout>
+						<SizePolicy>me,min</SizePolicy>
+						<MinimumSize>100,45</MinimumSize>
+						<MaximumSize>i,45</MaximumSize>
+						<Children>
+							
+							<SetVariable name="height">45</SetVariable>
+							<SetVariable name="width">21</SetVariable>
+							<PushButton>
+								<TooltipId>play_start</TooltipId>
+								<NumberStates>2</NumberStates>
+								<RightClickIsPushButton>true</RightClickIsPushButton>
+								<State>
+									<Number>0</Number>
+									<Pressed>btn_play.svg</Pressed>
+									<Unpressed>btn_play.svg</Unpressed>
+								</State>
+								<State>
+									<Number>1</Number>
+									<Pressed>btn_pause.svg</Pressed>
+									<Unpressed>btn_pause.svg</Unpressed>
+								</State>
+								<Connection>
+									<ConfigKey>[PreviewDeck1],play</ConfigKey>
+									<EmitOnDownPress>true</EmitOnDownPress>
+									<ButtonState>LeftButton</ButtonState>
+								</Connection>
+								<Connection>
+									<ConfigKey>[PreviewDeck1],start</ConfigKey>
+									<EmitOnDownPress>true</EmitOnDownPress>
+									<ButtonState>RightButton</ButtonState>
+									<ConnectValueToWidget>false</ConnectValueToWidget>
+								</Connection>
+							</PushButton>
+							
+							<Template src="skin:spacer_vx.xml">
+								<SetVariable name="height">3</SetVariable>
+							</Template>
+							
+							<Overview>
+								<TooltipId>waveform_overview</TooltipId>
+								<Group>[PreviewDeck1]</Group>
+								<Size>me,45f</Size>
+								<BgColor></BgColor>
+								<BgColor>#FFFFFF</BgColor>
+								<SignalHighColor>#FFE300</SignalHighColor>
+								<SignalMidColor>#0099FF</SignalMidColor>
+								<SignalLowColor>#FF0035</SignalLowColor>
+								<SignalColor>#FF8000</SignalColor>
+								<PlayPosColor>#00FF00</PlayPosColor>
+								<DefaultMark>
+									<Align>bottom</Align>
+									<Color>#FFFFFF</Color>
+									<TextColor>#00FF00</TextColor>
+									<Text> %1 </Text>
+								</DefaultMark>
+								<Mark>
+									<Control>cue_point</Control>
+									<Text> C </Text>
+									<Align>top</Align>
+									<Color>#FF001C</Color>
+									<TextColor>#00FF00</TextColor>
+								</Mark>
+								<Connection>
+									<ConfigKey>[PreviewDeck1],playposition</ConfigKey>
+									<EmitOnDownPress>false</EmitOnDownPress>
+								</Connection>
+							</Overview>
+							
+							
+							
+							
+							
+							<Template src="skin:spacer_vx.xml">
+								<SetVariable name="height">3</SetVariable>
+							</Template>
+							
+							<SetVariable name="handle_width">10</SetVariable>
+							<SetVariable name="handle_height">7</SetVariable>
+							<SetVariable name="shape_width">10</SetVariable>
+							<SetVariable name="shape_height">3</SetVariable>
+							<SetVariable name="rectangle_width">10</SetVariable>
+							<SetVariable name="rectangle_height">45</SetVariable>
+							<SliderComposed>
+								<TooltipId>pregain</TooltipId>
+								<Handle>handle_triangle.svg</Handle>
+								<Slider>rectangle.svg</Slider>
+								<Horizontal>false</Horizontal>
+								<Connection>
+									<ConfigKey>[PreviewDeck1],pregain</ConfigKey>
+								</Connection>
+							</SliderComposed>
+							
+							
+							
+						</Children>
+					</WidgetGroup>
+				</Children>
+			</WidgetGroup>
+
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Children>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<SizePolicy>min,min</SizePolicy>
+						<Children>
+							
+							<Template src="skin:vumeter.xml">
+								<!--TooltipId>channel_VuMeter</TooltipId-->
+								<SetVariable name="wrapper_height" expression="track_line_height"/>
+								<SetVariable name="i">2</SetVariable>
+								<SetVariable name="height">61</SetVariable>
+								<SetVariable name="width">13</SetVariable>
+								<SetVariable name="space">5</SetVariable>
+								<SetVariable name="peak_height">15</SetVariable>
+								<SetVariable name="margin">2</SetVariable>
+								<SetVariable name="channel">[PreviewDeck1]</SetVariable>
+								<SetVariable name="peak_control">PeakIndicator</SetVariable>
+								<SetVariable name="vumeter_control">VuMeter</SetVariable>
+							</Template>
+							
+						</Children>
+					</WidgetGroup>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
+			
+			
+		</Children>
+		<Connection>
+			<ConfigKey>[PreviewDeck1],play</ConfigKey>
+			<BindProperty>visible</BindProperty>
+		</Connection>
+	</WidgetGroup>
+	
+</Template>

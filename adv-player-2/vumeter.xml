@@ -1,0 +1,62 @@
+<!DOCTYPE template>
+<!--
+Description: vumeter and peak indicator.
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>PeakVuMeter</ObjectName>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<Layout>vertical</Layout>
+		<SizePolicy>min,min</SizePolicy>
+		<MinimumSize>-1,<Variable name="wrapper_height"/></MinimumSize>
+		<MaximumSize>-1,<Variable name="wrapper_height"/></MaximumSize>
+		<Children>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height" expression="margin_top"/>
+			</Template>
+			
+			<!-- Visual - Volume peak indicator -->
+			<SetVariable name="peak_width" expression="width"/>
+			<StatusLight>
+				<TooltipId>PeakIndicator</TooltipId>
+				<SizePolicy>min,min</SizePolicy>
+				<PathStatusLight>peak_on.svg</PathStatusLight>
+				<PathBack>peak_off.svg</PathBack>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,<Variable name="peak_control"/></ConfigKey>
+				</Connection>
+			</StatusLight>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height" expression="space"/>
+			</Template>
+			
+			<!-- Visual - Volume level display -->
+			<SetVariable name="vumeter_height" expression="Number(height) - Number(space) - Number(peak_height)"/>
+			<SetVariable name="vumeter_width" expression="width"/>
+			
+			<VuMeter>
+				<TooltipId>channel_VuMeter</TooltipId>
+				<PathVu>vumeter_on.svg</PathVu>
+				<PathBack>vumeter_off.svg</PathBack>
+				<Horizontal>false</Horizontal>
+				<PeakHoldSize><Variable name="vumeter_height"/></PeakHoldSize>
+				<PeakHoldTime>500</PeakHoldTime>
+				<PeakFallTime>50</PeakFallTime>
+				<PeakFallStep>0</PeakFallStep>
+				
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,<Variable name="vumeter_control"/></ConfigKey>
+				</Connection>
+			</VuMeter>
+			
+		</Children>
+	</WidgetGroup>
+
+</Template>
