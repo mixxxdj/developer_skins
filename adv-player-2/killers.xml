@@ -36,13 +36,13 @@ Description: Frequency killers
 						<SetVariable name="frequency">High</SetVariable>
 					</Template>
 					
-					<Template src="skin:skin_spacer_v.xml"/>
+					<Template src="skin:spacer_v.xml"/>
 					
 					<Template src="skin:btn_killer.xml">
 						<SetVariable name="frequency">Mid</SetVariable>
 					</Template>
 					
-					<Template src="skin:skin_spacer_v.xml"/>
+					<Template src="skin:spacer_v.xml"/>
 					
 					<Template src="skin:btn_killer.xml">
 						<SetVariable name="frequency">Low</SetVariable>
