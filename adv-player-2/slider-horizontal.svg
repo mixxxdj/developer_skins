@@ -19,8 +19,8 @@
 			} );
 			offset = Math.round(offset);
 			
-			console.log('#####################################################');
-			console.log(offset);
+			// console.log('#####################################################');
+			// console.log(offset);
 			
 			shapeWidth = width - margin * 2;
 			

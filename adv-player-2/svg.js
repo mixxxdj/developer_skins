@@ -68,8 +68,8 @@ hookNames = function(){
 
 global = this;
 templateHooks.variable = variable = function( varName ){
-	print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-	print(global[varName]);
+	// console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+	// console.log(global[varName]);
     if( varName in global ){
         return global[varName];
     }
