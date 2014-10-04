@@ -1,0 +1,55 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+	<!-- <WidgetGroup>
+		<ObjectName>PeakVuMeter</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,min</SizePolicy>
+		<MinimumSize>-1,<Variable name="wrapper_height"/></MinimumSize>
+		<MaximumSize>-1,<Variable name="wrapper_height"/></MaximumSize>
+		<Size><Variable name="width"/>,1f</Size>
+		<Children>
+			<VuMeter>
+				<TooltipId>channel_VuMeter</TooltipId>
+				<PathVu>indicators/vumeter/images/<Variable name="vumeter_control"/>.svg</PathVu>
+				<PathBack>indicators/vumeter/images/<Variable name="vumeter_control"/>-BG.svg</PathBack>
+				<Horizontal>true</Horizontal>
+				<PeakHoldSize>2</PeakHoldSize>
+				<PeakHoldTime>0</PeakHoldTime>
+				<PeakFallTime>50</PeakFallTime>
+				<PeakFallStep>10</PeakFallStep>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,<Variable name="vumeter_control"/></ConfigKey>
+				</Connection>
+			</VuMeter>
+		</Children>
+	</WidgetGroup> -->
+    <PushButton>
+        <TooltipId>play_start</TooltipId>
+        <NumberStates>2</NumberStates>
+        <RightClickIsPushButton>true</RightClickIsPushButton>
+        <State>
+            <Number>0</Number>
+            <Pressed>buttons/images/play-sampler.svg</Pressed>
+            <Unpressed>buttons/images/play-sampler.svg</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>buttons/images/play-sampler.svg</Pressed>
+            <Unpressed>buttons/images/play-sampler.svg</Unpressed>
+        </State>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,start_play</ConfigKey>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,start_stop</ConfigKey>
+            <ButtonState>RightButton</ButtonState>
+        </Connection>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,play_indicator</ConfigKey>
+        </Connection>
+    </PushButton>
+</Template>

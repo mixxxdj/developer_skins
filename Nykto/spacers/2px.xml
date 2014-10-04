@@ -1,0 +1,11 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    2px spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<ObjectName>Spacer</ObjectName>
+		<Size>2f,2f</Size>
+	</WidgetGroup>
+</Template>

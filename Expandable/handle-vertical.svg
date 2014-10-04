@@ -6,7 +6,7 @@
 	<script src="svg.js">
 		<![CDATA[
 		
-		borderPath = templateHooks.borderPath = function( width, height, offset, up ){
+		borderPath = svg.templateHooks.borderPath = function( width, height, offset, up ){
 			var path = '';
 			
 			if( width > 0 && height > 0 ){

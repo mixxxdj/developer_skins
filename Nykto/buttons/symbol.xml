@@ -1,0 +1,15 @@
+<!DOCTYPE template>
+<!--
+Description: Button symbol.
+-->
+<Template>
+	<PushButton>
+	    <TooltipId>play_start</TooltipId>
+	    <NumberStates>1</NumberStates>
+	    <State>
+	        <Number>0</Number>
+	        <Unpressed>buttons/images/<Variable name="image"/>.svg</Unpressed>
+	        <Pressed>buttons/images/<Variable name="image"/>.svg</Pressed>
+	    </State>
+	</PushButton>
+</Template>

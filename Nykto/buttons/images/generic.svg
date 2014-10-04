@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="42"
+   height="22">
+
+  <defs
+     id="defs10844">
+    <linearGradient
+       id="linearGradient4662" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop
+         id="stop4664"
+         style="stop-color:#ffffff;stop-opacity:0.095"
+         offset="0" />
+      <stop
+         id="stop4666"
+         style="stop-color:#ffffff;stop-opacity:0.06"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 2,0 C 0.8991,0 0,0.8991 0,2 l 0,18 c 0,1.1009 0.8991,2 2,2 l 38,0 c 1.1009,0 2,-0.8991 2,-2 L 42,2 C 42,0.8991 41.1009,0 40,0 z m 0,2 38,0 0,18 -38,0 z"
+     id="Recess"
+     style="fill:#000000;fill-opacity:0.50196078; fill-rule:nonzero;stroke:none" />
+  <path
+     d="m 40,1.9872 0,18 -38,0 0,-18 38,0 z"
+     id="Background"
+     style="fill:url(#linearGradient4662);fill-opacity:1;" />
+  <rect
+     width="38"
+     height="1"
+     rx="0"
+     x="-40"
+     y="18.987165"
+     transform="scale(-1,1)"
+     id="Shadow"
+     style="fill:#000000;fill-opacity:0.25098039;" />
+  <rect
+     width="38"
+     height="1"
+     rx="0"
+     x="-40"
+     y="1.9999828"
+     transform="scale(-1,1)"
+     id="Highlight"
+     style="fill:#ffffff;fill-opacity:0.0627451;" />
+  <rect
+     width="38"
+     height="2"
+     rx="0"
+     x="-40"
+     y="1.9999828"
+     transform="scale(-1,1)"
+     id="ShadowPressed"
+     style="fill:#ff00ff;fill-opacity:0;" />
+</svg>

@@ -1,0 +1,103 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Sampler.
+-->
+<Template>
+	<WidgetStack>
+		<ObjectName>Sampler</ObjectName>
+		<SizePolicy>me,f</SizePolicy>
+		<MaximumSize>300,-1</MaximumSize>
+		<Children>
+			<WidgetGroup>
+				<ObjectName>SamplerFull</ObjectName>
+				<Layout>vertical</Layout>
+				<Size>me,f</Size>
+				<Children>
+					<WidgetGroup>
+						<Style> QGroupBox { background-color: #F1AD0D; } </Style>
+						<Layout>horizontal</Layout>
+						<Children>
+							<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+								<SetVariable name="color">#F1AD0D</SetVariable>
+							</Template>
+						</Children>
+					</WidgetGroup>
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<Size>me,f</Size>
+						<Style> QGroupBox { background-color: #303030; } </Style>
+						<Children>
+
+							<!-- Play, Gain, PFL -->
+
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,f</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<Template src="skin:buttons/green.xml">
+										<SetVariable name="size">42,22</SetVariable>
+										<SetVariable name="states">1</SetVariable>
+										<SetVariable name="text"></SetVariable>
+										<SetVariable name="image">play-sampler</SetVariable>
+										<SetVariable name="leftclick">start_play</SetVariable>
+										<SetVariable name="rightclick">start_stop</SetVariable>
+										<SetVariable name="indicator">play_indicator</SetVariable>
+									</Template>
+									<Template src="skin:knobs/knob.xml">
+										<SetVariable name="color">red</SetVariable>
+										<SetVariable name="control">pregain</SetVariable>
+										<SetVariable name="text">GAIN</SetVariable>
+									</Template>
+									<WidgetGroup>
+										<Layout>horizontal</Layout>
+										<Children>
+											<Template src="skin:buttons/green-nodark.xml">
+												<SetVariable name="size">42,22</SetVariable>
+												<SetVariable name="states">2</SetVariable>
+												<SetVariable name="text">PFL</SetVariable>
+												<SetVariable name="image"></SetVariable>
+												<SetVariable name="leftclick">pfl</SetVariable>
+												<SetVariable name="rightclick"></SetVariable>
+												<SetVariable name="indicator">pfl</SetVariable>
+											</Template>
+										</Children>
+									</WidgetGroup>
+								</Children>
+							</WidgetGroup>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>me,f</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>me,f</Size>
+										<Children>
+											
+										</Children>
+									</WidgetGroup>
+									<WidgetGroup>
+										<Layout>horizontal</Layout>
+										<Size>f,f</Size>
+										<Children>
+										</Children>
+									</WidgetGroup>
+								</Children>
+							</WidgetGroup>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,me</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+								</Children>
+							</WidgetGroup>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:decorations/bottom-shadow.xml"/>
+				</Children>
+			</WidgetGroup>
+		</Children>
+	</WidgetStack>
+</Template>

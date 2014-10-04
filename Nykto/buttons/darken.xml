@@ -1,0 +1,28 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            background-color: rgba(0,0,0,25%);
+            margin: 2px;}
+        </Style>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="leftclick"/></ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
+    </WidgetGroup>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            background-color: rgba(0,0,0,25%);
+            margin: 2px;}
+        </Style>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="rightclick"/></ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
+    </WidgetGroup>
+</Template>

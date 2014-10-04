@@ -1,0 +1,18 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Bottom shadow.
+-->
+<Template>
+	<WidgetGroup>
+		<ObjectName>BottomShadow</ObjectName>
+		<Size>me,4f</Size>
+		<Style>QGroupBox {
+			border-top: 2px;
+			border-bottom: 2px;
+			border-left: 2px;
+			border-right: 2px;
+			border-image: url(skin:decorations/images/bottom-shadow.svg); }
+		</Style>
+	</WidgetGroup>
+</Template>

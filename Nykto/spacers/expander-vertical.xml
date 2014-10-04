@@ -1,0 +1,12 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Vertical expander.
+-->
+<Template>
+	<WidgetGroup>
+		<Style> QGroupBox { background-color: transparent; } </Style>
+		<ObjectName>Spacer</ObjectName>
+		<Size>4f,me</Size>
+	</WidgetGroup>
+</Template>

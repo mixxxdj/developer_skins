@@ -1,0 +1,20 @@
+<!DOCTYPE template>
+<!--
+Description: Green overlay.
+-->
+<Template>
+
+            <WidgetGroup>
+                <Size>me,me</Size>
+                <Style>QGroupBox {
+                    background-color: #FF344D;
+                    border-top: 2px solid rgba(0,0,0,20%);
+                    margin: 6px;}
+                </Style>
+                <Connection>
+                    <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                    <BindProperty>visible</BindProperty>
+                </Connection>
+            </WidgetGroup>
+
+</Template>

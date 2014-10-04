@@ -1,0 +1,27 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+	<WidgetGroup>
+		<ObjectName>PeakVuMeter</ObjectName>
+		<Layout>stacked</Layout>
+		<Size>me,1f</Size>
+		<Style> QGroupBox { background-color: rgba(48, 48, 48, 75%);}</Style>
+		<Children>
+			<VuMeter>
+				<TooltipId>channel_VuMeter</TooltipId>
+				<Size>me,1f</Size>
+				<PathVu>indicators/vumeter/images/vu.svg</PathVu>
+				<Horizontal>true</Horizontal>
+                <PeakHoldSize>5</PeakHoldSize>
+                <PeakHoldTime>500</PeakHoldTime>
+                <PeakFallTime>50</PeakFallTime>
+                <PeakFallStep>2</PeakFallStep>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,<Variable name="vumeter_control"/></ConfigKey>
+				</Connection>
+			</VuMeter>
+		</Children>
+	</WidgetGroup>
+</Template>

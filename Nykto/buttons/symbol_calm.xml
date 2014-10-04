@@ -1,0 +1,25 @@
+<!DOCTYPE template>
+<!--
+Description: Inactive symbol for button.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>f,f</Size>
+        <Layout>vertical</Layout>
+        <Children>
+            <Template src="skin:buttons/symbol.xml">
+                <SetVariable name="opacity">0.5</SetVariable>
+                <SetVariable name="shadow">0.75</SetVariable>
+                <SetVariable name="symbol_color">#FFFFFF</SetVariable>
+            </Template>
+        </Children>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+            <BindProperty>visible</BindProperty>
+            <Transform>
+                <Invert/>
+                <Add>1</Add>
+            </Transform>
+        </Connection>
+    </WidgetGroup>
+</Template>

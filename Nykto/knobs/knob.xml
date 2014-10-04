@@ -1,0 +1,40 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Knob.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+		<Size>f,f</Size>
+		<Children>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<Size>42,42</Size>
+				<Children>
+					<WidgetGroup>
+						<Layout>stacked</Layout>
+						<Size>40f,40f</Size>
+						<Children>
+						<Knob>
+						    <TooltipId>pregain</TooltipId>
+						    <NumberStates>83</NumberStates>
+						    <Path>knobs/images/<Variable name="color"/>/s%1.svg</Path>
+						    <Connection>
+						        <ConfigKey><Variable name="channel"/>,<Variable name="control"/></ConfigKey>
+						    </Connection>
+						</Knob>
+						<WidgetGroup>
+							<Size>40f,40f</Size>
+							<Layout>vertical</Layout>
+							<Style> QGroupBox { background-image: url("skin:knobs/images/red/bg.svg") ; } </Style>
+						</WidgetGroup>
+						</Children>
+					</WidgetGroup>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:labels/knob.xml">
+			</Template>
+		</Children>
+	</WidgetGroup>
+</Template>

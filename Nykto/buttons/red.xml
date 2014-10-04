@@ -1,0 +1,17 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Style> QGroupBox { margin: 4px; } </Style>
+        <Children>
+            <Template src="skin:buttons/push.xml"/>
+            <Template src="skin:buttons/darken.xml"/>
+            <Template src="skin:buttons/symbol_active.xml"/>
+            <Template src="skin:buttons/images/green.xml"/>
+            <Template src="skin:buttons/background.xml"/>
+        </Children>
+    </WidgetGroup>
+</Template>

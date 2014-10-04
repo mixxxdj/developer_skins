@@ -1,0 +1,12 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    2px spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<Style> QGroupBox { border-image: none;} </Style>
+		<ObjectName>Spacer</ObjectName>
+		<Size>8f,8f</Size>
+	</WidgetGroup>
+</Template>

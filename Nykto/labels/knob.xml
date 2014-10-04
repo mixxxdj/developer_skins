@@ -1,0 +1,25 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Small active text for button.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Size>me,9f</Size>
+		<Children>
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Size>36f,9f</Size>
+				<Style> QGroupBox { background-color: rgba(0,0,0,25%); } </Style>
+				<Children>
+					<Label>
+						<Size>f,f</Size>
+					    <Style> QLabel { font: 8px PT Mono; font-weight: bold; color: rgba(255,255,255,50%); text-align: center; padding-left: 2px; }</Style>
+					    <Text><Variable name="text"/></Text>
+					</Label>
+				</Children>
+			</WidgetGroup>
+		</Children>
+	</WidgetGroup>
+</Template>

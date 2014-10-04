@@ -1,0 +1,28 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+    <PushButton>
+        <TooltipId>play_start</TooltipId>
+        <NumberStates><Variable name="states"/></NumberStates>
+        <RightClickIsPushButton>true</RightClickIsPushButton>
+        <Size>me,me</Size>
+        <State>
+            <Number>0</Number>
+        </State>
+        <State>
+            <Number>1</Number>
+        </State>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="leftclick"/></ConfigKey>
+            <ButtonState>LeftButton</ButtonState>
+            <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        </Connection>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="rightclick"/></ConfigKey>
+            <ButtonState>RightButton</ButtonState>
+            <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        </Connection>
+    </PushButton>
+</Template>

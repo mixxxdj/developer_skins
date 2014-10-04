@@ -1,0 +1,20 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            border-top: 4px;
+            border-bottom: 4px;
+            border-left: 2px;
+            border-right: 2px;
+            border-image: url(skin:buttons/images/generic.svg); }
+        </Style>
+        <Layout>vertical</Layout>
+        <Children>
+            
+        </Children>
+    </WidgetGroup>
+</Template>
