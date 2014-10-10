@@ -21,7 +21,6 @@ function setDefault(){
 		if( 'type' in params && typeof params.type ==  'function' ){
 			this[params.name] = params.type( this[params.name] );
 		}
-		// console.log('!!!!!!!!!!!!', this[params.name], typeof this[params.name] );
 	}
 	
 }
@@ -66,7 +65,6 @@ function describeArc(x, y, radius, startAngle, endAngle){
 
 
 pointsToPath = function( points ){
-    // console.log('#############################################################');
     var path	= '',
         currentPoint;
     

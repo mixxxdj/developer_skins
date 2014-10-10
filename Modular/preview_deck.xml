@@ -78,6 +78,7 @@ Description: preview deck
 							
 							<SetVariable name="height">45</SetVariable>
 							<SetVariable name="width">21</SetVariable>
+							<SetVariable name="color"></SetVariable>
 							<PushButton>
 								<TooltipId>play_start</TooltipId>
 								<NumberStates>2</NumberStates>
@@ -138,10 +139,6 @@ Description: preview deck
 									<EmitOnDownPress>false</EmitOnDownPress>
 								</Connection>
 							</Overview>
-							
-							
-							
-							
 							
 							<Template src="skin:spacer_vx.xml">
 								<SetVariable name="height">3</SetVariable>
