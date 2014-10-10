@@ -62,8 +62,9 @@
 		<text	x="17"		expr-x="width / 2"
 				y="15.5"	expr-y="text_y"
 				text-anchor="middle"
-				style="fill:#ffffff; font-size: 11px; prop('font-size', text_size + 'px'); font-weight: bold; prop('fill', 'text_color'); font-family: SquaryBig, loma, serif;">
-					<Variable name="text"/>
+				style="fill:#ffffff; font-size: 11px; prop('font-size', text_size + 'px'); font-weight: bold; prop('fill', 'text_color'); font-family: SquaryBig, loma, serif;"
+                value="text">
+					<!--Variable name="text"/-->
 		</text>
 	</g>
 	

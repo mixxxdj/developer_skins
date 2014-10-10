@@ -1,32 +1,9 @@
-this.templateHooks = {};
+global = this;
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-regexpQuote = function (str, delimiter) {
-    return String(str).replace(
-        new RegExp(
-            '[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]',
-            'g'
-        ),
-        '\\$&'
-    );
-}
-
-// console
-if( !('console' in this ) ){
-    console = {
-        log : function(){
-            var out = [],
-                i   = 0;
-            for( ; i<arguments.length; i++ ){
-                out.push( JSON.stringify(arguments[i]) );
-            }
-            print(out.join(' '));
-        }
-    }
-}
 
 function setDefault(){
 	var params;
@@ -50,59 +27,9 @@ function setDefault(){
 }
 
 
-
-hookNames = function(){
-    var hookNames = ['variable'];
-    for( var i in this.templateHooks )
-        hookNames.push(i);
-    
-    hookNames.toPattern = function(){
-        for( var i in this )
-            this[i] = regexpQuote(this[i]);
-        return this.join('|');
-    }
-    
-    return hookNames;
-}
-
-
-global = this;
-templateHooks.variable = variable = function( varName ){
-	// console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-	// console.log(global[varName]);
-    if( varName in global ){
-        return global[varName];
-    }
-    return '';
-}
-
-
-
-
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
-
-templateHooks.prop = prop = function( propName, varName ){
-    var out = '';
-    
-    if( (varName in global) ){
-        var value = global[varName];
-        
-        if( isNumber(value) ){
-            out = propName + ':' + value + ';';
-        } else if( value.length ) {
-            out = propName + ':' + value + ';';
-        }
-        
-    } else {
-        // print( 'Unable to find ' + varName + ' for prop hook.' );
-    }
-    
-    // print( varName + ' => ' out + ' | ' + (varName in global) );
-    return out;
-}
-
 
 // http://stackoverflow.com/questions/5736398/how-to-calculate-the-svg-path-for-an-arc-of-a-circle
 function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
@@ -134,8 +61,6 @@ function describeArc(x, y, radius, startAngle, endAngle){
 				style="stroke: #cccccc"/-->
 /**/
 
-this.templateHooks.variable = variable;
-
 
 
 
@@ -158,6 +83,6 @@ pointsToPath = function( points ){
     return path;
 }
 
-this.templateHooks.pointsToPath = pointsToPath;
+this.svg.templateHooks.pointsToPath = pointsToPath;
 
 

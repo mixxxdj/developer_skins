@@ -109,7 +109,7 @@
 				y="62"	expr-y="text_y"
 				text-anchor="middle"
 				style="fill:#bbbbbb; font-size: 9px; font-weight: bold; prop('fill', 'text_color'); font-family: SquaryBig, loma, serif;">
-					<Variable name="text"/>
+					<Variable expression="text"/>
 		</text>
 		
 		<!-- slit -->
