@@ -1,0 +1,149 @@
+<Template>
+    <WidgetGroup>
+        <ObjectName>AuxBorder</ObjectName>
+        <Layout>vertical</Layout>
+        <SizePolicy>min,min</SizePolicy>
+        <Children>
+            <!-- To make each widget centered, we have to put them each in their own
+                widgetgroup. -->
+            <WidgetGroup>
+                <Layout>horizontal</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                     <PushButton>
+                        <Size>40f,20f</Size>
+                        <ObjectName>FourDeckToggleButton</ObjectName>
+                        <NumberStates>2</NumberStates>
+                        <State>
+                          <Number>0</Number>
+                          <Text>AUX<Variable name="channum" /></Text>
+                        </State>
+                        <State>
+                          <Number>1</Number>
+                          <Text>AUX<Variable name="channum" /></Text>
+                        </State>
+                        <Connection>
+                          <ConfigKey persist="true">[Auxiliary<Variable name="channum" />],passthrough</ConfigKey>
+                          <ButtonState>LeftButton</ButtonState>
+                        </Connection>
+                        <Connection>
+                          <ConfigKey persist="true">[Auxiliary<Variable name="channum" />],passthrough</ConfigKey>
+                        </Connection>
+                    </PushButton>
+                </Children>
+            </WidgetGroup>
+            <WidgetGroup>
+                <ObjectName>AuxPflSpace</ObjectName>
+                <Layout>horizontal</Layout>
+                <SizePolicy>me,min</SizePolicy>
+                <Children>
+                    <PushButton>
+                      <Alignment>center</Alignment>
+                      <TooltipId>pfl</TooltipId>
+                      <NumberStates>2</NumberStates>
+                      <State>
+                          <Number>0</Number>
+                          <Pressed>btn_pfl1_down.png</Pressed>
+                          <Unpressed>btn_pfl1.png</Unpressed>
+                      </State>
+                      <State>
+                          <Number>1</Number>
+                          <Pressed>btn_pfl1_overdown.png</Pressed>
+                          <Unpressed>btn_pfl1_over.png</Unpressed>
+                      </State>
+                      <Connection>
+                          <ConfigKey>[Auxiliary<Variable name="channum"/>],pfl</ConfigKey>
+                      </Connection>
+                  </PushButton>
+               </Children>
+           </WidgetGroup>
+           <WidgetGroup>
+                <Layout>vertical</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                    <Knob>
+                        <NumberStates>64</NumberStates>
+                        <Path>knobs/knob_rotary_s%1.png</Path>
+                        <Connection>
+                            <ConfigKey>[Auxiliary<Variable name="channum" />],pregain</ConfigKey>
+                        </Connection>
+                    </Knob>
+                </Children>
+            </WidgetGroup>
+            <WidgetGroup>
+                <Layout>vertical</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                    <Knob>
+                        <NumberStates>64</NumberStates>
+                        <Path>knobs/knob_rotary_s%1.png</Path>
+                        <Connection>
+                            <ConfigKey>[Auxiliary<Variable name="channum" />],volume</ConfigKey>
+                        </Connection>
+                    </Knob>
+                </Children>
+            </WidgetGroup>
+            <WidgetGroup>
+                <Layout>vertical</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                    <StatusLight>
+                        <TooltipId>PeakIndicator</TooltipId>
+                        <PathStatusLight>btn_clipping1_over.png</PathStatusLight>
+                        <PathBack>btn_clipping1.png</PathBack>
+                        <Horizontal>false</Horizontal>
+                        <Connection>
+                            <ConfigKey>[Auxiliary<Variable name="channum" />],PeakIndicator</ConfigKey>
+                        </Connection>
+                    </StatusLight>
+                    <VuMeter>
+                        <PathVu>btn_volume_display1_over.png</PathVu>
+                        <PathBack>btn_volume_display1.png</PathBack>
+                        <Horizontal>false</Horizontal>
+                        <PeakHoldSize>5</PeakHoldSize>
+                        <PeakHoldTime>500</PeakHoldTime>
+                        <PeakFallTime>50</PeakFallTime>
+                        <PeakFallStep>2</PeakFallStep>
+                        <Connection>
+                            <ConfigKey>[Auxiliary<Variable name="channum" />],VuMeter</ConfigKey>
+                        </Connection>
+                    </VuMeter>
+                </Children>
+            </WidgetGroup>
+           <!--  <WidgetGroup>
+                <Layout>vertical</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                    <PushButton>
+                        <TooltipId>orientation</TooltipId>
+                        <Style></Style>
+                        <NumberStates>3</NumberStates>
+                        <State>
+                            <Number>0</Number>
+                            <Pressed>btn_orientation_microphone_left_over.png</Pressed>
+                            <Unpressed>btn_orientation_microphone_left_over.png</Unpressed>
+                        </State>
+                        <State>
+                            <Number>1</Number>
+                            <Pressed>btn_orientation_microphone_master.png</Pressed>
+                            <Unpressed>btn_orientation_microphone_master.png</Unpressed>
+                        </State>
+                        <State>
+                            <Number>2</Number>
+                            <Pressed>btn_orientation_microphone_right_over.png</Pressed>
+                            <Unpressed>btn_orientation_microphone_right_over.png</Unpressed>
+                        </State>
+                        <Connection>
+                            <ConfigKey>[Auxiliary<Variable name="channum" />],orientation</ConfigKey>
+                            <ButtonState>LeftButton</ButtonState>
+                        </Connection>
+                    </PushButton>
+                </Children>
+            </WidgetGroup> -->
+        </Children>
+        <Connection>
+            <ConfigKey>[Auxiliary<Variable name="channum" />],enabled</ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
+    </WidgetGroup>
+</Template>

@@ -59,8 +59,16 @@
 						</Connection>
 					</PushButton>
 				</Children>
+                <Connection>
+                    <ConfigKey persist="true">[VinylControl],show_vinylcontrol</ConfigKey>
+                    <BindProperty>visible</BindProperty>
+                </Connection>
 			</WidgetGroup>
-
+            <WidgetGroup>
+                <Layout>horizontal</Layout>
+                <SizePolicy>me,min</SizePolicy>
+                <Children></Children>
+            </WidgetGroup>
 			<WidgetGroup>
                 <ObjectName>Hotcues</ObjectName>
                 <Layout>vertical</Layout>
@@ -88,19 +96,14 @@
                                 </State>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_1_activate</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>LeftButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_1_clear</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>RightButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_1_enabled</ConfigKey>
-                                    <ConnectValueFromWidget>false</ConnectValueFromWidget>
                                 </Connection>
                             </PushButton>
                             <PushButton>
@@ -120,19 +123,14 @@
                                 </State>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_2_activate</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>LeftButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_2_clear</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>RightButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_2_enabled</ConfigKey>
-                                    <ConnectValueFromWidget>false</ConnectValueFromWidget>
                                 </Connection>
                             </PushButton>
                         </Children>
@@ -159,19 +157,14 @@
                                 </State>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_3_activate</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>LeftButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_3_clear</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>RightButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_3_enabled</ConfigKey>
-                                    <ConnectValueFromWidget>false</ConnectValueFromWidget>
                                 </Connection>
                             </PushButton>
                             <PushButton>
@@ -191,79 +184,20 @@
                                 </State>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_4_activate</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>LeftButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_4_clear</ConfigKey>
-                                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                                     <ButtonState>RightButton</ButtonState>
-                                    <ConnectValueToWidget>false</ConnectValueToWidget>
                                 </Connection>
                                 <Connection>
                                     <ConfigKey>[Channel<Variable name="channum" />],hotcue_4_enabled</ConfigKey>
-                                    <ConnectValueFromWidget>false</ConnectValueFromWidget>
                                 </Connection>
                             </PushButton>
                         </Children>
                     </WidgetGroup>
                 </Children>
             </WidgetGroup>
-
-            <WidgetGroup>
-                <ObjectName>SyncControls</ObjectName>
-                <Layout>vertical</Layout>
-                <SizePolicy>min,min</SizePolicy>
-                <MinimumSize>48,48</MinimumSize>
-                <Children>
-                    <PushButton>
-                        <TooltipId>beatsync_beatsync_tempo</TooltipId>
-                        <NumberStates>2</NumberStates>
-                        <State>
-                            <Number>0</Number>
-                            <Pressed>btn_sync1_overdown.png</Pressed>
-                            <Unpressed>btn_sync1.png</Unpressed>
-                        </State>
-                        <State>
-                            <Number>1</Number>
-                            <Pressed>btn_sync1_overdown.png</Pressed>
-                            <Unpressed>btn_sync1_overdown.png</Unpressed>
-                        </State>
-                        <Connection>
-                            <ConfigKey>[Channel<Variable name="channum" />],sync_enabled</ConfigKey>
-                            <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-                            <ButtonState>LeftButton</ButtonState>
-                        </Connection>
-                        <Connection>
-                            <ConfigKey>[Channel<Variable name="channum" />],beatsync_tempo</ConfigKey>
-                            <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-                            <ButtonState>RightButton</ButtonState>
-                        </Connection>
-                    </PushButton>
-                    <!-- Disable explicit master for now. -->
-					<!-- <PushButton>
-						<TooltipId>sync_master</TooltipId>
-						<Style></Style>
-						<NumberStates>2</NumberStates>
-						<State>
-							<Number>0</Number>
-							<Pressed>btn_mastersync_master_on.png</Pressed>
-							<Unpressed>btn_mastersync_master_off.png</Unpressed>
-						</State>
-						<State>
-							<Number>1</Number>
-							<Pressed>btn_mastersync_master_on.png</Pressed>
-							<Unpressed>btn_mastersync_master_on.png</Unpressed>
-						</State>
-						<Connection>
-							<ConfigKey>[Channel<Variable name="channum" />],sync_master</ConfigKey>
-							<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
-							<ButtonState>LeftButton</ButtonState>
-						</Connection>
-					</PushButton> -->
-				</Children>
-			</WidgetGroup>
 		</Children>
 	</WidgetGroup>
 </Template>
