@@ -1,0 +1,58 @@
+<!DOCTYPE template>
+<!--
+Description: duration
+-->
+<Template>
+	
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,f</SizePolicy>
+		<Size>i,20</Size>
+		<Children>
+			
+			<!-- Text - Playing position / Time remaining -->
+			<NumberPos>
+				<TooltipId>track_time</TooltipId>
+				<Channel><Variable name="i"/></Channel>
+				<SizePolicy>min,f</SizePolicy>
+				<Size>i,20</Size>
+				<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
+				<Alignment>right</Alignment>
+				<!--NumberOfDigits>6</NumberOfDigits marche pas ?-->
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
+				</Connection>
+			</NumberPos>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">6</SetVariable>
+			</Template>
+			
+			<Label>
+				<Text>/</Text>
+			</Label>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">6</SetVariable>
+			</Template>
+			
+			<!--
+			**********************************************
+			Text- Playing position / Time remaining
+			**********************************************
+			-->
+			<TrackProperty>
+				<TooltipId>track_duration</TooltipId>
+				<Channel><Variable name="i"/></Channel>
+				<Property>durationFormatted</Property>
+				<SizePolicy>min,f</SizePolicy>
+				<Size>i,20</Size>
+				<!--CSS alignments not respected see bug lp:605530 , lets call <Alignment>-->
+				<Alignment>right</Alignment>
+			</TrackProperty>
+			
+			
+			
+		</Children>
+	</WidgetGroup>
+</Template>

@@ -1,0 +1,17 @@
+<!DOCTYPE template>
+<!--
+Description:
+Vertical spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,me</SizePolicy>
+		<Children>
+		</Children>
+	</WidgetGroup>
+</Template>
+
+
+
+

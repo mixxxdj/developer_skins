@@ -1,0 +1,53 @@
+<!DOCTYPE template>
+<!--
+Description:
+Button with a number
+-->
+<Template>
+	
+	<SetVariable name="text"><Variable name="number"/></SetVariable>
+	<SetVariable name="width">21</SetVariable>
+	<SetVariable name="height">21</SetVariable>
+	<SetVariable name="text_size">11</SetVariable>
+	
+	<PushButton>
+		<TooltipId><Variable name="tooltip_id"/></TooltipId>
+		
+		<NumberStates>2</NumberStates>
+		
+		<State>
+			<Number>0</Number>
+			<Unpressed>btn_text.svg</Unpressed>
+			<Pressed>btn_text.svg</Pressed>
+		</State>
+		
+		<State>
+			<Number>1</Number>
+			<SetVariable name="border_color" expression="active_border_color"/>
+			<SetVariable name="text_color" expression="active_text_color"/>
+			<Pressed>btn_text.svg</Pressed>
+			<Unpressed>btn_text.svg</Unpressed>
+		</State>
+		
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,<Variable name="left_control"/></ConfigKey>
+			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			<ConnectValueToWidget>false</ConnectValueToWidget>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,<Variable name="right_control"/></ConfigKey>
+			<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+			<ConnectValueToWidget>false</ConnectValueToWidget>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+		
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,<Variable name="display_control"/></ConfigKey>
+			<ConnectValueFromWidget>false</ConnectValueFromWidget>
+		</Connection>
+		
+	</PushButton>
+	
+</Template>

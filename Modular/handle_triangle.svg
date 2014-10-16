@@ -1,0 +1,86 @@
+<svg	xmlns="http://www.w3.org/2000/svg"
+		width="33"	expr-width="handle_width"
+		height="21"	expr-height="handle_height"
+		>
+	
+	<script src="svg.js">
+		// <![CDATA[
+			
+			if( !('handle_width' in this) )
+				handle_width = 33;
+			if( !('handle_height' in this) )
+				handle_height = 21;
+			
+			var center = {
+				width	: Math.round((handle_width - 1) / 2),
+				height	: Math.round((handle_height - 1) / 2),
+			}
+			
+			var shapeWidth = shapeWidth || 10;
+			var shapeHeight = shapeHeight || 10;
+			
+			shapePoints = [
+				{
+					type	: 'M',
+					x		: center.width - shapeWidth / 2,
+					y		: center.height - shapeHeight / 2
+				},
+				{
+					type	: 'L',
+					x		: center.width + shapeWidth / 2,
+					y		: center.height
+				},
+				{
+					type	: 'L',
+					x		: center.width - shapeWidth / 2,
+					y		: center.height + shapeHeight / 2
+				}
+			];
+			
+			
+		// ]]>
+	</script>
+	<defs>
+		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #333333; stop-opacity: 1;" />
+			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
+		</linearGradient>
+		
+		<linearGradient id="grad_transparent_light" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #cccccc; stop-opacity: 0.2;" />
+			<stop offset="100%"	style="stop-color: #cccccc; stop-opacity: 0;" />
+		</linearGradient>
+		
+		<linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #13a9fc; stop-opacity: 0.5; prop( 'stop-color', 'track_light_color' );" />
+			<stop offset="100%"	style="stop-color: #13a9fc; stop-opacity: 0.2; prop( 'stop-color', 'track_light_color' );" />
+		</linearGradient>
+		
+	</defs>
+	
+	
+	<g transform="translate( 0.5, 0.5 )">
+	
+		<!-- transform="matrix(10,0,0,10,10,10)" -->
+		<path
+			style="fill-opacity: 1;"
+			fill="#000000"
+			d="M 10.75 4.75 L 21.25 10 L 10.75 15.25"
+			expr-d="pointsToPath( shapePoints )"
+			stroke-width="0"
+			fill-opacity="0.5"
+			transform="translate( 1, 1 )"
+			/>
+		
+		<path
+			style="fill-opacity: 1;"
+			fill="#ffffff"
+			d="M 10.75 4.75 L 21.25 10 L 10.75 15.25"
+			expr-d="pointsToPath( shapePoints )"
+			stroke-width="0"
+			
+			fill-opacity="1"
+			/>
+	</g>
+	
+</svg>

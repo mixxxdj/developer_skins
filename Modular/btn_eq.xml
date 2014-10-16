@@ -1,0 +1,30 @@
+<!DOCTYPE template>
+<!--
+Description:
+Equalizer slider
+-->
+<Template>
+	
+	<SetVariable name="width">90</SetVariable>
+	<SetVariable name="height">25</SetVariable>
+	<SetVariable name="margin">5.5</SetVariable>
+	
+	<SetVariable name="handle_width">11</SetVariable>
+	<SetVariable name="handle_height"><Variable name="height"/></SetVariable>
+	
+	<SliderComposed>
+		
+		<TooltipId>filter<Variable name="frequency"/></TooltipId>
+		
+		<Slider>slider-horizontal.svg</Slider>
+		<Handle>handle-horizontal.svg</Handle>
+		
+		<Horizontal>true</Horizontal>
+		
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,filter<Variable name="frequency"/></ConfigKey>
+		</Connection>
+		
+	</SliderComposed>
+	
+</Template>

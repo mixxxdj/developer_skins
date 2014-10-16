@@ -1,0 +1,51 @@
+<!DOCTYPE template>
+<!--
+Description: track gain and volume 
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>VolumeControls</ObjectName>
+		<Layout>vertical</Layout>
+		<SizePolicy>min,min</SizePolicy>
+		<MinimumSize>33,-1</MinimumSize>
+		<MaximumSize>69,-1</MaximumSize>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<Children>
+			
+			<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			
+			<!-- Prelisten / Monitoring -->
+			<SetVariable name="text">H</SetVariable>
+			<PushButton>
+				<TooltipId>pfl</TooltipId>
+				<MinimumSize>30,20</MinimumSize>
+				<MaximumSize>40,30</MaximumSize>
+				<NumberStates>2</NumberStates>
+				<RightClickIsPushButton>true</RightClickIsPushButton>
+				<State>
+					<Number>0</Number>
+					<Unpressed>btn_text_little_1x1.svg</Unpressed>
+					<Pressed>btn_text_little_1x1.svg</Pressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<SetVariable name="dark_color"><Variable name="track_dark_color"/></SetVariable>
+					<SetVariable name="light_color"><Variable name="track_light_color"/></SetVariable>
+					<SetVariable name="text_color"><Variable name="track_text_color"/></SetVariable>
+					<Unpressed>btn_text_little_1x1.svg</Unpressed>
+					<Pressed>btn_text_little_1x1.svg</Pressed>
+				</State>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
+				</Connection>
+			</PushButton>
+			
+			
+		</Children>
+	</WidgetGroup>
+</Template>

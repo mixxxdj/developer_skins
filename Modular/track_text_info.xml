@@ -1,0 +1,63 @@
+<!DOCTYPE template>
+<!--
+Description: Artist, name...
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>TrackTextInfo</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,f</SizePolicy>
+		<MinimumSize>-1,16</MinimumSize>
+		<MaximumSize>-1,16</MaximumSize>
+		<Style>
+			/**/
+			QGroupBox { border: 1px solid green; }
+			/**/
+			QGroupBox { border: 1px solid transparent; }
+			/**/
+		</Style>
+		<Children>
+			
+			
+			<!--
+			**********************************************
+			Text- Track Artist
+			**********************************************
+			-->
+			<TrackProperty>
+				<TooltipId>track_artist</TooltipId>
+				<MinimumSize>150,-1</MinimumSize>
+				<MaximumSize>150,-1</MaximumSize>
+				<Alignment>left</Alignment>
+				<Property>artist</Property>
+				<Channel><Variable name="i"/></Channel>
+			</TrackProperty>
+			
+			
+			<!--
+			**********************************************
+			Text- Track Title
+			**********************************************
+			-->
+			<TrackProperty>
+				<TooltipId>track_title</TooltipId>
+				<SizePolicy>me,me</SizePolicy>
+				<MaximumSize>i,20</MaximumSize>
+				<Alignment>left</Alignment>
+				<Property>title</Property>
+				<Channel><Variable name="i"/></Channel>
+			</TrackProperty>
+			
+			<!--
+			**********************************************
+			Duration
+			**********************************************
+			-->
+			<Template src="skin:track_duration_info.xml">
+			</Template>
+			
+		</Children>
+	</WidgetGroup>
+	
+</Template>

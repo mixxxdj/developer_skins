@@ -1,0 +1,220 @@
+<!DOCTYPE template>
+<!--
+Description:
+Track control panel.
+-->
+<Template>
+	<WidgetGroup>
+	<ObjectName>VolumeControls</ObjectName>
+	<Layout>vertical</Layout>
+	<MinimumSize>35,<Variable name="track_line_height"/></MinimumSize>
+	<MaximumSize>35,<Variable name="track_line_height"/></MaximumSize>
+	<Style>
+		/** /
+		QGroupBox { border: 1px solid red; }
+		/**/
+	</Style>
+	<Children>
+		
+		<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+		
+		<Template src="skin:spacer_vx.xml">
+			<SetVariable name="height">8</SetVariable>
+		</Template>
+		
+		<!--
+		****************************************
+		 Button- Play
+		****************************************
+		-->
+		<SetVariable name="width">33</SetVariable>
+		<SetVariable name="height">21</SetVariable>
+		<PushButton>
+			<TooltipId>play_cue_set</TooltipId>
+			<MinimumSize>20,20</MinimumSize>
+			<MaximumSize>40,30</MaximumSize>
+			<NumberStates>2</NumberStates>
+			<RightClickIsPushButton>true</RightClickIsPushButton>
+			<State>
+				<Number>0</Number>
+				<SetVariable name="shapeWidth">10.5</SetVariable>
+				<SetVariable name="shapeHeight">10.5</SetVariable>
+				<SetVariable name="color"></SetVariable>
+				<Unpressed>btn_play.svg</Unpressed>
+				<Pressed>btn_play.svg</Pressed>
+			</State>
+			<State>
+				<Number>1</Number>
+				<SetVariable name="shapeWidth">10.5</SetVariable>
+				<SetVariable name="shapeHeight">10.5</SetVariable>
+				<SetVariable name="background_color">url(#grad)</SetVariable>
+				<Unpressed>btn_pause.svg</Unpressed>
+				<Pressed>btn_pause.svg</Pressed>
+			</State>
+			<Connection>
+				<ConfigKey><Variable name="channel"/>,play</ConfigKey>
+				<EmitOnDownPress>true</EmitOnDownPress>
+				<ButtonState>LeftButton</ButtonState>
+			</Connection>
+			<Connection>
+				<ConfigKey><Variable name="channel"/>,cue_set</ConfigKey>
+				<EmitOnDownPress>true</EmitOnDownPress>
+				<ButtonState>RightButton</ButtonState>
+				<ConnectValueToWidget>false</ConnectValueToWidget>
+			</Connection>
+		</PushButton>
+		
+		<Template src="skin:spacer_vx.xml">
+			<SetVariable name="height">5</SetVariable>
+		</Template>
+		
+		<WidgetGroup>
+			<Layout>vertical</Layout>
+			<SizePolicy>min,min</SizePolicy>
+			<MinimumSize>33,23</MinimumSize>
+			<MaximumSize>33,23</MaximumSize>
+			<Style>
+				QGroupBox { border: 0px; }
+			</Style>
+			<Children>
+				
+				<!-- Prelisten / Monitoring -->
+				<SetVariable name="width">33</SetVariable>
+				<SetVariable name="height">21</SetVariable>
+				<SetVariable name="shapeScale">0.75</SetVariable>
+				<SetVariable name="shapeX">9</SetVariable>
+				<SetVariable name="shapeY">1.5</SetVariable>
+				<PushButton>
+					<TooltipId>pfl</TooltipId>
+					<MinimumSize>30,20</MinimumSize>
+					<MaximumSize>40,30</MaximumSize>
+					<NumberStates>2</NumberStates>
+					<RightClickIsPushButton>true</RightClickIsPushButton>
+					<State>
+						<Number>0</Number>
+						<SetVariable name="color"></SetVariable>
+						<Unpressed>btn_headphones.svg</Unpressed>
+						<Pressed>btn_headphones.svg</Pressed>
+					</State>
+					<State>
+						<Number>1</Number>
+						<Unpressed>btn_headphones.svg</Unpressed>
+						<Pressed>btn_headphones.svg</Pressed>
+					</State>
+					<Connection>
+						<ConfigKey><Variable name="channel"/>,pfl</ConfigKey>
+					</Connection>
+					<Connection>
+						<ConfigKey persist="true">[Master],show_headphone_controls</ConfigKey>
+						<BindProperty>visible</BindProperty>
+					</Connection>
+				</PushButton>
+			</Children>
+		</WidgetGroup>
+		
+		<Template src="skin:spacer_vx.xml">
+			<SetVariable name="height">5</SetVariable>
+		</Template>
+		
+		
+		<!--
+		**********************************************
+		Button- Beat sync
+		**********************************************
+		-->
+		<PushButton>
+			<TooltipId>beatsync_beatsync_tempo</TooltipId>
+			<NumberStates>2</NumberStates>
+			<State>
+				<Number>0</Number>
+				<SetVariable name="color"></SetVariable>
+				<Unpressed>btn_sync.svg</Unpressed>
+				<Pressed>btn_sync.svg</Pressed>
+			</State>
+			<State>
+				<Number>1</Number>
+				<Unpressed>btn_sync.svg</Unpressed>
+				<Pressed>btn_sync.svg</Pressed>
+			</State>
+			<Connection>
+				<ConfigKey><Variable name="channel"/>,sync_enabled</ConfigKey>
+				<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+				<ButtonState>LeftButton</ButtonState>
+			</Connection>
+		</PushButton>
+		
+		
+		
+		<Template src="skin:spacer_vx.xml">
+			<SetVariable name="height">6</SetVariable>
+		</Template>
+		
+		
+		
+		<SetVariable name="width">15</SetVariable>
+		<SetVariable name="height">21</SetVariable>
+		<SetVariable name="text_size">11</SetVariable>
+		<WidgetGroup>
+			<Layout>horizontal</Layout>
+			<SizePolicy>min,min</SizePolicy>
+			<Style>
+				QGroupBox { border: 0px; }
+			</Style>
+			<Children>
+				
+				<SetVariable name="text">&lt;</SetVariable>
+				<PushButton>
+					<TooltipId>rate_temp_up</TooltipId>
+					<NumberStates>2</NumberStates>
+					<State>
+						<Number>0</Number>
+						<Pressed>btn_text.svg</Pressed>
+						<Unpressed>btn_text.svg</Unpressed>
+					</State>
+					<State>
+						<Number>1</Number>
+						<Pressed>btn_text.svg</Pressed>
+						<Unpressed>btn_text.svg</Unpressed>
+						<SetVariable name="border_color" expression="color"/>
+						<SetVariable name="text_color" expression="color"/>
+					</State>
+					<Connection>
+						<ConfigKey><Variable name="channel"/>,rate_temp_up</ConfigKey>
+					</Connection>
+				</PushButton>
+				
+				<Template src="skin:spacer_vx.xml">
+					<SetVariable name="height">3</SetVariable>
+				</Template>
+				
+				<SetVariable name="text">&gt;</SetVariable>
+				<PushButton>
+					<TooltipId>rate_temp_down</TooltipId>
+					<NumberStates>2</NumberStates>
+					<State>
+						<Number>0</Number>
+						<Pressed>btn_text.svg</Pressed>
+						<Unpressed>btn_text.svg</Unpressed>
+					</State>
+					<State>
+						<Number>1</Number>
+						<Pressed>btn_text.svg</Pressed>
+						<Unpressed>btn_text.svg</Unpressed>
+						<SetVariable name="border_color" expression="color"/>
+						<SetVariable name="text_color" expression="color"/>
+					</State>
+					<Connection>
+						<ConfigKey><Variable name="channel"/>,rate_temp_down</ConfigKey>
+					</Connection>
+				</PushButton>
+				
+			</Children>
+		</WidgetGroup>
+		
+		<Template src="skin:spacer_vx.xml">
+			<SetVariable name="height">7</SetVariable>
+		</Template>
+		
+	</Children>
+	</WidgetGroup>
+</Template>

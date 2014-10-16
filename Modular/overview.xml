@@ -1,0 +1,44 @@
+<!DOCTYPE template>
+<!--
+Description: 
+-->
+<Template>
+	
+	<Overview>
+		<TooltipId>waveform_overview</TooltipId>
+		<SizePolicy>me,me</SizePolicy>
+		<Channel><Variable name="i"/></Channel>
+		<BgColor>#191919</BgColor>
+		<SignalHighColor>#FFE300</SignalHighColor>
+		<SignalMidColor>#0099FF</SignalMidColor>
+		<SignalLowColor>#FF0035</SignalLowColor>
+		<SignalColor>#FF8000</SignalColor>
+		<PlayPosColor>#00FF00</PlayPosColor>
+		<EndOfTrackColor><Variable name="track_light_color"/></EndOfTrackColor>
+		<DefaultMark>
+			<Align>bottom</Align>
+			<Color>#00FF00</Color>
+			<TextColor>#CCCCCC</TextColor>
+			<Text> %1 </Text>
+		</DefaultMark>
+		<MarkRange>
+			<StartControl>loop_start_position</StartControl>
+			<EndControl>loop_end_position</EndControl>
+			<EnabledControl>loop_enabled</EnabledControl>
+			<Color>#00FF00</Color>
+			<DisabledColor>#008000</DisabledColor>
+		</MarkRange>
+		<Mark>
+			<Control>cue_point</Control>
+			<Text>C</Text>
+			<Align>top</Align>
+			<Color>#00FF00</Color>
+			<TextColor>#CCCCCC</TextColor>
+		</Mark>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</Overview>
+	
+</Template>

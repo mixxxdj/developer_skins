@@ -1,0 +1,144 @@
+<svg	xmlns	= "http://www.w3.org/2000/svg"
+		width="60"	expr-width="width"
+		height="25"	expr-height="height"
+	>
+	
+	<script src="svg.js">
+		<![CDATA[
+			margin = Number(margin) || 0;
+			
+			width = Number(width);
+			text_x = Number(text_x);
+			text_y = Number(text_y);
+			
+			setDefault( {
+				name		: 'offset',
+				value		: 13,
+				type		: Number,
+				nullValue	: 0
+			} );
+			offset = Math.round(offset);
+			
+			// console.log('#####################################################');
+			// console.log(offset);
+			
+			shapeWidth = width - margin * 2;
+			
+			// compute the position to be relative to the slider
+			// and exactly aligned on pixel grid and degrees grid
+			var computePosition = function( position ){
+				var out = Math.round( position );
+				if( out % 2 != 0 )
+					out--;
+				
+				return out + Math.round( margin );
+			}
+			
+			sectionColor	= '#888888';
+			limitColor		= '#666666';
+			degreesColor	= 'url(#grad1)';
+			
+		]]>
+	</script>
+	
+	<defs>
+		<linearGradient id = "grad1" gradientUnits ="userSpaceOnUse"
+			x1 = "0" x2 = "100"	expr-x2 = "width"
+			y1 = "0" y2 = "0"
+			>
+			<stop offset="0%"	style="stop-color: #666666; stop-opacity:1" />
+			<stop offset="50%"	style="stop-color: #aaaaaa; stop-opacity:1" />
+			<stop offset="100%"	style="stop-color: #666666; stop-opacity:1" />
+		</linearGradient>
+	</defs>
+	
+	<rect	width="60"	expr-width="width"
+			height="25"	expr-height="height"
+			style="fill: #191919; var( fill, background_color ); "/>
+	
+	<g transform="translate( 0.5, 0.5 )">
+		
+		<!-- degrees -->
+		<line
+			x1="0"	expr-x1="margin"
+			x2="60"	expr-x2="shapeWidth + margin"
+			y1="12"	expr-y1="offset"
+			y2="12"	expr-y2="offset"
+			stroke-dasharray="1, 1"
+			style="stroke-width: 5; stroke: #ffffff; prop( 'stroke', 'degreesColor' );"/>
+		
+		<!-- left line -->
+		<line
+			x1="0"	expr-x1="margin - 0.5"
+			x2="0"	expr-x2="margin - 0.5"
+			y1="6"	expr-y1="offset - 6"
+			y2="18"	expr-y2="offset + 6"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'limitColor' ); stroke-linecap: square;"/>
+		
+		<!-- 1/4 line -->
+		<line
+			x1="1"	expr-x1="computePosition( shapeWidth / 4 )"
+			x2="13"	expr-x2="computePosition( shapeWidth / 4 )"
+			y1="6"	expr-y1="offset - 4"
+			y2="18"	expr-y2="offset + 4"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
+		
+		<!-- middle line -->
+		<line
+			x1="1"	expr-x1="computePosition( shapeWidth / 2 )"
+			x2="13"	expr-x2="computePosition( shapeWidth / 2 )"
+			y1="6"	expr-y1="offset - 6"
+			y2="18"	expr-y2="offset + 6"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
+		
+		<!-- 3/4 line -->
+		<line
+			x1="1"	expr-x1="computePosition( shapeWidth / 4 * 3)"
+			x2="13"	expr-x2="computePosition( shapeWidth / 4 * 3 )"
+			y1="6"	expr-y1="offset - 4"
+			y2="18"	expr-y2="offset + 4"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'sectionColor' ); stroke-linecap: square;"/>
+		
+		<!-- right line -->
+		<line
+			x1="60"	expr-x1="Math.round(shapeWidth + margin)"
+			x2="60"	expr-x2="Math.round(shapeWidth + margin)"
+			y1="6"	expr-y1="offset - 6"
+			y2="18"	expr-y2="offset + 6"
+			style="stroke-width: 1; stroke: #ffffff; prop( 'stroke', 'limitColor' ); stroke-linecap: square;"/>
+		
+		<!-- label shadow -->
+		<text	x="7"	expr-x="text_x + 0.5"
+				y="62"	expr-y="text_y + 0.5"
+				text-anchor="middle"
+				style="fill:#000000; font-size: 10px; font-weight: bold;">
+					<Variable name="text"/>
+		</text>
+		
+		<!-- label -->
+		<text	x="7"	expr-x="text_x"
+				y="62"	expr-y="text_y"
+				text-anchor="middle"
+				style="fill:#aaaaaa; font-size: 10px; font-weight: bold; prop('fill', 'text_color');">
+					<Variable name="text"/>
+		</text>
+		
+		<!-- slit -->
+		<line
+			x1="0"	expr-x1="Math.round(margin)"
+			x2="60"	expr-x2="Math.round(width - margin) - 1"
+			y1="13"	expr-y1="offset"
+			y2="13"	expr-y2="offset"
+			style="stroke-width: 1; stroke: #000000; stroke-opacity: 1; stroke-linecap: square;"/>
+		
+		<!-- light reflection -->
+		<line
+			x1="0"	expr-x1="margin"
+			x2="60"	expr-x2="width - margin"
+			y1="13"	expr-y1="offset + 1"
+			y2="13"	expr-y2="offset + 1"
+			style="stroke-width: 1; stroke: #ffffff; stroke-opacity: 0.1"/>
+		
+	</g>
+	
+</svg>

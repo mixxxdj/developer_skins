@@ -1,0 +1,93 @@
+<!DOCTYPE template>
+<!--
+Description: track gain and volume 
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>VolumeControls</ObjectName>
+		<Layout>vertical</Layout>
+		<SizePolicy>min,min</SizePolicy>
+		<MinimumSize>53,<Variable name="track_line_height"/></MinimumSize>
+		<MaximumSize>69,<Variable name="track_line_height"/></MaximumSize>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<Children>
+			
+			<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			
+			<!--Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">8</SetVariable>
+			</Template-->
+			
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Size>45,69</Size>
+				<SizePolicy>min,min</SizePolicy>
+				<Children>
+					
+					<!-- gain -->
+					<SetVariable name="width">15</SetVariable>
+					<SetVariable name="height">119</SetVariable>
+					<SetVariable name="offset">7</SetVariable>
+					<SetVariable name="margin">10.5</SetVariable>
+					
+					<SetVariable name="handle_width">15</SetVariable>
+					<SetVariable name="handle_height">13</SetVariable>
+					
+					<SetVariable name="text">gai</SetVariable>
+					<SetVariable name="text_x">6</SetVariable>
+					<SetVariable name="text_y">119</SetVariable>
+					
+					<SliderComposed>
+						<TooltipId>pregain</TooltipId>
+						<Slider>slider-vertical.svg</Slider>
+						<Handle>handle-vertical.svg</Handle>
+						<Horizontal>false</Horizontal>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,pregain</ConfigKey>
+						</Connection>
+					</SliderComposed>
+					
+					<Template src="skin:spacer_vx.xml">
+						<SetVariable name="height">3</SetVariable>
+					</Template>
+					
+					<!-- volume -->
+					<SetVariable name="width">25</SetVariable>
+					<SetVariable name="height">119</SetVariable>
+					<SetVariable name="offset">12</SetVariable>
+					<SetVariable name="margin">10.5</SetVariable>
+					
+					<SetVariable name="handle_width">25</SetVariable>
+					<SetVariable name="handle_height">13</SetVariable>
+					
+					<SetVariable name="text">vol.</SetVariable>
+					<SetVariable name="text_x">12.5</SetVariable>
+					<SetVariable name="text_y">119</SetVariable>
+					
+					<SliderComposed>
+						<TooltipId>channel_volume</TooltipId>
+						<SizePoicy>min,min</SizePoicy>
+						<Slider>slider-vertical.svg</Slider>
+						<Handle>handle-vertical.svg</Handle>
+						<Horizontal>false</Horizontal>
+						<Connection>
+							<ConfigKey><Variable name="channel"/>,volume</ConfigKey>
+							<EmitOnDownPress>false</EmitOnDownPress>
+						</Connection>
+					</SliderComposed>
+					
+				</Children>
+			</WidgetGroup>
+				
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">3</SetVariable>
+			</Template>
+			
+		</Children>
+	</WidgetGroup>
+</Template>

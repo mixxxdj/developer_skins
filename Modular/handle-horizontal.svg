@@ -1,0 +1,90 @@
+<svg	xmlns	= "http://www.w3.org/2000/svg"
+		width	= "15"	expr-width	= "handle_width"
+		height	= "33"	expr-height	= "handle_height"
+	>
+	
+	<script src="svg.js">
+		// <![CDATA[
+		
+		borderPath = function( width, height, offset, left ){
+			var path = '';
+			
+			if( width > 0 && height > 0 ){
+				
+				var finalHeight	= height - 2 * offset;
+				var finalWidth	= width - offset;
+				
+				if( left ){
+					
+					path =	"M " + width + " " + offset + " " +
+							"l " + ( -finalWidth ) + " " + 0 + " " +
+							"l " + 0 + " " + finalHeight + " " +
+							"l " + finalWidth + " " + 0;
+				} else {
+					path =	"M " + ( width + 2 ) + " " + offset + " " +
+							"l " + finalWidth + " " + 0 + " " +
+							"l " + 0 + " " + finalHeight + " " +
+							"l " + (-finalWidth) + " " + 0;
+				}
+			}
+			
+			return path;
+		}
+		
+		svg.templateHooks.borderPath = borderPath;
+		
+		shapeHeight	= handle_height - 1;
+		shapeWidth	= (handle_width - 1) / 2 - 1;
+		
+		// ]]>
+	</script>
+	
+	<defs>
+		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #444444; stop-opacity: 1;" />
+			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
+		</linearGradient>
+	</defs>
+	
+	
+	<rect	x="0" y="0"
+			width	= "15"	expr-width	= "handle_width"
+			height	= "33"	expr-height	= "handle_height"
+			style	= "fill: url(#grad_def); stroke-linecap: sqare;" />
+	
+	<g transform="translate( 0.5, 0.5 )">
+		
+		<path	d="M 6 1 l -5 0 l 0 30 l 5 0" expr-d="borderPath( shapeWidth, shapeHeight, 1, true )"
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5; stroke-linecap: square;" />
+		
+		<path	d="M 8 1 l 5 0 l 0 30 l -5 0" expr-d="borderPath( shapeWidth, shapeHeight, 1, false )"
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.5; stroke-linecap: square;" />
+		
+		
+		<path	d="M 6 0 l -6 0 l 0 32 l 6 0" expr-d="borderPath( shapeWidth, shapeHeight, 0, true )"
+				style="fill:none; stroke-width:1; stroke:#cccccc; stroke-linecap: square;" />
+		
+		<path	d="M 8 0 l 6 0 l 0 32 l -6 0" expr-d="borderPath( shapeWidth, shapeHeight, 0, false )"
+				style="fill:none; stroke-width:1; stroke:#cccccc; stroke-linecap: square;" />
+		
+		
+		<line	x1="7" y1="1" x2="7" y2="31"
+				expr-x1	= "shapeWidth + 0"
+				expr-x2	= "shapeWidth + 0"
+				expr-y2	= "shapeHeight - 1"
+				style="stroke: #000000; stroke-width: 1; stroke-opacity: 0.2;"/>
+		
+		<line	x1="7" y1="1" x2="7" y2="31"
+				expr-x1	= "shapeWidth + 1"
+				expr-x2	= "shapeWidth + 1"
+				expr-y2	= "shapeHeight - 1"
+				style="stroke: #13a9fc; stroke-width: 1; prop( 'stroke', 'color' );"/>
+		
+	</g>
+	
+</svg>
+
+
+
+
+

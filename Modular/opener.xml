@@ -1,0 +1,47 @@
+<!DOCTYPE template>
+<!--
+Description:
+Opener.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<Size>15,</Size>
+		<SizePolicy>min,min</SizePolicy>
+		<Children>
+			
+			<SetVariable name="width">15</SetVariable>
+			<SetVariable name="height">15</SetVariable>
+			<SetVariable name="font_size">11</SetVariable>
+			
+			<PushButton>
+				<NumberStates>2</NumberStates>
+				<State>
+					<Number>0</Number>
+					<SetVariable name="text">+</SetVariable>
+					<Unpressed>btn_text.svg</Unpressed>
+					<Pressed>btn_text.svg</Pressed>
+				</State>
+				<State>
+					<Number>1</Number>
+					<SetVariable name="text">-</SetVariable>
+					<Unpressed>btn_text.svg</Unpressed>
+					<Pressed>btn_text.svg</Pressed>
+				</State>
+				<Connection>
+					<ConfigKey persist="true"><Variable name="action"/></ConfigKey>
+				</Connection>
+			</PushButton>
+			
+		</Children>
+	</WidgetGroup>
+</Template>
+
+
+
+

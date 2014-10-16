@@ -1,0 +1,57 @@
+<!DOCTYPE template>
+<!--
+Description: Frequency killers
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>KillersColumn</ObjectName>
+		<Layout>vertical</Layout>
+		<SizePolicy>f,me</SizePolicy>
+		<MinimumSize>25,-1</MinimumSize>
+		<MaximumSize>25,-1</MaximumSize>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid green; }
+			/**/
+		</Style>
+		<Children>
+			
+			<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			<SetVariable name="width">11</SetVariable>
+			<SetVariable name="height">11</SetVariable>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">1</SetVariable>
+			</Template>
+			
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<SizePolicy>min,f</SizePolicy>
+				<MinimumSize>-1,66</MinimumSize>
+				<MaximumSize>-1,66</MaximumSize>
+				<Children>
+					
+					<Template src="skin:btn_killer.xml">
+						<SetVariable name="frequency">High</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_v.xml"/>
+					
+					<Template src="skin:btn_killer.xml">
+						<SetVariable name="frequency">Mid</SetVariable>
+					</Template>
+					
+					<Template src="skin:spacer_v.xml"/>
+					
+					<Template src="skin:btn_killer.xml">
+						<SetVariable name="frequency">Low</SetVariable>
+					</Template>
+					
+				</Children>
+			</WidgetGroup>
+			
+		</Children>
+	</WidgetGroup>
+	
+</Template>

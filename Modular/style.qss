@@ -1,0 +1,211 @@
+#Mixxx {
+	background-color	: #191919;
+	color				: #ffffff;
+}
+
+
+
+QLabel {
+    /* font				: bold 12px/14px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif ;*/
+    font				: SquaryBig, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+    background-color	: transparent;
+    color				: #ffffff;
+}
+
+#PrevewDeck {
+	border				: 1px solid #585858;
+	border-bottom		: 0;
+	background-color	: #0f0f0f;
+}
+
+
+/* library search bar */
+
+WSearchLineEdit {
+	padding				: 2px;
+	font				: 18px/20px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+	background-color	: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #0f0f0f, stop:1 #191919);
+	border				: 0px;
+	border-left			: 1px solid #585858;
+	border-top			: 1px solid #585858;
+	color				: #bbbbbb;
+}
+WSearchLineEdit:focus {
+	padding				: 2px;
+	font				: bold 18px/20px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+	background-color	: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #0f0f0f, stop:1 #191919);
+	border				: 0px;
+	border-left			: 1px solid #585858;
+	border-top			: 1px solid #585858;
+	color				: #ffffff;
+}
+
+/* splitter between treeview and library */
+
+QSplitter::handle { image: url(skin:/style/style_handle_unchecked.png); background-color: #1e1e1e; }
+QSplitter::handle:pressed { image: url(skin:/style/style_handle_checked.png); background-color: #1e1e1e; }
+/**/
+QSplitter::handle:horizontal { width: 10px; background-color: #191919;}
+QSplitter::handle:vertical { height: 10px; background-color: #191919;}
+
+
+/* Library styling is hard */
+
+QTableView, QTextBrowser, QTreeView {
+  border: 1px solid #585858;
+  font: 15px/18px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+  /* color: #cfb32c; */
+  color: #bbbbbb;
+  background-color: #0f0f0f;
+  alternate-background-color: #1a1a1a;
+}
+
+
+
+/* checkbox in library "Played" column */
+QTableView::indicator { width: 12px; height: 12px;}
+QTableView::indicator:checked { background: url(skin:/style/style_checkbox_checked.png);}
+QTableView::indicator:unchecked { background: url(skin:/style/style_checkbox_unchecked.png);}
+QTableView::item:selected {
+/*
+  color: #cfb32c;
+*/
+  color: #000000;
+/*
+  background-color: #725309;
+*/
+}
+
+/*QPushButton#LibraryPreviewButton:focus { 
+  background-color: #725309;
+}*/
+
+/**/
+#LibraryBPMWidget,#LibraryBPMButton, #LibraryBPMSpinBox {
+  background-color: #888888; 
+}
+LibraryBPMWidget::indicator:checked { background: url(skin:/style/style_checkbox_checked.png);}
+LibraryBPMWidget::indicator:unchecked { background: url(skin:/style/style_checkbox_unchecked.png);}
+/**/
+
+/* Button in library "Preview" column */
+QPushButton#LibraryPreviewButton { 
+  width: 23px; 
+  height: 12px; 
+  background: transparent; 
+  border: 0px; 
+}
+
+QPushButton#LibraryPreviewButton:!checked{ image: url(skin:/style/style_library_preview_play.png); }
+QPushButton#LibraryPreviewButton:checked{ image: url(skin:/style/style_library_preview_pause.png); }
+
+QHeaderView { 
+  font: 13px/15px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif; 
+  color: #dddddd;
+  background-color: #0f0f0f;
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #191919, stop:1 #0f0f0f);
+  font-weight	: bold;
+}
+
+QHeaderView::section {
+  height: 18px;
+  border: 1px solid #585858;
+  border: 0px;
+  border-left: 0px;
+  background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
+  background: transparent; 
+}
+
+
+
+
+
+
+/* QScrollbar styling is even harder */
+QScrollBar:horizontal {
+  min-width		: 12px;
+  height		: 15px;
+  background	: #1a1a1a;
+  padding		: 1px;
+  border-top	: 1px solid #585858;
+}
+QScrollBar:vertical {
+  min-height	: 12px;
+  width			: 15px;
+  background	: #1a1a1a;
+  padding		: 1px;
+  border-left	: 1px solid #585858;
+}
+
+/* "add-page" and "sub-page" are the gutter of the scrollbar */
+QScrollBar::add-page, QScrollBar::sub-page {
+  min-width: 15px;
+  min-height: 15px;
+  background-color: #1a1a1a;
+} 
+QScrollBar::handle:horizontal {
+  min-width: 25px; 
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #666666, stop:1 #191919);
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+} 
+QScrollBar::handle:vertical {
+  min-height: 25px; 
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #666666, stop:1 #191919);
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+} 
+/* Turn off buttons */
+QScrollBar::add-line:horizontal, QScrollBar::add-line:vertical {
+  width: 0px;
+  height: 0px;
+  border: 0px solid white;
+}
+QScrollBar::sub-line:horizontal, QScrollBar::sub-line:vertical {
+  width: 0px;
+  height: 0px;
+  border: 0px solid white;
+} 
+
+
+
+/** /
+
+#Deck1 {
+  margin: 0px;
+  qproperty-layoutSpacing: 0;
+  qproperty-layoutContentsMargins: rect(10 2 10 2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+WWidget {
+  border: 1px solid rgb(128, 128, 128);
+  background-color: grey;
+}
+
+WSliderComposed {
+  background-color: orange;
+}
+
+WVuMeter {
+  background-color: pink;
+}
+
+WPushButton[value="1"] {
+  background-color: green;
+}
+
+WPushButton[pressed="true"] {
+  background-color: pink;
+}
+
+#BeatLoopButton[value="1"][pressed="true"] {
+  background-color: pink;
+}
+
+#BeatLoopButton[value="0"][pressed="true"] {
+  background-color: orange;
+}
+*/
+

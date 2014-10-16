@@ -1,0 +1,62 @@
+<!DOCTYPE template>
+<!--
+Description: equalizers.
+-->
+<Template>
+	
+	<WidgetGroup>
+		<ObjectName>EqualizersColumn</ObjectName>
+		<Layout>vertical</Layout>
+		<SizePolicy>f,me</SizePolicy>
+		<MinimumSize>90,-1</MinimumSize>
+		<MaximumSize>90,-1</MaximumSize>
+		<Style>
+			/** /
+			QGroupBox { border: 1px solid red; }
+			/**/
+		</Style>
+		<Children>
+			
+			<SetVariable name="channel">[Channel<Variable name="i"/>]</SetVariable>
+			
+			<Template src="skin:btn_eq.xml">
+				<SetVariable name="offset">0</SetVariable>
+				<!--SetVariable name="offset">19</SetVariable>
+				<SetVariable name="text">High</SetVariable-->
+				<SetVariable name="text_x">54</SetVariable>
+				<SetVariable name="text_y">11</SetVariable>
+				<SetVariable name="frequency">High</SetVariable>
+			</Template>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">2</SetVariable>
+			</Template>
+			
+			<Template src="skin:btn_eq.xml">
+				<SetVariable name="offset">0</SetVariable>
+				<!--SetVariable name="offset">13</SetVariable>
+				<SetVariable name="text">Mid</SetVariable-->
+				<SetVariable name="text_x">54</SetVariable>
+				<SetVariable name="text_y">24</SetVariable>
+				<SetVariable name="frequency">Mid</SetVariable>
+				<SetVariable name="height">25</SetVariable>
+			</Template>
+			
+			<Template src="skin:spacer_vx.xml">
+				<SetVariable name="height">2</SetVariable>
+			</Template>
+			
+			<Template src="skin:btn_eq.xml">
+				<SetVariable name="offset">0</SetVariable>
+				<!--SetVariable name="offset">7</SetVariable>
+				<SetVariable name="text">Low</SetVariable-->
+				<SetVariable name="text_x">54</SetVariable>
+				<SetVariable name="text_y">20</SetVariable>
+				<SetVariable name="frequency">Low</SetVariable>
+				<SetVariable name="height">27</SetVariable>
+			</Template>
+			
+		</Children>
+	</WidgetGroup>
+	
+</Template>

@@ -1,0 +1,100 @@
+<svg	xmlns="http://www.w3.org/2000/svg"
+		width="33"	expr-width="width"
+		height="21"	expr-height="height"
+		>
+	
+	<script src="svg.js">
+		// <![CDATA[
+			
+			if( !('width' in this) )
+				width = 33;
+			if( !('height' in this) )
+				height = 21;
+			
+			var center = {
+				width	: Math.round((width - 1) / 2),
+				height	: Math.round((height - 1) / 2),
+			}
+			
+			var shapeWidth = shapeWidth || 10;
+			var shapeHeight = shapeHeight || 10;
+			
+			shapePoints = [
+				{
+					type	: 'M',
+					x		: center.width - shapeWidth / 2,
+					y		: center.height - shapeHeight / 2
+				},
+				{
+					type	: 'L',
+					x		: center.width + shapeWidth / 2,
+					y		: center.height
+				},
+				{
+					type	: 'L',
+					x		: center.width - shapeWidth / 2,
+					y		: center.height + shapeHeight / 2
+				}
+			];
+			
+			
+		// ]]>
+	</script>
+	<defs>
+		<linearGradient id="grad_def" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #333333; stop-opacity: 1;" />
+			<stop offset="100%"	style="stop-color: #191919; stop-opacity: 1;" />
+		</linearGradient>
+		
+		<linearGradient id="grad_transparent_light" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #cccccc; stop-opacity: 0.2;" />
+			<stop offset="100%"	style="stop-color: #cccccc; stop-opacity: 0;" />
+		</linearGradient>
+		
+		<linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%"	style="stop-color: #13a9fc; stop-opacity: 0.5; prop( 'stop-color', 'color' );" />
+			<stop offset="100%"	style="stop-color: #13a9fc; stop-opacity: 0.2; prop( 'stop-color', 'color' );" />
+		</linearGradient>
+		
+	</defs>
+	
+	
+	<g transform="translate( 0.5, 0.5 )">
+	
+		<!-- border and inner background -->
+		<rect	x="0" y="0" rx="1" ry="1"
+				width="32"	expr-width="width - 1"
+				height="20"	expr-height="height - 1"
+				style="fill:url(#grad_def); stroke-width:1; stroke:#cccccc; prop('stroke', 'color'); prop('fill', 'background_color');" />
+		
+		
+		<!-- border inner shadow -->
+		<rect	x="1" y="1"
+				width="30"	expr-width="width - 3"
+				height="18"	expr-height="height - 3"
+				style="fill:none; stroke-width:1; stroke:#000000; stroke-opacity: 0.25;"/>
+		
+		
+		<!-- transform="matrix(10,0,0,10,10,10)" -->
+		<path
+			style="fill-opacity: 1;"
+			fill="#000000"
+			d="M 10.75 4.75 L 21.25 10 L 10.75 15.25"
+			expr-d="pointsToPath( shapePoints )"
+			stroke-width="0"
+			fill-opacity="0.5"
+			transform="translate( 1, 1 )"
+			/>
+		
+		<path
+			style="fill-opacity: 1;"
+			fill="#ffffff"
+			d="M 10.75 4.75 L 21.25 10 L 10.75 15.25"
+			expr-d="pointsToPath( shapePoints )"
+			stroke-width="0"
+			
+			fill-opacity="1"
+			/>
+	</g>
+	
+</svg>
