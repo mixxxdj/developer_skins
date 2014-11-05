@@ -230,7 +230,8 @@
 								<ButtonState>RightButton</ButtonState>
 							</Connection>
 							<Connection>
-								<ConfigKey>[Channel1],cue_indicator</ConfigKey>							</Connection>
+								<ConfigKey>[Channel1],cue_indicator</ConfigKey>
+							</Connection>
 						</PushButton>
 						<PushButton>
 							<TooltipId>cue_default_cue_gotoandstop</TooltipId>
@@ -471,6 +472,27 @@
 								<ButtonState>LeftButton</ButtonState>
 							</Connection>
 						</PushButton>
+						<PushButton>
+							<TooltipId>filter</TooltipId>
+							<Style></Style>
+							<NumberStates>2</NumberStates>
+							<State>
+								<Number>0</Number>
+								<Pressed>btn_kill_down.png</Pressed>
+								<Unpressed>btn_kill.png</Unpressed>
+							</State>
+							<State>
+								<Number>1</Number>
+								<Pressed>btn_kill_overdown.png</Pressed>
+								<Unpressed>btn_kill_over.png</Unpressed>
+							</State>
+							<Pos>11,190</Pos>
+							<Connection>
+								<ConfigKey>[Channel1],filter</ConfigKey>
+								<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+								<ButtonState>LeftButton</ButtonState>
+							</Connection>
+						</PushButton>
 	
 						<PushButton>
 							<TooltipId>filterHighKill</TooltipId>
@@ -535,7 +557,27 @@
 								<ButtonState>LeftButton</ButtonState>
 							</Connection>
 						</PushButton>
-	
+						<PushButton>
+							<TooltipId>filter</TooltipId>
+							<Style></Style>
+							<NumberStates>2</NumberStates>
+							<State>
+								<Number>0</Number>
+								<Pressed>btn_kill_down.png</Pressed>
+								<Unpressed>btn_kill.png</Unpressed>
+							</State>
+							<State>
+								<Number>1</Number>
+								<Pressed>btn_kill_overdown.png</Pressed>
+								<Unpressed>btn_kill_over.png</Unpressed>
+							</State>
+							<Pos>229,190</Pos>
+							<Connection>
+								<ConfigKey>[Channel2],filter</ConfigKey>
+								<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+								<ButtonState>LeftButton</ButtonState>
+							</Connection>
+						</PushButton>
 						<!--
 						**********************************************
 						Text- Clock display
@@ -692,6 +734,16 @@
 								<ConfigKey>[Channel1],filterLow</ConfigKey>
 							</Connection>
 						</Knob>
+						<Knob>
+							<TooltipId>filterDepth</TooltipId>
+							<Style></Style>
+							<NumberStates>64</NumberStates>
+							<Path>knobs/knob_rotary_s%1.png</Path>
+							<Pos>32,190</Pos>
+							<Connection>
+								<ConfigKey>[Channel1],filterDepth</ConfigKey>
+							</Connection>
+						</Knob>
 	
 						<Knob>
 							<TooltipId>pregain</TooltipId>
@@ -731,6 +783,16 @@
 							<Pos>196,170</Pos>
 							<Connection>
 								<ConfigKey>[Channel2],filterLow</ConfigKey>
+							</Connection>
+						</Knob>
+						<Knob>
+							<TooltipId>filterDepth</TooltipId>
+							<Style></Style>
+							<NumberStates>64</NumberStates>
+							<Path>knobs/knob_rotary_s%1.png</Path>
+							<Pos>196,190</Pos>
+							<Connection>
+								<ConfigKey>[Channel2],filterDepth</ConfigKey>
 							</Connection>
 						</Knob>
 	
